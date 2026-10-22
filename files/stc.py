@@ -5,7 +5,7 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import parse_qsl, urljoin, urlsplit
+from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 import httpx
@@ -35,7 +35,8 @@ UA = (
     "Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
 )
 
-HTTP_SEMAPHORE = asyncio.Semaphore(10)
+# একসাথে ১৫টি প্যারালাল রিকোয়েস্ট হ্যান্ডেল করার সেমাফোর
+HTTP_SEMAPHORE = asyncio.Semaphore(15)
 BST_TZ = ZoneInfo("Asia/Dhaka")
 
 LOG_FMT = (
@@ -62,9 +63,6 @@ if not log.handlers:
     log.propagate = False
 
 
-# -----------------------------------------------------------------------------
-# স্মার্ট লোগো লাইব্রেরি (হাই-কোয়ালিটি স্পোর্টস ও টুর্নামেন্ট লোগো)
-# -----------------------------------------------------------------------------
 DEFAULT_LIVE_LOGO = "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png"
 
 SPORT_LOGOS = {
@@ -85,7 +83,6 @@ SPORT_LOGOS = {
     "american football": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/National_Football_League_logo.svg/500px-National_Football_League_logo.svg.png",
 }
 
-# বড় বড় টুর্নামেন্টের জন্য কাস্টম লোগো
 TOURNAMENT_KEYWORDS = [
     (r"premier league|epl", "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/500px-Premier_League_Logo.svg.png"),
     (r"champions league|ucl", "https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/UEFA_Champions_League_logo_2.svg/500px-UEFA_Champions_League_logo_2.svg.png"),
@@ -103,19 +100,15 @@ TOURNAMENT_KEYWORDS = [
 
 def get_smart_logo(sport: str, title: str) -> str:
     title_lower = title.lower()
-
-    # ১. প্রথমে টাইটেলের ভেতরের টুর্নামেন্ট নাম চেক করা
     for pattern, logo_url in TOURNAMENT_KEYWORDS:
         if re.search(pattern, title_lower):
             return logo_url
 
-    # ২. টুর্নামেন্ট না মিললে খেলার ক্যাটাগরি ভিত্তিক লোগো দেওয়া
     sport_lower = sport.lower()
     for sp_key, logo_url in SPORT_LOGOS.items():
         if sp_key in sport_lower:
             return logo_url
 
-    # ৩. কোনোটিই না মিললে ডিফল্ট লাইভ স্পোর্টস লোগো
     return DEFAULT_LIVE_LOGO
 
 
@@ -228,32 +221,20 @@ async def request(
     client: httpx.AsyncClient,
     url: str,
     headers: dict | None = None,
+    timeout: float = 6.0,
 ) -> httpx.Response | None:
     try:
-        response = await client.get(url, headers=headers)
-        response.raise_for_status()
-        return response
-    except Exception as e:
-        log.debug(f'Failed to fetch "{url}": {e}')
+        response = await client.get(url, headers=headers, timeout=timeout)
+        if response.status_code == 200:
+            return response
+        return None
+    except Exception:
         return None
 
 
-async def safe_process(fn, timeout: int | float = 25):
-    async with HTTP_SEMAPHORE:
-        task = asyncio.create_task(fn())
-        try:
-            return await asyncio.wait_for(task, timeout=timeout)
-        except asyncio.TimeoutError:
-            task.cancel()
-            try:
-                await task
-            except asyncio.CancelledError:
-                pass
-            return None
-        except Exception:
-            return None
-
-
+# -----------------------------------------------------------------------------
+# ডাইনামিক DaddyLive .m3u8 ডিকোডার (দ্রুত রেসপন্সের জন্য অপ্টিমাইজড)
+# -----------------------------------------------------------------------------
 async def decode_dlhd_m3u8(
     client: httpx.AsyncClient,
     channel_id: str,
@@ -308,30 +289,21 @@ async def decode_dlhd_m3u8(
     key_match = re.search(r'channel_id=([^"\'&\s]+)', player_resp.text)
     channel_key = key_match.group(1) if key_match else f"premium{clean_id}"
 
-    lookup_urls = [
-        f"{player_origin}/server_lookup.php?channel_id={channel_key}",
-        f"{player_origin}/server_lookup.js?channel_id={channel_key}",
-    ]
-
-    server_key = None
+    lookup_url = f"{player_origin}/server_lookup.php?channel_id={channel_key}"
     lookup_headers = {
         "User-Agent": UA,
         "Referer": f"{player_origin}/",
     }
 
-    for l_url in lookup_urls:
-        l_resp = await request(client, l_url, headers=lookup_headers)
-        if l_resp and l_resp.status_code == 200:
-            try:
-                data = l_resp.json()
-                if "server_key" in data and data["server_key"]:
-                    server_key = data["server_key"]
-                    break
-            except Exception:
-                pass
-
-    if not server_key:
-        server_key = "topembed"
+    server_key = "topembed"
+    l_resp = await request(client, lookup_url, headers=lookup_headers, timeout=4.0)
+    if l_resp:
+        try:
+            data = l_resp.json()
+            if "server_key" in data and data["server_key"]:
+                server_key = data["server_key"]
+        except Exception:
+            pass
 
     m3u8_url = f"https://{server_key}new.newkso.ru/{server_key}/{channel_key}/mono.m3u8"
     return m3u8_url, f"{player_origin}/"
@@ -345,7 +317,7 @@ async def get_dlhd_events(client: httpx.AsyncClient) -> list[DLHDEvent]:
         "Accept": "application/json, text/plain, */*",
     }
 
-    resp = await request(client, SCHEDULE_URL, headers=headers)
+    resp = await request(client, SCHEDULE_URL, headers=headers, timeout=10.0)
     if not resp:
         log.error("Failed to fetch DaddyLive schedule JSON")
         return events
@@ -387,10 +359,12 @@ async def get_dlhd_events(client: httpx.AsyncClient) -> list[DLHDEvent]:
                     h, m = int(time_match.group(1)), int(time_match.group(2))
                     event_dt = now_utc.replace(hour=h, minute=m, second=0, microsecond=0)
 
+                # ৩ ঘণ্টার বেশি পুরানো ম্যাচ বাদ
                 if event_dt < now_utc - timedelta(hours=3):
                     continue
 
-                if event_dt > now_utc + timedelta(hours=24):
+                # অপ্টিমাইজেশন: শুধুমাত্র আগামী ৫ ঘণ্টার মধ্যে শুরু হওয়া এবং লাইভ ম্যাচগুলো ডিকোড হবে
+                if event_dt > now_utc + timedelta(hours=5):
                     continue
 
                 channels: list[DLHDChannel] = []
@@ -424,13 +398,13 @@ async def scrape() -> None:
     async with httpx.AsyncClient(
         headers={"User-Agent": UA},
         follow_redirects=True,
-        timeout=15.0,
+        timeout=10.0,
         http2=True,
     ) as client:
 
         raw_events = await get_dlhd_events(client)
         if not raw_events:
-            log.info("No events found in DaddyLive schedule")
+            log.info("No active events found in window")
             return
 
         current_state = []
@@ -445,7 +419,24 @@ async def scrape() -> None:
             log.info("No status change or new events. Exiting in 2 seconds.")
             return
 
-        log.info(f"Processing {len(raw_events)} DaddyLive event(s)...")
+        log.info(f"Processing {len(raw_events)} active DaddyLive event(s)...")
+
+        # ---------------------------------------------------------------------
+        # ডুপ্লিকেট চ্যানেল রিমুভ এবং ফুল প্যারালাল ফেচিং (Speed Booster)
+        # ---------------------------------------------------------------------
+        unique_channel_ids = {ch.channel_id for ev in raw_events for ch in ev.channels}
+        log.info(f"Decoding {len(unique_channel_ids)} unique channels concurrently...")
+
+        channel_map = {}
+
+        async def fetch_channel(c_id: str):
+            async with HTTP_SEMAPHORE:
+                res = await decode_dlhd_m3u8(client, c_id)
+                if res:
+                    channel_map[c_id] = res
+
+        # সব চ্যানেলের m3u8 একসাথে প্যারালালে ডিকোড হবে
+        await asyncio.gather(*(fetch_channel(cid) for cid in unique_channel_ids))
 
         final_playlist: list[dict] = []
 
@@ -453,13 +444,8 @@ async def scrape() -> None:
             event_channels = []
 
             for ch in ev.channels:
-                async def handler(c_id=ch.channel_id):
-                    return await decode_dlhd_m3u8(client, c_id)
-
-                result = await safe_process(handler, timeout=20)
-
-                if result:
-                    m3u8_url, referer = result
+                if ch.channel_id in channel_map:
+                    m3u8_url, referer = channel_map[ch.channel_id]
                     event_channels.append(
                         {
                             "channel_name": ch.channel_name,
@@ -478,7 +464,6 @@ async def scrape() -> None:
                 start_str = start_bst.strftime("%b %d, %Y, %I:%M:%S %p")
                 end_str = end_bst.strftime("%b %d, %Y, %I:%M:%S %p")
 
-                # স্মার্ট লোগো সেট করা হচ্ছে
                 event_logo = get_smart_logo(ev.sport, ev.title)
 
                 formatted_event = {
@@ -519,6 +504,7 @@ async def scrape() -> None:
 
         save_playlists(final_playlist)
         STATE_FILE.write_text(new_state, encoding="utf-8")
+        log.info("Playlist generation completed successfully!")
 
 
 if __name__ == "__main__":
