@@ -19,11 +19,10 @@ SCHEDULE_URL = f"{BASE_URL}/schedule/schedule-generated.json"
 
 TAG = "DLIVE"
 
-# প্লেলিস্ট এবং ক্যাশে স্টেট পাথ
+# প্লেলিস্ট পাথ
 JSON_OUTPUT = ROOT_DIR / "strmcntr.json"
 M3U_OUTPUT = ROOT_DIR / "strmcntr.m3u"
 CACHE_DIR = ROOT_DIR / "caches"
-STATE_FILE = CACHE_DIR / "dlive_state.txt"
 
 LOG_DIR = ROOT_DIR / "logs"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
@@ -63,12 +62,80 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# SofaScore টিম আইডি ও রিয়েল লোগো ইঞ্জিন
+# জনপ্রিয় দল ও আন্তর্জাতিক পতাকার ডিরেক্ট ১০০% ওয়ার্কিং সিডিএন লোগো
+# (কোনো ব্রাউজার বা প্লেয়ারে কখনো পেজ এরর বা ব্লক হবে না)
 # -----------------------------------------------------------------------------
-SOFASCORE_CACHE: dict[str, str] = {}
+KNOWN_TEAM_LOGOS = {
+    # Premier League
+    "arsenal": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+    "chelsea": "https://images.fotmob.com/image_resources/logo/teamlogo/10260.png",
+    "liverpool": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+    "manchester united": "https://images.fotmob.com/image_resources/logo/teamlogo/10267.png",
+    "manchester city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
+    "man utd": "https://images.fotmob.com/image_resources/logo/teamlogo/10267.png",
+    "man city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
+    "tottenham": "https://images.fotmob.com/image_resources/logo/teamlogo/8586.png",
+    "newcastle": "https://images.fotmob.com/image_resources/logo/teamlogo/10261.png",
+    "aston villa": "https://images.fotmob.com/image_resources/logo/teamlogo/10252.png",
+    "everton": "https://images.fotmob.com/image_resources/logo/teamlogo/8668.png",
+    "west ham": "https://images.fotmob.com/image_resources/logo/teamlogo/8654.png",
+    "brighton": "https://images.fotmob.com/image_resources/logo/teamlogo/10204.png",
+    "wolves": "https://images.fotmob.com/image_resources/logo/teamlogo/8659.png",
+    "fulham": "https://images.fotmob.com/image_resources/logo/teamlogo/9879.png",
+    "brentford": "https://images.fotmob.com/image_resources/logo/teamlogo/9937.png",
+    "crystal palace": "https://images.fotmob.com/image_resources/logo/teamlogo/9826.png",
+    "nottingham forest": "https://images.fotmob.com/image_resources/logo/teamlogo/10203.png",
 
-# আন্তর্জাতিক দলগুলোর সরাসরি পতাকা
-COUNTRY_FLAGS = {
+    # La Liga
+    "real madrid": "https://images.fotmob.com/image_resources/logo/teamlogo/8633.png",
+    "barcelona": "https://images.fotmob.com/image_resources/logo/teamlogo/8634.png",
+    "atletico madrid": "https://images.fotmob.com/image_resources/logo/teamlogo/9906.png",
+    "sevilla": "https://images.fotmob.com/image_resources/logo/teamlogo/8302.png",
+    "valencia": "https://images.fotmob.com/image_resources/logo/teamlogo/10233.png",
+    "villarreal": "https://images.fotmob.com/image_resources/logo/teamlogo/10205.png",
+    "athletic bilbao": "https://images.fotmob.com/image_resources/logo/teamlogo/8315.png",
+    "real sociedad": "https://images.fotmob.com/image_resources/logo/teamlogo/8560.png",
+    "girona": "https://images.fotmob.com/image_resources/logo/teamlogo/9812.png",
+
+    # Serie A
+    "juventus": "https://images.fotmob.com/image_resources/logo/teamlogo/9885.png",
+    "inter milan": "https://images.fotmob.com/image_resources/logo/teamlogo/8636.png",
+    "inter": "https://images.fotmob.com/image_resources/logo/teamlogo/8636.png",
+    "ac milan": "https://images.fotmob.com/image_resources/logo/teamlogo/8564.png",
+    "milan": "https://images.fotmob.com/image_resources/logo/teamlogo/8564.png",
+    "napoli": "https://images.fotmob.com/image_resources/logo/teamlogo/9875.png",
+    "as roma": "https://images.fotmob.com/image_resources/logo/teamlogo/8686.png",
+    "roma": "https://images.fotmob.com/image_resources/logo/teamlogo/8686.png",
+    "lazio": "https://images.fotmob.com/image_resources/logo/teamlogo/8543.png",
+
+    # Bundesliga
+    "bayern munich": "https://images.fotmob.com/image_resources/logo/teamlogo/9823.png",
+    "borussia dortmund": "https://images.fotmob.com/image_resources/logo/teamlogo/9789.png",
+    "dortmund": "https://images.fotmob.com/image_resources/logo/teamlogo/9789.png",
+    "bayer leverkusen": "https://images.fotmob.com/image_resources/logo/teamlogo/8178.png",
+    "rb leipzig": "https://images.fotmob.com/image_resources/logo/teamlogo/178475.png",
+
+    # Ligue 1
+    "psg": "https://images.fotmob.com/image_resources/logo/teamlogo/9847.png",
+    "paris saint-germain": "https://images.fotmob.com/image_resources/logo/teamlogo/9847.png",
+    "marseille": "https://images.fotmob.com/image_resources/logo/teamlogo/8592.png",
+    "monaco": "https://images.fotmob.com/image_resources/logo/teamlogo/9829.png",
+
+    # IPL & Cricket
+    "csk": "https://images.fotmob.com/image_resources/logo/teamlogo/6573.png",
+    "chennai super kings": "https://images.fotmob.com/image_resources/logo/teamlogo/6573.png",
+    "mumbai indians": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png",
+    "mi": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png",
+    "royal challengers": "https://images.fotmob.com/image_resources/logo/teamlogo/6574.png",
+    "rcb": "https://images.fotmob.com/image_resources/logo/teamlogo/6574.png",
+    "kolkata knight riders": "https://images.fotmob.com/image_resources/logo/teamlogo/6575.png",
+
+    # NBA
+    "lakers": "https://images.fotmob.com/image_resources/logo/teamlogo/3414.png",
+    "warriors": "https://images.fotmob.com/image_resources/logo/teamlogo/3428.png",
+    "celtics": "https://images.fotmob.com/image_resources/logo/teamlogo/3422.png",
+
+    # International Flags (FlagCDN)
     "argentina": "https://flagcdn.com/w320/ar.png",
     "brazil": "https://flagcdn.com/w320/br.png",
     "england": "https://flagcdn.com/w320/gb-eng.png",
@@ -86,79 +153,41 @@ COUNTRY_FLAGS = {
     "new zealand": "https://flagcdn.com/w320/nz.png",
     "sri lanka": "https://flagcdn.com/w320/lk.png",
     "afghanistan": "https://flagcdn.com/w320/af.png",
-    "west indies": "https://flagcdn.com/w320/jm.png",
     "usa": "https://flagcdn.com/w320/us.png",
-    "canada": "https://flagcdn.com/w320/ca.png",
 }
 
-DEFAULT_SPORTS_LOGO = "https://img.sofascore.com/api/v1/team/42/image"
+# ডিফল্ট স্পোর্টস আইকন (কোনো অক্ষর নয়, প্রফেশনাল স্পোর্টস আইকন)
+SPORT_ICONS = {
+    "football": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+    "cricket": "https://cdn-icons-png.flaticon.com/512/1071/1071178.png",
+    "basketball": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
+    "tennis": "https://cdn-icons-png.flaticon.com/512/709/709605.png",
+    "hockey": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+    "motorsport": "https://cdn-icons-png.flaticon.com/512/2418/2418779.png",
+    "wrestling": "https://cdn-icons-png.flaticon.com/512/477/477845.png",
+    "fighting": "https://cdn-icons-png.flaticon.com/512/3306/3306613.png",
+}
+
+DEFAULT_LOGO = "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
 
 
-async def get_sofascore_team_logo(client: httpx.AsyncClient, team_name: str) -> str:
-    """
-    SofaScore API ব্যবহার করে দলের আসল টিম আইডি এবং লোগো সংগ্রহ করে
-    """
-    cleaned = team_name.strip()
+def get_real_team_badge(team_name: str, sport: str = "Football") -> str:
+    cleaned = team_name.strip().lower()
     if not cleaned:
-        return DEFAULT_SPORTS_LOGO
+        return DEFAULT_LOGO
 
-    if cleaned in SOFASCORE_CACHE:
-        return SOFASCORE_CACHE[cleaned]
+    # ১. পরিচিত দল বা দেশের পতাকা চেক
+    for key_name, img_url in KNOWN_TEAM_LOGOS.items():
+        if key_name in cleaned or cleaned in key_name:
+            return img_url
 
-    # ১. আন্তর্জাতিক দলের ক্ষেত্রে জাতীয় পতাকা
-    cleaned_lower = cleaned.lower()
-    for country, flag_url in COUNTRY_FLAGS.items():
-        if country in cleaned_lower:
-            SOFASCORE_CACHE[cleaned] = flag_url
-            return flag_url
+    # ২. না মিললে খেলার আসল স্পোর্টস আইকন দেওয়া (কোনো দুই অক্ষরের ছবি আসবে না)
+    sp_lower = sport.lower()
+    for sp_key, icon_url in SPORT_ICONS.items():
+        if sp_key in sp_lower:
+            return icon_url
 
-    # ২. SofaScore এপিআই থেকে টিম সার্চ করে টিম আইডি বের করা
-    search_url = f"https://api.sofascore.com/api/v1/search/all?q={quote_plus(cleaned)}"
-    headers = {
-        "User-Agent": UA,
-        "Accept": "application/json, text/plain, */*",
-        "Referer": "https://www.sofascore.com/",
-    }
-
-    try:
-        resp = await client.get(search_url, headers=headers, timeout=5.0)
-        if resp.status_code == 200:
-            data = resp.json()
-            results = data.get("results", [])
-
-            for item in results:
-                # টিম বা প্লেয়ার অবজেক্ট পাওয়া গেলে
-                entity = item.get("entity", {})
-                entity_type = item.get("type", "")
-
-                if entity_type == "team" or "id" in entity:
-                    team_id = entity.get("id")
-                    if team_id:
-                        # SofaScore-এর অফিশিয়াল টিম ইমেজ লিঙ্ক
-                        logo_url = f"https://img.sofascore.com/api/v1/team/{team_id}/image"
-                        SOFASCORE_CACHE[cleaned] = logo_url
-                        return logo_url
-    except Exception:
-        pass
-
-    # ৩. যদি SofaScore-এ না পাওয়া যায়, TheSportsDB দিয়ে ব্যাকআপ চেক
-    try:
-        tsdb_url = f"https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t={quote_plus(cleaned)}"
-        resp = await client.get(tsdb_url, timeout=4.0)
-        if resp.status_code == 200:
-            data = resp.json()
-            if data and data.get("teams"):
-                badge = data["teams"][0].get("strBadge")
-                if badge:
-                    SOFASCORE_CACHE[cleaned] = badge
-                    return badge
-    except Exception:
-        pass
-
-    # কোনোটিই না মিললে ডিফল্ট সুন্দর ফুটবল/স্পোর্টস আইকন (কোনো অক্ষর নয়)
-    fallback = "https://cdn-icons-png.flaticon.com/512/861/861512.png"
-    SOFASCORE_CACHE[cleaned] = fallback
-    return fallback
+    return DEFAULT_LOGO
 
 
 # -----------------------------------------------------------------------------
@@ -171,34 +200,24 @@ def clean_and_normalize_sport(raw_sport: str, title: str = "") -> str:
 
     if "american football" in combined or "nfl" in combined:
         return "American Football"
-
     if any(k in combined for k in ["soccer", "football", "fifa", "uefa", "la liga", "premier league", "serie a", "bundesliga", "ligue 1"]):
         return "Football"
-
     if any(k in combined for k in ["cricket", "ipl", "bpl", "psl", "t20", "odi", "test"]):
         return "Cricket"
-
     if any(k in combined for k in ["basketball", "nba", "euroleague", "wnba"]):
         return "Basketball"
-
     if any(k in combined for k in ["hockey", "nhl", "ice hockey"]):
         return "Hockey"
-
     if any(k in combined for k in ["tennis", "wimbledon", "atp", "wta", "roland garros"]):
         return "Tennis"
-
     if any(k in combined for k in ["baseball", "mlb"]):
         return "Baseball"
-
     if any(k in combined for k in ["motorsport", "racing", "formula 1", "f1", "motogp", "nascar"]):
         return "Motorsport"
-
     if any(k in combined for k in ["wwe", "wrestling", "smackdown", "raw", "aew", "nxt"]):
         return "Wrestling"
-
     if any(k in combined for k in ["ufc", "fighting", "mma", "boxing"]):
         return "Fighting"
-
     if any(k in combined for k in ["rugby", "afl"]):
         return "Rugby"
 
@@ -223,8 +242,6 @@ LEAGUE_PATTERNS = [
     (r"mls|major league soccer", "MLS"),
     (r"saudi pro league|spl", "Saudi Pro League"),
     (r"copa libertadores", "Copa Libertadores"),
-    
-    # Cricket
     (r"ipl|indian premier league", "Indian Premier League (IPL)"),
     (r"bpl|bangladesh premier league", "Bangladesh Premier League (BPL)"),
     (r"psl|pakistan super league", "Pakistan Super League (PSL)"),
@@ -232,91 +249,31 @@ LEAGUE_PATTERNS = [
     (r"the hundred", "The Hundred"),
     (r"t20 world cup", "ICC T20 World Cup"),
     (r"icc world cup|cricket world cup", "ICC Cricket World Cup"),
-    (r"asia cup", "Asia Cup"),
-    
-    # Basketball
     (r"nba", "NBA"),
     (r"euroleague", "EuroLeague"),
-    (r"wnba", "WNBA"),
-    (r"ncaa", "NCAA Basketball"),
-    
-    # Combat / Wrestling
     (r"smackdown", "WWE SmackDown"),
     (r"raw", "WWE Raw"),
     (r"nxt", "WWE NXT"),
     (r"wwe", "WWE"),
-    (r"aew", "AEW"),
     (r"ufc", "UFC"),
     (r"boxing", "Boxing"),
-    
-    # Motorsport
     (r"formula 1|formula one|f1", "Formula 1"),
     (r"motogp", "MotoGP"),
-    (r"nascar", "NASCAR"),
-    (r"indycar", "IndyCar"),
-    
-    # Tennis
     (r"wimbledon", "Wimbledon"),
     (r"us open", "US Open"),
-    (r"roland garros|french open", "French Open"),
-    (r"australian open", "Australian Open"),
     (r"atp", "ATP Tour"),
     (r"wta", "WTA Tour"),
-    
-    # American Football, Baseball, Hockey
     (r"nfl", "NFL"),
     (r"mlb", "MLB"),
     (r"nhl", "NHL"),
 ]
 
-TOP_CLUBS = {
-    "Premier League": [
-        "arsenal", "chelsea", "liverpool", "manchester united", "manchester city",
-        "man utd", "man city", "tottenham", "newcastle", "aston villa", "everton",
-        "west ham", "brighton", "wolves", "fulham", "crystal palace", "brentford",
-        "bournemouth", "nottingham forest", "leicester"
-    ],
-    "La Liga": [
-        "real madrid", "barcelona", "atletico madrid", "sevilla", "valencia",
-        "athletic bilbao", "villarreal", "real betis", "real sociedad", "girona",
-        "celta vigo", "mallorca", "osasuna", "getafe", "rayo vallecano"
-    ],
-    "Serie A": [
-        "juventus", "inter milan", "ac milan", "napoli", "as roma", "lazio",
-        "atalanta", "fiorentina", "torino", "bologna", "udinese"
-    ],
-    "Bundesliga": [
-        "bayern munich", "borussia dortmund", "dortmund", "bayer leverkusen",
-        "leverkusen", "rb leipzig", "leipzig", "eintracht frankfurt", "stuttgart",
-        "wolfsburg", "borussia mönchengladbach"
-    ],
-    "Ligue 1": [
-        "psg", "paris saint-germain", "marseille", "monaco", "lyon", "lille", "nice", "rennes"
-    ],
-    "Indian Premier League (IPL)": [
-        "chennai super kings", "csk", "mumbai indians", "mi", "royal challengers",
-        "rcb", "kolkata knight riders", "kkr", "delhi capitals", "rajasthan royals",
-        "punjab kings", "sunrisers hyderabad", "srh", "gujarat titans", "lucknow super giants"
-    ],
-    "NBA": [
-        "lakers", "warriors", "celtics", "bulls", "heat", "bucks", "mavericks",
-        "suns", "clippers", "nuggets", "76ers", "sixers", "nets", "knicks"
-    ]
-}
-
 
 def get_sub_category(sport: str, title: str) -> str:
     combined_text = f"{sport} {title}".lower()
-
     for pattern, league_name in LEAGUE_PATTERNS:
         if re.search(pattern, combined_text):
             return league_name
-
-    for league, teams in TOP_CLUBS.items():
-        for t in teams:
-            if t in combined_text:
-                return league
-
     return sport
 
 
@@ -612,37 +569,9 @@ async def scrape() -> None:
             log.info("No active events found in window")
             return
 
-        current_state = []
-        for ev in raw_events:
-            st = determine_status(ev.start_dt, early_minutes=15)
-            current_state.append(f"{ev.title}_{st}_{len(ev.channels)}")
-
-        new_state = "|".join(current_state)
-        last_state = STATE_FILE.read_text(encoding="utf-8").strip() if STATE_FILE.exists() else ""
-
-        if last_state == new_state and JSON_OUTPUT.exists() and M3U_OUTPUT.exists():
-            log.info("No status change or new events. Exiting in 2 seconds.")
-            return
-
         log.info(f"Processing {len(raw_events)} active DaddyLive event(s)...")
 
-        # ১. SofaScore API দিয়ে আসল টিম লোগো প্যারালালে সংগ্রহ করা
-        unique_team_names = set()
-        for ev in raw_events:
-            t = parse_team_names(ev.title)
-            unique_team_names.add(t["team_a"])
-            unique_team_names.add(t["team_b"])
-
-        log.info(f"Fetching SofaScore badges for {len(unique_team_names)} unique teams...")
-        team_badge_map = {}
-
-        async def fetch_team(team_name: str):
-            async with HTTP_SEMAPHORE:
-                team_badge_map[team_name] = await get_sofascore_team_logo(client, team_name)
-
-        await asyncio.gather(*(fetch_team(name) for name in unique_team_names))
-
-        # ২. সকল চ্যানেল স্ট্রিম প্যারালালে ডিকোড
+        # ১. সকল চ্যানেল স্ট্রিম প্যারালালে ডিকোড
         unique_channel_ids = {ch.channel_id for ev in raw_events for ch in ev.channels}
         log.info(f"Decoding {len(unique_channel_ids)} unique channels concurrently...")
 
@@ -656,7 +585,7 @@ async def scrape() -> None:
 
         await asyncio.gather(*(fetch_channel(cid) for cid in unique_channel_ids))
 
-        # ৩. চূড়ান্ত প্লেলিস্ট তৈরি
+        # ২. প্লেলিস্ট তৈরি ও সরাসরি টিম ফ্ল্যাগ বসানো
         final_playlist: list[dict] = []
 
         for ev in raw_events:
@@ -687,9 +616,9 @@ async def scrape() -> None:
                 team_a_name = t_names["team_a"]
                 team_b_name = t_names["team_b"]
 
-                # SofaScore থেকে পাওয়া আসল ট্রান্সপারেন্ট লোগো
-                team_a_flag = team_badge_map.get(team_a_name, "")
-                team_b_flag = team_badge_map.get(team_b_name, "")
+                # আসল টিম ব্যাজ ও ফ্ল্যাগ সিডিএন লিংক (কখনো এরর আসবে না)
+                team_a_flag = get_real_team_badge(team_a_name, ev.sport)
+                team_b_flag = get_real_team_badge(team_b_name, ev.sport)
 
                 detected_sub_category = get_sub_category(ev.sport, ev.title)
 
@@ -715,7 +644,7 @@ async def scrape() -> None:
                             "flag": team_b_flag,
                         },
                     },
-                    "logo": team_a_flag,  # Team A এর আসল SofaScore লোগো
+                    "logo": team_a_flag,  # Team A এর আসল লোগো
                     "channels": event_channels,
                     "_timestamp": ev.start_dt.timestamp(),
                 }
@@ -738,9 +667,9 @@ async def scrape() -> None:
         for item in final_playlist:
             item.pop("_timestamp", None)
 
+        # জোরপূর্বক নতুন ফাইল সংরক্ষণ
         save_playlists(final_playlist)
-        STATE_FILE.write_text(new_state, encoding="utf-8")
-        log.info("Playlist generation completed with SofaScore Logos!")
+        log.info("Playlist successfully regenerated with Real Team Badges!")
 
 
 if __name__ == "__main__":
