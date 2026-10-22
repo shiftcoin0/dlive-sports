@@ -15,6 +15,8 @@ GH_REPO = os.getenv("GH_REPO", "dlive-sports")
 PORT = int(os.getenv("PORT", 10000))
 
 SCHEDULE_URL = "https://dlive.sx/schedule/schedule-generated.json"
+STATE_FILE = "last_state.txt"
+
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -28,26 +30,31 @@ logging.basicConfig(
 )
 log = logging.getLogger("Watcher")
 
-# Render-এর হেলথ চেকের জন্য ডামি ওয়েব সার্ভার (Render Free Web Service সচল রাখতে)
+
+# Render হেলথ চেক সার্ভার
 class HealthServer(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.send_header("Content-type", "application/json")
         self.end_headers()
         response = {
-            "status": "running",
-            "service": "DLHD Schedule Watcher",
+            "status": "healthy",
+            "service": "DLHD Watcher",
+            "interval": "5 minutes",
             "timestamp": datetime.now(timezone.utc).isoformat()
         }
         self.wfile.write(json.dumps(response).encode("utf-8"))
 
+    def log_message(self, format, *args):
+        pass  # কনসোলে অপ্রয়োজনীয় হেলথ চেক লগ বন্ধ রাখতে
+
+
 def start_health_server():
     server = HTTPServer(("0.0.0.0", PORT), HealthServer)
-    log.info(f"Health server running on port {PORT}")
     server.serve_forever()
 
 
-# ১৫ মিনিট আগে লাইভ ক্যালকুলেশন
+# ১৫ মিনিট আগে লাইভ স্ট্যাটাস ক্যালকুলেশন
 def get_event_status(start_dt: datetime) -> str:
     now_utc = datetime.now(timezone.utc)
     start_utc = start_dt.astimezone(timezone.utc)
@@ -61,10 +68,10 @@ def get_event_status(start_dt: datetime) -> str:
     return "ENDED"
 
 
-# GitHub Trigger কল করার ফাংশন
+# GitHub Trigger কল করা
 async def trigger_github(client: httpx.AsyncClient):
     if not GH_TOKEN:
-        log.error("GH_TOKEN environment variable is missing!")
+        log.error("GH_TOKEN is missing!")
         return False
 
     url = f"https://api.github.com/repos/{GH_OWNER}/{GH_REPO}/dispatches"
@@ -95,9 +102,18 @@ async def trigger_github(client: httpx.AsyncClient):
         return False
 
 
-# মূল ওয়াচার লুপ (প্রতি ৫ মিনিট পর পর চলবে)
+# মূল ওয়াচার লুপ (প্রতি ৫ মিনিট পর পর চেক করবে)
 async def watch_schedule():
+    # ফাইল থেকে পূর্বের স্টেট লোড করা (রিস্টার্ট হলেও যেন মনে থাকে)
     last_state = ""
+    if os.path.exists(STATE_FILE):
+        try:
+            with open(STATE_FILE, "r", encoding="utf-8") as f:
+                last_state = f.read().strip()
+            log.info("Loaded previous state from file.")
+        except Exception:
+            last_state = ""
+
     log.info("Schedule Watcher started. Polling every 5 minutes...")
 
     async with httpx.AsyncClient(headers={"User-Agent": UA}, timeout=15.0) as client:
@@ -113,7 +129,6 @@ async def watch_schedule():
                 now_utc = datetime.now(timezone.utc)
                 current_events = []
 
-                # শিডিউল বিশ্লেষণ
                 for date_key, category_obj in schedule_data.items():
                     items = category_obj if isinstance(category_obj, dict) else {date_key: category_obj}
 
@@ -142,43 +157,41 @@ async def watch_schedule():
                             if event_dt < now_utc - timedelta(hours=3):
                                 continue
 
-                            # স্ট্যাটাস নির্ধারণ (১৫ মিনিট আগে LIVE হবে)
                             status = get_event_status(event_dt)
                             current_events.append(f"{title}|{status}|{len(channels)}")
 
-                # বর্তমান অবস্থার হ্যাশ/স্টেট স্ট্রিং
                 new_state = "#".join(sorted(current_events))
 
-                # প্রথমবার রান হলে স্টেট সেভ করে ট্রিগার পাঠানো
+                # ১. প্রথমবার চালু হলে স্টেট সেভ হবে (কোনো ফলস লুপ ট্রিগার হবে না)
                 if last_state == "":
-                    log.info(f"Initial run: Found {len(current_events)} active events. Syncing GitHub...")
-                    success = await trigger_github(client)
-                    if success:
-                        last_state = new_state
+                    log.info(f"Initialized with {len(current_events)} active events.")
+                    last_state = new_state
+                    with open(STATE_FILE, "w", encoding="utf-8") as f:
+                        f.write(new_state)
 
-                # যদি কোনো পরিবর্তন বা লাইভ স্ট্যাটাস আপডেট ঘটে
+                # ২. যদি কোনো ম্যাচ লাইভ হয় (১৫ মিনিট আগে) অথবা নতুন ম্যাচ যোগ/বাদ হয়
                 elif new_state != last_state:
-                    log.info("Change detected! (Event added/removed or match reached 15-min LIVE window)")
+                    log.info("Real change detected! Triggering GitHub Action...")
                     success = await trigger_github(client)
                     if success:
                         last_state = new_state
+                        with open(STATE_FILE, "w", encoding="utf-8") as f:
+                            f.write(new_state)
                 else:
-                    log.info("No status change or source update. Skipping GitHub trigger.")
+                    log.info("No change detected. Everything up-to-date.")
 
             except Exception as e:
                 log.error(f"Watcher loop exception: {e}")
 
-            # ৫ মিনিট অপেক্ষা (৩০০ সেকেন্ড)
+            # ঠিক ৫ মিনিট (৩০০ সেকেন্ড) অপেক্ষা করবে
             await asyncio.sleep(300)
 
 
 def main():
-    # ব্যাকগ্রাউন্ডে হেলথ সার্ভার চালানো
     t = threading.Thread(target=start_health_server, daemon=True)
     t.start()
-
-    # মূল লুপ রান করা
     asyncio.run(watch_schedule())
+
 
 if __name__ == "__main__":
     main()
