@@ -1,84 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 04:37:58 AM",
-  "event_count": 58,
+  "last_updated": "Oct 23, 2026, 04:42:53 AM",
+  "event_count": 57,
   "events": {
     "events": [
-      {
-        "title": "Premier League Darts : Humphries, Luke vs. van Gerwen, Michael",
-        "sport": "Football",
-        "sub_category": "Premier League",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "premier-league-darts-humphries-luke-vs-van-gerwen-michael",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 01:40:00 AM",
-          "end_time_bst": "Oct 23, 2026, 04:40:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Premier League Darts : Humphries, Luke",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png"
-          },
-          "team_b": {
-            "name": "van Gerwen, Michael",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png",
-        "channels": [
-          {
-            "channel_name": "Sky Sports Action UK",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium37/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium37/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport1 DE",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium641/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium641/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sports Main Event",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium38/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium38/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "TV3 Sport Denmark",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium809/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium809/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sport Select NZ",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium587/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium587/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "UEFA Nations League : Simulcast",
         "sport": "Football",
