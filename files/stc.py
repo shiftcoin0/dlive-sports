@@ -5,7 +5,7 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import quote_plus, urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 import httpx
@@ -35,7 +35,6 @@ UA = (
     "Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
 )
 
-# একসাথে ১৫টি প্যারালাল রিকোয়েস্ট হ্যান্ডেল করার সেমাফোর
 HTTP_SEMAPHORE = asyncio.Semaphore(15)
 BST_TZ = ZoneInfo("Asia/Dhaka")
 
@@ -63,53 +62,89 @@ if not log.handlers:
     log.propagate = False
 
 
-DEFAULT_LIVE_LOGO = "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png"
-
-SPORT_LOGOS = {
-    "soccer": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
-    "football": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
-    "cricket": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Cricketball.svg/500px-Cricketball.svg.png",
-    "basketball": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
-    "tennis": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Tennis_ball.svg/500px-Tennis_ball.svg.png",
-    "motorsport": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/500px-F1.svg.png",
-    "racing": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/500px-F1.svg.png",
-    "baseball": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
-    "hockey": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
-    "rugby": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Rugby_ball.svg/500px-Rugby_ball.svg.png",
-    "wrestling": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/500px-WWE_Logo.svg.png",
-    "fighting": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/UFC_logo.svg/500px-UFC_logo.svg.png",
-    "mma": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/UFC_logo.svg/500px-UFC_logo.svg.png",
-    "boxing": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/UFC_logo.svg/500px-UFC_logo.svg.png",
-    "american football": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/National_Football_League_logo.svg/500px-National_Football_League_logo.svg.png",
+# -----------------------------------------------------------------------------
+# আন্তর্জাতিক পতাকার ওপেন সিডিএন (ব্রাউজারে সরাসরি ১০০% ওপেন হবে)
+# -----------------------------------------------------------------------------
+COUNTRY_FLAGS = {
+    "argentina": "https://flagcdn.com/w320/ar.png",
+    "brazil": "https://flagcdn.com/w320/br.png",
+    "england": "https://flagcdn.com/w320/gb-eng.png",
+    "france": "https://flagcdn.com/w320/fr.png",
+    "germany": "https://flagcdn.com/w320/de.png",
+    "spain": "https://flagcdn.com/w320/es.png",
+    "italy": "https://flagcdn.com/w320/it.png",
+    "portugal": "https://flagcdn.com/w320/pt.png",
+    "netherlands": "https://flagcdn.com/w320/nl.png",
+    "india": "https://flagcdn.com/w320/in.png",
+    "pakistan": "https://flagcdn.com/w320/pk.png",
+    "bangladesh": "https://flagcdn.com/w320/bd.png",
+    "australia": "https://flagcdn.com/w320/au.png",
+    "south africa": "https://flagcdn.com/w320/za.png",
+    "new zealand": "https://flagcdn.com/w320/nz.png",
+    "sri lanka": "https://flagcdn.com/w320/lk.png",
+    "afghanistan": "https://flagcdn.com/w320/af.png",
+    "west indies": "https://flagcdn.com/w320/jm.png",
+    "usa": "https://flagcdn.com/w320/us.png",
+    "canada": "https://flagcdn.com/w320/ca.png",
 }
 
-TOURNAMENT_KEYWORDS = [
-    (r"premier league|epl", "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/500px-Premier_League_Logo.svg.png"),
-    (r"champions league|ucl", "https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/UEFA_Champions_League_logo_2.svg/500px-UEFA_Champions_League_logo_2.svg.png"),
-    (r"la liga", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/LaLiga_logo_2023.svg/500px-LaLiga_logo_2023.svg.png"),
-    (r"serie a", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Serie_A_logo_2019.svg/500px-Serie_A_logo_2019.svg.png"),
-    (r"bundesliga", "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Bundesliga_logo_%282017%29.svg/500px-Bundesliga_logo_%282017%29.svg.png"),
-    (r"ipl|indian premier league", "https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/500px-Indian_Premier_League_Official_Logo.svg.png"),
-    (r"nba", "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/National_Basketball_Association_logo.svg/500px-National_Basketball_Association_logo.svg.png"),
-    (r"ufc", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/UFC_logo.svg/500px-UFC_logo.svg.png"),
-    (r"wwe|smackdown|raw|nxt", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/500px-WWE_Logo.svg.png"),
-    (r"f1|formula 1", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/500px-F1.svg.png"),
-    (r"nfl", "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/National_Football_League_logo.svg/500px-National_Football_League_logo.svg.png"),
-]
+# মেমোরি ক্যাশ যাতে একই দলের জন্য বারবার রিকোয়েস্ট না যায়
+TEAM_BADGE_CACHE: dict[str, str] = {}
 
 
-def get_smart_logo(sport: str, title: str) -> str:
-    title_lower = title.lower()
-    for pattern, logo_url in TOURNAMENT_KEYWORDS:
-        if re.search(pattern, title_lower):
-            return logo_url
+async def get_team_badge(client: httpx.AsyncClient, team_name: str) -> str:
+    """
+    টিমের আসল লোগো/ফ্ল্যাগ খোঁজার ফাংশন (TheSportsDB API + FlagCDN)
+    """
+    cleaned = team_name.strip()
+    if not cleaned:
+        return "https://ui-avatars.com/api/?name=Live+Match&background=0D8ABC&color=fff&size=200"
 
-    sport_lower = sport.lower()
-    for sp_key, logo_url in SPORT_LOGOS.items():
-        if sp_key in sport_lower:
-            return logo_url
+    # ক্যাশে থাকলে সেখান থেকে নেওয়া
+    if cleaned in TEAM_BADGE_CACHE:
+        return TEAM_BADGE_CACHE[cleaned]
 
-    return DEFAULT_LIVE_LOGO
+    # ১. আন্তর্জাতিক দল কিনা চেক
+    name_lower = cleaned.lower()
+    for country, flag_url in COUNTRY_FLAGS.items():
+        if country in name_lower:
+            TEAM_BADGE_CACHE[cleaned] = flag_url
+            return flag_url
+
+    # ২. TheSportsDB ফ্রি API দিয়ে ক্লাব ব্যাজ সার্চ করা
+    api_url = f"https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t={quote_plus(cleaned)}"
+    try:
+        resp = await client.get(api_url, timeout=5.0)
+        if resp.status_code == 200:
+            data = resp.json()
+            if data and data.get("teams"):
+                badge = data["teams"][0].get("strBadge")
+                if badge:
+                    TEAM_BADGE_CACHE[cleaned] = badge
+                    return badge
+    except Exception:
+        pass
+
+    # ৩. কোনোটিই না পাওয়া গেলে সুন্দর এইচডি ক্রিয়েটিভ স্পোর্টস ব্যাজ (কোনোদিন এরর দিবে না)
+    fallback_badge = f"https://ui-avatars.com/api/?name={quote_plus(cleaned)}&background=0D8ABC&color=fff&size=200&bold=true&format=png"
+    TEAM_BADGE_CACHE[cleaned] = fallback_badge
+    return fallback_badge
+
+
+def parse_team_names(title: str) -> dict[str, str]:
+    delimiters = [" vs. ", " vs ", " - ", " @ "]
+    for d in delimiters:
+        if d in title.lower():
+            parts = re.split(re.escape(d), title, maxsplit=1, flags=re.IGNORECASE)
+            if len(parts) == 2:
+                return {
+                    "team_a": parts[0].strip(),
+                    "team_b": parts[1].strip(),
+                }
+    return {
+        "team_a": title.strip(),
+        "team_b": title.strip(),
+    }
 
 
 @dataclass(slots=True)
@@ -129,22 +164,6 @@ class DLHDEvent:
 def create_slug(text: str) -> str:
     text = text.lower().strip()
     return re.sub(r"[\W_]+", "-", text).strip("-")
-
-
-def parse_teams(title: str) -> dict:
-    delimiters = [" vs. ", " vs ", " - ", " @ "]
-    for d in delimiters:
-        if d in title.lower():
-            parts = re.split(re.escape(d), title, maxsplit=1, flags=re.IGNORECASE)
-            if len(parts) == 2:
-                return {
-                    "team_a": {"name": parts[0].strip()},
-                    "team_b": {"name": parts[1].strip()},
-                }
-    return {
-        "team_a": {"name": title.strip()},
-        "team_b": {"name": title.strip()},
-    }
 
 
 def determine_status(start_dt: datetime, early_minutes: int = 15) -> str:
@@ -232,9 +251,6 @@ async def request(
         return None
 
 
-# -----------------------------------------------------------------------------
-# ডাইনামিক DaddyLive .m3u8 ডিকোডার (দ্রুত রেসপন্সের জন্য অপ্টিমাইজড)
-# -----------------------------------------------------------------------------
 async def decode_dlhd_m3u8(
     client: httpx.AsyncClient,
     channel_id: str,
@@ -359,11 +375,9 @@ async def get_dlhd_events(client: httpx.AsyncClient) -> list[DLHDEvent]:
                     h, m = int(time_match.group(1)), int(time_match.group(2))
                     event_dt = now_utc.replace(hour=h, minute=m, second=0, microsecond=0)
 
-                # ৩ ঘণ্টার বেশি পুরানো ম্যাচ বাদ
                 if event_dt < now_utc - timedelta(hours=3):
                     continue
 
-                # অপ্টিমাইজেশন: শুধুমাত্র আগামী ৫ ঘণ্টার মধ্যে শুরু হওয়া এবং লাইভ ম্যাচগুলো ডিকোড হবে
                 if event_dt > now_utc + timedelta(hours=5):
                     continue
 
@@ -422,7 +436,25 @@ async def scrape() -> None:
         log.info(f"Processing {len(raw_events)} active DaddyLive event(s)...")
 
         # ---------------------------------------------------------------------
-        # ডুপ্লিকেট চ্যানেল রিমুভ এবং ফুল প্যারালাল ফেচিং (Speed Booster)
+        # ১. সকল টিমের ফ্ল্যাগ/ব্যাজ একসাথে প্যারালালে সংগ্রহ করা
+        # ---------------------------------------------------------------------
+        unique_team_names = set()
+        for ev in raw_events:
+            t = parse_team_names(ev.title)
+            unique_team_names.add(t["team_a"])
+            unique_team_names.add(t["team_b"])
+
+        log.info(f"Fetching badges for {len(unique_team_names)} unique teams...")
+        team_badge_map = {}
+
+        async def fetch_team(team_name: str):
+            async with HTTP_SEMAPHORE:
+                team_badge_map[team_name] = await get_team_badge(client, team_name)
+
+        await asyncio.gather(*(fetch_team(name) for name in unique_team_names))
+
+        # ---------------------------------------------------------------------
+        # ২. সকল চ্যানেল স্ট্রিম একসাথে প্যারালালে ডিকোড করা
         # ---------------------------------------------------------------------
         unique_channel_ids = {ch.channel_id for ev in raw_events for ch in ev.channels}
         log.info(f"Decoding {len(unique_channel_ids)} unique channels concurrently...")
@@ -435,9 +467,11 @@ async def scrape() -> None:
                 if res:
                     channel_map[c_id] = res
 
-        # সব চ্যানেলের m3u8 একসাথে প্যারালালে ডিকোড হবে
         await asyncio.gather(*(fetch_channel(cid) for cid in unique_channel_ids))
 
+        # ---------------------------------------------------------------------
+        # ৩. চূড়ান্ত প্লেলিস্ট তৈরি
+        # ---------------------------------------------------------------------
         final_playlist: list[dict] = []
 
         for ev in raw_events:
@@ -464,7 +498,16 @@ async def scrape() -> None:
                 start_str = start_bst.strftime("%b %d, %Y, %I:%M:%S %p")
                 end_str = end_bst.strftime("%b %d, %Y, %I:%M:%S %p")
 
-                event_logo = get_smart_logo(ev.sport, ev.title)
+                # টিম নেম এবং সংশ্লিষ্ট ফ্ল্যাগ নির্ধারণ
+                t_names = parse_team_names(ev.title)
+                team_a_name = t_names["team_a"]
+                team_b_name = t_names["team_b"]
+
+                team_a_flag = team_badge_map.get(team_a_name, "")
+                team_b_flag = team_badge_map.get(team_b_name, "")
+
+                # টিম A এর ফ্ল্যাগ/লোগোটিকে মূল লোগো হিসেবে সেট করা
+                event_logo = team_a_flag
 
                 formatted_event = {
                     "title": ev.title,
@@ -478,8 +521,17 @@ async def scrape() -> None:
                         "start_time_bst": start_str,
                         "end_time_bst": end_str,
                     },
-                    "teams": parse_teams(ev.title),
-                    "logo": event_logo,
+                    "teams": {
+                        "team_a": {
+                            "name": team_a_name,
+                            "flag": team_a_flag,
+                        },
+                        "team_b": {
+                            "name": team_b_name,
+                            "flag": team_b_flag,
+                        },
+                    },
+                    "logo": event_logo,  # Team A এর ইমেজ মূল লোগোতে সেট হলো
                     "channels": event_channels,
                     "_timestamp": ev.start_dt.timestamp(),
                 }
@@ -504,7 +556,7 @@ async def scrape() -> None:
 
         save_playlists(final_playlist)
         STATE_FILE.write_text(new_state, encoding="utf-8")
-        log.info("Playlist generation completed successfully!")
+        log.info("Playlist generation with Real Team Logos completed successfully!")
 
 
 if __name__ == "__main__":
