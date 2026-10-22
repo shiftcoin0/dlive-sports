@@ -63,57 +63,142 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# স্পোর্টস ক্লিন এবং স্ট্যান্ডার্ড নাম রূপান্তরকারী (Sport Normalizer)
+# SofaScore টিম আইডি ও রিয়েল লোগো ইঞ্জিন
+# -----------------------------------------------------------------------------
+SOFASCORE_CACHE: dict[str, str] = {}
+
+# আন্তর্জাতিক দলগুলোর সরাসরি পতাকা
+COUNTRY_FLAGS = {
+    "argentina": "https://flagcdn.com/w320/ar.png",
+    "brazil": "https://flagcdn.com/w320/br.png",
+    "england": "https://flagcdn.com/w320/gb-eng.png",
+    "france": "https://flagcdn.com/w320/fr.png",
+    "germany": "https://flagcdn.com/w320/de.png",
+    "spain": "https://flagcdn.com/w320/es.png",
+    "italy": "https://flagcdn.com/w320/it.png",
+    "portugal": "https://flagcdn.com/w320/pt.png",
+    "netherlands": "https://flagcdn.com/w320/nl.png",
+    "india": "https://flagcdn.com/w320/in.png",
+    "pakistan": "https://flagcdn.com/w320/pk.png",
+    "bangladesh": "https://flagcdn.com/w320/bd.png",
+    "australia": "https://flagcdn.com/w320/au.png",
+    "south africa": "https://flagcdn.com/w320/za.png",
+    "new zealand": "https://flagcdn.com/w320/nz.png",
+    "sri lanka": "https://flagcdn.com/w320/lk.png",
+    "afghanistan": "https://flagcdn.com/w320/af.png",
+    "west indies": "https://flagcdn.com/w320/jm.png",
+    "usa": "https://flagcdn.com/w320/us.png",
+    "canada": "https://flagcdn.com/w320/ca.png",
+}
+
+DEFAULT_SPORTS_LOGO = "https://img.sofascore.com/api/v1/team/42/image"
+
+
+async def get_sofascore_team_logo(client: httpx.AsyncClient, team_name: str) -> str:
+    """
+    SofaScore API ব্যবহার করে দলের আসল টিম আইডি এবং লোগো সংগ্রহ করে
+    """
+    cleaned = team_name.strip()
+    if not cleaned:
+        return DEFAULT_SPORTS_LOGO
+
+    if cleaned in SOFASCORE_CACHE:
+        return SOFASCORE_CACHE[cleaned]
+
+    # ১. আন্তর্জাতিক দলের ক্ষেত্রে জাতীয় পতাকা
+    cleaned_lower = cleaned.lower()
+    for country, flag_url in COUNTRY_FLAGS.items():
+        if country in cleaned_lower:
+            SOFASCORE_CACHE[cleaned] = flag_url
+            return flag_url
+
+    # ২. SofaScore এপিআই থেকে টিম সার্চ করে টিম আইডি বের করা
+    search_url = f"https://api.sofascore.com/api/v1/search/all?q={quote_plus(cleaned)}"
+    headers = {
+        "User-Agent": UA,
+        "Accept": "application/json, text/plain, */*",
+        "Referer": "https://www.sofascore.com/",
+    }
+
+    try:
+        resp = await client.get(search_url, headers=headers, timeout=5.0)
+        if resp.status_code == 200:
+            data = resp.json()
+            results = data.get("results", [])
+
+            for item in results:
+                # টিম বা প্লেয়ার অবজেক্ট পাওয়া গেলে
+                entity = item.get("entity", {})
+                entity_type = item.get("type", "")
+
+                if entity_type == "team" or "id" in entity:
+                    team_id = entity.get("id")
+                    if team_id:
+                        # SofaScore-এর অফিশিয়াল টিম ইমেজ লিঙ্ক
+                        logo_url = f"https://img.sofascore.com/api/v1/team/{team_id}/image"
+                        SOFASCORE_CACHE[cleaned] = logo_url
+                        return logo_url
+    except Exception:
+        pass
+
+    # ৩. যদি SofaScore-এ না পাওয়া যায়, TheSportsDB দিয়ে ব্যাকআপ চেক
+    try:
+        tsdb_url = f"https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t={quote_plus(cleaned)}"
+        resp = await client.get(tsdb_url, timeout=4.0)
+        if resp.status_code == 200:
+            data = resp.json()
+            if data and data.get("teams"):
+                badge = data["teams"][0].get("strBadge")
+                if badge:
+                    SOFASCORE_CACHE[cleaned] = badge
+                    return badge
+    except Exception:
+        pass
+
+    # কোনোটিই না মিললে ডিফল্ট সুন্দর ফুটবল/স্পোর্টস আইকন (কোনো অক্ষর নয়)
+    fallback = "https://cdn-icons-png.flaticon.com/512/861/861512.png"
+    SOFASCORE_CACHE[cleaned] = fallback
+    return fallback
+
+
+# -----------------------------------------------------------------------------
+# স্পোর্টস ক্লিন এবং স্ট্যান্ডার্ড নাম রূপান্তরকারী
 # -----------------------------------------------------------------------------
 def clean_and_normalize_sport(raw_sport: str, title: str = "") -> str:
-    """
-    সব ধরনের HTML ট্যাগ (যেমন: </span>) মুছে ফেলে স্ট্যান্ডার্ড খেলার নাম রিটার্ন করে।
-    """
     clean = re.sub(r"<[^>]+>", "", raw_sport).strip()
     clean = clean.split("—")[0].strip()
     combined = f"{clean} {title}".lower()
 
-    # আমেরিকান ফুটবল চেক
     if "american football" in combined or "nfl" in combined:
         return "American Football"
 
-    # ফুটবল / সকার
     if any(k in combined for k in ["soccer", "football", "fifa", "uefa", "la liga", "premier league", "serie a", "bundesliga", "ligue 1"]):
         return "Football"
 
-    # ক্রিকেট
     if any(k in combined for k in ["cricket", "ipl", "bpl", "psl", "t20", "odi", "test"]):
         return "Cricket"
 
-    # বাস্কেটবল
     if any(k in combined for k in ["basketball", "nba", "euroleague", "wnba"]):
         return "Basketball"
 
-    # হকি
     if any(k in combined for k in ["hockey", "nhl", "ice hockey"]):
         return "Hockey"
 
-    # টেনিস
     if any(k in combined for k in ["tennis", "wimbledon", "atp", "wta", "roland garros"]):
         return "Tennis"
 
-    # বেসবল
     if any(k in combined for k in ["baseball", "mlb"]):
         return "Baseball"
 
-    # মোটরস্পোর্ট
     if any(k in combined for k in ["motorsport", "racing", "formula 1", "f1", "motogp", "nascar"]):
         return "Motorsport"
 
-    # রেসলিং
     if any(k in combined for k in ["wwe", "wrestling", "smackdown", "raw", "aew", "nxt"]):
         return "Wrestling"
 
-    # ফাইটিং / বক্সিং / MMA
     if any(k in combined for k in ["ufc", "fighting", "mma", "boxing"]):
         return "Fighting"
 
-    # রাগবি
     if any(k in combined for k in ["rugby", "afl"]):
         return "Rugby"
 
@@ -121,7 +206,7 @@ def clean_and_normalize_sport(raw_sport: str, title: str = "") -> str:
 
 
 # -----------------------------------------------------------------------------
-# স্মার্ট সাব-ক্যাটাগরি ডিটেকশন ইঞ্জিন (লিগ ও টুর্নামেন্ট)
+# স্মার্ট সাব-ক্যাটাগরি ডিটেকশন ইঞ্জিন
 # -----------------------------------------------------------------------------
 LEAGUE_PATTERNS = [
     (r"premier league|epl|english premier", "Premier League"),
@@ -233,67 +318,6 @@ def get_sub_category(sport: str, title: str) -> str:
                 return league
 
     return sport
-
-
-# -----------------------------------------------------------------------------
-# আন্তর্জাতিক পতাকার ওপেন সিডিএন
-# -----------------------------------------------------------------------------
-COUNTRY_FLAGS = {
-    "argentina": "https://flagcdn.com/w320/ar.png",
-    "brazil": "https://flagcdn.com/w320/br.png",
-    "england": "https://flagcdn.com/w320/gb-eng.png",
-    "france": "https://flagcdn.com/w320/fr.png",
-    "germany": "https://flagcdn.com/w320/de.png",
-    "spain": "https://flagcdn.com/w320/es.png",
-    "italy": "https://flagcdn.com/w320/it.png",
-    "portugal": "https://flagcdn.com/w320/pt.png",
-    "netherlands": "https://flagcdn.com/w320/nl.png",
-    "india": "https://flagcdn.com/w320/in.png",
-    "pakistan": "https://flagcdn.com/w320/pk.png",
-    "bangladesh": "https://flagcdn.com/w320/bd.png",
-    "australia": "https://flagcdn.com/w320/au.png",
-    "south africa": "https://flagcdn.com/w320/za.png",
-    "new zealand": "https://flagcdn.com/w320/nz.png",
-    "sri lanka": "https://flagcdn.com/w320/lk.png",
-    "afghanistan": "https://flagcdn.com/w320/af.png",
-    "west indies": "https://flagcdn.com/w320/jm.png",
-    "usa": "https://flagcdn.com/w320/us.png",
-    "canada": "https://flagcdn.com/w320/ca.png",
-}
-
-TEAM_BADGE_CACHE: dict[str, str] = {}
-
-
-async def get_team_badge(client: httpx.AsyncClient, team_name: str) -> str:
-    cleaned = team_name.strip()
-    if not cleaned:
-        return "https://ui-avatars.com/api/?name=Live+Match&background=0D8ABC&color=fff&size=200"
-
-    if cleaned in TEAM_BADGE_CACHE:
-        return TEAM_BADGE_CACHE[cleaned]
-
-    name_lower = cleaned.lower()
-    for country, flag_url in COUNTRY_FLAGS.items():
-        if country in name_lower:
-            TEAM_BADGE_CACHE[cleaned] = flag_url
-            return flag_url
-
-    api_url = f"https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t={quote_plus(cleaned)}"
-    try:
-        resp = await client.get(api_url, timeout=5.0)
-        if resp.status_code == 200:
-            data = resp.json()
-            if data and data.get("teams"):
-                badge = data["teams"][0].get("strBadge")
-                if badge:
-                    TEAM_BADGE_CACHE[cleaned] = badge
-                    return badge
-    except Exception:
-        pass
-
-    fallback_badge = f"https://ui-avatars.com/api/?name={quote_plus(cleaned)}&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-    TEAM_BADGE_CACHE[cleaned] = fallback_badge
-    return fallback_badge
 
 
 def parse_team_names(title: str) -> dict[str, str]:
@@ -559,7 +583,6 @@ async def get_dlhd_events(client: httpx.AsyncClient) -> list[DLHDEvent]:
                         channels.append(DLHDChannel(channel_name=c_name, channel_id=c_id))
 
                 if channels:
-                    # এখানে স্পোর্টসের নাম ক্লিন এবং স্ট্যান্ডার্ড রূপ দেওয়া হচ্ছে
                     normalized_sport = clean_and_normalize_sport(sport_cat, event_title)
 
                     events.append(
@@ -603,19 +626,19 @@ async def scrape() -> None:
 
         log.info(f"Processing {len(raw_events)} active DaddyLive event(s)...")
 
-        # ১. সকল টিমের ফ্ল্যাগ সংগ্রহ
+        # ১. SofaScore API দিয়ে আসল টিম লোগো প্যারালালে সংগ্রহ করা
         unique_team_names = set()
         for ev in raw_events:
             t = parse_team_names(ev.title)
             unique_team_names.add(t["team_a"])
             unique_team_names.add(t["team_b"])
 
-        log.info(f"Fetching badges for {len(unique_team_names)} unique teams...")
+        log.info(f"Fetching SofaScore badges for {len(unique_team_names)} unique teams...")
         team_badge_map = {}
 
         async def fetch_team(team_name: str):
             async with HTTP_SEMAPHORE:
-                team_badge_map[team_name] = await get_team_badge(client, team_name)
+                team_badge_map[team_name] = await get_sofascore_team_logo(client, team_name)
 
         await asyncio.gather(*(fetch_team(name) for name in unique_team_names))
 
@@ -664,15 +687,15 @@ async def scrape() -> None:
                 team_a_name = t_names["team_a"]
                 team_b_name = t_names["team_b"]
 
+                # SofaScore থেকে পাওয়া আসল ট্রান্সপারেন্ট লোগো
                 team_a_flag = team_badge_map.get(team_a_name, "")
                 team_b_flag = team_badge_map.get(team_b_name, "")
 
-                # স্মার্ট সাব-ক্যাটাগরি
                 detected_sub_category = get_sub_category(ev.sport, ev.title)
 
                 formatted_event = {
                     "title": ev.title,
-                    "sport": ev.sport,  # সম্পূর্ণ ক্লিন এবং স্ট্যান্ডার্ড খেলার নাম
+                    "sport": ev.sport,
                     "sub_category": detected_sub_category,
                     "status": determine_status(ev.start_dt, early_minutes=15),
                     "is_hot": False,
@@ -692,7 +715,7 @@ async def scrape() -> None:
                             "flag": team_b_flag,
                         },
                     },
-                    "logo": team_a_flag,
+                    "logo": team_a_flag,  # Team A এর আসল SofaScore লোগো
                     "channels": event_channels,
                     "_timestamp": ev.start_dt.timestamp(),
                 }
@@ -717,7 +740,7 @@ async def scrape() -> None:
 
         save_playlists(final_playlist)
         STATE_FILE.write_text(new_state, encoding="utf-8")
-        log.info("Playlist generation completed with Clean Sports names!")
+        log.info("Playlist generation completed with SofaScore Logos!")
 
 
 if __name__ == "__main__":
