@@ -1,52 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 01:09:38 AM",
-  "event_count": 106,
+  "last_updated": "Oct 23, 2026, 01:22:28 AM",
+  "event_count": 105,
   "events": {
     "events": [
-      {
-        "title": "Basquetebol: Men's March Madness #1 - College Basketball",
-        "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "basquetebol-men-s-march-madness-1-college-basketball",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 10:15:00 PM",
-          "end_time_bst": "Oct 23, 2026, 01:15:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Basquetebol: Men's March Madness #1"
-          },
-          "team_b": {
-            "name": "College Basketball"
-          }
-        },
-        "logo": null,
-        "channels": [
-          {
-            "channel_name": "DAZN Eleven 1 Portugal",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium455/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium455/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport Klub 2 Serbia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium102/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium102/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Slovakia Extraliga : Spisska Nova Ves vs. HKM Zvolen",
         "sport": "Ice hockey</span>",
@@ -67,7 +23,7 @@
             "name": "HKM Zvolen"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "Sport 2 Czech",
@@ -101,7 +57,7 @@
             "name": "Sochi"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "KHL Prime",
@@ -135,7 +91,7 @@
             "name": "Cherepovets"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "Match TV Russia",
@@ -169,7 +125,7 @@
             "name": "Stal Nysa SA"
           }
         },
-        "logo": null,
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
         "channels": [
           {
             "channel_name": "Polsat Sport 1 Poland",
@@ -203,7 +159,7 @@
             "name": "Purdue"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "truTV USA",
@@ -247,7 +203,7 @@
             "name": "Big Xii Pro Day Live"
           }
         },
-        "logo": null,
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
         "channels": [
           {
             "channel_name": "NFL Network USA",
@@ -281,7 +237,7 @@
             "name": "Tel Aviv University"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "Sport 5 Plus Israel",
@@ -315,7 +271,7 @@
             "name": "Hungary"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "Fox Sports 2 USA",
@@ -559,7 +515,7 @@
             "name": "Georgia"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "Fox Soccer Plus",
@@ -753,7 +709,7 @@
             "name": "PGA Tour Valspar Championship"
           }
         },
-        "logo": null,
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
         "channels": [
           {
             "channel_name": "Sky Sports Golf UK",
@@ -837,7 +793,7 @@
             "name": "Kk Podgorica"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "Arena Sport 1 Serbia",
@@ -881,7 +837,7 @@
             "name": "Sokol Hradec Kralove"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "Nova Sport 1 Czech",
@@ -915,7 +871,7 @@
             "name": "Krka"
           }
         },
-        "logo": null,
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
         "channels": [
           {
             "channel_name": "Sport Klub 9 Serbia",
@@ -949,7 +905,7 @@
             "name": "HK Dukla Trencin"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "JOJ Sport Slovakia HD",
@@ -983,7 +939,7 @@
             "name": "Vakifbank SK"
           }
         },
-        "logo": null,
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
         "channels": [
           {
             "channel_name": "TRT Spor Turkey",
@@ -1027,7 +983,7 @@
             "name": "Atlanta Braves"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
         "channels": [
           {
             "channel_name": "MLB Network",
@@ -1081,7 +1037,7 @@
             "name": "Premier League Pool: Day 1"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/500px-Premier_League_Logo.svg.png",
         "channels": [
           {
             "channel_name": "Sky Sport 9 NZ",
@@ -1115,7 +1071,7 @@
             "name": "Wisconsin"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "TNT USA",
@@ -1149,7 +1105,7 @@
             "name": "Soenderjyske HK"
           }
         },
-        "logo": null,
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
         "channels": [
           {
             "channel_name": "TV2 Sport Denmark",
@@ -1183,7 +1139,7 @@
             "name": "Pictionary Season 3, Episode 114"
           }
         },
-        "logo": null,
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
         "channels": [
           {
             "channel_name": "FOXNY USA",
@@ -1217,7 +1173,7 @@
             "name": "KK Crvena zvezda Belgrade"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "Magenta Sport 304",
@@ -1301,7 +1257,7 @@
             "name": "Fenerbahce Istanbul"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "Magenta Sport 302",
@@ -1375,7 +1331,7 @@
             "name": "Houston"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "TBS USA",
@@ -1409,7 +1365,7 @@
             "name": "TSV Hannover-Burgdorf"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Bundesliga_logo_%282017%29.svg/500px-Bundesliga_logo_%282017%29.svg.png",
         "channels": [
           {
             "channel_name": "TV3 Max Denmark",
@@ -1473,7 +1429,7 @@
             "name": "Storhamar Hockey"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "TV2 Sport 2 Norway",
@@ -1507,7 +1463,7 @@
             "name": "Malmo IF"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "TV4 Sport Live 2 Sweden",
@@ -1571,7 +1527,7 @@
             "name": "BIK Karlskoga"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "TV4 Sport Live 1 Sweden",
@@ -1605,7 +1561,7 @@
             "name": "Djurgardens"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "TV4 Sport Live 3 Sweden",
@@ -1639,7 +1595,7 @@
             "name": "Vimmerby"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "TV4 Sportkanalen",
@@ -1673,7 +1629,7 @@
             "name": "China"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "ESPN 2 NL",
@@ -1747,7 +1703,7 @@
             "name": "Kuwait"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "beIN Sports MENA 4",
@@ -1781,7 +1737,7 @@
             "name": "Palestine"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "Jordan Sport",
@@ -1825,7 +1781,7 @@
             "name": "Korea DPR"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "Astro Football",
@@ -1869,7 +1825,7 @@
             "name": "Auburn"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "CBSNY USA",
@@ -1903,7 +1859,7 @@
             "name": "College Basketball"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "DAZN Eleven 1 Portugal",
@@ -1937,7 +1893,7 @@
             "name": "General Hospital Season 62, Episode 133"
           }
         },
-        "logo": null,
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
         "channels": [
           {
             "channel_name": "ABC NY USA",
@@ -1971,7 +1927,7 @@
             "name": "Angola"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "Sport TV6 Portugal",
@@ -2005,7 +1961,7 @@
             "name": "Telford, England"
           }
         },
-        "logo": null,
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
         "channels": [
           {
             "channel_name": "ITV 4 UK",
@@ -2069,7 +2025,7 @@
             "name": "Clemson"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "truTV USA",
@@ -2103,7 +2059,7 @@
             "name": "Bunting, Stephen"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/500px-Premier_League_Logo.svg.png",
         "channels": [
           {
             "channel_name": "Sky Sports Action UK",
@@ -2177,7 +2133,7 @@
             "name": "EV Zug"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "3 Schweiz",
@@ -2211,7 +2167,7 @@
             "name": "Knrc"
           }
         },
-        "logo": null,
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
         "channels": [
           {
             "channel_name": "M4 Sport Hungary",
@@ -2245,7 +2201,7 @@
             "name": "Euroleague : Konferenz"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "Magenta Sport 301",
@@ -2279,7 +2235,7 @@
             "name": "Virtus Bologna"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "Magenta Sport 303",
@@ -2327,7 +2283,7 @@
         "title": "Euroleague : Baskonia Vitoria-Gasteiz vs. Bayern Munich",
         "sport": "Basketball</span>",
         "sub_category": "Basketball</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-baskonia-vitoria-gasteiz-vs-bayern-munich",
         "schedule": {
@@ -2343,7 +2299,7 @@
             "name": "Bayern Munich"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "Magenta Sport 305",
@@ -2391,7 +2347,7 @@
         "title": "Poland Superliga : Gornik Zabrze vs. SPR Chrobry Glogow",
         "sport": "Handball</span>",
         "sub_category": "Handball</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "poland-superliga-gornik-zabrze-vs-spr-chrobry-glogow",
         "schedule": {
@@ -2407,7 +2363,7 @@
             "name": "SPR Chrobry Glogow"
           }
         },
-        "logo": null,
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
         "channels": [
           {
             "channel_name": "Polsat Sport 3 Poland",
@@ -2425,7 +2381,7 @@
         "title": "Champions League : Perugia Umbria Volley vs. VV Monza",
         "sport": "Volleyball</span>",
         "sub_category": "Volleyball</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "champions-league-perugia-umbria-volley-vs-vv-monza",
         "schedule": {
@@ -2441,7 +2397,7 @@
             "name": "VV Monza"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/UEFA_Champions_League_logo_2.svg/500px-UEFA_Champions_League_logo_2.svg.png",
         "channels": [
           {
             "channel_name": "Zona DAZN IT",
@@ -2525,7 +2481,7 @@
             "name": "van Gerwen, Michael"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/500px-Premier_League_Logo.svg.png",
         "channels": [
           {
             "channel_name": "Sky Sports Action UK",
@@ -2599,7 +2555,7 @@
             "name": "UEFA Nations League : Simulcast"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "L'Équipe France",
@@ -2653,7 +2609,7 @@
             "name": "Slovenia"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "Nova Sports News Greece",
@@ -2697,7 +2653,7 @@
             "name": "Ireland Republic"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "RTE 2 Ireland",
@@ -2791,7 +2747,7 @@
             "name": "Portugal"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "Sport TV1 Portugal",
@@ -2945,7 +2901,7 @@
             "name": "Iceland"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "Stöð 2 Sport 1 Iceland",
@@ -2979,7 +2935,7 @@
             "name": "Scotland"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "BBC Scotland",
@@ -3083,7 +3039,7 @@
             "name": "Belgium"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "VTM Belgium",
@@ -3177,7 +3133,7 @@
             "name": "Germany"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "RAI 1 IT",
@@ -3421,7 +3377,7 @@
             "name": "France"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "Fox Sports 2 USA",
@@ -3615,7 +3571,7 @@
             "name": "Spain"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "Fox Sports 1 USA",
@@ -3819,7 +3775,7 @@
             "name": "Serbia"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "ORF eins Austria",
@@ -3903,7 +3859,7 @@
             "name": "ASVEL Lyon Villeurbanne"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "Magenta Sport 306",
@@ -3987,7 +3943,7 @@
             "name": "FanDuel Racing Live"
           }
         },
-        "logo": null,
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
         "channels": [
           {
             "channel_name": "NBC Sports Bay Area",
@@ -4021,7 +3977,7 @@
             "name": "Juventud"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "VTV+ Uruguay",
@@ -4065,7 +4021,7 @@
             "name": "Cb Jairis"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "Teledeporte Spain (TDP)",
@@ -4099,7 +4055,7 @@
             "name": "BYU"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "TNT USA",
@@ -4133,7 +4089,7 @@
             "name": "Boston University"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "NESN USA",
@@ -4167,7 +4123,7 @@
             "name": "Huddersfield"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Rugby_ball.svg/500px-Rugby_ball.svg.png",
         "channels": [
           {
             "channel_name": "Fox Soccer Plus",
@@ -4211,7 +4167,7 @@
             "name": "Chicago White Sox"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
         "channels": [
           {
             "channel_name": "MLB Network",
@@ -4245,7 +4201,7 @@
             "name": "Aspinall, Nathan"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/500px-Premier_League_Logo.svg.png",
         "channels": [
           {
             "channel_name": "Sky Sports Action UK",
@@ -4319,7 +4275,7 @@
             "name": "Gonzaga"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "TBS USA",
@@ -4373,7 +4329,7 @@
             "name": "Cross, Rob"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/500px-Premier_League_Logo.svg.png",
         "channels": [
           {
             "channel_name": "Sky Sports Action UK",
@@ -4447,7 +4403,7 @@
             "name": "Rubble &amp; Crew Season 3"
           }
         },
-        "logo": null,
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
         "channels": [
           {
             "channel_name": "Nick JR USA",
@@ -4481,7 +4437,7 @@
             "name": "Mali"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "Sport Klub 8 Serbia",
@@ -4515,7 +4471,7 @@
             "name": "University of Wisconsin (Madison)"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
         "channels": [
           {
             "channel_name": "BTN USA",
@@ -4549,7 +4505,7 @@
             "name": "Moto Club"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "Premier Brasil",
@@ -4583,7 +4539,7 @@
             "name": "First Round 2025 NCAA Men's Basketball Tournament"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "TSN1",
@@ -4627,7 +4583,7 @@
             "name": "Minnesota Twins"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
         "channels": [
           {
             "channel_name": "NESN USA",
@@ -4661,7 +4617,7 @@
             "name": "Baltimore Orioles"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
         "channels": [
           {
             "channel_name": "MASN USA",
@@ -4695,7 +4651,7 @@
             "name": "Cerrado W"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "ESPN 4 BR",
@@ -4729,7 +4685,7 @@
             "name": "Wofford"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "Sport Klub 1 Serbia",
@@ -4763,7 +4719,7 @@
             "name": "Jeopardy! Season 41, Episode 139"
           }
         },
-        "logo": null,
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
         "channels": [
           {
             "channel_name": "ABC NY USA",
@@ -4797,7 +4753,7 @@
             "name": "Chile"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "Astro Grandstand",
@@ -4921,7 +4877,7 @@
             "name": "Panama"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "CBS Sports Golazo USA",
@@ -5015,7 +4971,7 @@
             "name": "Liverpool"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
         "channels": [
           {
             "channel_name": "VTV+ Uruguay",
@@ -5059,7 +5015,7 @@
             "name": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Tennis_ball.svg/500px-Tennis_ball.svg.png",
         "channels": [
           {
             "channel_name": "Tennis Channel",
@@ -5113,7 +5069,7 @@
             "name": "Men's College Wrestling NCAA Champonships, Second Round"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/500px-WWE_Logo.svg.png",
         "channels": [
           {
             "channel_name": "ESPN USA",
@@ -5147,7 +5103,7 @@
             "name": "Vanderbilt"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
         "channels": [
           {
             "channel_name": "SEC Network USA",
@@ -5181,7 +5137,7 @@
             "name": "Miami"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
         "channels": [
           {
             "channel_name": "ACC Network USA",
@@ -5215,7 +5171,7 @@
             "name": "Lakeland Magic"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/National_Basketball_Association_logo.svg/500px-National_Basketball_Association_logo.svg.png",
         "channels": [
           {
             "channel_name": "NBCS Boston USA",
@@ -5249,7 +5205,7 @@
             "name": "Long Island Nets"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/National_Basketball_Association_logo.svg/500px-National_Basketball_Association_logo.svg.png",
         "channels": [
           {
             "channel_name": "ESPN+ USA",
@@ -5283,7 +5239,7 @@
             "name": "Columbia"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "ESPN2 USA",
@@ -5317,7 +5273,7 @@
             "name": "Columbia"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "ESPN2 USA",
@@ -5351,7 +5307,7 @@
             "name": "Charlotte Hornets"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/National_Basketball_Association_logo.svg/500px-National_Basketball_Association_logo.svg.png",
         "channels": [
           {
             "channel_name": "Home Feed",
@@ -5405,7 +5361,7 @@
             "name": "Indiana Pacers"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/National_Basketball_Association_logo.svg/500px-National_Basketball_Association_logo.svg.png",
         "channels": [
           {
             "channel_name": "Home Feed",
@@ -5469,7 +5425,7 @@
             "name": "Ottawa Senators"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "Home Feed",
@@ -5543,7 +5499,7 @@
             "name": "New Jersey Devils"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "Home Feed",
@@ -5607,7 +5563,7 @@
             "name": "New York Rangers"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "Home Feed",
@@ -5671,7 +5627,7 @@
             "name": "Washington Capitals"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "Home Feed",
@@ -5795,7 +5751,7 @@
             "name": "Columbus Blue Jackets"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "Home Feed",
@@ -5849,7 +5805,7 @@
             "name": "Arkansas"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "Sport Klub 2 Serbia",
@@ -5883,7 +5839,7 @@
             "name": "Texas A&amp;M"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "TBS USA",
@@ -5917,7 +5873,7 @@
             "name": "Alabama"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
         "channels": [
           {
             "channel_name": "ESPNU USA",
@@ -5951,7 +5907,7 @@
             "name": "Maryland (College Park)"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
         "channels": [
           {
             "channel_name": "BTN USA",
@@ -5985,7 +5941,7 @@
             "name": "Missouri"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
         "channels": [
           {
             "channel_name": "truTV USA",
@@ -6019,7 +5975,7 @@
             "name": "New York Islanders"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "Home Feed",
@@ -6083,7 +6039,7 @@
             "name": "St. Louis Blues"
           }
         },
-        "logo": null,
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
         "channels": [
           {
             "channel_name": "Home Feed",
