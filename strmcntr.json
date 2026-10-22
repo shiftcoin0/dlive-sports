@@ -1,116 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 02:22:52 AM",
-  "event_count": 89,
+  "last_updated": "Oct 23, 2026, 02:41:41 AM",
+  "event_count": 86,
   "events": {
     "events": [
-      {
-        "title": "Premier League Pool: Day 1",
-        "sport": "Football",
-        "sub_category": "Premier League",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "premier-league-pool-day-1",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 11:30:00 PM",
-          "end_time_bst": "Oct 23, 2026, 02:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Premier League Pool: Day 1",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png"
-          },
-          "team_b": {
-            "name": "Premier League Pool: Day 1",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png",
-        "channels": [
-          {
-            "channel_name": "Sky Sport 9 NZ",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium596/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium596/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "2025 NCAA Men's Basketball Tournament First Round: Montana vs Wisconsin",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "2025-ncaa-men-s-basketball-tournament-first-round-montana-vs-wisconsin",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 11:30:00 PM",
-          "end_time_bst": "Oct 23, 2026, 02:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "2025 NCAA Men's Basketball Tournament First Round: Montana",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          },
-          "team_b": {
-            "name": "Wisconsin",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          }
-        },
-        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
-        "channels": [
-          {
-            "channel_name": "TNT USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium338/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium338/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Denmark, Handboldligaen : Skanderborg-Aarhus Haandbold vs. Soenderjyske HK",
-        "sport": "Handball",
-        "sub_category": "Handball",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "denmark-handboldligaen-skanderborg-aarhus-haandbold-vs-soenderjyske-hk",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 11:30:00 PM",
-          "end_time_bst": "Oct 23, 2026, 02:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Denmark, Handboldligaen : Skanderborg-Aarhus Haandbold",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "Soenderjyske HK",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "TV2 Sport Denmark",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium810/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium810/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Pictionary Season 3, Episode 114",
         "sport": "Tv shows",
@@ -150,7 +42,7 @@
       {
         "title": "Euroleague : BC Olympiakos Piraeus vs. KK Crvena zvezda Belgrade",
         "sport": "Basketball",
-        "sub_category": "EuroLeague",
+        "sub_category": "Basketball",
         "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-bc-olympiakos-piraeus-vs-kk-crvena-zvezda-belgrade",
@@ -236,7 +128,7 @@
       {
         "title": "Euroleague : AS Monaco vs. Fenerbahce Istanbul",
         "sport": "Basketball",
-        "sub_category": "EuroLeague",
+        "sub_category": "Basketball",
         "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-as-monaco-vs-fenerbahce-istanbul",
@@ -248,14 +140,14 @@
         "teams": {
           "team_a": {
             "name": "Euroleague : AS Monaco",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9829.png"
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
           },
           "team_b": {
             "name": "Fenerbahce Istanbul",
             "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
           }
         },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9829.png",
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
         "channels": [
           {
             "channel_name": "Magenta Sport 302",
@@ -1222,7 +1114,7 @@
       {
         "title": "Euroleague : Konferenz",
         "sport": "Basketball",
-        "sub_category": "EuroLeague",
+        "sub_category": "Basketball",
         "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-konferenz",
@@ -1258,7 +1150,7 @@
       {
         "title": "Euroleague : Maccabi Tel-Aviv vs. Virtus Bologna",
         "sport": "Basketball",
-        "sub_category": "EuroLeague",
+        "sub_category": "Basketball",
         "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-maccabi-tel-aviv-vs-virtus-bologna",
@@ -1324,7 +1216,7 @@
       {
         "title": "Euroleague : Baskonia Vitoria-Gasteiz vs. Bayern Munich",
         "sport": "Basketball",
-        "sub_category": "EuroLeague",
+        "sub_category": "Basketball",
         "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-baskonia-vitoria-gasteiz-vs-bayern-munich",
@@ -1802,7 +1694,7 @@
           },
           "team_b": {
             "name": "Portugal",
-            "flag": "https://flagcdn.com/w320/pt.png"
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
           }
         },
         "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
@@ -2192,14 +2084,14 @@
         "teams": {
           "team_a": {
             "name": "UEFA Nations League : Italy",
-            "flag": "https://flagcdn.com/w320/it.png"
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
           },
           "team_b": {
             "name": "Germany",
             "flag": "https://flagcdn.com/w320/de.png"
           }
         },
-        "logo": "https://flagcdn.com/w320/it.png",
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
         "channels": [
           {
             "channel_name": "RAI 1 IT",
@@ -2634,14 +2526,14 @@
         "teams": {
           "team_a": {
             "name": "UEFA Nations League : Netherlands",
-            "flag": "https://flagcdn.com/w320/nl.png"
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
           },
           "team_b": {
             "name": "Spain",
             "flag": "https://flagcdn.com/w320/es.png"
           }
         },
-        "logo": "https://flagcdn.com/w320/nl.png",
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
         "channels": [
           {
             "channel_name": "Fox Sports 1 USA",
@@ -2914,7 +2806,7 @@
       {
         "title": "Euroleague : Real Madrid vs. ASVEL Lyon Villeurbanne",
         "sport": "Basketball",
-        "sub_category": "EuroLeague",
+        "sub_category": "Basketball",
         "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-real-madrid-vs-asvel-lyon-villeurbanne",
@@ -3012,14 +2904,14 @@
         "teams": {
           "team_a": {
             "name": "FanDuel Racing Live",
-            "flag": "https://cdn-icons-png.flaticon.com/512/2418/2418779.png"
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
           },
           "team_b": {
             "name": "FanDuel Racing Live",
-            "flag": "https://cdn-icons-png.flaticon.com/512/2418/2418779.png"
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
           }
         },
-        "logo": "https://cdn-icons-png.flaticon.com/512/2418/2418779.png",
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
         "channels": [
           {
             "channel_name": "NBC Sports Bay Area",
@@ -3036,7 +2928,7 @@
       {
         "title": "Uruguay - Primera Division : Torque vs Juventud",
         "sport": "Football",
-        "sub_category": "La Liga",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "uruguay-primera-division-torque-vs-juventud",
@@ -3094,14 +2986,14 @@
         "teams": {
           "team_a": {
             "name": "Spain Copa de la Reina, Women : Valencia Basket",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/10233.png"
+            "flag": "https://flagcdn.com/w320/es.png"
           },
           "team_b": {
             "name": "Cb Jairis",
             "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
           }
         },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/10233.png",
+        "logo": "https://flagcdn.com/w320/es.png",
         "channels": [
           {
             "channel_name": "Teledeporte Spain (TDP)",
@@ -3189,8 +3081,8 @@
       },
       {
         "title": "Super League Rugby : Salford Red Devils vs Huddersfield",
-        "sport": "Rugby",
-        "sub_category": "Rugby",
+        "sport": "Rugby league",
+        "sub_category": "Rugby league",
         "status": "LIVE",
         "is_hot": false,
         "slug": "super-league-rugby-salford-red-devils-vs-huddersfield",
@@ -3236,7 +3128,7 @@
       {
         "title": "MLB : Los Angeles Angels vs Chicago White Sox",
         "sport": "Baseball",
-        "sub_category": "MLB",
+        "sub_category": "Baseball",
         "status": "LIVE",
         "is_hot": false,
         "slug": "mlb-los-angeles-angels-vs-chicago-white-sox",
@@ -3405,7 +3297,7 @@
         "title": "Premier League Darts : Price, Gerwyn vs. Cross, Rob",
         "sport": "Football",
         "sub_category": "Premier League",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "premier-league-darts-price-gerwyn-vs-cross-rob",
         "schedule": {
@@ -3480,7 +3372,7 @@
       {
         "title": "Rubble &amp; Crew Season 3",
         "sport": "Tv shows",
-        "sub_category": "Big Bash League",
+        "sub_category": "Tv shows",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "rubble-amp-crew-season-3",
@@ -3670,7 +3562,7 @@
       {
         "title": "MLB : Boston Red Sox vs Minnesota Twins",
         "sport": "Baseball",
-        "sub_category": "MLB",
+        "sub_category": "Baseball",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "mlb-boston-red-sox-vs-minnesota-twins",
@@ -3706,7 +3598,7 @@
       {
         "title": "MLB : New York Yankees vs Baltimore Orioles",
         "sport": "Baseball",
-        "sub_category": "MLB",
+        "sub_category": "Baseball",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "mlb-new-york-yankees-vs-baltimore-orioles",
@@ -3988,14 +3880,14 @@
         "teams": {
           "team_a": {
             "name": "CONCACAF Nations League : USA",
-            "flag": "https://flagcdn.com/w320/us.png"
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
           },
           "team_b": {
             "name": "Panama",
             "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
           }
         },
-        "logo": "https://flagcdn.com/w320/us.png",
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
         "channels": [
           {
             "channel_name": "CBS Sports Golazo USA",
@@ -4072,7 +3964,7 @@
       {
         "title": "Uruguay - Primera Division : Peñarol vs Liverpool",
         "sport": "Football",
-        "sub_category": "La Liga",
+        "sub_category": "Football",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "uruguay-primera-division-peñarol-vs-liverpool",
@@ -4118,7 +4010,7 @@
       {
         "title": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
         "sport": "Tennis",
-        "sub_category": "ATP Tour",
+        "sub_category": "Tennis",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "2025-miami-open-tennis-atp-1st-round-wta-2nd-round",
@@ -4186,14 +4078,14 @@
         "teams": {
           "team_a": {
             "name": "Men's College Wrestling NCAA Champonships, Second Round",
-            "flag": "https://cdn-icons-png.flaticon.com/512/477/477845.png"
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
           },
           "team_b": {
             "name": "Men's College Wrestling NCAA Champonships, Second Round",
-            "flag": "https://cdn-icons-png.flaticon.com/512/477/477845.png"
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
           }
         },
-        "logo": "https://cdn-icons-png.flaticon.com/512/477/477845.png",
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
         "channels": [
           {
             "channel_name": "ESPN USA",
@@ -4294,14 +4186,14 @@
         "teams": {
           "team_a": {
             "name": "NBA G-League : Maine Celtics",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/3422.png"
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
           },
           "team_b": {
             "name": "Lakeland Magic",
             "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
           }
         },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/3422.png",
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
         "channels": [
           {
             "channel_name": "NBCS Boston USA",
@@ -4548,7 +4440,7 @@
       {
         "title": "NHL : Colorado Avalanche vs Ottawa Senators",
         "sport": "Hockey",
-        "sub_category": "NHL",
+        "sub_category": "Hockey",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nhl-colorado-avalanche-vs-ottawa-senators",
@@ -4624,7 +4516,7 @@
       {
         "title": "NHL : Calgary Flames vs New Jersey Devils",
         "sport": "Hockey",
-        "sub_category": "NHL",
+        "sub_category": "Hockey",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nhl-calgary-flames-vs-new-jersey-devils",
@@ -4690,7 +4582,7 @@
       {
         "title": "NHL : Toronto Maple Leafs vs New York Rangers",
         "sport": "Hockey",
-        "sub_category": "NHL",
+        "sub_category": "Hockey",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nhl-toronto-maple-leafs-vs-new-york-rangers",
@@ -4756,7 +4648,7 @@
       {
         "title": "NHL : Philadelphia Flyers vs Washington Capitals",
         "sport": "Hockey",
-        "sub_category": "NHL",
+        "sub_category": "Hockey",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nhl-philadelphia-flyers-vs-washington-capitals",
@@ -4882,7 +4774,7 @@
       {
         "title": "NHL : Florida Panthers vs Columbus Blue Jackets",
         "sport": "Hockey",
-        "sub_category": "NHL",
+        "sub_category": "Hockey",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nhl-florida-panthers-vs-columbus-blue-jackets",
@@ -5118,7 +5010,7 @@
       {
         "title": "NHL : Montréal Canadiens vs New York Islanders",
         "sport": "Hockey",
-        "sub_category": "NHL",
+        "sub_category": "Hockey",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nhl-montréal-canadiens-vs-new-york-islanders",
@@ -5184,7 +5076,7 @@
       {
         "title": "NHL : Vancouver Canucks vs St. Louis Blues",
         "sport": "Hockey",
-        "sub_category": "NHL",
+        "sub_category": "Hockey",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nhl-vancouver-canucks-vs-st-louis-blues",
