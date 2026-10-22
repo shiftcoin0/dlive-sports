@@ -1,44 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 03:17:35 AM",
-  "event_count": 72,
+  "last_updated": "Oct 23, 2026, 03:32:43 AM",
+  "event_count": 71,
   "events": {
     "events": [
-      {
-        "title": "2025 NCAA Men's Basketball Tournament First Round: Alabama State vs Auburn",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "2025-ncaa-men-s-basketball-tournament-first-round-alabama-state-vs-auburn",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 12:30:00 AM",
-          "end_time_bst": "Oct 23, 2026, 03:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "2025 NCAA Men's Basketball Tournament First Round: Alabama State",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          },
-          "team_b": {
-            "name": "Auburn",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          }
-        },
-        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
-        "channels": [
-          {
-            "channel_name": "CBSNY USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium308/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium308/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Basquetebol: Men's March Madness #2 - College Basketball",
         "sport": "Basketball",
