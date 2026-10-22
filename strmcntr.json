@@ -1,44 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 03:32:43 AM",
-  "event_count": 71,
+  "last_updated": "Oct 23, 2026, 03:47:41 AM",
+  "event_count": 70,
   "events": {
     "events": [
-      {
-        "title": "Basquetebol: Men's March Madness #2 - College Basketball",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "basquetebol-men-s-march-madness-2-college-basketball",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 12:45:00 AM",
-          "end_time_bst": "Oct 23, 2026, 03:45:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Basquetebol: Men's March Madness #2",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          },
-          "team_b": {
-            "name": "College Basketball",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          }
-        },
-        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
-        "channels": [
-          {
-            "channel_name": "DAZN Eleven 1 Portugal",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium455/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium455/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "General Hospital Season 62, Episode 133",
         "sport": "Tv shows",
@@ -2731,7 +2695,7 @@
         "title": "Brazil Copa do Nordeste : AA Altos vs Moto Club",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "brazil-copa-do-nordeste-aa-altos-vs-moto-club",
         "schedule": {
@@ -2767,7 +2731,7 @@
         "title": "First Round 2025 NCAA Men's Basketball Tournament",
         "sport": "Basketball",
         "sub_category": "Basketball",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "first-round-2025-ncaa-men-s-basketball-tournament",
         "schedule": {
