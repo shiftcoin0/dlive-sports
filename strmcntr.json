@@ -1,54 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 01:37:41 AM",
-  "event_count": 101,
+  "last_updated": "Oct 23, 2026, 01:56:11 AM",
+  "event_count": 100,
   "events": {
     "events": [
-      {
-        "title": "NCAA : High Point vs Purdue",
-        "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "ncaa-high-point-vs-purdue",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 10:40:00 PM",
-          "end_time_bst": "Oct 23, 2026, 01:40:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "NCAA : High Point",
-            "flag": "https://ui-avatars.com/api/?name=NCAA+%3A+High+Point&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          },
-          "team_b": {
-            "name": "Purdue",
-            "flag": "https://ui-avatars.com/api/?name=Purdue&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          }
-        },
-        "logo": "https://ui-avatars.com/api/?name=NCAA+%3A+High+Point&background=0D8ABC&color=fff&size=200&bold=true&format=png",
-        "channels": [
-          {
-            "channel_name": "truTV USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium341/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium341/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "TSN1",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium111/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium111/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Big Xii Pro Day Live",
         "sport": "Tv shows</span>",
@@ -852,7 +806,7 @@
       {
         "title": "MLB : Philadelphia Phillies vs Atlanta Braves",
         "sport": "Baseball</span>",
-        "sub_category": "Baseball</span>",
+        "sub_category": "MLB",
         "status": "LIVE",
         "is_hot": false,
         "slug": "mlb-philadelphia-phillies-vs-atlanta-braves",
@@ -908,7 +862,7 @@
       {
         "title": "Premier League Pool: Day 1",
         "sport": "Snooker</span>",
-        "sub_category": "Snooker</span>",
+        "sub_category": "Premier League",
         "status": "LIVE",
         "is_hot": false,
         "slug": "premier-league-pool-day-1",
@@ -944,7 +898,7 @@
       {
         "title": "2025 NCAA Men's Basketball Tournament First Round: Montana vs Wisconsin",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "NCAA Basketball",
         "status": "LIVE",
         "is_hot": false,
         "slug": "2025-ncaa-men-s-basketball-tournament-first-round-montana-vs-wisconsin",
@@ -1052,7 +1006,7 @@
       {
         "title": "Euroleague : BC Olympiakos Piraeus vs. KK Crvena zvezda Belgrade",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "EuroLeague",
         "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-bc-olympiakos-piraeus-vs-kk-crvena-zvezda-belgrade",
@@ -1138,7 +1092,7 @@
       {
         "title": "Euroleague : AS Monaco vs. Fenerbahce Istanbul",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "EuroLeague",
         "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-as-monaco-vs-fenerbahce-istanbul",
@@ -1214,7 +1168,7 @@
       {
         "title": "2025 NCAA Men's Basketball Tournament First Round: Southern Illinois-Edwardsville vs Houston",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "NCAA Basketball",
         "status": "LIVE",
         "is_hot": false,
         "slug": "2025-ncaa-men-s-basketball-tournament-first-round-southern-illinois-edwardsville-vs-houston",
@@ -1250,7 +1204,7 @@
       {
         "title": "Handball-Bundesliga : Rhein-Neckar Lowen vs. TSV Hannover-Burgdorf",
         "sport": "Handball</span>",
-        "sub_category": "Handball</span>",
+        "sub_category": "Bundesliga",
         "status": "LIVE",
         "is_hot": false,
         "slug": "handball-bundesliga-rhein-neckar-lowen-vs-tsv-hannover-burgdorf",
@@ -1730,7 +1684,7 @@
       {
         "title": "2025 NCAA Men's Basketball Tournament First Round: Alabama State vs Auburn",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "NCAA Basketball",
         "status": "LIVE",
         "is_hot": false,
         "slug": "2025-ncaa-men-s-basketball-tournament-first-round-alabama-state-vs-auburn",
@@ -1940,7 +1894,7 @@
       {
         "title": "2025 NCAA Men's Basketball Tournament First Round: McNeese State vs Clemson",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "NCAA Basketball",
         "status": "LIVE",
         "is_hot": false,
         "slug": "2025-ncaa-men-s-basketball-tournament-first-round-mcneese-state-vs-clemson",
@@ -1976,7 +1930,7 @@
       {
         "title": "Premier League Darts : Dobey, Chris vs. Bunting, Stephen",
         "sport": "Darts</span>",
-        "sub_category": "Darts</span>",
+        "sub_category": "Premier League",
         "status": "LIVE",
         "is_hot": false,
         "slug": "premier-league-darts-dobey-chris-vs-bunting-stephen",
@@ -2124,7 +2078,7 @@
       {
         "title": "Euroleague : Konferenz",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "EuroLeague",
         "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-konferenz",
@@ -2160,7 +2114,7 @@
       {
         "title": "Euroleague : Maccabi Tel-Aviv vs. Virtus Bologna",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "EuroLeague",
         "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-maccabi-tel-aviv-vs-virtus-bologna",
@@ -2226,7 +2180,7 @@
       {
         "title": "Euroleague : Baskonia Vitoria-Gasteiz vs. Bayern Munich",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "EuroLeague",
         "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-baskonia-vitoria-gasteiz-vs-bayern-munich",
@@ -2328,7 +2282,7 @@
       {
         "title": "Champions League : Perugia Umbria Volley vs. VV Monza",
         "sport": "Volleyball</span>",
-        "sub_category": "Volleyball</span>",
+        "sub_category": "UEFA Champions League",
         "status": "LIVE",
         "is_hot": false,
         "slug": "champions-league-perugia-umbria-volley-vs-vv-monza",
@@ -2414,7 +2368,7 @@
       {
         "title": "Premier League Darts : Humphries, Luke vs. van Gerwen, Michael",
         "sport": "Darts</span>",
-        "sub_category": "Darts</span>",
+        "sub_category": "Premier League",
         "status": "LIVE",
         "is_hot": false,
         "slug": "premier-league-darts-humphries-luke-vs-van-gerwen-michael",
@@ -3816,7 +3770,7 @@
       {
         "title": "Euroleague : Real Madrid vs. ASVEL Lyon Villeurbanne",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "EuroLeague",
         "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-real-madrid-vs-asvel-lyon-villeurbanne",
@@ -3902,8 +3856,8 @@
       {
         "title": "FanDuel Racing Live",
         "sport": "Tv shows</span>",
-        "sub_category": "Tv shows</span>",
-        "status": "UPCOMING",
+        "sub_category": "UEFA Europa League",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "fanduel-racing-live",
         "schedule": {
@@ -3938,8 +3892,8 @@
       {
         "title": "Uruguay - Primera Division : Torque vs Juventud",
         "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
-        "status": "UPCOMING",
+        "sub_category": "La Liga",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uruguay-primera-division-torque-vs-juventud",
         "schedule": {
@@ -3984,8 +3938,8 @@
       {
         "title": "Spain Copa de la Reina, Women : Valencia Basket vs Cb Jairis",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
-        "status": "UPCOMING",
+        "sub_category": "La Liga",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "spain-copa-de-la-reina-women-valencia-basket-vs-cb-jairis",
         "schedule": {
@@ -4020,8 +3974,8 @@
       {
         "title": "2025 NCAA Men's Basketball Tournament First Round: VCU vs BYU",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
-        "status": "UPCOMING",
+        "sub_category": "NCAA Basketball",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "2025-ncaa-men-s-basketball-tournament-first-round-vcu-vs-byu",
         "schedule": {
@@ -4057,7 +4011,7 @@
         "title": "College Hockey Hockey East Tournament : Connecticut vs Boston University",
         "sport": "Ice hockey</span>",
         "sub_category": "Ice hockey</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "college-hockey-hockey-east-tournament-connecticut-vs-boston-university",
         "schedule": {
@@ -4093,7 +4047,7 @@
         "title": "Super League Rugby : Salford Red Devils vs Huddersfield",
         "sport": "Rugby league</span>",
         "sub_category": "Rugby league</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "super-league-rugby-salford-red-devils-vs-huddersfield",
         "schedule": {
@@ -4138,8 +4092,8 @@
       {
         "title": "MLB : Los Angeles Angels vs Chicago White Sox",
         "sport": "Baseball</span>",
-        "sub_category": "Baseball</span>",
-        "status": "UPCOMING",
+        "sub_category": "MLB",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "mlb-los-angeles-angels-vs-chicago-white-sox",
         "schedule": {
@@ -4174,8 +4128,8 @@
       {
         "title": "Premier League Darts : Littler, Luke vs. Aspinall, Nathan",
         "sport": "Darts</span>",
-        "sub_category": "Darts</span>",
-        "status": "UPCOMING",
+        "sub_category": "Premier League",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "premier-league-darts-littler-luke-vs-aspinall-nathan",
         "schedule": {
@@ -4250,7 +4204,7 @@
       {
         "title": "NCAA : Georgia vs Gonzaga",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "NCAA Basketball",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "ncaa-georgia-vs-gonzaga",
@@ -4306,7 +4260,7 @@
       {
         "title": "Premier League Darts : Price, Gerwyn vs. Cross, Rob",
         "sport": "Darts</span>",
-        "sub_category": "Darts</span>",
+        "sub_category": "Premier League",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "premier-league-darts-price-gerwyn-vs-cross-rob",
@@ -4382,7 +4336,7 @@
       {
         "title": "Rubble &amp; Crew Season 3",
         "sport": "Tv shows</span>",
-        "sub_category": "Tv shows</span>",
+        "sub_category": "Big Bash League",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "rubble-amp-crew-season-3",
@@ -4526,7 +4480,7 @@
       {
         "title": "First Round 2025 NCAA Men's Basketball Tournament",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "NCAA Basketball",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "first-round-2025-ncaa-men-s-basketball-tournament",
@@ -4572,7 +4526,7 @@
       {
         "title": "MLB : Boston Red Sox vs Minnesota Twins",
         "sport": "Baseball</span>",
-        "sub_category": "Baseball</span>",
+        "sub_category": "MLB",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "mlb-boston-red-sox-vs-minnesota-twins",
@@ -4608,7 +4562,7 @@
       {
         "title": "MLB : New York Yankees vs Baltimore Orioles",
         "sport": "Baseball</span>",
-        "sub_category": "Baseball</span>",
+        "sub_category": "MLB",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "mlb-new-york-yankees-vs-baltimore-orioles",
@@ -4974,7 +4928,7 @@
       {
         "title": "Uruguay - Primera Division : Peñarol vs Liverpool",
         "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sub_category": "La Liga",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "uruguay-primera-division-peñarol-vs-liverpool",
@@ -5020,7 +4974,7 @@
       {
         "title": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
         "sport": "Tennis</span>",
-        "sub_category": "Tennis</span>",
+        "sub_category": "ATP Tour",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "2025-miami-open-tennis-atp-1st-round-wta-2nd-round",
@@ -5076,7 +5030,7 @@
       {
         "title": "Men's College Wrestling NCAA Champonships, Second Round",
         "sport": "Wrestling</span>",
-        "sub_category": "Wrestling</span>",
+        "sub_category": "NCAA Basketball",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "men-s-college-wrestling-ncaa-champonships-second-round",
@@ -5148,7 +5102,7 @@
       {
         "title": "College Baseball : Florida State vs Miami",
         "sport": "Baseball</span>",
-        "sub_category": "Baseball</span>",
+        "sub_category": "Indian Premier League (IPL)",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "college-baseball-florida-state-vs-miami",
@@ -5184,7 +5138,7 @@
       {
         "title": "NBA G-League : Maine Celtics vs Lakeland Magic",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "NBA",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nba-g-league-maine-celtics-vs-lakeland-magic",
@@ -5220,7 +5174,7 @@
       {
         "title": "NBA G-League : Wisconsin Herd vs Long Island Nets",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "NBA",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nba-g-league-wisconsin-herd-vs-long-island-nets",
@@ -5256,7 +5210,7 @@
       {
         "title": "2025 NCAA Women's Basketball Tournament First Four: Washington vs Columbia",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "NCAA Basketball",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "2025-ncaa-women-s-basketball-tournament-first-four-washington-vs-columbia",
@@ -5292,7 +5246,7 @@
       {
         "title": "2025 NCAA Women's Basketball Tournament First Four: Washington vs Columbia",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "NCAA Basketball",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "2025-ncaa-women-s-basketball-tournament-first-four-washington-vs-columbia",
@@ -5328,7 +5282,7 @@
       {
         "title": "NBA : New York Knicks vs Charlotte Hornets",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "NBA",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nba-new-york-knicks-vs-charlotte-hornets",
@@ -5384,7 +5338,7 @@
       {
         "title": "NBA : Brooklyn Nets vs Indiana Pacers",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "NBA",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nba-brooklyn-nets-vs-indiana-pacers",
@@ -5450,7 +5404,7 @@
       {
         "title": "NHL : Colorado Avalanche vs Ottawa Senators",
         "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
+        "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nhl-colorado-avalanche-vs-ottawa-senators",
@@ -5526,7 +5480,7 @@
       {
         "title": "NHL : Calgary Flames vs New Jersey Devils",
         "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
+        "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nhl-calgary-flames-vs-new-jersey-devils",
@@ -5592,7 +5546,7 @@
       {
         "title": "NHL : Toronto Maple Leafs vs New York Rangers",
         "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
+        "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nhl-toronto-maple-leafs-vs-new-york-rangers",
@@ -5658,7 +5612,7 @@
       {
         "title": "NHL : Philadelphia Flyers vs Washington Capitals",
         "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
+        "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nhl-philadelphia-flyers-vs-washington-capitals",
@@ -5784,7 +5738,7 @@
       {
         "title": "NHL : Florida Panthers vs Columbus Blue Jackets",
         "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
+        "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nhl-florida-panthers-vs-columbus-blue-jackets",
@@ -5876,7 +5830,7 @@
       {
         "title": "2025 NCAA Men's Basketball Tournament First Round: Yale vs Texas A&amp;M",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "NCAA Basketball",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "2025-ncaa-men-s-basketball-tournament-first-round-yale-vs-texas-a-amp-m",
@@ -5948,7 +5902,7 @@
       {
         "title": "College Softball : Michigan vs Maryland (College Park)",
         "sport": "Baseball</span>",
-        "sub_category": "Baseball</span>",
+        "sub_category": "Indian Premier League (IPL)",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "college-softball-michigan-vs-maryland-college-park",
@@ -5984,7 +5938,7 @@
       {
         "title": "2025 NCAA Men's Basketball Tournament First Round: Drake vs Missouri",
         "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sub_category": "NCAA Basketball",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "2025-ncaa-men-s-basketball-tournament-first-round-drake-vs-missouri",
@@ -6020,7 +5974,7 @@
       {
         "title": "NHL : Montréal Canadiens vs New York Islanders",
         "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
+        "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nhl-montréal-canadiens-vs-new-york-islanders",
@@ -6086,7 +6040,7 @@
       {
         "title": "NHL : Vancouver Canucks vs St. Louis Blues",
         "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
+        "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "nhl-vancouver-canucks-vs-st-louis-blues",
