@@ -1,144 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 01:25:50 AM",
-  "event_count": 105,
+  "last_updated": "Oct 23, 2026, 01:37:41 AM",
+  "event_count": 101,
   "events": {
     "events": [
-      {
-        "title": "Slovakia Extraliga : Spisska Nova Ves vs. HKM Zvolen",
-        "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "slovakia-extraliga-spisska-nova-ves-vs-hkm-zvolen",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 10:30:00 PM",
-          "end_time_bst": "Oct 23, 2026, 01:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Slovakia Extraliga : Spisska Nova Ves"
-          },
-          "team_b": {
-            "name": "HKM Zvolen"
-          }
-        },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
-        "channels": [
-          {
-            "channel_name": "Sport 2 Czech",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium5/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium5/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "KHL : Spartak Moscow vs Sochi",
-        "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "khl-spartak-moscow-vs-sochi",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 10:30:00 PM",
-          "end_time_bst": "Oct 23, 2026, 01:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "KHL : Spartak Moscow"
-          },
-          "team_b": {
-            "name": "Sochi"
-          }
-        },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
-        "channels": [
-          {
-            "channel_name": "KHL Prime",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium86/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium86/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "KHL : Nizhny Novgorod vs Cherepovets",
-        "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "khl-nizhny-novgorod-vs-cherepovets",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 10:30:00 PM",
-          "end_time_bst": "Oct 23, 2026, 01:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "KHL : Nizhny Novgorod"
-          },
-          "team_b": {
-            "name": "Cherepovets"
-          }
-        },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
-        "channels": [
-          {
-            "channel_name": "Match TV Russia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium127/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium127/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "PlusLiga : Barkom-Kazhany Lviv vs. Stal Nysa SA",
-        "sport": "Volleyball</span>",
-        "sub_category": "Volleyball</span>",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "plusliga-barkom-kazhany-lviv-vs-stal-nysa-sa",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 10:30:00 PM",
-          "end_time_bst": "Oct 23, 2026, 01:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "PlusLiga : Barkom-Kazhany Lviv"
-          },
-          "team_b": {
-            "name": "Stal Nysa SA"
-          }
-        },
-        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
-        "channels": [
-          {
-            "channel_name": "Polsat Sport 1 Poland",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium47/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium47/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "NCAA : High Point vs Purdue",
         "sport": "Basketball</span>",
@@ -153,13 +17,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "NCAA : High Point"
+            "name": "NCAA : High Point",
+            "flag": "https://ui-avatars.com/api/?name=NCAA+%3A+High+Point&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Purdue"
+            "name": "Purdue",
+            "flag": "https://ui-avatars.com/api/?name=Purdue&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=NCAA+%3A+High+Point&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "truTV USA",
@@ -197,13 +63,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Big Xii Pro Day Live"
+            "name": "Big Xii Pro Day Live",
+            "flag": "https://ui-avatars.com/api/?name=Big+Xii+Pro+Day+Live&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Big Xii Pro Day Live"
+            "name": "Big Xii Pro Day Live",
+            "flag": "https://ui-avatars.com/api/?name=Big+Xii+Pro+Day+Live&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
+        "logo": "https://ui-avatars.com/api/?name=Big+Xii+Pro+Day+Live&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "NFL Network USA",
@@ -231,13 +99,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Israel Liga Al, Women : Maccabi Hadera"
+            "name": "Israel Liga Al, Women : Maccabi Hadera",
+            "flag": "https://ui-avatars.com/api/?name=Israel+Liga+Al%2C+Women+%3A+Maccabi+Hadera&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Tel Aviv University"
+            "name": "Tel Aviv University",
+            "flag": "https://ui-avatars.com/api/?name=Tel+Aviv+University&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=Israel+Liga+Al%2C+Women+%3A+Maccabi+Hadera&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Sport 5 Plus Israel",
@@ -265,13 +135,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "UEFA Nations League : Turkey"
+            "name": "UEFA Nations League : Turkey",
+            "flag": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Turkey&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Hungary"
+            "name": "Hungary",
+            "flag": "https://ui-avatars.com/api/?name=Hungary&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Turkey&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Fox Sports 2 USA",
@@ -509,13 +381,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "UEFA Nations League : Armenia"
+            "name": "UEFA Nations League : Armenia",
+            "flag": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Armenia&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Georgia"
+            "name": "Georgia",
+            "flag": "https://ui-avatars.com/api/?name=Georgia&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Armenia&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Fox Soccer Plus",
@@ -703,13 +577,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "PGA Tour Valspar Championship"
+            "name": "PGA Tour Valspar Championship",
+            "flag": "https://ui-avatars.com/api/?name=PGA+Tour+Valspar+Championship&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "PGA Tour Valspar Championship"
+            "name": "PGA Tour Valspar Championship",
+            "flag": "https://ui-avatars.com/api/?name=PGA+Tour+Valspar+Championship&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
+        "logo": "https://ui-avatars.com/api/?name=PGA+Tour+Valspar+Championship&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Sky Sports Golf UK",
@@ -787,13 +663,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "ABA Liga 2 : Kk Zlatibor"
+            "name": "ABA Liga 2 : Kk Zlatibor",
+            "flag": "https://ui-avatars.com/api/?name=ABA+Liga+2+%3A+Kk+Zlatibor&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Kk Podgorica"
+            "name": "Kk Podgorica",
+            "flag": "https://ui-avatars.com/api/?name=Kk+Podgorica&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=ABA+Liga+2+%3A+Kk+Zlatibor&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Arena Sport 1 Serbia",
@@ -831,13 +709,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Czech Republic ZBL : KP Brno"
+            "name": "Czech Republic ZBL : KP Brno",
+            "flag": "https://ui-avatars.com/api/?name=Czech+Republic+ZBL+%3A+KP+Brno&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Sokol Hradec Kralove"
+            "name": "Sokol Hradec Kralove",
+            "flag": "https://ui-avatars.com/api/?name=Sokol+Hradec+Kralove&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=Czech+Republic+ZBL+%3A+KP+Brno&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Nova Sport 1 Czech",
@@ -865,13 +745,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Slovenian League (M) : Gorenje"
+            "name": "Slovenian League (M) : Gorenje",
+            "flag": "https://ui-avatars.com/api/?name=Slovenian+League+%28M%29+%3A+Gorenje&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Krka"
+            "name": "Krka",
+            "flag": "https://ui-avatars.com/api/?name=Krka&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
+        "logo": "https://ui-avatars.com/api/?name=Slovenian+League+%28M%29+%3A+Gorenje&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Sport Klub 9 Serbia",
@@ -899,13 +781,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Slovakia Extraliga : HC Kosice"
+            "name": "Slovakia Extraliga : HC Kosice",
+            "flag": "https://ui-avatars.com/api/?name=Slovakia+Extraliga+%3A+HC+Kosice&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "HK Dukla Trencin"
+            "name": "HK Dukla Trencin",
+            "flag": "https://ui-avatars.com/api/?name=HK+Dukla+Trencin&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
+        "logo": "https://ui-avatars.com/api/?name=Slovakia+Extraliga+%3A+HC+Kosice&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "JOJ Sport Slovakia HD",
@@ -933,13 +817,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Division 1 Women : Eczacibasi Istanbul"
+            "name": "Division 1 Women : Eczacibasi Istanbul",
+            "flag": "https://ui-avatars.com/api/?name=Division+1+Women+%3A+Eczacibasi+Istanbul&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Vakifbank SK"
+            "name": "Vakifbank SK",
+            "flag": "https://ui-avatars.com/api/?name=Vakifbank+SK&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
+        "logo": "https://ui-avatars.com/api/?name=Division+1+Women+%3A+Eczacibasi+Istanbul&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "TRT Spor Turkey",
@@ -977,13 +863,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "MLB : Philadelphia Phillies"
+            "name": "MLB : Philadelphia Phillies",
+            "flag": "https://ui-avatars.com/api/?name=MLB+%3A+Philadelphia+Phillies&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Atlanta Braves"
+            "name": "Atlanta Braves",
+            "flag": "https://ui-avatars.com/api/?name=Atlanta+Braves&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
+        "logo": "https://ui-avatars.com/api/?name=MLB+%3A+Philadelphia+Phillies&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "MLB Network",
@@ -1031,13 +919,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Premier League Pool: Day 1"
+            "name": "Premier League Pool: Day 1",
+            "flag": "https://ui-avatars.com/api/?name=Premier+League+Pool%3A+Day+1&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Premier League Pool: Day 1"
+            "name": "Premier League Pool: Day 1",
+            "flag": "https://ui-avatars.com/api/?name=Premier+League+Pool%3A+Day+1&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/500px-Premier_League_Logo.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=Premier+League+Pool%3A+Day+1&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Sky Sport 9 NZ",
@@ -1065,13 +955,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "2025 NCAA Men's Basketball Tournament First Round: Montana"
+            "name": "2025 NCAA Men's Basketball Tournament First Round: Montana",
+            "flag": "https://ui-avatars.com/api/?name=2025+NCAA+Men%27s+Basketball+Tournament+First+Round%3A+Montana&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Wisconsin"
+            "name": "Wisconsin",
+            "flag": "https://ui-avatars.com/api/?name=Wisconsin&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=2025+NCAA+Men%27s+Basketball+Tournament+First+Round%3A+Montana&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "TNT USA",
@@ -1099,13 +991,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Denmark, Handboldligaen : Skanderborg-Aarhus Haandbold"
+            "name": "Denmark, Handboldligaen : Skanderborg-Aarhus Haandbold",
+            "flag": "https://ui-avatars.com/api/?name=Denmark%2C+Handboldligaen+%3A+Skanderborg-Aarhus+Haandbold&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Soenderjyske HK"
+            "name": "Soenderjyske HK",
+            "flag": "https://ui-avatars.com/api/?name=Soenderjyske+HK&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
+        "logo": "https://ui-avatars.com/api/?name=Denmark%2C+Handboldligaen+%3A+Skanderborg-Aarhus+Haandbold&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "TV2 Sport Denmark",
@@ -1133,13 +1027,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Pictionary Season 3, Episode 114"
+            "name": "Pictionary Season 3, Episode 114",
+            "flag": "https://ui-avatars.com/api/?name=Pictionary+Season+3%2C+Episode+114&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Pictionary Season 3, Episode 114"
+            "name": "Pictionary Season 3, Episode 114",
+            "flag": "https://ui-avatars.com/api/?name=Pictionary+Season+3%2C+Episode+114&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
+        "logo": "https://ui-avatars.com/api/?name=Pictionary+Season+3%2C+Episode+114&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "FOXNY USA",
@@ -1167,13 +1063,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Euroleague : BC Olympiakos Piraeus"
+            "name": "Euroleague : BC Olympiakos Piraeus",
+            "flag": "https://ui-avatars.com/api/?name=Euroleague+%3A+BC+Olympiakos+Piraeus&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "KK Crvena zvezda Belgrade"
+            "name": "KK Crvena zvezda Belgrade",
+            "flag": "https://ui-avatars.com/api/?name=KK+Crvena+zvezda+Belgrade&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=Euroleague+%3A+BC+Olympiakos+Piraeus&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Magenta Sport 304",
@@ -1251,13 +1149,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Euroleague : AS Monaco"
+            "name": "Euroleague : AS Monaco",
+            "flag": "https://ui-avatars.com/api/?name=Euroleague+%3A+AS+Monaco&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Fenerbahce Istanbul"
+            "name": "Fenerbahce Istanbul",
+            "flag": "https://ui-avatars.com/api/?name=Fenerbahce+Istanbul&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=Euroleague+%3A+AS+Monaco&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Magenta Sport 302",
@@ -1325,13 +1225,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "2025 NCAA Men's Basketball Tournament First Round: Southern Illinois-Edwardsville"
+            "name": "2025 NCAA Men's Basketball Tournament First Round: Southern Illinois-Edwardsville",
+            "flag": "https://ui-avatars.com/api/?name=2025+NCAA+Men%27s+Basketball+Tournament+First+Round%3A+Southern+Illinois-Edwardsville&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Houston"
+            "name": "Houston",
+            "flag": "https://ui-avatars.com/api/?name=Houston&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=2025+NCAA+Men%27s+Basketball+Tournament+First+Round%3A+Southern+Illinois-Edwardsville&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "TBS USA",
@@ -1359,13 +1261,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Handball-Bundesliga : Rhein-Neckar Lowen"
+            "name": "Handball-Bundesliga : Rhein-Neckar Lowen",
+            "flag": "https://ui-avatars.com/api/?name=Handball-Bundesliga+%3A+Rhein-Neckar+Lowen&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "TSV Hannover-Burgdorf"
+            "name": "TSV Hannover-Burgdorf",
+            "flag": "https://ui-avatars.com/api/?name=TSV+Hannover-Burgdorf&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Bundesliga_logo_%282017%29.svg/500px-Bundesliga_logo_%282017%29.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=Handball-Bundesliga+%3A+Rhein-Neckar+Lowen&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "TV3 Max Denmark",
@@ -1423,13 +1327,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Norway Eliteserien : Vaalerenga IF Oslo"
+            "name": "Norway Eliteserien : Vaalerenga IF Oslo",
+            "flag": "https://ui-avatars.com/api/?name=Norway+Eliteserien+%3A+Vaalerenga+IF+Oslo&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Storhamar Hockey"
+            "name": "Storhamar Hockey",
+            "flag": "https://ui-avatars.com/api/?name=Storhamar+Hockey&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
+        "logo": "https://ui-avatars.com/api/?name=Norway+Eliteserien+%3A+Vaalerenga+IF+Oslo&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "TV2 Sport 2 Norway",
@@ -1457,13 +1363,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "SHL : Brynas IF"
+            "name": "SHL : Brynas IF",
+            "flag": "https://ui-avatars.com/api/?name=SHL+%3A+Brynas+IF&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Malmo IF"
+            "name": "Malmo IF",
+            "flag": "https://ui-avatars.com/api/?name=Malmo+IF&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
+        "logo": "https://ui-avatars.com/api/?name=SHL+%3A+Brynas+IF&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "TV4 Sport Live 2 Sweden",
@@ -1521,13 +1429,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "HockeyAllsvenskan : Oskarshamn"
+            "name": "HockeyAllsvenskan : Oskarshamn",
+            "flag": "https://ui-avatars.com/api/?name=HockeyAllsvenskan+%3A+Oskarshamn&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "BIK Karlskoga"
+            "name": "BIK Karlskoga",
+            "flag": "https://ui-avatars.com/api/?name=BIK+Karlskoga&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
+        "logo": "https://ui-avatars.com/api/?name=HockeyAllsvenskan+%3A+Oskarshamn&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "TV4 Sport Live 1 Sweden",
@@ -1555,13 +1465,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "HockeyAllsvenskan : Mora"
+            "name": "HockeyAllsvenskan : Mora",
+            "flag": "https://ui-avatars.com/api/?name=HockeyAllsvenskan+%3A+Mora&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Djurgardens"
+            "name": "Djurgardens",
+            "flag": "https://ui-avatars.com/api/?name=Djurgardens&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
+        "logo": "https://ui-avatars.com/api/?name=HockeyAllsvenskan+%3A+Mora&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "TV4 Sport Live 3 Sweden",
@@ -1589,13 +1501,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "HockeyAllsvenskan : Tingsryds"
+            "name": "HockeyAllsvenskan : Tingsryds",
+            "flag": "https://ui-avatars.com/api/?name=HockeyAllsvenskan+%3A+Tingsryds&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Vimmerby"
+            "name": "Vimmerby",
+            "flag": "https://ui-avatars.com/api/?name=Vimmerby&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
+        "logo": "https://ui-avatars.com/api/?name=HockeyAllsvenskan+%3A+Tingsryds&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "TV4 Sportkanalen",
@@ -1623,13 +1537,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "World Cup Qualifying : Saudi Arabia"
+            "name": "World Cup Qualifying : Saudi Arabia",
+            "flag": "https://ui-avatars.com/api/?name=World+Cup+Qualifying+%3A+Saudi+Arabia&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "China"
+            "name": "China",
+            "flag": "https://ui-avatars.com/api/?name=China&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=World+Cup+Qualifying+%3A+Saudi+Arabia&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "ESPN 2 NL",
@@ -1697,13 +1613,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "World Cup Qualifying : Iraq"
+            "name": "World Cup Qualifying : Iraq",
+            "flag": "https://ui-avatars.com/api/?name=World+Cup+Qualifying+%3A+Iraq&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Kuwait"
+            "name": "Kuwait",
+            "flag": "https://ui-avatars.com/api/?name=Kuwait&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=World+Cup+Qualifying+%3A+Iraq&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "beIN Sports MENA 4",
@@ -1731,13 +1649,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "World Cup Qualifying : Jordan"
+            "name": "World Cup Qualifying : Jordan",
+            "flag": "https://ui-avatars.com/api/?name=World+Cup+Qualifying+%3A+Jordan&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Palestine"
+            "name": "Palestine",
+            "flag": "https://ui-avatars.com/api/?name=Palestine&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=World+Cup+Qualifying+%3A+Jordan&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Jordan Sport",
@@ -1775,13 +1695,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "World Cup Qualifying : Qatar"
+            "name": "World Cup Qualifying : Qatar",
+            "flag": "https://ui-avatars.com/api/?name=World+Cup+Qualifying+%3A+Qatar&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Korea DPR"
+            "name": "Korea DPR",
+            "flag": "https://ui-avatars.com/api/?name=Korea+DPR&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=World+Cup+Qualifying+%3A+Qatar&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Astro Football",
@@ -1819,13 +1741,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "2025 NCAA Men's Basketball Tournament First Round: Alabama State"
+            "name": "2025 NCAA Men's Basketball Tournament First Round: Alabama State",
+            "flag": "https://ui-avatars.com/api/?name=2025+NCAA+Men%27s+Basketball+Tournament+First+Round%3A+Alabama+State&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Auburn"
+            "name": "Auburn",
+            "flag": "https://ui-avatars.com/api/?name=Auburn&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=2025+NCAA+Men%27s+Basketball+Tournament+First+Round%3A+Alabama+State&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "CBSNY USA",
@@ -1853,13 +1777,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Basquetebol: Men's March Madness #2"
+            "name": "Basquetebol: Men's March Madness #2",
+            "flag": "https://ui-avatars.com/api/?name=Basquetebol%3A+Men%27s+March+Madness+%232&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "College Basketball"
+            "name": "College Basketball",
+            "flag": "https://ui-avatars.com/api/?name=College+Basketball&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=Basquetebol%3A+Men%27s+March+Madness+%232&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "DAZN Eleven 1 Portugal",
@@ -1887,13 +1813,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "General Hospital Season 62, Episode 133"
+            "name": "General Hospital Season 62, Episode 133",
+            "flag": "https://ui-avatars.com/api/?name=General+Hospital+Season+62%2C+Episode+133&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "General Hospital Season 62, Episode 133"
+            "name": "General Hospital Season 62, Episode 133",
+            "flag": "https://ui-avatars.com/api/?name=General+Hospital+Season+62%2C+Episode+133&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
+        "logo": "https://ui-avatars.com/api/?name=General+Hospital+Season+62%2C+Episode+133&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "ABC NY USA",
@@ -1921,13 +1849,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "World Cup Qualifying : Libya"
+            "name": "World Cup Qualifying : Libya",
+            "flag": "https://ui-avatars.com/api/?name=World+Cup+Qualifying+%3A+Libya&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Angola"
+            "name": "Angola",
+            "flag": "https://ui-avatars.com/api/?name=Angola&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=World+Cup+Qualifying+%3A+Libya&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Sport TV6 Portugal",
@@ -1955,13 +1885,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Live Players Championship"
+            "name": "Live Players Championship",
+            "flag": "https://ui-avatars.com/api/?name=Live+Players+Championship&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Telford, England"
+            "name": "Telford, England",
+            "flag": "https://flagcdn.com/w320/gb-eng.png"
           }
         },
-        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
+        "logo": "https://ui-avatars.com/api/?name=Live+Players+Championship&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "ITV 4 UK",
@@ -2019,13 +1951,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "2025 NCAA Men's Basketball Tournament First Round: McNeese State"
+            "name": "2025 NCAA Men's Basketball Tournament First Round: McNeese State",
+            "flag": "https://ui-avatars.com/api/?name=2025+NCAA+Men%27s+Basketball+Tournament+First+Round%3A+McNeese+State&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Clemson"
+            "name": "Clemson",
+            "flag": "https://ui-avatars.com/api/?name=Clemson&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=2025+NCAA+Men%27s+Basketball+Tournament+First+Round%3A+McNeese+State&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "truTV USA",
@@ -2053,13 +1987,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Premier League Darts : Dobey, Chris"
+            "name": "Premier League Darts : Dobey, Chris",
+            "flag": "https://ui-avatars.com/api/?name=Premier+League+Darts+%3A+Dobey%2C+Chris&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Bunting, Stephen"
+            "name": "Bunting, Stephen",
+            "flag": "https://ui-avatars.com/api/?name=Bunting%2C+Stephen&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/500px-Premier_League_Logo.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=Premier+League+Darts+%3A+Dobey%2C+Chris&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Sky Sports Action UK",
@@ -2127,13 +2063,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Switzerland National League : HC Davos"
+            "name": "Switzerland National League : HC Davos",
+            "flag": "https://ui-avatars.com/api/?name=Switzerland+National+League+%3A+HC+Davos&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "EV Zug"
+            "name": "EV Zug",
+            "flag": "https://ui-avatars.com/api/?name=EV+Zug&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
+        "logo": "https://ui-avatars.com/api/?name=Switzerland+National+League+%3A+HC+Davos&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "3 Schweiz",
@@ -2161,13 +2099,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Hungary Extraliga Women : Volleyball BRSE"
+            "name": "Hungary Extraliga Women : Volleyball BRSE",
+            "flag": "https://ui-avatars.com/api/?name=Hungary+Extraliga+Women+%3A+Volleyball+BRSE&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Knrc"
+            "name": "Knrc",
+            "flag": "https://ui-avatars.com/api/?name=Knrc&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
+        "logo": "https://ui-avatars.com/api/?name=Hungary+Extraliga+Women+%3A+Volleyball+BRSE&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "M4 Sport Hungary",
@@ -2195,13 +2135,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Euroleague : Konferenz"
+            "name": "Euroleague : Konferenz",
+            "flag": "https://ui-avatars.com/api/?name=Euroleague+%3A+Konferenz&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Euroleague : Konferenz"
+            "name": "Euroleague : Konferenz",
+            "flag": "https://ui-avatars.com/api/?name=Euroleague+%3A+Konferenz&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=Euroleague+%3A+Konferenz&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Magenta Sport 301",
@@ -2229,13 +2171,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Euroleague : Maccabi Tel-Aviv"
+            "name": "Euroleague : Maccabi Tel-Aviv",
+            "flag": "https://ui-avatars.com/api/?name=Euroleague+%3A+Maccabi+Tel-Aviv&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Virtus Bologna"
+            "name": "Virtus Bologna",
+            "flag": "https://ui-avatars.com/api/?name=Virtus+Bologna&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=Euroleague+%3A+Maccabi+Tel-Aviv&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Magenta Sport 303",
@@ -2293,13 +2237,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Euroleague : Baskonia Vitoria-Gasteiz"
+            "name": "Euroleague : Baskonia Vitoria-Gasteiz",
+            "flag": "https://ui-avatars.com/api/?name=Euroleague+%3A+Baskonia+Vitoria-Gasteiz&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Bayern Munich"
+            "name": "Bayern Munich",
+            "flag": "https://ui-avatars.com/api/?name=Bayern+Munich&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=Euroleague+%3A+Baskonia+Vitoria-Gasteiz&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Magenta Sport 305",
@@ -2357,13 +2303,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Poland Superliga : Gornik Zabrze"
+            "name": "Poland Superliga : Gornik Zabrze",
+            "flag": "https://ui-avatars.com/api/?name=Poland+Superliga+%3A+Gornik+Zabrze&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "SPR Chrobry Glogow"
+            "name": "SPR Chrobry Glogow",
+            "flag": "https://ui-avatars.com/api/?name=SPR+Chrobry+Glogow&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
+        "logo": "https://ui-avatars.com/api/?name=Poland+Superliga+%3A+Gornik+Zabrze&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Polsat Sport 3 Poland",
@@ -2391,13 +2339,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Champions League : Perugia Umbria Volley"
+            "name": "Champions League : Perugia Umbria Volley",
+            "flag": "https://ui-avatars.com/api/?name=Champions+League+%3A+Perugia+Umbria+Volley&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "VV Monza"
+            "name": "VV Monza",
+            "flag": "https://ui-avatars.com/api/?name=VV+Monza&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/UEFA_Champions_League_logo_2.svg/500px-UEFA_Champions_League_logo_2.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=Champions+League+%3A+Perugia+Umbria+Volley&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Zona DAZN IT",
@@ -2475,13 +2425,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Premier League Darts : Humphries, Luke"
+            "name": "Premier League Darts : Humphries, Luke",
+            "flag": "https://ui-avatars.com/api/?name=Premier+League+Darts+%3A+Humphries%2C+Luke&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "van Gerwen, Michael"
+            "name": "van Gerwen, Michael",
+            "flag": "https://ui-avatars.com/api/?name=van+Gerwen%2C+Michael&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/500px-Premier_League_Logo.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=Premier+League+Darts+%3A+Humphries%2C+Luke&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Sky Sports Action UK",
@@ -2539,7 +2491,7 @@
         "title": "UEFA Nations League : Simulcast",
         "sport": "Soccer</span>",
         "sub_category": "Soccer</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-simulcast",
         "schedule": {
@@ -2549,13 +2501,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "UEFA Nations League : Simulcast"
+            "name": "UEFA Nations League : Simulcast",
+            "flag": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Simulcast&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "UEFA Nations League : Simulcast"
+            "name": "UEFA Nations League : Simulcast",
+            "flag": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Simulcast&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Simulcast&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "L'Équipe France",
@@ -2593,7 +2547,7 @@
         "title": "UEFA Nations League : Slovakia vs Slovenia",
         "sport": "Soccer</span>",
         "sub_category": "Soccer</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-slovakia-vs-slovenia",
         "schedule": {
@@ -2603,13 +2557,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "UEFA Nations League : Slovakia"
+            "name": "UEFA Nations League : Slovakia",
+            "flag": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Slovakia&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Slovenia"
+            "name": "Slovenia",
+            "flag": "https://ui-avatars.com/api/?name=Slovenia&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Slovakia&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Nova Sports News Greece",
@@ -2637,7 +2593,7 @@
         "title": "UEFA Nations League : Bulgaria vs Ireland Republic",
         "sport": "Soccer</span>",
         "sub_category": "Soccer</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-bulgaria-vs-ireland-republic",
         "schedule": {
@@ -2647,13 +2603,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "UEFA Nations League : Bulgaria"
+            "name": "UEFA Nations League : Bulgaria",
+            "flag": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Bulgaria&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Ireland Republic"
+            "name": "Ireland Republic",
+            "flag": "https://ui-avatars.com/api/?name=Ireland+Republic&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Bulgaria&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "RTE 2 Ireland",
@@ -2731,7 +2689,7 @@
         "title": "UEFA Nations League : Denmark vs Portugal",
         "sport": "Soccer</span>",
         "sub_category": "Soccer</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-denmark-vs-portugal",
         "schedule": {
@@ -2741,13 +2699,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "UEFA Nations League : Denmark"
+            "name": "UEFA Nations League : Denmark",
+            "flag": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Denmark&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Portugal"
+            "name": "Portugal",
+            "flag": "https://flagcdn.com/w320/pt.png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Denmark&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Sport TV1 Portugal",
@@ -2885,7 +2845,7 @@
         "title": "UEFA Nations League : Kosovo vs Iceland",
         "sport": "Soccer</span>",
         "sub_category": "Soccer</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-kosovo-vs-iceland",
         "schedule": {
@@ -2895,13 +2855,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "UEFA Nations League : Kosovo"
+            "name": "UEFA Nations League : Kosovo",
+            "flag": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Kosovo&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Iceland"
+            "name": "Iceland",
+            "flag": "https://ui-avatars.com/api/?name=Iceland&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Kosovo&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Stöð 2 Sport 1 Iceland",
@@ -2919,7 +2881,7 @@
         "title": "UEFA Nations League : Greece vs Scotland",
         "sport": "Soccer</span>",
         "sub_category": "Soccer</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-greece-vs-scotland",
         "schedule": {
@@ -2929,13 +2891,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "UEFA Nations League : Greece"
+            "name": "UEFA Nations League : Greece",
+            "flag": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Greece&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Scotland"
+            "name": "Scotland",
+            "flag": "https://ui-avatars.com/api/?name=Scotland&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Greece&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "BBC Scotland",
@@ -3023,7 +2987,7 @@
         "title": "UEFA Nations League : Ukraine vs Belgium",
         "sport": "Soccer</span>",
         "sub_category": "Soccer</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-ukraine-vs-belgium",
         "schedule": {
@@ -3033,13 +2997,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "UEFA Nations League : Ukraine"
+            "name": "UEFA Nations League : Ukraine",
+            "flag": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Ukraine&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Belgium"
+            "name": "Belgium",
+            "flag": "https://ui-avatars.com/api/?name=Belgium&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Ukraine&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "VTM Belgium",
@@ -3117,7 +3083,7 @@
         "title": "UEFA Nations League : Italy vs Germany",
         "sport": "Soccer</span>",
         "sub_category": "Soccer</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-italy-vs-germany",
         "schedule": {
@@ -3127,13 +3093,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "UEFA Nations League : Italy"
+            "name": "UEFA Nations League : Italy",
+            "flag": "https://flagcdn.com/w320/it.png"
           },
           "team_b": {
-            "name": "Germany"
+            "name": "Germany",
+            "flag": "https://flagcdn.com/w320/de.png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://flagcdn.com/w320/it.png",
         "channels": [
           {
             "channel_name": "RAI 1 IT",
@@ -3361,7 +3329,7 @@
         "title": "UEFA Nations League : Croatia vs France",
         "sport": "Soccer</span>",
         "sub_category": "Soccer</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-croatia-vs-france",
         "schedule": {
@@ -3371,13 +3339,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "UEFA Nations League : Croatia"
+            "name": "UEFA Nations League : Croatia",
+            "flag": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Croatia&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "France"
+            "name": "France",
+            "flag": "https://flagcdn.com/w320/fr.png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Croatia&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Fox Sports 2 USA",
@@ -3555,7 +3525,7 @@
         "title": "UEFA Nations League : Netherlands vs Spain",
         "sport": "Soccer</span>",
         "sub_category": "Soccer</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-netherlands-vs-spain",
         "schedule": {
@@ -3565,13 +3535,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "UEFA Nations League : Netherlands"
+            "name": "UEFA Nations League : Netherlands",
+            "flag": "https://flagcdn.com/w320/nl.png"
           },
           "team_b": {
-            "name": "Spain"
+            "name": "Spain",
+            "flag": "https://flagcdn.com/w320/es.png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://flagcdn.com/w320/nl.png",
         "channels": [
           {
             "channel_name": "Fox Sports 1 USA",
@@ -3759,7 +3731,7 @@
         "title": "UEFA Nations League : Austria vs Serbia",
         "sport": "Soccer</span>",
         "sub_category": "Soccer</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-austria-vs-serbia",
         "schedule": {
@@ -3769,13 +3741,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "UEFA Nations League : Austria"
+            "name": "UEFA Nations League : Austria",
+            "flag": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Austria&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Serbia"
+            "name": "Serbia",
+            "flag": "https://ui-avatars.com/api/?name=Serbia&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Austria&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "ORF eins Austria",
@@ -3843,7 +3817,7 @@
         "title": "Euroleague : Real Madrid vs. ASVEL Lyon Villeurbanne",
         "sport": "Basketball</span>",
         "sub_category": "Basketball</span>",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-real-madrid-vs-asvel-lyon-villeurbanne",
         "schedule": {
@@ -3853,13 +3827,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Euroleague : Real Madrid"
+            "name": "Euroleague : Real Madrid",
+            "flag": "https://ui-avatars.com/api/?name=Euroleague+%3A+Real+Madrid&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "ASVEL Lyon Villeurbanne"
+            "name": "ASVEL Lyon Villeurbanne",
+            "flag": "https://ui-avatars.com/api/?name=ASVEL+Lyon+Villeurbanne&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=Euroleague+%3A+Real+Madrid&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Magenta Sport 306",
@@ -3937,13 +3913,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "FanDuel Racing Live"
+            "name": "FanDuel Racing Live",
+            "flag": "https://ui-avatars.com/api/?name=FanDuel+Racing+Live&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "FanDuel Racing Live"
+            "name": "FanDuel Racing Live",
+            "flag": "https://ui-avatars.com/api/?name=FanDuel+Racing+Live&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
+        "logo": "https://ui-avatars.com/api/?name=FanDuel+Racing+Live&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "NBC Sports Bay Area",
@@ -3971,13 +3949,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Uruguay - Primera Division : Torque"
+            "name": "Uruguay - Primera Division : Torque",
+            "flag": "https://ui-avatars.com/api/?name=Uruguay+-+Primera+Division+%3A+Torque&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Juventud"
+            "name": "Juventud",
+            "flag": "https://ui-avatars.com/api/?name=Juventud&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=Uruguay+-+Primera+Division+%3A+Torque&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "VTV+ Uruguay",
@@ -4015,13 +3995,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Spain Copa de la Reina, Women : Valencia Basket"
+            "name": "Spain Copa de la Reina, Women : Valencia Basket",
+            "flag": "https://flagcdn.com/w320/es.png"
           },
           "team_b": {
-            "name": "Cb Jairis"
+            "name": "Cb Jairis",
+            "flag": "https://ui-avatars.com/api/?name=Cb+Jairis&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://flagcdn.com/w320/es.png",
         "channels": [
           {
             "channel_name": "Teledeporte Spain (TDP)",
@@ -4049,13 +4031,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "2025 NCAA Men's Basketball Tournament First Round: VCU"
+            "name": "2025 NCAA Men's Basketball Tournament First Round: VCU",
+            "flag": "https://ui-avatars.com/api/?name=2025+NCAA+Men%27s+Basketball+Tournament+First+Round%3A+VCU&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "BYU"
+            "name": "BYU",
+            "flag": "https://ui-avatars.com/api/?name=BYU&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=2025+NCAA+Men%27s+Basketball+Tournament+First+Round%3A+VCU&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "TNT USA",
@@ -4083,13 +4067,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "College Hockey Hockey East Tournament : Connecticut"
+            "name": "College Hockey Hockey East Tournament : Connecticut",
+            "flag": "https://ui-avatars.com/api/?name=College+Hockey+Hockey+East+Tournament+%3A+Connecticut&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Boston University"
+            "name": "Boston University",
+            "flag": "https://ui-avatars.com/api/?name=Boston+University&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
+        "logo": "https://ui-avatars.com/api/?name=College+Hockey+Hockey+East+Tournament+%3A+Connecticut&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "NESN USA",
@@ -4117,13 +4103,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Super League Rugby : Salford Red Devils"
+            "name": "Super League Rugby : Salford Red Devils",
+            "flag": "https://ui-avatars.com/api/?name=Super+League+Rugby+%3A+Salford+Red+Devils&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Huddersfield"
+            "name": "Huddersfield",
+            "flag": "https://ui-avatars.com/api/?name=Huddersfield&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Rugby_ball.svg/500px-Rugby_ball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=Super+League+Rugby+%3A+Salford+Red+Devils&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Fox Soccer Plus",
@@ -4161,13 +4149,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "MLB : Los Angeles Angels"
+            "name": "MLB : Los Angeles Angels",
+            "flag": "https://ui-avatars.com/api/?name=MLB+%3A+Los+Angeles+Angels&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Chicago White Sox"
+            "name": "Chicago White Sox",
+            "flag": "https://ui-avatars.com/api/?name=Chicago+White+Sox&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
+        "logo": "https://ui-avatars.com/api/?name=MLB+%3A+Los+Angeles+Angels&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "MLB Network",
@@ -4195,13 +4185,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Premier League Darts : Littler, Luke"
+            "name": "Premier League Darts : Littler, Luke",
+            "flag": "https://ui-avatars.com/api/?name=Premier+League+Darts+%3A+Littler%2C+Luke&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Aspinall, Nathan"
+            "name": "Aspinall, Nathan",
+            "flag": "https://ui-avatars.com/api/?name=Aspinall%2C+Nathan&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/500px-Premier_League_Logo.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=Premier+League+Darts+%3A+Littler%2C+Luke&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Sky Sports Action UK",
@@ -4269,13 +4261,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "NCAA : Georgia"
+            "name": "NCAA : Georgia",
+            "flag": "https://ui-avatars.com/api/?name=NCAA+%3A+Georgia&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Gonzaga"
+            "name": "Gonzaga",
+            "flag": "https://ui-avatars.com/api/?name=Gonzaga&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=NCAA+%3A+Georgia&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "TBS USA",
@@ -4323,13 +4317,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Premier League Darts : Price, Gerwyn"
+            "name": "Premier League Darts : Price, Gerwyn",
+            "flag": "https://ui-avatars.com/api/?name=Premier+League+Darts+%3A+Price%2C+Gerwyn&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Cross, Rob"
+            "name": "Cross, Rob",
+            "flag": "https://ui-avatars.com/api/?name=Cross%2C+Rob&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/500px-Premier_League_Logo.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=Premier+League+Darts+%3A+Price%2C+Gerwyn&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Sky Sports Action UK",
@@ -4397,13 +4393,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Rubble &amp; Crew Season 3"
+            "name": "Rubble &amp; Crew Season 3",
+            "flag": "https://ui-avatars.com/api/?name=Rubble+%26amp%3B+Crew+Season+3&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Rubble &amp; Crew Season 3"
+            "name": "Rubble &amp; Crew Season 3",
+            "flag": "https://ui-avatars.com/api/?name=Rubble+%26amp%3B+Crew+Season+3&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
+        "logo": "https://ui-avatars.com/api/?name=Rubble+%26amp%3B+Crew+Season+3&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Nick JR USA",
@@ -4431,13 +4429,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "World Cup Qualifying : Comoros"
+            "name": "World Cup Qualifying : Comoros",
+            "flag": "https://ui-avatars.com/api/?name=World+Cup+Qualifying+%3A+Comoros&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Mali"
+            "name": "Mali",
+            "flag": "https://ui-avatars.com/api/?name=Mali&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=World+Cup+Qualifying+%3A+Comoros&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Sport Klub 8 Serbia",
@@ -4465,13 +4465,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "College Softball : Purdue"
+            "name": "College Softball : Purdue",
+            "flag": "https://ui-avatars.com/api/?name=College+Softball+%3A+Purdue&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "University of Wisconsin (Madison)"
+            "name": "University of Wisconsin (Madison)",
+            "flag": "https://ui-avatars.com/api/?name=University+of+Wisconsin+%28Madison%29&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
+        "logo": "https://ui-avatars.com/api/?name=College+Softball+%3A+Purdue&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "BTN USA",
@@ -4499,13 +4501,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Brazil Copa do Nordeste : AA Altos"
+            "name": "Brazil Copa do Nordeste : AA Altos",
+            "flag": "https://flagcdn.com/w320/br.png"
           },
           "team_b": {
-            "name": "Moto Club"
+            "name": "Moto Club",
+            "flag": "https://ui-avatars.com/api/?name=Moto+Club&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://flagcdn.com/w320/br.png",
         "channels": [
           {
             "channel_name": "Premier Brasil",
@@ -4533,13 +4537,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "First Round 2025 NCAA Men's Basketball Tournament"
+            "name": "First Round 2025 NCAA Men's Basketball Tournament",
+            "flag": "https://ui-avatars.com/api/?name=First+Round+2025+NCAA+Men%27s+Basketball+Tournament&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "First Round 2025 NCAA Men's Basketball Tournament"
+            "name": "First Round 2025 NCAA Men's Basketball Tournament",
+            "flag": "https://ui-avatars.com/api/?name=First+Round+2025+NCAA+Men%27s+Basketball+Tournament&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=First+Round+2025+NCAA+Men%27s+Basketball+Tournament&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "TSN1",
@@ -4577,13 +4583,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "MLB : Boston Red Sox"
+            "name": "MLB : Boston Red Sox",
+            "flag": "https://ui-avatars.com/api/?name=MLB+%3A+Boston+Red+Sox&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Minnesota Twins"
+            "name": "Minnesota Twins",
+            "flag": "https://ui-avatars.com/api/?name=Minnesota+Twins&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
+        "logo": "https://ui-avatars.com/api/?name=MLB+%3A+Boston+Red+Sox&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "NESN USA",
@@ -4611,13 +4619,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "MLB : New York Yankees"
+            "name": "MLB : New York Yankees",
+            "flag": "https://ui-avatars.com/api/?name=MLB+%3A+New+York+Yankees&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Baltimore Orioles"
+            "name": "Baltimore Orioles",
+            "flag": "https://ui-avatars.com/api/?name=Baltimore+Orioles&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
+        "logo": "https://ui-avatars.com/api/?name=MLB+%3A+New+York+Yankees&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "MASN USA",
@@ -4645,13 +4655,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "BRAZIL: LBF Women - Ourinhos W"
+            "name": "BRAZIL: LBF Women - Ourinhos W",
+            "flag": "https://flagcdn.com/w320/br.png"
           },
           "team_b": {
-            "name": "Cerrado W"
+            "name": "Cerrado W",
+            "flag": "https://ui-avatars.com/api/?name=Cerrado+W&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://flagcdn.com/w320/br.png",
         "channels": [
           {
             "channel_name": "ESPN 4 BR",
@@ -4679,13 +4691,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "College Basketball - March Madness (RD1): Tennessee"
+            "name": "College Basketball - March Madness (RD1): Tennessee",
+            "flag": "https://ui-avatars.com/api/?name=College+Basketball+-+March+Madness+%28RD1%29%3A+Tennessee&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Wofford"
+            "name": "Wofford",
+            "flag": "https://ui-avatars.com/api/?name=Wofford&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=College+Basketball+-+March+Madness+%28RD1%29%3A+Tennessee&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Sport Klub 1 Serbia",
@@ -4713,13 +4727,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Jeopardy! Season 41, Episode 139"
+            "name": "Jeopardy! Season 41, Episode 139",
+            "flag": "https://ui-avatars.com/api/?name=Jeopardy%21+Season+41%2C+Episode+139&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Jeopardy! Season 41, Episode 139"
+            "name": "Jeopardy! Season 41, Episode 139",
+            "flag": "https://ui-avatars.com/api/?name=Jeopardy%21+Season+41%2C+Episode+139&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png",
+        "logo": "https://ui-avatars.com/api/?name=Jeopardy%21+Season+41%2C+Episode+139&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "ABC NY USA",
@@ -4747,13 +4763,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "World Cup Qualifying : Paraguay"
+            "name": "World Cup Qualifying : Paraguay",
+            "flag": "https://ui-avatars.com/api/?name=World+Cup+Qualifying+%3A+Paraguay&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Chile"
+            "name": "Chile",
+            "flag": "https://ui-avatars.com/api/?name=Chile&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=World+Cup+Qualifying+%3A+Paraguay&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Astro Grandstand",
@@ -4871,13 +4889,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "CONCACAF Nations League : USA"
+            "name": "CONCACAF Nations League : USA",
+            "flag": "https://flagcdn.com/w320/us.png"
           },
           "team_b": {
-            "name": "Panama"
+            "name": "Panama",
+            "flag": "https://ui-avatars.com/api/?name=Panama&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://flagcdn.com/w320/us.png",
         "channels": [
           {
             "channel_name": "CBS Sports Golazo USA",
@@ -4965,13 +4985,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Uruguay - Primera Division : Peñarol"
+            "name": "Uruguay - Primera Division : Peñarol",
+            "flag": "https://ui-avatars.com/api/?name=Uruguay+-+Primera+Division+%3A+Pe%C3%B1arol&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Liverpool"
+            "name": "Liverpool",
+            "flag": "https://ui-avatars.com/api/?name=Liverpool&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=Uruguay+-+Primera+Division+%3A+Pe%C3%B1arol&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "VTV+ Uruguay",
@@ -5009,13 +5031,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round"
+            "name": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
+            "flag": "https://ui-avatars.com/api/?name=2025+Miami+Open+Tennis+ATP+1st+Round%3B+WTA+2nd+Round&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round"
+            "name": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
+            "flag": "https://ui-avatars.com/api/?name=2025+Miami+Open+Tennis+ATP+1st+Round%3B+WTA+2nd+Round&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Tennis_ball.svg/500px-Tennis_ball.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=2025+Miami+Open+Tennis+ATP+1st+Round%3B+WTA+2nd+Round&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Tennis Channel",
@@ -5063,13 +5087,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "Men's College Wrestling NCAA Champonships, Second Round"
+            "name": "Men's College Wrestling NCAA Champonships, Second Round",
+            "flag": "https://ui-avatars.com/api/?name=Men%27s+College+Wrestling+NCAA+Champonships%2C+Second+Round&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Men's College Wrestling NCAA Champonships, Second Round"
+            "name": "Men's College Wrestling NCAA Champonships, Second Round",
+            "flag": "https://ui-avatars.com/api/?name=Men%27s+College+Wrestling+NCAA+Champonships%2C+Second+Round&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/500px-WWE_Logo.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=Men%27s+College+Wrestling+NCAA+Champonships%2C+Second+Round&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "ESPN USA",
@@ -5097,13 +5123,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "College Baseball : Texas A&amp;M"
+            "name": "College Baseball : Texas A&amp;M",
+            "flag": "https://ui-avatars.com/api/?name=College+Baseball+%3A+Texas+A%26amp%3BM&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Vanderbilt"
+            "name": "Vanderbilt",
+            "flag": "https://ui-avatars.com/api/?name=Vanderbilt&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
+        "logo": "https://ui-avatars.com/api/?name=College+Baseball+%3A+Texas+A%26amp%3BM&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "SEC Network USA",
@@ -5131,13 +5159,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "College Baseball : Florida State"
+            "name": "College Baseball : Florida State",
+            "flag": "https://ui-avatars.com/api/?name=College+Baseball+%3A+Florida+State&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Miami"
+            "name": "Miami",
+            "flag": "https://ui-avatars.com/api/?name=Miami&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
+        "logo": "https://ui-avatars.com/api/?name=College+Baseball+%3A+Florida+State&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "ACC Network USA",
@@ -5165,13 +5195,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "NBA G-League : Maine Celtics"
+            "name": "NBA G-League : Maine Celtics",
+            "flag": "https://ui-avatars.com/api/?name=NBA+G-League+%3A+Maine+Celtics&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Lakeland Magic"
+            "name": "Lakeland Magic",
+            "flag": "https://ui-avatars.com/api/?name=Lakeland+Magic&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/National_Basketball_Association_logo.svg/500px-National_Basketball_Association_logo.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=NBA+G-League+%3A+Maine+Celtics&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "NBCS Boston USA",
@@ -5199,13 +5231,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "NBA G-League : Wisconsin Herd"
+            "name": "NBA G-League : Wisconsin Herd",
+            "flag": "https://ui-avatars.com/api/?name=NBA+G-League+%3A+Wisconsin+Herd&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Long Island Nets"
+            "name": "Long Island Nets",
+            "flag": "https://ui-avatars.com/api/?name=Long+Island+Nets&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/National_Basketball_Association_logo.svg/500px-National_Basketball_Association_logo.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=NBA+G-League+%3A+Wisconsin+Herd&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "ESPN+ USA",
@@ -5233,13 +5267,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "2025 NCAA Women's Basketball Tournament First Four: Washington"
+            "name": "2025 NCAA Women's Basketball Tournament First Four: Washington",
+            "flag": "https://ui-avatars.com/api/?name=2025+NCAA+Women%27s+Basketball+Tournament+First+Four%3A+Washington&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Columbia"
+            "name": "Columbia",
+            "flag": "https://ui-avatars.com/api/?name=Columbia&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=2025+NCAA+Women%27s+Basketball+Tournament+First+Four%3A+Washington&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "ESPN2 USA",
@@ -5267,13 +5303,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "2025 NCAA Women's Basketball Tournament First Four: Washington"
+            "name": "2025 NCAA Women's Basketball Tournament First Four: Washington",
+            "flag": "https://ui-avatars.com/api/?name=2025+NCAA+Women%27s+Basketball+Tournament+First+Four%3A+Washington&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Columbia"
+            "name": "Columbia",
+            "flag": "https://ui-avatars.com/api/?name=Columbia&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=2025+NCAA+Women%27s+Basketball+Tournament+First+Four%3A+Washington&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "ESPN2 USA",
@@ -5301,13 +5339,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "NBA : New York Knicks"
+            "name": "NBA : New York Knicks",
+            "flag": "https://ui-avatars.com/api/?name=NBA+%3A+New+York+Knicks&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Charlotte Hornets"
+            "name": "Charlotte Hornets",
+            "flag": "https://ui-avatars.com/api/?name=Charlotte+Hornets&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/National_Basketball_Association_logo.svg/500px-National_Basketball_Association_logo.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=NBA+%3A+New+York+Knicks&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Home Feed",
@@ -5355,13 +5395,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "NBA : Brooklyn Nets"
+            "name": "NBA : Brooklyn Nets",
+            "flag": "https://ui-avatars.com/api/?name=NBA+%3A+Brooklyn+Nets&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Indiana Pacers"
+            "name": "Indiana Pacers",
+            "flag": "https://flagcdn.com/w320/in.png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/National_Basketball_Association_logo.svg/500px-National_Basketball_Association_logo.svg.png",
+        "logo": "https://ui-avatars.com/api/?name=NBA+%3A+Brooklyn+Nets&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Home Feed",
@@ -5419,13 +5461,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "NHL : Colorado Avalanche"
+            "name": "NHL : Colorado Avalanche",
+            "flag": "https://ui-avatars.com/api/?name=NHL+%3A+Colorado+Avalanche&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Ottawa Senators"
+            "name": "Ottawa Senators",
+            "flag": "https://ui-avatars.com/api/?name=Ottawa+Senators&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
+        "logo": "https://ui-avatars.com/api/?name=NHL+%3A+Colorado+Avalanche&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Home Feed",
@@ -5493,13 +5537,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "NHL : Calgary Flames"
+            "name": "NHL : Calgary Flames",
+            "flag": "https://ui-avatars.com/api/?name=NHL+%3A+Calgary+Flames&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "New Jersey Devils"
+            "name": "New Jersey Devils",
+            "flag": "https://ui-avatars.com/api/?name=New+Jersey+Devils&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
+        "logo": "https://ui-avatars.com/api/?name=NHL+%3A+Calgary+Flames&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Home Feed",
@@ -5557,13 +5603,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "NHL : Toronto Maple Leafs"
+            "name": "NHL : Toronto Maple Leafs",
+            "flag": "https://ui-avatars.com/api/?name=NHL+%3A+Toronto+Maple+Leafs&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "New York Rangers"
+            "name": "New York Rangers",
+            "flag": "https://ui-avatars.com/api/?name=New+York+Rangers&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
+        "logo": "https://ui-avatars.com/api/?name=NHL+%3A+Toronto+Maple+Leafs&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Home Feed",
@@ -5621,13 +5669,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "NHL : Philadelphia Flyers"
+            "name": "NHL : Philadelphia Flyers",
+            "flag": "https://ui-avatars.com/api/?name=NHL+%3A+Philadelphia+Flyers&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Washington Capitals"
+            "name": "Washington Capitals",
+            "flag": "https://ui-avatars.com/api/?name=Washington+Capitals&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
+        "logo": "https://ui-avatars.com/api/?name=NHL+%3A+Philadelphia+Flyers&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Home Feed",
@@ -5745,13 +5795,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "NHL : Florida Panthers"
+            "name": "NHL : Florida Panthers",
+            "flag": "https://ui-avatars.com/api/?name=NHL+%3A+Florida+Panthers&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Columbus Blue Jackets"
+            "name": "Columbus Blue Jackets",
+            "flag": "https://ui-avatars.com/api/?name=Columbus+Blue+Jackets&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
+        "logo": "https://ui-avatars.com/api/?name=NHL+%3A+Florida+Panthers&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Home Feed",
@@ -5799,13 +5851,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "College Basketball - March Madness (RD1): Kansas"
+            "name": "College Basketball - March Madness (RD1): Kansas",
+            "flag": "https://ui-avatars.com/api/?name=College+Basketball+-+March+Madness+%28RD1%29%3A+Kansas&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Arkansas"
+            "name": "Arkansas",
+            "flag": "https://ui-avatars.com/api/?name=Arkansas&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=College+Basketball+-+March+Madness+%28RD1%29%3A+Kansas&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Sport Klub 2 Serbia",
@@ -5833,13 +5887,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "2025 NCAA Men's Basketball Tournament First Round: Yale"
+            "name": "2025 NCAA Men's Basketball Tournament First Round: Yale",
+            "flag": "https://ui-avatars.com/api/?name=2025+NCAA+Men%27s+Basketball+Tournament+First+Round%3A+Yale&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Texas A&amp;M"
+            "name": "Texas A&amp;M",
+            "flag": "https://ui-avatars.com/api/?name=Texas+A%26amp%3BM&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=2025+NCAA+Men%27s+Basketball+Tournament+First+Round%3A+Yale&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "TBS USA",
@@ -5867,13 +5923,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "College Baseball : Tennessee"
+            "name": "College Baseball : Tennessee",
+            "flag": "https://ui-avatars.com/api/?name=College+Baseball+%3A+Tennessee&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Alabama"
+            "name": "Alabama",
+            "flag": "https://ui-avatars.com/api/?name=Alabama&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
+        "logo": "https://ui-avatars.com/api/?name=College+Baseball+%3A+Tennessee&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "ESPNU USA",
@@ -5901,13 +5959,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "College Softball : Michigan"
+            "name": "College Softball : Michigan",
+            "flag": "https://ui-avatars.com/api/?name=College+Softball+%3A+Michigan&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Maryland (College Park)"
+            "name": "Maryland (College Park)",
+            "flag": "https://ui-avatars.com/api/?name=Maryland+%28College+Park%29&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
+        "logo": "https://ui-avatars.com/api/?name=College+Softball+%3A+Michigan&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "BTN USA",
@@ -5935,13 +5995,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "2025 NCAA Men's Basketball Tournament First Round: Drake"
+            "name": "2025 NCAA Men's Basketball Tournament First Round: Drake",
+            "flag": "https://ui-avatars.com/api/?name=2025+NCAA+Men%27s+Basketball+Tournament+First+Round%3A+Drake&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "Missouri"
+            "name": "Missouri",
+            "flag": "https://ui-avatars.com/api/?name=Missouri&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+        "logo": "https://ui-avatars.com/api/?name=2025+NCAA+Men%27s+Basketball+Tournament+First+Round%3A+Drake&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "truTV USA",
@@ -5969,13 +6031,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "NHL : Montréal Canadiens"
+            "name": "NHL : Montréal Canadiens",
+            "flag": "https://ui-avatars.com/api/?name=NHL+%3A+Montr%C3%A9al+Canadiens&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "New York Islanders"
+            "name": "New York Islanders",
+            "flag": "https://ui-avatars.com/api/?name=New+York+Islanders&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
+        "logo": "https://ui-avatars.com/api/?name=NHL+%3A+Montr%C3%A9al+Canadiens&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Home Feed",
@@ -6033,13 +6097,15 @@
         },
         "teams": {
           "team_a": {
-            "name": "NHL : Vancouver Canucks"
+            "name": "NHL : Vancouver Canucks",
+            "flag": "https://ui-avatars.com/api/?name=NHL+%3A+Vancouver+Canucks&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           },
           "team_b": {
-            "name": "St. Louis Blues"
+            "name": "St. Louis Blues",
+            "flag": "https://ui-avatars.com/api/?name=St.+Louis+Blues&background=0D8ABC&color=fff&size=200&bold=true&format=png"
           }
         },
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
+        "logo": "https://ui-avatars.com/api/?name=NHL+%3A+Vancouver+Canucks&background=0D8ABC&color=fff&size=200&bold=true&format=png",
         "channels": [
           {
             "channel_name": "Home Feed",
