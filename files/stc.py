@@ -63,7 +63,65 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# স্মার্ট সাব-ক্যাটাগরি ডিটেকশন ইঞ্জিন (লিগ, টুর্নামেন্ট ও টিম অ্যানালাইসিস)
+# স্পোর্টস ক্লিন এবং স্ট্যান্ডার্ড নাম রূপান্তরকারী (Sport Normalizer)
+# -----------------------------------------------------------------------------
+def clean_and_normalize_sport(raw_sport: str, title: str = "") -> str:
+    """
+    সব ধরনের HTML ট্যাগ (যেমন: </span>) মুছে ফেলে স্ট্যান্ডার্ড খেলার নাম রিটার্ন করে।
+    """
+    clean = re.sub(r"<[^>]+>", "", raw_sport).strip()
+    clean = clean.split("—")[0].strip()
+    combined = f"{clean} {title}".lower()
+
+    # আমেরিকান ফুটবল চেক
+    if "american football" in combined or "nfl" in combined:
+        return "American Football"
+
+    # ফুটবল / সকার
+    if any(k in combined for k in ["soccer", "football", "fifa", "uefa", "la liga", "premier league", "serie a", "bundesliga", "ligue 1"]):
+        return "Football"
+
+    # ক্রিকেট
+    if any(k in combined for k in ["cricket", "ipl", "bpl", "psl", "t20", "odi", "test"]):
+        return "Cricket"
+
+    # বাস্কেটবল
+    if any(k in combined for k in ["basketball", "nba", "euroleague", "wnba"]):
+        return "Basketball"
+
+    # হকি
+    if any(k in combined for k in ["hockey", "nhl", "ice hockey"]):
+        return "Hockey"
+
+    # টেনিস
+    if any(k in combined for k in ["tennis", "wimbledon", "atp", "wta", "roland garros"]):
+        return "Tennis"
+
+    # বেসবল
+    if any(k in combined for k in ["baseball", "mlb"]):
+        return "Baseball"
+
+    # মোটরস্পোর্ট
+    if any(k in combined for k in ["motorsport", "racing", "formula 1", "f1", "motogp", "nascar"]):
+        return "Motorsport"
+
+    # রেসলিং
+    if any(k in combined for k in ["wwe", "wrestling", "smackdown", "raw", "aew", "nxt"]):
+        return "Wrestling"
+
+    # ফাইটিং / বক্সিং / MMA
+    if any(k in combined for k in ["ufc", "fighting", "mma", "boxing"]):
+        return "Fighting"
+
+    # রাগবি
+    if any(k in combined for k in ["rugby", "afl"]):
+        return "Rugby"
+
+    return clean.capitalize() or "Live Sports"
+
+
+# -----------------------------------------------------------------------------
+# স্মার্ট সাব-ক্যাটাগরি ডিটেকশন ইঞ্জিন (লিগ ও টুর্নামেন্ট)
 # -----------------------------------------------------------------------------
 LEAGUE_PATTERNS = [
     (r"premier league|epl|english premier", "Premier League"),
@@ -126,7 +184,6 @@ LEAGUE_PATTERNS = [
     (r"nhl", "NHL"),
 ]
 
-# জনপ্রিয় দল দেখে লিগ চেনার ডিকশনারি
 TOP_CLUBS = {
     "Premier League": [
         "arsenal", "chelsea", "liverpool", "manchester united", "manchester city",
@@ -166,22 +223,16 @@ TOP_CLUBS = {
 def get_sub_category(sport: str, title: str) -> str:
     combined_text = f"{sport} {title}".lower()
 
-    # ১. সরাসরি লিগ বা টুর্নামেন্টের নাম খোঁজা
     for pattern, league_name in LEAGUE_PATTERNS:
         if re.search(pattern, combined_text):
             return league_name
 
-    # ২. দলগুলোর নাম দিয়ে লিগ অনুমান করা
     for league, teams in TOP_CLUBS.items():
         for t in teams:
             if t in combined_text:
                 return league
 
-    # ৩. কোনো নির্দিষ্ট টুর্নামেন্ট না পেলে খেলার ক্যাটাগরি বসানো
-    clean_sport = sport.strip().capitalize()
-    if clean_sport.lower() in ["soccer", "football"]:
-        return "Football"
-    return clean_sport or "Live Sports"
+    return sport
 
 
 # -----------------------------------------------------------------------------
@@ -332,7 +383,6 @@ def save_playlists(events: list[dict]) -> None:
             status_lbl = f" [{status}]" if status else ""
             display_name = f"[{sub_cat}] {title} | {ch_name}{status_lbl}"
 
-            # M3U তে সাব-ক্যাটাগরিকে group-title হিসেবে সেট করা
             m3u_lines.append(
                 f'#EXTINF:-1 '
                 f'tvg-id="Live.Event.us" '
@@ -509,9 +559,12 @@ async def get_dlhd_events(client: httpx.AsyncClient) -> list[DLHDEvent]:
                         channels.append(DLHDChannel(channel_name=c_name, channel_id=c_id))
 
                 if channels:
+                    # এখানে স্পোর্টসের নাম ক্লিন এবং স্ট্যান্ডার্ড রূপ দেওয়া হচ্ছে
+                    normalized_sport = clean_and_normalize_sport(sport_cat, event_title)
+
                     events.append(
                         DLHDEvent(
-                            sport=sport_cat.capitalize(),
+                            sport=normalized_sport,
                             title=event_title.strip(),
                             start_dt=event_dt,
                             channels=channels,
@@ -614,13 +667,13 @@ async def scrape() -> None:
                 team_a_flag = team_badge_map.get(team_a_name, "")
                 team_b_flag = team_badge_map.get(team_b_name, "")
 
-                # স্মার্ট সাব-ক্যাটাগরি বের করা
+                # স্মার্ট সাব-ক্যাটাগরি
                 detected_sub_category = get_sub_category(ev.sport, ev.title)
 
                 formatted_event = {
                     "title": ev.title,
-                    "sport": ev.sport,
-                    "sub_category": detected_sub_category,  # সঠিক লিগ/টুর্নামেন্ট নাম
+                    "sport": ev.sport,  # সম্পূর্ণ ক্লিন এবং স্ট্যান্ডার্ড খেলার নাম
+                    "sub_category": detected_sub_category,
                     "status": determine_status(ev.start_dt, early_minutes=15),
                     "is_hot": False,
                     "slug": create_slug(ev.title),
@@ -664,7 +717,7 @@ async def scrape() -> None:
 
         save_playlists(final_playlist)
         STATE_FILE.write_text(new_state, encoding="utf-8")
-        log.info("Playlist generation completed with Smart Sub-categories!")
+        log.info("Playlist generation completed with Clean Sports names!")
 
 
 if __name__ == "__main__":
