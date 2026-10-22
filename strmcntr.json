@@ -1,84 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 05:37:59 AM",
-  "event_count": 36,
+  "last_updated": "Oct 23, 2026, 05:43:00 AM",
+  "event_count": 35,
   "events": {
     "events": [
-      {
-        "title": "Premier League Darts : Price, Gerwyn vs. Cross, Rob",
-        "sport": "Football",
-        "sub_category": "Premier League",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "premier-league-darts-price-gerwyn-vs-cross-rob",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 02:40:00 AM",
-          "end_time_bst": "Oct 23, 2026, 05:40:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Premier League Darts : Price, Gerwyn",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png"
-          },
-          "team_b": {
-            "name": "Cross, Rob",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png",
-        "channels": [
-          {
-            "channel_name": "Sky Sports Action UK",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium37/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium37/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport1 DE",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium641/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium641/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sports Main Event",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium38/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium38/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "TV3 Sport Denmark",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium809/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium809/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sport Select NZ",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium587/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium587/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Rubble &amp; Crew Season 3",
         "sport": "Tv shows",
