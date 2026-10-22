@@ -1,0 +1,52 @@
+name: DLHD Playlist Auto Update
+
+on:
+  workflow_dispatch:
+  # ক্লাউডফ্লেয়ার ওয়ার্কারের সিগন্যাল গ্রহণ করার জন্য
+  repository_dispatch:
+    types: [source_updated]
+  # ব্যাকগ্রাউন্ডে প্রতি ১৫ মিনিট পর পর অটোমেটিক চলার জন্য
+  schedule:
+    - cron: "*/15 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install "httpx[http2]" selectolax
+
+      - name: Run DaddyLive Scraper (Generate JSON & M3U)
+        run: |
+          python files/stc.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # তৈরি হওয়া প্লেলিস্ট এবং ক্যাশে স্টেট গিট ট্র্যাকিংয়ে যোগ করা
+          git add strmcntr.json strmcntr.m3u caches/ logs/
+
+          # কোনো পরিবর্তন না থাকলে প্রস্থান করবে
+          if git diff --cached --quiet; then
+            echo "No changes in playlist. Nothing to commit."
+            exit 0
+          fi
+
+          git commit -m "Auto: Update DaddyLive JSON & M3U Playlists"
+          git push
