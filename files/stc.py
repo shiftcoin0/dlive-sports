@@ -62,6 +62,63 @@ if not log.handlers:
     log.propagate = False
 
 
+# -----------------------------------------------------------------------------
+# স্মার্ট লোগো লাইব্রেরি (হাই-কোয়ালিটি স্পোর্টস ও টুর্নামেন্ট লোগো)
+# -----------------------------------------------------------------------------
+DEFAULT_LIVE_LOGO = "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sports-live-us.png"
+
+SPORT_LOGOS = {
+    "soccer": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+    "football": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png",
+    "cricket": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Cricketball.svg/500px-Cricketball.svg.png",
+    "basketball": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/500px-Basketball.png",
+    "tennis": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Tennis_ball.svg/500px-Tennis_ball.svg.png",
+    "motorsport": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/500px-F1.svg.png",
+    "racing": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/500px-F1.svg.png",
+    "baseball": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baseball_%28crop%29.jpg/500px-Baseball_%28crop%29.jpg",
+    "hockey": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ice_Hockey_Puck.jpg/500px-Ice_Hockey_Puck.jpg",
+    "rugby": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Rugby_ball.svg/500px-Rugby_ball.svg.png",
+    "wrestling": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/500px-WWE_Logo.svg.png",
+    "fighting": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/UFC_logo.svg/500px-UFC_logo.svg.png",
+    "mma": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/UFC_logo.svg/500px-UFC_logo.svg.png",
+    "boxing": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/UFC_logo.svg/500px-UFC_logo.svg.png",
+    "american football": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/National_Football_League_logo.svg/500px-National_Football_League_logo.svg.png",
+}
+
+# বড় বড় টুর্নামেন্টের জন্য কাস্টম লোগো
+TOURNAMENT_KEYWORDS = [
+    (r"premier league|epl", "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/500px-Premier_League_Logo.svg.png"),
+    (r"champions league|ucl", "https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/UEFA_Champions_League_logo_2.svg/500px-UEFA_Champions_League_logo_2.svg.png"),
+    (r"la liga", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/LaLiga_logo_2023.svg/500px-LaLiga_logo_2023.svg.png"),
+    (r"serie a", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Serie_A_logo_2019.svg/500px-Serie_A_logo_2019.svg.png"),
+    (r"bundesliga", "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Bundesliga_logo_%282017%29.svg/500px-Bundesliga_logo_%282017%29.svg.png"),
+    (r"ipl|indian premier league", "https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/500px-Indian_Premier_League_Official_Logo.svg.png"),
+    (r"nba", "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/National_Basketball_Association_logo.svg/500px-National_Basketball_Association_logo.svg.png"),
+    (r"ufc", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/UFC_logo.svg/500px-UFC_logo.svg.png"),
+    (r"wwe|smackdown|raw|nxt", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/500px-WWE_Logo.svg.png"),
+    (r"f1|formula 1", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/500px-F1.svg.png"),
+    (r"nfl", "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/National_Football_League_logo.svg/500px-National_Football_League_logo.svg.png"),
+]
+
+
+def get_smart_logo(sport: str, title: str) -> str:
+    title_lower = title.lower()
+
+    # ১. প্রথমে টাইটেলের ভেতরের টুর্নামেন্ট নাম চেক করা
+    for pattern, logo_url in TOURNAMENT_KEYWORDS:
+        if re.search(pattern, title_lower):
+            return logo_url
+
+    # ২. টুর্নামেন্ট না মিললে খেলার ক্যাটাগরি ভিত্তিক লোগো দেওয়া
+    sport_lower = sport.lower()
+    for sp_key, logo_url in SPORT_LOGOS.items():
+        if sp_key in sport_lower:
+            return logo_url
+
+    # ৩. কোনোটিই না মিললে ডিফল্ট লাইভ স্পোর্টস লোগো
+    return DEFAULT_LIVE_LOGO
+
+
 @dataclass(slots=True)
 class DLHDChannel:
     channel_name: str
@@ -197,16 +254,10 @@ async def safe_process(fn, timeout: int | float = 25):
             return None
 
 
-# -----------------------------------------------------------------------------
-# DaddyLive (DLHD) ডাইরেক্ট .m3u8 ডিকোডার
-# -----------------------------------------------------------------------------
 async def decode_dlhd_m3u8(
     client: httpx.AsyncClient,
     channel_id: str,
 ) -> tuple[str, str] | None:
-    """
-    DaddyLive চ্যানেল আইডি থেকে আসল m3u8 স্ট্রিম এবং প্লেয়ার রেফারার ডিকোড করার ফাংশন
-    """
     clean_id = re.sub(r"[^\d]", "", str(channel_id))
     if not clean_id:
         return None
@@ -217,17 +268,14 @@ async def decode_dlhd_m3u8(
         "Referer": f"{BASE_URL}/",
     }
 
-    # ১. চ্যানেল পেজ ফেচ করা
     resp = await request(client, channel_page_url, headers=headers)
     if not resp:
         return None
 
-    # সরাসরি m3u8 লিংক আছে কিনা চেক
     direct_match = re.search(r'["\'](https?://[^"\']+\.m3u8[^"\']*)["\']', resp.text)
     if direct_match:
         return direct_match.group(1), f"{BASE_URL}/"
 
-    # আইফ্রেম খোঁজা
     soup = HTMLParser(resp.content)
     iframe = soup.css_first("iframe")
     if not iframe:
@@ -245,7 +293,6 @@ async def decode_dlhd_m3u8(
     parsed_iframe = urlsplit(iframe_src)
     player_origin = f"{parsed_iframe.scheme}://{parsed_iframe.netloc}"
 
-    # ২. প্লেয়ার আইফ্রেম ফেচ করা
     player_headers = {
         "User-Agent": UA,
         "Referer": f"{BASE_URL}/",
@@ -254,12 +301,10 @@ async def decode_dlhd_m3u8(
     if not player_resp:
         return None
 
-    # প্লেয়ার পেজে সরাসরি m3u8 থাকলে
     player_match = re.search(r'["\'](https?://[^"\']+\.m3u8[^"\']*)["\']', player_resp.text)
     if player_match:
         return player_match.group(1), f"{player_origin}/"
 
-    # ৩. server_lookup.php কল করে server_key সংগ্রহ করা
     key_match = re.search(r'channel_id=([^"\'&\s]+)', player_resp.text)
     channel_key = key_match.group(1) if key_match else f"premium{clean_id}"
 
@@ -288,14 +333,10 @@ async def decode_dlhd_m3u8(
     if not server_key:
         server_key = "topembed"
 
-    # ৪. চূড়ান্ত .m3u8 লিঙ্ক তৈরি
     m3u8_url = f"https://{server_key}new.newkso.ru/{server_key}/{channel_key}/mono.m3u8"
     return m3u8_url, f"{player_origin}/"
 
 
-# -----------------------------------------------------------------------------
-# DaddyLive শিডিউল সংগ্রহ ও পার্সিং
-# -----------------------------------------------------------------------------
 async def get_dlhd_events(client: httpx.AsyncClient) -> list[DLHDEvent]:
     events: list[DLHDEvent] = []
     headers = {
@@ -317,9 +358,7 @@ async def get_dlhd_events(client: httpx.AsyncClient) -> list[DLHDEvent]:
 
     now_utc = datetime.now(timezone.utc)
 
-    # DaddyLive শিডিউল পার্সিং
     for date_key, category_obj in schedule_data.items():
-        # ডেটা যদি সরাসরি ক্যাটাগরি লিস্ট হয়
         if isinstance(category_obj, list):
             items_by_cat = {date_key: category_obj}
         elif isinstance(category_obj, dict):
@@ -342,18 +381,15 @@ async def get_dlhd_events(client: httpx.AsyncClient) -> list[DLHDEvent]:
                 if not event_title or not raw_channels:
                     continue
 
-                # সময় পার্সিং (DaddyLive এর সময় সাধারণত UTC তে থাকে)
                 event_dt = now_utc
                 time_match = re.search(r"(\d{1,2}):(\d{2})", time_str)
                 if time_match:
                     h, m = int(time_match.group(1)), int(time_match.group(2))
                     event_dt = now_utc.replace(hour=h, minute=m, second=0, microsecond=0)
 
-                # ৩ ঘণ্টার বেশি পুরানো ম্যাচ বাদ
                 if event_dt < now_utc - timedelta(hours=3):
                     continue
 
-                # পরবর্তী ২৪ ঘণ্টার ম্যাচগুলো রাখা হবে
                 if event_dt > now_utc + timedelta(hours=24):
                     continue
 
@@ -397,7 +433,6 @@ async def scrape() -> None:
             log.info("No events found in DaddyLive schedule")
             return
 
-        # দ্রুত চেক: সোর্সের ম্যাচ বা লাইভ স্ট্যাটাস অপরিবর্তিত থাকলে দ্রুত এক্সিট করা
         current_state = []
         for ev in raw_events:
             st = determine_status(ev.start_dt, early_minutes=15)
@@ -443,6 +478,9 @@ async def scrape() -> None:
                 start_str = start_bst.strftime("%b %d, %Y, %I:%M:%S %p")
                 end_str = end_bst.strftime("%b %d, %Y, %I:%M:%S %p")
 
+                # স্মার্ট লোগো সেট করা হচ্ছে
+                event_logo = get_smart_logo(ev.sport, ev.title)
+
                 formatted_event = {
                     "title": ev.title,
                     "sport": ev.sport,
@@ -456,14 +494,13 @@ async def scrape() -> None:
                         "end_time_bst": end_str,
                     },
                     "teams": parse_teams(ev.title),
-                    "logo": None,
+                    "logo": event_logo,
                     "channels": event_channels,
                     "_timestamp": ev.start_dt.timestamp(),
                 }
 
                 final_playlist.append(formatted_event)
 
-        # LIVE ইভেন্ট সবার উপরে রাখার সর্টিং
         status_priority = {
             "LIVE": 0,
             "UPCOMING": 1,
