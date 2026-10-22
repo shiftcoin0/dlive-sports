@@ -63,7 +63,129 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# আন্তর্জাতিক পতাকার ওপেন সিডিএন (ব্রাউজারে সরাসরি ১০০% ওপেন হবে)
+# স্মার্ট সাব-ক্যাটাগরি ডিটেকশন ইঞ্জিন (লিগ, টুর্নামেন্ট ও টিম অ্যানালাইসিস)
+# -----------------------------------------------------------------------------
+LEAGUE_PATTERNS = [
+    (r"premier league|epl|english premier", "Premier League"),
+    (r"la liga|laliga|primera division", "La Liga"),
+    (r"serie a|serie-a", "Serie A"),
+    (r"bundesliga", "Bundesliga"),
+    (r"ligue 1|ligue1", "Ligue 1"),
+    (r"champions league|ucl|uefa champions", "UEFA Champions League"),
+    (r"europa league|uel", "UEFA Europa League"),
+    (r"conference league|uecl", "UEFA Conference League"),
+    (r"fa cup", "FA Cup"),
+    (r"copa del rey", "Copa del Rey"),
+    (r"carabao cup|efl cup", "EFL Cup"),
+    (r"mls|major league soccer", "MLS"),
+    (r"saudi pro league|spl", "Saudi Pro League"),
+    (r"copa libertadores", "Copa Libertadores"),
+    
+    # Cricket
+    (r"ipl|indian premier league", "Indian Premier League (IPL)"),
+    (r"bpl|bangladesh premier league", "Bangladesh Premier League (BPL)"),
+    (r"psl|pakistan super league", "Pakistan Super League (PSL)"),
+    (r"big bash|bbl", "Big Bash League"),
+    (r"the hundred", "The Hundred"),
+    (r"t20 world cup", "ICC T20 World Cup"),
+    (r"icc world cup|cricket world cup", "ICC Cricket World Cup"),
+    (r"asia cup", "Asia Cup"),
+    
+    # Basketball
+    (r"nba", "NBA"),
+    (r"euroleague", "EuroLeague"),
+    (r"wnba", "WNBA"),
+    (r"ncaa", "NCAA Basketball"),
+    
+    # Combat / Wrestling
+    (r"smackdown", "WWE SmackDown"),
+    (r"raw", "WWE Raw"),
+    (r"nxt", "WWE NXT"),
+    (r"wwe", "WWE"),
+    (r"aew", "AEW"),
+    (r"ufc", "UFC"),
+    (r"boxing", "Boxing"),
+    
+    # Motorsport
+    (r"formula 1|formula one|f1", "Formula 1"),
+    (r"motogp", "MotoGP"),
+    (r"nascar", "NASCAR"),
+    (r"indycar", "IndyCar"),
+    
+    # Tennis
+    (r"wimbledon", "Wimbledon"),
+    (r"us open", "US Open"),
+    (r"roland garros|french open", "French Open"),
+    (r"australian open", "Australian Open"),
+    (r"atp", "ATP Tour"),
+    (r"wta", "WTA Tour"),
+    
+    # American Football, Baseball, Hockey
+    (r"nfl", "NFL"),
+    (r"mlb", "MLB"),
+    (r"nhl", "NHL"),
+]
+
+# জনপ্রিয় দল দেখে লিগ চেনার ডিকশনারি
+TOP_CLUBS = {
+    "Premier League": [
+        "arsenal", "chelsea", "liverpool", "manchester united", "manchester city",
+        "man utd", "man city", "tottenham", "newcastle", "aston villa", "everton",
+        "west ham", "brighton", "wolves", "fulham", "crystal palace", "brentford",
+        "bournemouth", "nottingham forest", "leicester"
+    ],
+    "La Liga": [
+        "real madrid", "barcelona", "atletico madrid", "sevilla", "valencia",
+        "athletic bilbao", "villarreal", "real betis", "real sociedad", "girona",
+        "celta vigo", "mallorca", "osasuna", "getafe", "rayo vallecano"
+    ],
+    "Serie A": [
+        "juventus", "inter milan", "ac milan", "napoli", "as roma", "lazio",
+        "atalanta", "fiorentina", "torino", "bologna", "udinese"
+    ],
+    "Bundesliga": [
+        "bayern munich", "borussia dortmund", "dortmund", "bayer leverkusen",
+        "leverkusen", "rb leipzig", "leipzig", "eintracht frankfurt", "stuttgart",
+        "wolfsburg", "borussia mönchengladbach"
+    ],
+    "Ligue 1": [
+        "psg", "paris saint-germain", "marseille", "monaco", "lyon", "lille", "nice", "rennes"
+    ],
+    "Indian Premier League (IPL)": [
+        "chennai super kings", "csk", "mumbai indians", "mi", "royal challengers",
+        "rcb", "kolkata knight riders", "kkr", "delhi capitals", "rajasthan royals",
+        "punjab kings", "sunrisers hyderabad", "srh", "gujarat titans", "lucknow super giants"
+    ],
+    "NBA": [
+        "lakers", "warriors", "celtics", "bulls", "heat", "bucks", "mavericks",
+        "suns", "clippers", "nuggets", "76ers", "sixers", "nets", "knicks"
+    ]
+}
+
+
+def get_sub_category(sport: str, title: str) -> str:
+    combined_text = f"{sport} {title}".lower()
+
+    # ১. সরাসরি লিগ বা টুর্নামেন্টের নাম খোঁজা
+    for pattern, league_name in LEAGUE_PATTERNS:
+        if re.search(pattern, combined_text):
+            return league_name
+
+    # ২. দলগুলোর নাম দিয়ে লিগ অনুমান করা
+    for league, teams in TOP_CLUBS.items():
+        for t in teams:
+            if t in combined_text:
+                return league
+
+    # ৩. কোনো নির্দিষ্ট টুর্নামেন্ট না পেলে খেলার ক্যাটাগরি বসানো
+    clean_sport = sport.strip().capitalize()
+    if clean_sport.lower() in ["soccer", "football"]:
+        return "Football"
+    return clean_sport or "Live Sports"
+
+
+# -----------------------------------------------------------------------------
+# আন্তর্জাতিক পতাকার ওপেন সিডিএন
 # -----------------------------------------------------------------------------
 COUNTRY_FLAGS = {
     "argentina": "https://flagcdn.com/w320/ar.png",
@@ -88,30 +210,23 @@ COUNTRY_FLAGS = {
     "canada": "https://flagcdn.com/w320/ca.png",
 }
 
-# মেমোরি ক্যাশ যাতে একই দলের জন্য বারবার রিকোয়েস্ট না যায়
 TEAM_BADGE_CACHE: dict[str, str] = {}
 
 
 async def get_team_badge(client: httpx.AsyncClient, team_name: str) -> str:
-    """
-    টিমের আসল লোগো/ফ্ল্যাগ খোঁজার ফাংশন (TheSportsDB API + FlagCDN)
-    """
     cleaned = team_name.strip()
     if not cleaned:
         return "https://ui-avatars.com/api/?name=Live+Match&background=0D8ABC&color=fff&size=200"
 
-    # ক্যাশে থাকলে সেখান থেকে নেওয়া
     if cleaned in TEAM_BADGE_CACHE:
         return TEAM_BADGE_CACHE[cleaned]
 
-    # ১. আন্তর্জাতিক দল কিনা চেক
     name_lower = cleaned.lower()
     for country, flag_url in COUNTRY_FLAGS.items():
         if country in name_lower:
             TEAM_BADGE_CACHE[cleaned] = flag_url
             return flag_url
 
-    # ২. TheSportsDB ফ্রি API দিয়ে ক্লাব ব্যাজ সার্চ করা
     api_url = f"https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t={quote_plus(cleaned)}"
     try:
         resp = await client.get(api_url, timeout=5.0)
@@ -125,7 +240,6 @@ async def get_team_badge(client: httpx.AsyncClient, team_name: str) -> str:
     except Exception:
         pass
 
-    # ৩. কোনোটিই না পাওয়া গেলে সুন্দর এইচডি ক্রিয়েটিভ স্পোর্টস ব্যাজ (কোনোদিন এরর দিবে না)
     fallback_badge = f"https://ui-avatars.com/api/?name={quote_plus(cleaned)}&background=0D8ABC&color=fff&size=200&bold=true&format=png"
     TEAM_BADGE_CACHE[cleaned] = fallback_badge
     return fallback_badge
@@ -202,7 +316,7 @@ def save_playlists(events: list[dict]) -> None:
 
     for ev in events:
         title = ev.get("title", "Event")
-        sport = ev.get("sport", "Live")
+        sub_cat = ev.get("sub_category", "Live")
         logo = ev.get("logo", "")
         status = ev.get("status", "")
 
@@ -216,13 +330,14 @@ def save_playlists(events: list[dict]) -> None:
             referer = headers.get("Referer", "")
 
             status_lbl = f" [{status}]" if status else ""
-            display_name = f"[{sport}] {title} | {ch_name}{status_lbl}"
+            display_name = f"[{sub_cat}] {title} | {ch_name}{status_lbl}"
 
+            # M3U তে সাব-ক্যাটাগরিকে group-title হিসেবে সেট করা
             m3u_lines.append(
                 f'#EXTINF:-1 '
                 f'tvg-id="Live.Event.us" '
                 f'tvg-logo="{logo}" '
-                f'group-title="{sport}",'
+                f'group-title="{sub_cat}",'
                 f'{display_name}'
             )
 
@@ -435,9 +550,7 @@ async def scrape() -> None:
 
         log.info(f"Processing {len(raw_events)} active DaddyLive event(s)...")
 
-        # ---------------------------------------------------------------------
-        # ১. সকল টিমের ফ্ল্যাগ/ব্যাজ একসাথে প্যারালালে সংগ্রহ করা
-        # ---------------------------------------------------------------------
+        # ১. সকল টিমের ফ্ল্যাগ সংগ্রহ
         unique_team_names = set()
         for ev in raw_events:
             t = parse_team_names(ev.title)
@@ -453,9 +566,7 @@ async def scrape() -> None:
 
         await asyncio.gather(*(fetch_team(name) for name in unique_team_names))
 
-        # ---------------------------------------------------------------------
-        # ২. সকল চ্যানেল স্ট্রিম একসাথে প্যারালালে ডিকোড করা
-        # ---------------------------------------------------------------------
+        # ২. সকল চ্যানেল স্ট্রিম প্যারালালে ডিকোড
         unique_channel_ids = {ch.channel_id for ev in raw_events for ch in ev.channels}
         log.info(f"Decoding {len(unique_channel_ids)} unique channels concurrently...")
 
@@ -469,9 +580,7 @@ async def scrape() -> None:
 
         await asyncio.gather(*(fetch_channel(cid) for cid in unique_channel_ids))
 
-        # ---------------------------------------------------------------------
         # ৩. চূড়ান্ত প্লেলিস্ট তৈরি
-        # ---------------------------------------------------------------------
         final_playlist: list[dict] = []
 
         for ev in raw_events:
@@ -498,7 +607,6 @@ async def scrape() -> None:
                 start_str = start_bst.strftime("%b %d, %Y, %I:%M:%S %p")
                 end_str = end_bst.strftime("%b %d, %Y, %I:%M:%S %p")
 
-                # টিম নেম এবং সংশ্লিষ্ট ফ্ল্যাগ নির্ধারণ
                 t_names = parse_team_names(ev.title)
                 team_a_name = t_names["team_a"]
                 team_b_name = t_names["team_b"]
@@ -506,13 +614,13 @@ async def scrape() -> None:
                 team_a_flag = team_badge_map.get(team_a_name, "")
                 team_b_flag = team_badge_map.get(team_b_name, "")
 
-                # টিম A এর ফ্ল্যাগ/লোগোটিকে মূল লোগো হিসেবে সেট করা
-                event_logo = team_a_flag
+                # স্মার্ট সাব-ক্যাটাগরি বের করা
+                detected_sub_category = get_sub_category(ev.sport, ev.title)
 
                 formatted_event = {
                     "title": ev.title,
                     "sport": ev.sport,
-                    "sub_category": ev.sport,
+                    "sub_category": detected_sub_category,  # সঠিক লিগ/টুর্নামেন্ট নাম
                     "status": determine_status(ev.start_dt, early_minutes=15),
                     "is_hot": False,
                     "slug": create_slug(ev.title),
@@ -531,7 +639,7 @@ async def scrape() -> None:
                             "flag": team_b_flag,
                         },
                     },
-                    "logo": event_logo,  # Team A এর ইমেজ মূল লোগোতে সেট হলো
+                    "logo": team_a_flag,
                     "channels": event_channels,
                     "_timestamp": ev.start_dt.timestamp(),
                 }
@@ -556,7 +664,7 @@ async def scrape() -> None:
 
         save_playlists(final_playlist)
         STATE_FILE.write_text(new_state, encoding="utf-8")
-        log.info("Playlist generation with Real Team Logos completed successfully!")
+        log.info("Playlist generation completed with Smart Sub-categories!")
 
 
 if __name__ == "__main__":
