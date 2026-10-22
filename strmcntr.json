@@ -1,84 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 05:07:50 AM",
-  "event_count": 38,
+  "last_updated": "Oct 23, 2026, 05:12:56 AM",
+  "event_count": 37,
   "events": {
     "events": [
-      {
-        "title": "Premier League Darts : Littler, Luke vs. Aspinall, Nathan",
-        "sport": "Football",
-        "sub_category": "Premier League",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "premier-league-darts-littler-luke-vs-aspinall-nathan",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 02:10:00 AM",
-          "end_time_bst": "Oct 23, 2026, 05:10:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Premier League Darts : Littler, Luke",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png"
-          },
-          "team_b": {
-            "name": "Aspinall, Nathan",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png",
-        "channels": [
-          {
-            "channel_name": "Sky Sports Action UK",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium37/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium37/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport1 DE",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium641/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium641/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sports Main Event",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium38/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium38/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "TV3 Sport Denmark",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium809/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium809/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sport Select NZ",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium587/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium587/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "NCAA : Georgia vs Gonzaga",
         "sport": "Basketball",
