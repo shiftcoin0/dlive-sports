@@ -1,867 +1,11 @@
 {
-  "last_updated": "Oct 23, 2026, 01:56:11 AM",
-  "event_count": 100,
+  "last_updated": "Oct 23, 2026, 02:05:29 AM",
+  "event_count": 89,
   "events": {
     "events": [
       {
-        "title": "Big Xii Pro Day Live",
-        "sport": "Tv shows</span>",
-        "sub_category": "Tv shows</span>",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "big-xii-pro-day-live",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 11:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 02:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Big Xii Pro Day Live",
-            "flag": "https://ui-avatars.com/api/?name=Big+Xii+Pro+Day+Live&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          },
-          "team_b": {
-            "name": "Big Xii Pro Day Live",
-            "flag": "https://ui-avatars.com/api/?name=Big+Xii+Pro+Day+Live&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          }
-        },
-        "logo": "https://ui-avatars.com/api/?name=Big+Xii+Pro+Day+Live&background=0D8ABC&color=fff&size=200&bold=true&format=png",
-        "channels": [
-          {
-            "channel_name": "NFL Network USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium405/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium405/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Israel Liga Al, Women : Maccabi Hadera vs Tel Aviv University",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "israel-liga-al-women-maccabi-hadera-vs-tel-aviv-university",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 11:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 02:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Israel Liga Al, Women : Maccabi Hadera",
-            "flag": "https://ui-avatars.com/api/?name=Israel+Liga+Al%2C+Women+%3A+Maccabi+Hadera&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          },
-          "team_b": {
-            "name": "Tel Aviv University",
-            "flag": "https://ui-avatars.com/api/?name=Tel+Aviv+University&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          }
-        },
-        "logo": "https://ui-avatars.com/api/?name=Israel+Liga+Al%2C+Women+%3A+Maccabi+Hadera&background=0D8ABC&color=fff&size=200&bold=true&format=png",
-        "channels": [
-          {
-            "channel_name": "Sport 5 Plus Israel",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium145/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium145/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "UEFA Nations League : Turkey vs Hungary",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "uefa-nations-league-turkey-vs-hungary",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 11:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 02:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "UEFA Nations League : Turkey",
-            "flag": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Turkey&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          },
-          "team_b": {
-            "name": "Hungary",
-            "flag": "https://ui-avatars.com/api/?name=Hungary&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          }
-        },
-        "logo": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Turkey&background=0D8ABC&color=fff&size=200&bold=true&format=png",
-        "channels": [
-          {
-            "channel_name": "Fox Sports 2 USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium758/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium758/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "TV8 Turkey",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium1/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium1/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "M4 Sports Hungary",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium265/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium265/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sport 4 NZ",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium591/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium591/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "DAZN1 DE",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium426/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium426/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport TV2 Portugal",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium74/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium74/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Ziggo Sport 1 NL",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium393/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium393/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Vodafone Sport",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium260/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium260/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "SONY TEN 1 HD",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium885/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium885/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport 1 CZ",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium2/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium2/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Digi Sport 1 Romania",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium400/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium400/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Prima Sport 1 Romania",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium583/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium583/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Nova Sports 1 Greece",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium631/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium631/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Arena 1 Premium Serbia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium134/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium134/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "TV2 Sport X Denmark",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium808/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium808/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Diema Sport 3 Bulgaria",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium467/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium467/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "ESPN4 Brazil",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium85/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium85/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "ESPN2 Argentina",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium150/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium150/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "SuperSport Premier League",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium414/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium414/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "beIN Sports MENA 2",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium92/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium92/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "beIN Sports MENA English 1",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium61/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium61/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport 1 Israel",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium140/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium140/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "UEFA Nations League : Armenia vs Georgia",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "uefa-nations-league-armenia-vs-georgia",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 11:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 02:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "UEFA Nations League : Armenia",
-            "flag": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Armenia&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          },
-          "team_b": {
-            "name": "Georgia",
-            "flag": "https://ui-avatars.com/api/?name=Georgia&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          }
-        },
-        "logo": "https://ui-avatars.com/api/?name=UEFA+Nations+League+%3A+Armenia&background=0D8ABC&color=fff&size=200&bold=true&format=png",
-        "channels": [
-          {
-            "channel_name": "Fox Soccer Plus",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium756/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium756/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "1TV Georgia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium3/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium3/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "DAZN2 DE",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium427/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium427/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sport 3 NZ",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium590/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium590/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport TV5 Portugal",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium290/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium290/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Polsat Sport 2 Poland",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium50/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium50/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Ziggo Sport 2 NL",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium398/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium398/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "SONY TEN 2 HD",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium886/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium886/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Cytavision Sports 3 Cyprus",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium913/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium913/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Digi Sport 3 Romania",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium402/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium402/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Prima Sport 2 Romania",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium584/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium584/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Nova Sports Start Greece",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium637/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium637/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Nova Sport Bulgaria",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium468/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium468/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "SuperSport Football",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium56/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium56/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "beIN Sports MENA 8",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium98/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium98/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "beIN Sports MENA English 2",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium90/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium90/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport 3 Israel",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium142/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium142/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "PGA Tour Valspar Championship",
-        "sport": "Golf</span>",
-        "sub_category": "Golf</span>",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "pga-tour-valspar-championship",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 11:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 02:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "PGA Tour Valspar Championship",
-            "flag": "https://ui-avatars.com/api/?name=PGA+Tour+Valspar+Championship&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          },
-          "team_b": {
-            "name": "PGA Tour Valspar Championship",
-            "flag": "https://ui-avatars.com/api/?name=PGA+Tour+Valspar+Championship&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          }
-        },
-        "logo": "https://ui-avatars.com/api/?name=PGA+Tour+Valspar+Championship&background=0D8ABC&color=fff&size=200&bold=true&format=png",
-        "channels": [
-          {
-            "channel_name": "Sky Sports Golf UK",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium70/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium70/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "GOLF Channel USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium318/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium318/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Movistar Golf",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium528/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium528/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "SuperSport Golf",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium422/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium422/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sports Main Event",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium38/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium38/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sport 1 NZ",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium588/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium588/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "ABA Liga 2 : Kk Zlatibor vs. Kk Podgorica",
-        "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "aba-liga-2-kk-zlatibor-vs-kk-podgorica",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 11:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 02:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "ABA Liga 2 : Kk Zlatibor",
-            "flag": "https://ui-avatars.com/api/?name=ABA+Liga+2+%3A+Kk+Zlatibor&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          },
-          "team_b": {
-            "name": "Kk Podgorica",
-            "flag": "https://ui-avatars.com/api/?name=Kk+Podgorica&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          }
-        },
-        "logo": "https://ui-avatars.com/api/?name=ABA+Liga+2+%3A+Kk+Zlatibor&background=0D8ABC&color=fff&size=200&bold=true&format=png",
-        "channels": [
-          {
-            "channel_name": "Arena Sport 1 Serbia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium429/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium429/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Arena Sport 1 Croatia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium432/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium432/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Czech Republic ZBL : KP Brno vs. Sokol Hradec Kralove",
-        "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "czech-republic-zbl-kp-brno-vs-sokol-hradec-kralove",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 11:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 02:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Czech Republic ZBL : KP Brno",
-            "flag": "https://ui-avatars.com/api/?name=Czech+Republic+ZBL+%3A+KP+Brno&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          },
-          "team_b": {
-            "name": "Sokol Hradec Kralove",
-            "flag": "https://ui-avatars.com/api/?name=Sokol+Hradec+Kralove&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          }
-        },
-        "logo": "https://ui-avatars.com/api/?name=Czech+Republic+ZBL+%3A+KP+Brno&background=0D8ABC&color=fff&size=200&bold=true&format=png",
-        "channels": [
-          {
-            "channel_name": "Nova Sport 1 Czech",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium30/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium30/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Slovenian League (M) : Gorenje vs Krka",
-        "sport": "Handball</span>",
-        "sub_category": "Handball</span>",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "slovenian-league-m-gorenje-vs-krka",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 11:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 02:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Slovenian League (M) : Gorenje",
-            "flag": "https://ui-avatars.com/api/?name=Slovenian+League+%28M%29+%3A+Gorenje&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          },
-          "team_b": {
-            "name": "Krka",
-            "flag": "https://ui-avatars.com/api/?name=Krka&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          }
-        },
-        "logo": "https://ui-avatars.com/api/?name=Slovenian+League+%28M%29+%3A+Gorenje&background=0D8ABC&color=fff&size=200&bold=true&format=png",
-        "channels": [
-          {
-            "channel_name": "Sport Klub 9 Serbia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium77/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium77/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Slovakia Extraliga : HC Kosice vs. HK Dukla Trencin",
-        "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "slovakia-extraliga-hc-kosice-vs-hk-dukla-trencin",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 11:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 02:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Slovakia Extraliga : HC Kosice",
-            "flag": "https://ui-avatars.com/api/?name=Slovakia+Extraliga+%3A+HC+Kosice&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          },
-          "team_b": {
-            "name": "HK Dukla Trencin",
-            "flag": "https://ui-avatars.com/api/?name=HK+Dukla+Trencin&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          }
-        },
-        "logo": "https://ui-avatars.com/api/?name=Slovakia+Extraliga+%3A+HC+Kosice&background=0D8ABC&color=fff&size=200&bold=true&format=png",
-        "channels": [
-          {
-            "channel_name": "JOJ Sport Slovakia HD",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium6/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium6/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Division 1 Women : Eczacibasi Istanbul vs. Vakifbank SK",
-        "sport": "Volleyball</span>",
-        "sub_category": "Volleyball</span>",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "division-1-women-eczacibasi-istanbul-vs-vakifbank-sk",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 11:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 02:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Division 1 Women : Eczacibasi Istanbul",
-            "flag": "https://ui-avatars.com/api/?name=Division+1+Women+%3A+Eczacibasi+Istanbul&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          },
-          "team_b": {
-            "name": "Vakifbank SK",
-            "flag": "https://ui-avatars.com/api/?name=Vakifbank+SK&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          }
-        },
-        "logo": "https://ui-avatars.com/api/?name=Division+1+Women+%3A+Eczacibasi+Istanbul&background=0D8ABC&color=fff&size=200&bold=true&format=png",
-        "channels": [
-          {
-            "channel_name": "TRT Spor Turkey",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium889/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium889/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Arena Premium 3 Serbia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium139/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium139/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "MLB : Philadelphia Phillies vs Atlanta Braves",
-        "sport": "Baseball</span>",
-        "sub_category": "MLB",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "mlb-philadelphia-phillies-vs-atlanta-braves",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 22, 2026, 11:05:00 PM",
-          "end_time_bst": "Oct 23, 2026, 02:05:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "MLB : Philadelphia Phillies",
-            "flag": "https://ui-avatars.com/api/?name=MLB+%3A+Philadelphia+Phillies&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          },
-          "team_b": {
-            "name": "Atlanta Braves",
-            "flag": "https://ui-avatars.com/api/?name=Atlanta+Braves&background=0D8ABC&color=fff&size=200&bold=true&format=png"
-          }
-        },
-        "logo": "https://ui-avatars.com/api/?name=MLB+%3A+Philadelphia+Phillies&background=0D8ABC&color=fff&size=200&bold=true&format=png",
-        "channels": [
-          {
-            "channel_name": "MLB Network",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium399/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium399/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sportsnet West",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium407/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium407/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "beIN Sports 4 Max France",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium494/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium494/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Premier League Pool: Day 1",
-        "sport": "Snooker</span>",
+        "sport": "Football",
         "sub_category": "Premier League",
         "status": "LIVE",
         "is_hot": false,
@@ -897,7 +41,7 @@
       },
       {
         "title": "2025 NCAA Men's Basketball Tournament First Round: Montana vs Wisconsin",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "NCAA Basketball",
         "status": "LIVE",
         "is_hot": false,
@@ -933,8 +77,8 @@
       },
       {
         "title": "Denmark, Handboldligaen : Skanderborg-Aarhus Haandbold vs. Soenderjyske HK",
-        "sport": "Handball</span>",
-        "sub_category": "Handball</span>",
+        "sport": "Handball",
+        "sub_category": "Handball",
         "status": "LIVE",
         "is_hot": false,
         "slug": "denmark-handboldligaen-skanderborg-aarhus-haandbold-vs-soenderjyske-hk",
@@ -969,8 +113,8 @@
       },
       {
         "title": "Pictionary Season 3, Episode 114",
-        "sport": "Tv shows</span>",
-        "sub_category": "Tv shows</span>",
+        "sport": "Tv shows",
+        "sub_category": "Tv shows",
         "status": "LIVE",
         "is_hot": false,
         "slug": "pictionary-season-3-episode-114",
@@ -1005,7 +149,7 @@
       },
       {
         "title": "Euroleague : BC Olympiakos Piraeus vs. KK Crvena zvezda Belgrade",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "EuroLeague",
         "status": "LIVE",
         "is_hot": false,
@@ -1091,7 +235,7 @@
       },
       {
         "title": "Euroleague : AS Monaco vs. Fenerbahce Istanbul",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "EuroLeague",
         "status": "LIVE",
         "is_hot": false,
@@ -1167,7 +311,7 @@
       },
       {
         "title": "2025 NCAA Men's Basketball Tournament First Round: Southern Illinois-Edwardsville vs Houston",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "NCAA Basketball",
         "status": "LIVE",
         "is_hot": false,
@@ -1203,7 +347,7 @@
       },
       {
         "title": "Handball-Bundesliga : Rhein-Neckar Lowen vs. TSV Hannover-Burgdorf",
-        "sport": "Handball</span>",
+        "sport": "Football",
         "sub_category": "Bundesliga",
         "status": "LIVE",
         "is_hot": false,
@@ -1269,8 +413,8 @@
       },
       {
         "title": "Norway Eliteserien : Vaalerenga IF Oslo vs. Storhamar Hockey",
-        "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
         "status": "LIVE",
         "is_hot": false,
         "slug": "norway-eliteserien-vaalerenga-if-oslo-vs-storhamar-hockey",
@@ -1305,8 +449,8 @@
       },
       {
         "title": "SHL : Brynas IF vs. Malmo IF",
-        "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
         "status": "LIVE",
         "is_hot": false,
         "slug": "shl-brynas-if-vs-malmo-if",
@@ -1371,8 +515,8 @@
       },
       {
         "title": "HockeyAllsvenskan : Oskarshamn vs BIK Karlskoga",
-        "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
         "status": "LIVE",
         "is_hot": false,
         "slug": "hockeyallsvenskan-oskarshamn-vs-bik-karlskoga",
@@ -1407,8 +551,8 @@
       },
       {
         "title": "HockeyAllsvenskan : Mora vs Djurgardens",
-        "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
         "status": "LIVE",
         "is_hot": false,
         "slug": "hockeyallsvenskan-mora-vs-djurgardens",
@@ -1443,8 +587,8 @@
       },
       {
         "title": "HockeyAllsvenskan : Tingsryds vs Vimmerby",
-        "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
         "status": "LIVE",
         "is_hot": false,
         "slug": "hockeyallsvenskan-tingsryds-vs-vimmerby",
@@ -1479,8 +623,8 @@
       },
       {
         "title": "World Cup Qualifying : Saudi Arabia vs China",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "world-cup-qualifying-saudi-arabia-vs-china",
@@ -1555,8 +699,8 @@
       },
       {
         "title": "World Cup Qualifying : Iraq vs Kuwait",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "world-cup-qualifying-iraq-vs-kuwait",
@@ -1591,8 +735,8 @@
       },
       {
         "title": "World Cup Qualifying : Jordan vs Palestine",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "world-cup-qualifying-jordan-vs-palestine",
@@ -1637,8 +781,8 @@
       },
       {
         "title": "World Cup Qualifying : Qatar vs Korea DPR",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "world-cup-qualifying-qatar-vs-korea-dpr",
@@ -1683,7 +827,7 @@
       },
       {
         "title": "2025 NCAA Men's Basketball Tournament First Round: Alabama State vs Auburn",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "NCAA Basketball",
         "status": "LIVE",
         "is_hot": false,
@@ -1719,8 +863,8 @@
       },
       {
         "title": "Basquetebol: Men's March Madness #2 - College Basketball",
-        "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
         "status": "LIVE",
         "is_hot": false,
         "slug": "basquetebol-men-s-march-madness-2-college-basketball",
@@ -1755,8 +899,8 @@
       },
       {
         "title": "General Hospital Season 62, Episode 133",
-        "sport": "Tv shows</span>",
-        "sub_category": "Tv shows</span>",
+        "sport": "Tv shows",
+        "sub_category": "Tv shows",
         "status": "LIVE",
         "is_hot": false,
         "slug": "general-hospital-season-62-episode-133",
@@ -1791,8 +935,8 @@
       },
       {
         "title": "World Cup Qualifying : Libya vs Angola",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "world-cup-qualifying-libya-vs-angola",
@@ -1827,8 +971,8 @@
       },
       {
         "title": "Live Players Championship - Telford, England",
-        "sport": "Snooker</span>",
-        "sub_category": "Snooker</span>",
+        "sport": "Snooker",
+        "sub_category": "Snooker",
         "status": "LIVE",
         "is_hot": false,
         "slug": "live-players-championship-telford-england",
@@ -1893,7 +1037,7 @@
       },
       {
         "title": "2025 NCAA Men's Basketball Tournament First Round: McNeese State vs Clemson",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "NCAA Basketball",
         "status": "LIVE",
         "is_hot": false,
@@ -1929,7 +1073,7 @@
       },
       {
         "title": "Premier League Darts : Dobey, Chris vs. Bunting, Stephen",
-        "sport": "Darts</span>",
+        "sport": "Football",
         "sub_category": "Premier League",
         "status": "LIVE",
         "is_hot": false,
@@ -2005,8 +1149,8 @@
       },
       {
         "title": "Switzerland National League : HC Davos vs. EV Zug",
-        "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
         "status": "LIVE",
         "is_hot": false,
         "slug": "switzerland-national-league-hc-davos-vs-ev-zug",
@@ -2041,8 +1185,8 @@
       },
       {
         "title": "Hungary Extraliga Women : Volleyball BRSE vs. Knrc",
-        "sport": "Volleyball</span>",
-        "sub_category": "Volleyball</span>",
+        "sport": "Volleyball",
+        "sub_category": "Volleyball",
         "status": "LIVE",
         "is_hot": false,
         "slug": "hungary-extraliga-women-volleyball-brse-vs-knrc",
@@ -2077,7 +1221,7 @@
       },
       {
         "title": "Euroleague : Konferenz",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "EuroLeague",
         "status": "LIVE",
         "is_hot": false,
@@ -2113,7 +1257,7 @@
       },
       {
         "title": "Euroleague : Maccabi Tel-Aviv vs. Virtus Bologna",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "EuroLeague",
         "status": "LIVE",
         "is_hot": false,
@@ -2179,7 +1323,7 @@
       },
       {
         "title": "Euroleague : Baskonia Vitoria-Gasteiz vs. Bayern Munich",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "EuroLeague",
         "status": "LIVE",
         "is_hot": false,
@@ -2245,8 +1389,8 @@
       },
       {
         "title": "Poland Superliga : Gornik Zabrze vs. SPR Chrobry Glogow",
-        "sport": "Handball</span>",
-        "sub_category": "Handball</span>",
+        "sport": "Handball",
+        "sub_category": "Handball",
         "status": "LIVE",
         "is_hot": false,
         "slug": "poland-superliga-gornik-zabrze-vs-spr-chrobry-glogow",
@@ -2281,7 +1425,7 @@
       },
       {
         "title": "Champions League : Perugia Umbria Volley vs. VV Monza",
-        "sport": "Volleyball</span>",
+        "sport": "Volleyball",
         "sub_category": "UEFA Champions League",
         "status": "LIVE",
         "is_hot": false,
@@ -2367,7 +1511,7 @@
       },
       {
         "title": "Premier League Darts : Humphries, Luke vs. van Gerwen, Michael",
-        "sport": "Darts</span>",
+        "sport": "Football",
         "sub_category": "Premier League",
         "status": "LIVE",
         "is_hot": false,
@@ -2443,8 +1587,8 @@
       },
       {
         "title": "UEFA Nations League : Simulcast",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-simulcast",
@@ -2499,8 +1643,8 @@
       },
       {
         "title": "UEFA Nations League : Slovakia vs Slovenia",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-slovakia-vs-slovenia",
@@ -2545,8 +1689,8 @@
       },
       {
         "title": "UEFA Nations League : Bulgaria vs Ireland Republic",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-bulgaria-vs-ireland-republic",
@@ -2641,8 +1785,8 @@
       },
       {
         "title": "UEFA Nations League : Denmark vs Portugal",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-denmark-vs-portugal",
@@ -2797,8 +1941,8 @@
       },
       {
         "title": "UEFA Nations League : Kosovo vs Iceland",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-kosovo-vs-iceland",
@@ -2833,8 +1977,8 @@
       },
       {
         "title": "UEFA Nations League : Greece vs Scotland",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-greece-vs-scotland",
@@ -2939,8 +2083,8 @@
       },
       {
         "title": "UEFA Nations League : Ukraine vs Belgium",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-ukraine-vs-belgium",
@@ -3035,8 +2179,8 @@
       },
       {
         "title": "UEFA Nations League : Italy vs Germany",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-italy-vs-germany",
@@ -3281,8 +2425,8 @@
       },
       {
         "title": "UEFA Nations League : Croatia vs France",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-croatia-vs-france",
@@ -3477,8 +2621,8 @@
       },
       {
         "title": "UEFA Nations League : Netherlands vs Spain",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-netherlands-vs-spain",
@@ -3683,8 +2827,8 @@
       },
       {
         "title": "UEFA Nations League : Austria vs Serbia",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-austria-vs-serbia",
@@ -3769,7 +2913,7 @@
       },
       {
         "title": "Euroleague : Real Madrid vs. ASVEL Lyon Villeurbanne",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "EuroLeague",
         "status": "LIVE",
         "is_hot": false,
@@ -3855,7 +2999,7 @@
       },
       {
         "title": "FanDuel Racing Live",
-        "sport": "Tv shows</span>",
+        "sport": "Motorsport",
         "sub_category": "UEFA Europa League",
         "status": "LIVE",
         "is_hot": false,
@@ -3891,7 +3035,7 @@
       },
       {
         "title": "Uruguay - Primera Division : Torque vs Juventud",
-        "sport": "Soccer</span>",
+        "sport": "Football",
         "sub_category": "La Liga",
         "status": "LIVE",
         "is_hot": false,
@@ -3937,7 +3081,7 @@
       },
       {
         "title": "Spain Copa de la Reina, Women : Valencia Basket vs Cb Jairis",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "La Liga",
         "status": "LIVE",
         "is_hot": false,
@@ -3973,7 +3117,7 @@
       },
       {
         "title": "2025 NCAA Men's Basketball Tournament First Round: VCU vs BYU",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "NCAA Basketball",
         "status": "LIVE",
         "is_hot": false,
@@ -4009,8 +3153,8 @@
       },
       {
         "title": "College Hockey Hockey East Tournament : Connecticut vs Boston University",
-        "sport": "Ice hockey</span>",
-        "sub_category": "Ice hockey</span>",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
         "status": "LIVE",
         "is_hot": false,
         "slug": "college-hockey-hockey-east-tournament-connecticut-vs-boston-university",
@@ -4045,8 +3189,8 @@
       },
       {
         "title": "Super League Rugby : Salford Red Devils vs Huddersfield",
-        "sport": "Rugby league</span>",
-        "sub_category": "Rugby league</span>",
+        "sport": "Rugby",
+        "sub_category": "Rugby",
         "status": "LIVE",
         "is_hot": false,
         "slug": "super-league-rugby-salford-red-devils-vs-huddersfield",
@@ -4091,7 +3235,7 @@
       },
       {
         "title": "MLB : Los Angeles Angels vs Chicago White Sox",
-        "sport": "Baseball</span>",
+        "sport": "Baseball",
         "sub_category": "MLB",
         "status": "LIVE",
         "is_hot": false,
@@ -4127,7 +3271,7 @@
       },
       {
         "title": "Premier League Darts : Littler, Luke vs. Aspinall, Nathan",
-        "sport": "Darts</span>",
+        "sport": "Football",
         "sub_category": "Premier League",
         "status": "LIVE",
         "is_hot": false,
@@ -4203,7 +3347,7 @@
       },
       {
         "title": "NCAA : Georgia vs Gonzaga",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "NCAA Basketball",
         "status": "UPCOMING",
         "is_hot": false,
@@ -4259,7 +3403,7 @@
       },
       {
         "title": "Premier League Darts : Price, Gerwyn vs. Cross, Rob",
-        "sport": "Darts</span>",
+        "sport": "Football",
         "sub_category": "Premier League",
         "status": "UPCOMING",
         "is_hot": false,
@@ -4335,7 +3479,7 @@
       },
       {
         "title": "Rubble &amp; Crew Season 3",
-        "sport": "Tv shows</span>",
+        "sport": "Tv shows",
         "sub_category": "Big Bash League",
         "status": "UPCOMING",
         "is_hot": false,
@@ -4371,8 +3515,8 @@
       },
       {
         "title": "World Cup Qualifying : Comoros vs Mali",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "world-cup-qualifying-comoros-vs-mali",
@@ -4407,8 +3551,8 @@
       },
       {
         "title": "College Softball : Purdue vs University of Wisconsin (Madison)",
-        "sport": "Baseball</span>",
-        "sub_category": "Baseball</span>",
+        "sport": "Baseball",
+        "sub_category": "Baseball",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "college-softball-purdue-vs-university-of-wisconsin-madison",
@@ -4443,8 +3587,8 @@
       },
       {
         "title": "Brazil Copa do Nordeste : AA Altos vs Moto Club",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "brazil-copa-do-nordeste-aa-altos-vs-moto-club",
@@ -4479,7 +3623,7 @@
       },
       {
         "title": "First Round 2025 NCAA Men's Basketball Tournament",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "NCAA Basketball",
         "status": "UPCOMING",
         "is_hot": false,
@@ -4525,7 +3669,7 @@
       },
       {
         "title": "MLB : Boston Red Sox vs Minnesota Twins",
-        "sport": "Baseball</span>",
+        "sport": "Baseball",
         "sub_category": "MLB",
         "status": "UPCOMING",
         "is_hot": false,
@@ -4561,7 +3705,7 @@
       },
       {
         "title": "MLB : New York Yankees vs Baltimore Orioles",
-        "sport": "Baseball</span>",
+        "sport": "Baseball",
         "sub_category": "MLB",
         "status": "UPCOMING",
         "is_hot": false,
@@ -4597,8 +3741,8 @@
       },
       {
         "title": "BRAZIL: LBF Women - Ourinhos W vs Cerrado W",
-        "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "brazil-lbf-women-ourinhos-w-vs-cerrado-w",
@@ -4633,8 +3777,8 @@
       },
       {
         "title": "College Basketball - March Madness (RD1): Tennessee vs Wofford",
-        "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "college-basketball-march-madness-rd1-tennessee-vs-wofford",
@@ -4669,8 +3813,8 @@
       },
       {
         "title": "Jeopardy! Season 41, Episode 139",
-        "sport": "Tv shows</span>",
-        "sub_category": "Tv shows</span>",
+        "sport": "Tv shows",
+        "sub_category": "Tv shows",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "jeopardy-season-41-episode-139",
@@ -4705,8 +3849,8 @@
       },
       {
         "title": "World Cup Qualifying : Paraguay vs Chile",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "world-cup-qualifying-paraguay-vs-chile",
@@ -4831,8 +3975,8 @@
       },
       {
         "title": "CONCACAF Nations League : USA vs Panama",
-        "sport": "Soccer</span>",
-        "sub_category": "Soccer</span>",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "concacaf-nations-league-usa-vs-panama",
@@ -4927,7 +4071,7 @@
       },
       {
         "title": "Uruguay - Primera Division : Peñarol vs Liverpool",
-        "sport": "Soccer</span>",
+        "sport": "Football",
         "sub_category": "La Liga",
         "status": "UPCOMING",
         "is_hot": false,
@@ -4973,7 +4117,7 @@
       },
       {
         "title": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
-        "sport": "Tennis</span>",
+        "sport": "Tennis",
         "sub_category": "ATP Tour",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5029,7 +4173,7 @@
       },
       {
         "title": "Men's College Wrestling NCAA Champonships, Second Round",
-        "sport": "Wrestling</span>",
+        "sport": "Wrestling",
         "sub_category": "NCAA Basketball",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5065,8 +4209,8 @@
       },
       {
         "title": "College Baseball : Texas A&amp;M vs Vanderbilt",
-        "sport": "Baseball</span>",
-        "sub_category": "Baseball</span>",
+        "sport": "Baseball",
+        "sub_category": "Baseball",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "college-baseball-texas-a-amp-m-vs-vanderbilt",
@@ -5101,7 +4245,7 @@
       },
       {
         "title": "College Baseball : Florida State vs Miami",
-        "sport": "Baseball</span>",
+        "sport": "Baseball",
         "sub_category": "Indian Premier League (IPL)",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5137,7 +4281,7 @@
       },
       {
         "title": "NBA G-League : Maine Celtics vs Lakeland Magic",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "NBA",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5173,7 +4317,7 @@
       },
       {
         "title": "NBA G-League : Wisconsin Herd vs Long Island Nets",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "NBA",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5209,7 +4353,7 @@
       },
       {
         "title": "2025 NCAA Women's Basketball Tournament First Four: Washington vs Columbia",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "NCAA Basketball",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5245,7 +4389,7 @@
       },
       {
         "title": "2025 NCAA Women's Basketball Tournament First Four: Washington vs Columbia",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "NCAA Basketball",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5281,7 +4425,7 @@
       },
       {
         "title": "NBA : New York Knicks vs Charlotte Hornets",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "NBA",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5337,7 +4481,7 @@
       },
       {
         "title": "NBA : Brooklyn Nets vs Indiana Pacers",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "NBA",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5403,7 +4547,7 @@
       },
       {
         "title": "NHL : Colorado Avalanche vs Ottawa Senators",
-        "sport": "Ice hockey</span>",
+        "sport": "Hockey",
         "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5479,7 +4623,7 @@
       },
       {
         "title": "NHL : Calgary Flames vs New Jersey Devils",
-        "sport": "Ice hockey</span>",
+        "sport": "Hockey",
         "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5545,7 +4689,7 @@
       },
       {
         "title": "NHL : Toronto Maple Leafs vs New York Rangers",
-        "sport": "Ice hockey</span>",
+        "sport": "Hockey",
         "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5611,7 +4755,7 @@
       },
       {
         "title": "NHL : Philadelphia Flyers vs Washington Capitals",
-        "sport": "Ice hockey</span>",
+        "sport": "Hockey",
         "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5737,7 +4881,7 @@
       },
       {
         "title": "NHL : Florida Panthers vs Columbus Blue Jackets",
-        "sport": "Ice hockey</span>",
+        "sport": "Hockey",
         "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5793,8 +4937,8 @@
       },
       {
         "title": "College Basketball - March Madness (RD1): Kansas vs Arkansas",
-        "sport": "Basketball</span>",
-        "sub_category": "Basketball</span>",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "college-basketball-march-madness-rd1-kansas-vs-arkansas",
@@ -5829,7 +4973,7 @@
       },
       {
         "title": "2025 NCAA Men's Basketball Tournament First Round: Yale vs Texas A&amp;M",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "NCAA Basketball",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5865,8 +5009,8 @@
       },
       {
         "title": "College Baseball : Tennessee vs Alabama",
-        "sport": "Baseball</span>",
-        "sub_category": "Baseball</span>",
+        "sport": "Baseball",
+        "sub_category": "Baseball",
         "status": "UPCOMING",
         "is_hot": false,
         "slug": "college-baseball-tennessee-vs-alabama",
@@ -5901,7 +5045,7 @@
       },
       {
         "title": "College Softball : Michigan vs Maryland (College Park)",
-        "sport": "Baseball</span>",
+        "sport": "Baseball",
         "sub_category": "Indian Premier League (IPL)",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5937,7 +5081,7 @@
       },
       {
         "title": "2025 NCAA Men's Basketball Tournament First Round: Drake vs Missouri",
-        "sport": "Basketball</span>",
+        "sport": "Basketball",
         "sub_category": "NCAA Basketball",
         "status": "UPCOMING",
         "is_hot": false,
@@ -5973,7 +5117,7 @@
       },
       {
         "title": "NHL : Montréal Canadiens vs New York Islanders",
-        "sport": "Ice hockey</span>",
+        "sport": "Hockey",
         "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
@@ -6039,7 +5183,7 @@
       },
       {
         "title": "NHL : Vancouver Canucks vs St. Louis Blues",
-        "sport": "Ice hockey</span>",
+        "sport": "Hockey",
         "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
