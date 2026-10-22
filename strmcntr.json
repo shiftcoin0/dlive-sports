@@ -1,110 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 04:02:45 AM",
-  "event_count": 63,
+  "last_updated": "Oct 23, 2026, 04:17:42 AM",
+  "event_count": 61,
   "events": {
     "events": [
-      {
-        "title": "Euroleague : Konferenz",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "euroleague-konferenz",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 01:15:00 AM",
-          "end_time_bst": "Oct 23, 2026, 04:15:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Euroleague : Konferenz",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          },
-          "team_b": {
-            "name": "Euroleague : Konferenz",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          }
-        },
-        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
-        "channels": [
-          {
-            "channel_name": "Magenta Sport 301",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium105/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium105/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Euroleague : Maccabi Tel-Aviv vs. Virtus Bologna",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "euroleague-maccabi-tel-aviv-vs-virtus-bologna",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 01:15:00 AM",
-          "end_time_bst": "Oct 23, 2026, 04:15:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Euroleague : Maccabi Tel-Aviv",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          },
-          "team_b": {
-            "name": "Virtus Bologna",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          }
-        },
-        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
-        "channels": [
-          {
-            "channel_name": "Magenta Sport 303",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium22/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium22/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Movistar Deportes 7 Spain",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium25/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium25/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Polsat Sport Fight Poland",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium26/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium26/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport 5 Israel",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium144/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium144/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Euroleague : Baskonia Vitoria-Gasteiz vs. Bayern Munich",
         "sport": "Basketball",
@@ -2527,7 +2425,7 @@
         "title": "BRAZIL: LBF Women - Ourinhos W vs Cerrado W",
         "sport": "Basketball",
         "sub_category": "Basketball",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "brazil-lbf-women-ourinhos-w-vs-cerrado-w",
         "schedule": {
