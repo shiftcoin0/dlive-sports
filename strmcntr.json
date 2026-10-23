@@ -1,94 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 12:49:23 PM",
-  "event_count": 12,
+  "last_updated": "Oct 23, 2026, 01:04:24 PM",
+  "event_count": 13,
   "events": {
     "events": [
-      {
-        "title": "DP World Tour Porsche Singapore Classic",
-        "sport": "Golf",
-        "sub_category": "Golf",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "dp-world-tour-porsche-singapore-classic",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 10:00:00 AM",
-          "end_time_bst": "Oct 23, 2026, 01:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "DP World Tour Porsche Singapore Classic",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "DP World Tour Porsche Singapore Classic",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "Sky Sports Golf UK",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium70/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium70/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "GOLF Channel USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium318/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium318/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Movistar Golf",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium528/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium528/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "SuperSport Golf",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium422/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium422/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sports Main Event",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium38/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium38/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sport 3 NZ",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium590/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium590/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "World Surf League: 2025 WSL Championship Tour: MEO Rip Curl Pro Portugal",
         "sport": "Sailing / boating",
@@ -778,6 +692,108 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium104/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium104/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Hell's Kitchen Season 12, Episode 17",
+        "sport": "Tv shows",
+        "sub_category": "Tv shows",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "hell-s-kitchen-season-12-episode-17",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 06:00:00 PM",
+          "end_time_bst": "Oct 23, 2026, 09:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Hell's Kitchen Season 12, Episode 17",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Hell's Kitchen Season 12, Episode 17",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "AXS TV USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium742/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium742/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Engadin | Parallel Giant Slalom World Championships",
+        "sport": "Winter sports",
+        "sub_category": "Winter sports",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "engadin-parallel-giant-slalom-world-championships",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 06:00:00 PM",
+          "end_time_bst": "Oct 23, 2026, 09:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Engadin | Parallel Giant Slalom World Championships",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Engadin | Parallel Giant Slalom World Championships",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "TNT Sports 4 UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium34/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium34/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 2 Poland",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium58/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium58/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 2 Spain",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium525/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium525/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 2 France",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium773/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium773/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
