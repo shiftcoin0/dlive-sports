@@ -1,80 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 10:43:58 AM",
-  "event_count": 24,
+  "last_updated": "Oct 23, 2026, 10:49:03 AM",
+  "event_count": 22,
   "events": {
     "events": [
-      {
-        "title": "College Basketball - March Madness (RD1): St. John's vs Omaha",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "college-basketball-march-madness-rd1-st-john-s-vs-omaha",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 07:45:00 AM",
-          "end_time_bst": "Oct 23, 2026, 10:45:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "College Basketball - March Madness (RD1): St. John's",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          },
-          "team_b": {
-            "name": "Omaha",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          }
-        },
-        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
-        "channels": [
-          {
-            "channel_name": "Sport Klub 2 Serbia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium102/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium102/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "2025 NCAA Men's Basketball Tournament First Round: UC San Diego vs Michigan",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "2025-ncaa-men-s-basketball-tournament-first-round-uc-san-diego-vs-michigan",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 07:45:00 AM",
-          "end_time_bst": "Oct 23, 2026, 10:45:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "2025 NCAA Men's Basketball Tournament First Round: UC San Diego",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          },
-          "team_b": {
-            "name": "Michigan",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png"
-          }
-        },
-        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
-        "channels": [
-          {
-            "channel_name": "TBS USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium336/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium336/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "NCAA March Madness 360 Live",
         "sport": "Tv shows",
