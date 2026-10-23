@@ -1,5 +1,4 @@
 import asyncio
-import base64
 import json
 import logging
 import re
@@ -294,6 +293,7 @@ def save_playlists(events: list[dict]) -> None:
 
             if referer:
                 m3u_lines.append(f'#EXTVLCOPT:http-referrer={referer}')
+                m3u_lines.append(f'#EXTVLCOPT:http-user-agent={UA}')
 
             m3u_lines.append(url)
             m3u_count += 1
@@ -318,63 +318,16 @@ async def request(
 
 
 # -----------------------------------------------------------------------------
-# DaddyLive অথেনটিকেশন ডাটা এক্সট্রাক্ট করার ফাংশন
+# ডাইনামিক DaddyLive .m3u8 ডিকোডার (ডাবল আইফ্রেম ও টোকেন সাপোর্টসহ)
 # -----------------------------------------------------------------------------
-def extract_auth_params(html: str) -> dict:
-    params = {}
-
-    # ১. Base64 এনকোডেড JSON বান্ডেল থেকে ডিকোড করা
-    b64_matches = re.findall(r'["\']([A-Za-z0-9+/=]{40,})["\']', html)
-    for b64 in b64_matches:
-        try:
-            decoded = base64.b64decode(b64).decode("utf-8", errors="ignore")
-            if "b_host" in decoded or "b_ts" in decoded or "b_sig" in decoded:
-                obj = json.loads(decoded)
-                if isinstance(obj, dict):
-                    for k, v in obj.items():
-                        if isinstance(v, str):
-                            try:
-                                params[k] = base64.b64decode(v).decode("utf-8", errors="ignore")
-                            except Exception:
-                                params[k] = v
-                        else:
-                            params[k] = v
-                    break
-        except Exception:
-            continue
-
-    # ২. সরাসরি স্ক্রিপ্ট ভ্যারিয়েবল থেকে খোঁজা (var c, var d, var e)
-    if not params.get("b_ts"):
-        m = re.search(r'var\s+[a-zA-Z0-9_]*c\s*=\s*["\']([^"\']+)["\']', html) or re.search(r'["\']?b_ts["\']?\s*[:=]\s*["\']([^"\']+)["\']', html)
-        if m:
-            params["b_ts"] = m.group(1)
-
-    if not params.get("b_rnd"):
-        m = re.search(r'var\s+[a-zA-Z0-9_]*d\s*=\s*["\']([^"\']+)["\']', html) or re.search(r'["\']?b_rnd["\']?\s*[:=]\s*["\']([^"\']+)["\']', html)
-        if m:
-            params["b_rnd"] = m.group(1)
-
-    if not params.get("b_sig"):
-        m = re.search(r'var\s+[a-zA-Z0-9_]*e\s*=\s*["\']([^"\']+)["\']', html) or re.search(r'["\']?b_sig["\']?\s*[:=]\s*["\']([^"\']+)["\']', html)
-        if m:
-            params["b_sig"] = m.group(1)
-
-    if not params.get("b_host"):
-        m = re.search(r'var\s+[a-zA-Z0-9_]*a\s*=\s*["\']([^"\']+)["\']', html) or re.search(r'["\']?b_host["\']?\s*[:=]\s*["\']([^"\']+)["\']', html)
-        if m:
-            params["b_host"] = m.group(1)
-
-    if not params.get("b_script"):
-        m = re.search(r'var\s+[a-zA-Z0-9_]*b\s*=\s*["\']([^"\']+)["\']', html) or re.search(r'["\']?b_script["\']?\s*[:=]\s*["\']([^"\']+)["\']', html)
-        if m:
-            params["b_script"] = m.group(1)
-
-    return params
+KNOWN_LOOKUP_HOSTS = [
+    "https://newembedplay.xyz",
+    "https://forcedtoplay.xyz",
+    "https://allupplay.xyz",
+    "https://webxzplay.cfd",
+]
 
 
-# -----------------------------------------------------------------------------
-# ডাইনামিক DaddyLive .m3u8 ডিকোডার (auth.php হ্যান্ডশেক ও টোকেনসহ)
-# -----------------------------------------------------------------------------
 async def decode_dlhd_m3u8(
     client: httpx.AsyncClient,
     channel_id: str,
@@ -393,10 +346,12 @@ async def decode_dlhd_m3u8(
     if not resp:
         return None
 
+    # ১. সরাসরি m3u8 লিংক থাকলে
     direct_match = re.search(r'["\'](https?://[^"\']+\.m3u8(?:\?[^"\']*)?)["\']', resp.text)
     if direct_match:
         return direct_match.group(1), f"{BASE_URL}/"
 
+    # প্রথম আইফ্রেম খোঁজা
     soup = HTMLParser(resp.content)
     iframe = soup.css_first("iframe")
     if not iframe:
@@ -423,6 +378,30 @@ async def decode_dlhd_m3u8(
     if not player_resp:
         return None
 
+    # ২. ডাবল আইফ্রেম চেক (আইফ্রেমের ভেতরে আরেকটি আইফ্রেম থাকলে)
+    p_soup = HTMLParser(player_resp.content)
+    inner_iframe = p_soup.css_first("iframe")
+    if inner_iframe and inner_iframe.attributes.get("src"):
+        inner_src = inner_iframe.attributes.get("src")
+        if inner_src.startswith("//"):
+            inner_src = "https:" + inner_src
+        elif inner_src.startswith("/"):
+            inner_src = urljoin(player_origin, inner_src)
+
+        parsed_inner = urlsplit(inner_src)
+        inner_origin = f"{parsed_inner.scheme}://{parsed_inner.netloc}"
+
+        inner_headers = {
+            "User-Agent": UA,
+            "Referer": f"{player_origin}/",
+            "Origin": player_origin,
+        }
+        inner_resp = await request(client, inner_src, headers=inner_headers)
+        if inner_resp and inner_resp.status_code == 200:
+            player_resp = inner_resp
+            player_origin = inner_origin
+
+    # ৩. প্লেয়ার স্ক্রিপ্ট থেকে সরাসরি m3u8 ও টোকেন থাকলে
     player_match = re.search(r'["\'](https?://[^"\']+\.m3u8(?:\?[^"\']*)?)["\']', player_resp.text)
     if player_match:
         return player_match.group(1), f"{player_origin}/"
@@ -431,78 +410,59 @@ async def decode_dlhd_m3u8(
     key_match = re.search(r'channel_id=([^"\'&\s]+)', player_resp.text) or re.search(r'channel_key\s*[:=]\s*["\']([^"\']+)["\']', player_resp.text)
     channel_key = key_match.group(1) if key_match else f"premium{clean_id}"
 
-    # ধাপ ১: প্লেয়ার থেকে অথেনটিকেশন ডাটা বের করা
-    auth_params = extract_auth_params(player_resp.text)
-
+    # ৪. সার্ভার লুকআপ হোস্টসমূহ দিয়ে আসল server_key ও token সংগ্রহ
+    server_key = None
     token = None
     expires = None
 
-    auth_ts = auth_params.get("b_ts")
-    auth_rnd = auth_params.get("b_rnd")
-    auth_sig = auth_params.get("b_sig")
-    auth_host = (auth_params.get("b_host") or player_origin).rstrip("/")
-    auth_script = auth_params.get("b_script") or "/auth.php"
+    lookup_candidates = [player_origin] + [h for h in KNOWN_LOOKUP_HOSTS if h != player_origin]
 
-    if auth_script.strip().lstrip("/") == "a.php":
-        auth_script = "/auth.php"
-    if not auth_script.startswith("/"):
-        auth_script = "/" + auth_script
-
-    # ধাপ ২: auth.php তে হ্যান্ডশেক রিকোয়েস্ট পাঠিয়ে টোকেন জেনারেট করানো
-    if auth_ts and auth_rnd and auth_sig:
-        sig_encoded = quote_plus(auth_sig)
-        auth_url = f"{auth_host}{auth_script}?channel_id={channel_key}&ts={auth_ts}&rnd={auth_rnd}&sig={sig_encoded}"
-        h_auth = {
+    for host in lookup_candidates:
+        lookup_url = f"{host}/server_lookup.php?channel_id={channel_key}"
+        l_headers = {
             "User-Agent": UA,
-            "Referer": f"{player_origin}/",
-            "Origin": player_origin
+            "Referer": f"{host}/",
+            "Origin": host,
         }
-        auth_resp = await request(client, auth_url, headers=h_auth, timeout=5.0)
-        if auth_resp and auth_resp.status_code == 200:
+        l_resp = await request(client, lookup_url, headers=l_headers, timeout=4.0)
+        if l_resp and l_resp.status_code == 200:
             try:
-                a_data = auth_resp.json()
-                if isinstance(a_data, dict):
-                    token = a_data.get("token") or a_data.get("auth_token") or a_data.get("key") or a_data.get("auth") or a_data.get("sig")
-                    expires = a_data.get("expires") or a_data.get("expiry") or a_data.get("ts")
+                data = l_resp.json()
+                if isinstance(data, dict):
+                    if data.get("server_key"):
+                        server_key = data["server_key"]
+                    if data.get("token") or data.get("auth_token"):
+                        token = data.get("token") or data.get("auth_token")
+                    if data.get("expires") or data.get("expiry"):
+                        expires = data.get("expires") or data.get("expiry")
+                    if "url" in data and ".m3u8" in str(data["url"]):
+                        return str(data["url"]), f"{host}/"
+
+                    if server_key:
+                        player_origin = host
+                        break
             except Exception:
                 pass
 
-    # ধাপ ৩: server_lookup.php কল করে সার্ভার কী ও টোকেন গ্রহণ করা
-    lookup_url = f"{player_origin}/server_lookup.php?channel_id={channel_key}"
-    lookup_headers = {
-        "User-Agent": UA,
-        "Referer": f"{player_origin}/",
-        "Origin": player_origin,
-    }
+    if not server_key:
+        server_key = "wind"  # সক্রিয় ডিফল্ট নোড
 
-    server_key = "topembed"
-    l_resp = await request(client, lookup_url, headers=lookup_headers, timeout=5.0)
+    # ৫. প্লেয়ারের স্ক্রিপ্ট থেকে টোকেন ব্যাকআপ
+    if not token:
+        token_match = re.search(r'["\']?token["\']?\s*[:=]\s*["\']([^"\'&\s]+)["\']', player_resp.text)
+        if token_match and len(token_match.group(1)) > 6:
+            token = token_match.group(1)
 
-    if l_resp and l_resp.status_code == 200:
-        try:
-            data = l_resp.json()
-            if isinstance(data, dict):
-                if "url" in data and ".m3u8" in str(data["url"]):
-                    return str(data["url"]), f"{player_origin}/"
-                if "stream" in data and ".m3u8" in str(data["stream"]):
-                    return str(data["stream"]), f"{player_origin}/"
+    # ৬. m3u8 URL গঠন ও টোকেন সংযোজন
+    domain = "newkso.ru"
+    if "iosplayer" in str(server_key):
+        domain = "iosplayer.ru"
 
-                if data.get("server_key"):
-                    server_key = data["server_key"]
-
-                if not token:
-                    token = data.get("token") or data.get("auth_token") or data.get("key") or data.get("auth") or data.get("sig")
-                if not expires:
-                    expires = data.get("expires") or data.get("expiry")
-        except Exception:
-            pass
-
-    # ধাপ ৪: m3u8 লিঙ্কের সাথে টোকেন যুক্ত করা
     if "/" in server_key:
         parts = server_key.split("/")
-        base_m3u8 = f"https://{parts[0]}.newkso.ru/{server_key}/{channel_key}/mono.m3u8"
+        base_m3u8 = f"https://{parts[0]}.{domain}/{server_key}/{channel_key}/mono.m3u8"
     else:
-        base_m3u8 = f"https://{server_key}new.newkso.ru/{server_key}/{channel_key}/mono.m3u8"
+        base_m3u8 = f"https://{server_key}new.{domain}/{server_key}/{channel_key}/mono.m3u8"
 
     query_parts = []
     if token:
@@ -611,9 +571,9 @@ async def scrape() -> None:
 
         log.info(f"Processing {len(raw_events)} active DaddyLive event(s)...")
 
-        # ১. সকল চ্যানেল স্ট্রিম প্যারালালে ডিকোড (auth হ্যান্ডশেক ও টোকেনসহ)
+        # ১. সকল চ্যানেল স্ট্রিম প্যারালালে ডিকোড
         unique_channel_ids = {ch.channel_id for ev in raw_events for ch in ev.channels}
-        log.info(f"Decoding {len(unique_channel_ids)} unique channels with Auth Handshake...")
+        log.info(f"Decoding {len(unique_channel_ids)} unique channels with Double-iframe resolver...")
 
         channel_map = {}
 
@@ -639,8 +599,12 @@ async def scrape() -> None:
                             "channel_name": ch.channel_name,
                             "stream_type": "HLS",
                             "url": m3u8_url,
-                            "raw_link": f"{m3u8_url}|Referer={referer}",
-                            "headers": {"Referer": referer},
+                            "raw_link": f"{m3u8_url}|Referer={referer}&User-Agent={quote_plus(UA)}",
+                            "headers": {
+                                "Referer": referer,
+                                "User-Agent": UA,
+                                "Origin": referer.rstrip("/"),
+                            },
                             "drm_key": None,
                         }
                     )
@@ -705,7 +669,7 @@ async def scrape() -> None:
             item.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info("Playlist generation completed with valid Tokens!")
+        log.info("Playlist generation completed successfully!")
 
 
 if __name__ == "__main__":
