@@ -1,54 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 09:03:39 AM",
+  "last_updated": "Oct 23, 2026, 09:33:49 AM",
   "event_count": 37,
   "events": {
     "events": [
-      {
-        "title": "NHL : Los Angeles Kings vs Chicago Blackhawks",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "nhl-los-angeles-kings-vs-chicago-blackhawks",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 06:30:00 AM",
-          "end_time_bst": "Oct 23, 2026, 09:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "NHL : Los Angeles Kings",
-            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
-          },
-          "team_b": {
-            "name": "Chicago Blackhawks",
-            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
-          }
-        },
-        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
-        "channels": [
-          {
-            "channel_name": "Home Feed",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium24/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium24/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Away Feed",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium25/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium25/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "World Cup Qualifying : Brazil vs Colombia",
         "sport": "Football",
@@ -2108,6 +2062,52 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium80/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium80/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "AFL : Carlton Blues vs Hawthorn Hawks",
+        "sport": "Aussie rules",
+        "sub_category": "Aussie rules",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "afl-carlton-blues-vs-hawthorn-hawks",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 02:30:00 PM",
+          "end_time_bst": "Oct 23, 2026, 05:30:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "AFL : Carlton Blues",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Hawthorn Hawks",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "TNT Sports 1 UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium31/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium31/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "FOX Sports 2 USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium758/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium758/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
