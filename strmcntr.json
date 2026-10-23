@@ -1,84 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 05:45:18 PM",
-  "event_count": 40,
+  "last_updated": "Oct 23, 2026, 06:00:25 PM",
+  "event_count": 49,
   "events": {
     "events": [
-      {
-        "title": "National Rugby League : Melbourne Storm vs Penrith Panthers",
-        "sport": "Rugby league",
-        "sub_category": "Rugby league",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "national-rugby-league-melbourne-storm-vs-penrith-panthers",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 03:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 06:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "National Rugby League : Melbourne Storm",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "Penrith Panthers",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "Fox Soccer Plus",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium756/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium756/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "beIN Sports 3 France",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium118/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium118/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sport 1 NZ",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium588/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium588/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sports Action UK",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium37/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium37/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "SPORT1+ DE",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium640/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium640/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "World Cup Qualifying : Australia vs Indonesia",
         "sport": "Football",
@@ -2046,6 +1970,806 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium111/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium111/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Big Xii Pro Day Live",
+        "sport": "Tv shows",
+        "sub_category": "Tv shows",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "big-xii-pro-day-live",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 11:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 02:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Big Xii Pro Day Live",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Big Xii Pro Day Live",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "NFL Network USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium405/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium405/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Israel Liga Al, Women : Maccabi Hadera vs Tel Aviv University",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "israel-liga-al-women-maccabi-hadera-vs-tel-aviv-university",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 11:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 02:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Israel Liga Al, Women : Maccabi Hadera",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Tel Aviv University",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Sport 5 Plus Israel",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium145/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium145/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "UEFA Nations League : Turkey vs Hungary",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "uefa-nations-league-turkey-vs-hungary",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 11:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 02:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "UEFA Nations League : Turkey",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Hungary",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Fox Sports 2 USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium758/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium758/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TV8 Turkey",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium1/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium1/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "M4 Sports Hungary",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium265/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium265/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sky Sport 4 NZ",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium591/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium591/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "DAZN1 DE",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium426/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium426/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport TV2 Portugal",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium74/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium74/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Ziggo Sport 1 NL",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium393/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium393/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Vodafone Sport",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium260/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium260/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "SONY TEN 1 HD",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium885/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium885/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport 1 CZ",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium2/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium2/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Digi Sport 1 Romania",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium400/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium400/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Prima Sport 1 Romania",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium583/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium583/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Nova Sports 1 Greece",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium631/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium631/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Arena 1 Premium Serbia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium134/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium134/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TV2 Sport X Denmark",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium808/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium808/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Diema Sport 3 Bulgaria",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium467/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium467/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "ESPN4 Brazil",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium85/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium85/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "ESPN2 Argentina",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium150/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium150/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "SuperSport Premier League",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium414/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium414/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "beIN Sports MENA 2",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium92/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium92/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "beIN Sports MENA English 1",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium61/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium61/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport 1 Israel",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium140/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium140/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "UEFA Nations League : Armenia vs Georgia",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "uefa-nations-league-armenia-vs-georgia",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 11:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 02:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "UEFA Nations League : Armenia",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Georgia",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Fox Soccer Plus",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium756/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium756/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "1TV Georgia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium3/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium3/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "DAZN2 DE",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium427/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium427/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sky Sport 3 NZ",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium590/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium590/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport TV5 Portugal",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium290/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium290/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Polsat Sport 2 Poland",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium50/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium50/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Ziggo Sport 2 NL",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium398/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium398/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "SONY TEN 2 HD",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium886/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium886/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Cytavision Sports 3 Cyprus",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium913/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium913/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Digi Sport 3 Romania",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium402/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium402/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Prima Sport 2 Romania",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium584/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium584/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Nova Sports Start Greece",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium637/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium637/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Nova Sport Bulgaria",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium468/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium468/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "SuperSport Football",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium56/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium56/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "beIN Sports MENA 8",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium98/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium98/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "beIN Sports MENA English 2",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium90/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium90/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport 3 Israel",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium142/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium142/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "PGA Tour Valspar Championship",
+        "sport": "Golf",
+        "sub_category": "Golf",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "pga-tour-valspar-championship",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 11:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 02:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "PGA Tour Valspar Championship",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "PGA Tour Valspar Championship",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Sky Sports Golf UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium70/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium70/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "GOLF Channel USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium318/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium318/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Movistar Golf",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium528/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium528/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "SuperSport Golf",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium422/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium422/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sky Sports Main Event",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium38/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium38/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sky Sport 1 NZ",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium588/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium588/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "ABA Liga 2 : Kk Zlatibor vs. Kk Podgorica",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "aba-liga-2-kk-zlatibor-vs-kk-podgorica",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 11:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 02:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "ABA Liga 2 : Kk Zlatibor",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          },
+          "team_b": {
+            "name": "Kk Podgorica",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
+        "channels": [
+          {
+            "channel_name": "Arena Sport 1 Serbia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium429/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium429/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Arena Sport 1 Croatia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium432/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium432/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Czech Republic ZBL : KP Brno vs. Sokol Hradec Kralove",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "czech-republic-zbl-kp-brno-vs-sokol-hradec-kralove",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 11:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 02:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Czech Republic ZBL : KP Brno",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          },
+          "team_b": {
+            "name": "Sokol Hradec Kralove",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
+        "channels": [
+          {
+            "channel_name": "Nova Sport 1 Czech",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium30/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium30/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Slovenian League (M) : Gorenje vs Krka",
+        "sport": "Handball",
+        "sub_category": "Handball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "slovenian-league-m-gorenje-vs-krka",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 11:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 02:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Slovenian League (M) : Gorenje",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Krka",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Sport Klub 9 Serbia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium77/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium77/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Slovakia Extraliga : HC Kosice vs. HK Dukla Trencin",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "slovakia-extraliga-hc-kosice-vs-hk-dukla-trencin",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 11:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 02:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Slovakia Extraliga : HC Kosice",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "HK Dukla Trencin",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "JOJ Sport Slovakia HD",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium6/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium6/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Division 1 Women : Eczacibasi Istanbul vs. Vakifbank SK",
+        "sport": "Volleyball",
+        "sub_category": "Volleyball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "division-1-women-eczacibasi-istanbul-vs-vakifbank-sk",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 11:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 02:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Division 1 Women : Eczacibasi Istanbul",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Vakifbank SK",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "TRT Spor Turkey",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium889/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium889/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Arena Premium 3 Serbia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium139/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium139/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
