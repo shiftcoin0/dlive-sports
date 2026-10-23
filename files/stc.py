@@ -12,7 +12,6 @@ from zoneinfo import ZoneInfo
 import httpx
 from selectolax.lexbor import LexborHTMLParser as HTMLParser
 
-# রিপোজিটরি রুট ডিরেক্টরি
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
 BASE_URL = "https://sportlight.live"
@@ -85,13 +84,11 @@ class RawMatch:
     match_url: str
 
 
+# নামের শেষে থাকা সংখ্যা (যেমন: Bulls 1) এবং সব ধরনের ইমোজি সম্পূর্ণ মুছে ফেলার নিখুঁত ফাংশন
 def clean_team_name(name: str) -> str:
-    """
-    ইমোজি (🔴, 👁, 📺), ভিউয়ার কাউন্ট এবং বাড়তি ময়লা লেখা মুছে ফেলে
-    """
-    cleaned = re.sub(r"[🔴👁📺]", "", name)
+    cleaned = re.sub(r"[🔴👁📺\U00010000-\U0010ffff]", "", name)
     cleaned = re.sub(r"(SOCCER|CRICKET|NBA|LIVE|Starts in.*|\d+:\d+\s*[AP]M)", "", cleaned, flags=re.I)
-    cleaned = re.sub(r"\s+\d+\s*$", "", cleaned)
+    cleaned = re.sub(r"\s+\d+\s*$", "", cleaned)  # পেছনের ' 1', ' 2' সংখ্যা মুছে ফেলে
     cleaned = re.sub(r"\s+", " ", cleaned)
     return cleaned.strip()
 
@@ -109,7 +106,7 @@ LEAGUE_PATTERNS = [
     (r"europa league|uel", "UEFA Europa League"),
     (r"ipl|indian premier league", "Indian Premier League (IPL)"),
     (r"bpl", "Bangladesh Premier League (BPL)"),
-    (r"nba|bulls|bucks|lakers|warriors", "NBA"),
+    (r"nba|bulls|bucks|lakers|warriors|celtics", "NBA"),
     (r"smackdown", "WWE SmackDown"),
     (r"raw", "WWE Raw"),
     (r"ufc", "UFC"),
@@ -152,23 +149,18 @@ def save_playlists(events: list[dict]) -> None:
             ch_name = ch.get("channel_name", "Stream")
             headers = ch.get("headers", {})
             referer = headers.get("Referer", "https://embed.st/")
-            origin = headers.get("Origin", "https://embed.st")
             status_lbl = f" [{status}]" if status else ""
             display_name = f"[{sub_cat}] {ev['title']} | {ch_name}{status_lbl}"
 
             m3u_lines.append(f'#EXTINF:-1 tvg-id="Live.Event.us" tvg-logo="{logo}" group-title="{sub_cat}",{display_name}')
             if referer:
                 m3u_lines.append(f'#EXTVLCOPT:http-referrer={referer}')
-                m3u_lines.append(f'#EXTVLCOPT:http-origin={origin}')
             m3u_lines.append(url)
 
     M3U_OUTPUT.write_text("\n".join(m3u_lines) + "\n", encoding="utf-8")
     log.info(f"Saved M3U Playlist: {M3U_OUTPUT}")
 
 
-# -----------------------------------------------------------------------------
-# embed.st ডাইরেক্ট .m3u8 ডিকোডার (strmd.st লোড ব্যালেন্সার এক্সট্র্যাক্টর)
-# -----------------------------------------------------------------------------
 async def resolve_embed_st_m3u8(client: httpx.AsyncClient, embed_url: str) -> tuple[str, dict]:
     standard_headers = {
         "Referer": "https://embed.st/",
@@ -176,40 +168,19 @@ async def resolve_embed_st_m3u8(client: httpx.AsyncClient, embed_url: str) -> tu
     }
 
     try:
-        req_headers = {
-            "User-Agent": UA,
-            "Referer": f"{BASE_URL}/",
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
-        }
-        resp = await client.get(embed_url, headers=req_headers, timeout=6.0)
+        req_headers = {"User-Agent": UA, "Referer": f"{BASE_URL}/"}
+        resp = await client.get(embed_url, headers=req_headers, timeout=5.0)
         if resp.status_code != 200:
             return embed_url, standard_headers
 
         html_text = resp.text
 
-        # ১. সরাসরি strmd.st লোড ব্যালেন্সারের m3u8 লিংক
-        strmd_match = re.search(r'["\'](https?://[a-zA-Z0-9_\-\.]*strmd\.st/[^"\']+\.m3u8[^"\']*)["\']', html_text)
-        if strmd_match:
-            return strmd_match.group(1).replace("\\/", "/"), standard_headers
+        # সরাসরি কোনো m3u8 লিংক থাকলে
+        m3u8_find = re.search(r'["\'](https?://[^"\']+\.m3u8[^"\']*)["\']', html_text)
+        if m3u8_find:
+            return m3u8_find.group(1).replace("\\/", "/"), standard_headers
 
-        # ২. যেকোনো সাধারণ .m3u8 লিংক
-        general_m3u8 = re.search(r'["\'](https?://[^"\']+\.m3u8[^"\']*)["\']', html_text)
-        if general_m3u8:
-            return general_m3u8.group(1).replace("\\/", "/"), standard_headers
-
-        # ৩. embed.st এর ব্যাকএন্ড প্লেয়ার কনফিগ API চেক (source/token)
-        # embed.st সাধারণত একটি внутренний API কল করে
-        api_matches = re.findall(r'fetch\(["\']([^"\']+)["\']', html_text)
-        for api_path in api_matches:
-            if "token" in api_path or "source" in api_path or "stream" in api_path:
-                api_full = urljoin(embed_url, api_path)
-                api_resp = await client.get(api_full, headers={"User-Agent": UA, "Referer": embed_url}, timeout=4.0)
-                if api_resp.status_code == 200:
-                    api_m3u8 = re.search(r'["\'](https?://[^"\']+\.m3u8[^"\']*)["\']', api_resp.text)
-                    if api_m3u8:
-                        return api_m3u8.group(1).replace("\\/", "/"), standard_headers
-
-        # ৪. Base64 ডিকোড মেকানিজম
+        # Base64 ডিকোড
         b64_matches = re.findall(r'atob\(["\']([A-Za-z0-9+/=]{20,})["\']\)', html_text)
         for b in b64_matches:
             try:
@@ -219,19 +190,6 @@ async def resolve_embed_st_m3u8(client: httpx.AsyncClient, embed_url: str) -> tu
                     return m.group(1).replace("\\/", "/"), standard_headers
             except Exception:
                 pass
-
-        # ৫. নেস্টেড আইফ্রেম প্লেয়ার
-        soup = HTMLParser(resp.content)
-        iframe = soup.css_first("iframe[src]")
-        if iframe:
-            sub_src = iframe.attributes.get("src")
-            if sub_src:
-                sub_url = urljoin(embed_url, sub_src)
-                sub_resp = await client.get(sub_url, headers={"User-Agent": UA, "Referer": embed_url}, timeout=4.0)
-                if sub_resp.status_code == 200:
-                    m = re.search(r'["\'](https?://[^"\']+\.m3u8[^"\']*)["\']', sub_resp.text)
-                    if m:
-                        return m.group(1).replace("\\/", "/"), standard_headers
 
     except Exception:
         pass
@@ -251,7 +209,6 @@ async def extract_streams_from_page(client: httpx.AsyncClient, page_url: str) ->
         soup = HTMLParser(resp.content)
         embed_links = []
 
-        # সার্ভার বাটন ও লিংক সংগ্রহ
         for a in soup.css("a[href*='embed'], button[data-src], iframe[src]"):
             href = a.attributes.get("href") or a.attributes.get("data-src") or a.attributes.get("src")
             if href:
@@ -259,7 +216,6 @@ async def extract_streams_from_page(client: httpx.AsyncClient, page_url: str) ->
                 if full_emb not in embed_links:
                     embed_links.append(full_emb)
 
-        # রেগুলার এক্সপ্রেশন দিয়ে অতিরিক্ত embed লিংক খোঁজা
         found_embeds = re.findall(r'["\'](https?://embed\.st/embed/[^"\']+)["\']', resp.text)
         for emb in found_embeds:
             if emb not in embed_links:
@@ -267,14 +223,13 @@ async def extract_streams_from_page(client: httpx.AsyncClient, page_url: str) ->
 
         idx = 1
         for emb_url in embed_links:
-            # সরাসরি আসল .m3u8 লিঙ্ক ডিকোড করা
-            final_m3u8, stream_headers = await resolve_embed_st_m3u8(client, emb_url)
+            final_url, stream_headers = await resolve_embed_st_m3u8(client, emb_url)
             ref = stream_headers.get("Referer", "https://embed.st/")
             streams.append({
                 "channel_name": f"Server {idx}",
                 "stream_type": "HLS",
-                "url": final_m3u8,
-                "raw_link": f"{final_m3u8}|Referer={ref}",
+                "url": final_url,
+                "raw_link": f"{final_url}|Referer={ref}",
                 "headers": stream_headers,
                 "drm_key": None
             })
@@ -316,7 +271,6 @@ async def parse_sport_page(client: httpx.AsyncClient, sport_name: str, page_url:
 
             full_match_url = urljoin(BASE_URL, match_href)
 
-            # সাইট থেকে অরিজিনাল টিম লোগো এক্সট্রাক্ট
             imgs = r.css("img")
             team_a_logo = ""
             team_b_logo = ""
@@ -327,7 +281,6 @@ async def parse_sport_page(client: httpx.AsyncClient, sport_name: str, page_url:
             elif len(imgs) == 1:
                 team_a_logo = urljoin(BASE_URL, imgs[0].attributes.get("src") or "")
 
-            # টিম নেম এবং টাইটেল ক্লিন করা
             team_a_name = ""
             team_b_name = ""
 
@@ -389,7 +342,7 @@ async def process_single_match(client: httpx.AsyncClient, m: RawMatch):
         final_logo = m.team_a_logo or "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
 
         return {
-            "title": m.title,  # সম্পূর্ণ ক্লিন টাইটেল
+            "title": m.title,  # ক্লিন টাইটেল (কোনো ' 1' থাকবে না)
             "sport": m.sport,
             "sub_category": get_sub_category(m.sport, m.title),
             "status": m.status,
@@ -406,7 +359,7 @@ async def process_single_match(client: httpx.AsyncClient, m: RawMatch):
                     "flag": m.team_a_logo,
                 },
                 "team_b": {
-                    "name": m.team_b_name,  # কোনো ইমোজি ছাড়া ক্লিন নাম
+                    "name": m.team_b_name,  # ক্লিন নাম: "Chicago Bulls"
                     "flag": m.team_b_logo,
                 }
             },
@@ -439,14 +392,13 @@ async def scrape():
             elif m.start_dt <= now_utc + timedelta(hours=5):
                 active_matches.append(m)
 
-        log.info(f"Filtered to {len(active_matches)} active matches. Extracting m3u8 streams in parallel...")
+        log.info(f"Filtered to {len(active_matches)} active matches. Extracting streams...")
 
         match_tasks = [process_single_match(client, m) for m in active_matches]
         processed_matches = await asyncio.gather(*match_tasks)
 
         final_playlist = [item for item in processed_matches if item is not None]
 
-        # LIVE ইভেন্ট সবসময় সবার উপরে রাখার সর্টিং
         final_playlist.sort(key=lambda x: ({"LIVE": 0, "UPCOMING": 1, "ENDED": 2}.get(x["status"], 99), x["_timestamp"]))
         for it in final_playlist:
             it.pop("_timestamp", None)
