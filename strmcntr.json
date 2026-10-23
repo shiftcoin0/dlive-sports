@@ -1,156 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 07:53:28 PM",
-  "event_count": 64,
+  "last_updated": "Oct 23, 2026, 08:00:52 PM",
+  "event_count": 68,
   "events": {
     "events": [
-      {
-        "title": "World Cup Qualifying : Korea Republic vs Oman",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "world-cup-qualifying-korea-republic-vs-oman",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 05:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 08:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "World Cup Qualifying : Korea Republic",
-            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
-          },
-          "team_b": {
-            "name": "Oman",
-            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png",
-        "channels": [
-          {
-            "channel_name": "ESPN 1 NL",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium379/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium379/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "ESPN 3 NL",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium888/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium888/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Diema Sport 3 Bulgaria",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium467/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium467/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "beIN Sports MENA 1",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium91/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium91/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport Klub 3 Serbia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium103/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium103/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Premier League Pool: Day 1",
-        "sport": "Football",
-        "sub_category": "Premier League",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "premier-league-pool-day-1",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 05:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 08:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Premier League Pool: Day 1",
-            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/47.png"
-          },
-          "team_b": {
-            "name": "Premier League Pool: Day 1",
-            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/47.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/leaguelogo/47.png",
-        "channels": [
-          {
-            "channel_name": "Sky Sport 3 NZ",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium590/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium590/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Asia Cup : Guam vs Thailand",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "asia-cup-guam-vs-thailand",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 05:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 08:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Asia Cup : Guam",
-            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
-          },
-          "team_b": {
-            "name": "Thailand",
-            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png",
-        "channels": [
-          {
-            "channel_name": "Sport Klub 4 Serbia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium104/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium104/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Hell's Kitchen Season 12, Episode 17",
         "sport": "Tv shows",
@@ -3330,6 +3182,328 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium455/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium455/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "General Hospital Season 62, Episode 133",
+        "sport": "Tv shows",
+        "sub_category": "Tv shows",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "general-hospital-season-62-episode-133",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 01:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 04:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "General Hospital Season 62, Episode 133",
+            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
+          },
+          "team_b": {
+            "name": "General Hospital Season 62, Episode 133",
+            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png",
+        "channels": [
+          {
+            "channel_name": "ABC NY USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium766/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium766/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "World Cup Qualifying : Libya vs Angola",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "world-cup-qualifying-libya-vs-angola",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 01:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 04:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "World Cup Qualifying : Libya",
+            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
+          },
+          "team_b": {
+            "name": "Angola",
+            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png",
+        "channels": [
+          {
+            "channel_name": "Sport TV6 Portugal",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium291/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium291/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Live Players Championship - Telford, England",
+        "sport": "Snooker",
+        "sub_category": "Snooker",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "live-players-championship-telford-england",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 01:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 04:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Live Players Championship",
+            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
+          },
+          "team_b": {
+            "name": "Telford, England",
+            "flag": "https://flagcdn.com/w320/gb-eng.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png",
+        "channels": [
+          {
+            "channel_name": "ITV 4 UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium353/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium353/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 1 Poland",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium57/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium57/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 1 Spain",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium524/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium524/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 1 France",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium772/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium772/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "2025 NCAA Men's Basketball Tournament First Round: McNeese State vs Clemson",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "2025-ncaa-men-s-basketball-tournament-first-round-mcneese-state-vs-clemson",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 01:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 04:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "2025 NCAA Men's Basketball Tournament First Round: McNeese State",
+            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
+          },
+          "team_b": {
+            "name": "Clemson",
+            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png",
+        "channels": [
+          {
+            "channel_name": "truTV USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium341/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium341/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Premier League Darts : Dobey, Chris vs. Bunting, Stephen",
+        "sport": "Football",
+        "sub_category": "Premier League",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "premier-league-darts-dobey-chris-vs-bunting-stephen",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 01:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 04:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Premier League Darts : Dobey, Chris",
+            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/47.png"
+          },
+          "team_b": {
+            "name": "Bunting, Stephen",
+            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/47.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/leaguelogo/47.png",
+        "channels": [
+          {
+            "channel_name": "Sky Sports Action UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium37/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium37/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport1 DE",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium641/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium641/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sky Sports Main Event",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium38/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium38/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TV3 Sport Denmark",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium809/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium809/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sky Sport Select NZ",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium587/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium587/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Switzerland National League : HC Davos vs. EV Zug",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "switzerland-national-league-hc-davos-vs-ev-zug",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 01:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 04:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Switzerland National League : HC Davos",
+            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
+          },
+          "team_b": {
+            "name": "EV Zug",
+            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png",
+        "channels": [
+          {
+            "channel_name": "3 Schweiz",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium29/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium29/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Hungary Extraliga Women : Volleyball BRSE vs. Knrc",
+        "sport": "Volleyball",
+        "sub_category": "Volleyball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "hungary-extraliga-women-volleyball-brse-vs-knrc",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 01:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 04:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Hungary Extraliga Women : Volleyball BRSE",
+            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
+          },
+          "team_b": {
+            "name": "Knrc",
+            "flag": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png",
+        "channels": [
+          {
+            "channel_name": "M4 Sport Hungary",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium265/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium265/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
