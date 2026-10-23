@@ -1,44 +1,8 @@
 {
-  "last_updated": "Oct 24, 2026, 02:50:23 AM",
+  "last_updated": "Oct 24, 2026, 03:00:24 AM",
   "event_count": 27,
   "events": {
     "events": [
-      {
-        "title": "VfB Stuttgartvs.Borussia Mönchengladbach",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "vfb-stuttgartvs-borussia-mönchengladbach",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 24, 2026, 12:30:00 AM",
-          "end_time_bst": "Oct 24, 2026, 03:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "VfB Stuttgartvs.Borussia Mönchengladbach",
-            "flag": "https://i.ibb.co.com/cSMrGjnb/Football.png"
-          },
-          "team_b": {
-            "name": "VfB Stuttgartvs.Borussia Mönchengladbach",
-            "flag": "https://i.ibb.co.com/cSMrGjnb/Football.png"
-          }
-        },
-        "logo": "https://i.ibb.co.com/cSMrGjnb/Football.png",
-        "channels": [
-          {
-            "channel_name": "English Stream",
-            "stream_type": "HLS",
-            "url": "https://edgestream2.pro/hls/ueyeztrazb4.m3u8",
-            "raw_link": "https://edgestream2.pro/hls/ueyeztrazb4.m3u8|Referer=https://streame.center/",
-            "headers": {
-              "Referer": "https://streame.center/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Brestvs.Nice",
         "sport": "Football",
@@ -644,6 +608,42 @@
             "stream_type": "HLS",
             "url": "https://edgestream2.pro/hls/zeuryuegn48.m3u8",
             "raw_link": "https://edgestream2.pro/hls/zeuryuegn48.m3u8|Referer=https://streame.center/",
+            "headers": {
+              "Referer": "https://streame.center/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Army Black Knightsvs.Tulsa Golden Hurricane",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "army-black-knightsvs-tulsa-golden-hurricane",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 06:30:00 AM",
+          "end_time_bst": "Oct 24, 2026, 09:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Army Black Knightsvs.Tulsa Golden Hurricane",
+            "flag": "https://i.ibb.co.com/cSMrGjnb/Football.png"
+          },
+          "team_b": {
+            "name": "Army Black Knightsvs.Tulsa Golden Hurricane",
+            "flag": "https://i.ibb.co.com/cSMrGjnb/Football.png"
+          }
+        },
+        "logo": "https://i.ibb.co.com/cSMrGjnb/Football.png",
+        "channels": [
+          {
+            "channel_name": "English Stream",
+            "stream_type": "HLS",
+            "url": "https://edgestream2.pro/hls/qsdnajbq32.m3u8",
+            "raw_link": "https://edgestream2.pro/hls/qsdnajbq32.m3u8|Referer=https://streame.center/",
             "headers": {
               "Referer": "https://streame.center/"
             },
