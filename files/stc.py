@@ -5,7 +5,7 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import parse_qsl, urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 import httpx
@@ -317,6 +317,9 @@ async def request(
         return None
 
 
+# -----------------------------------------------------------------------------
+# DaddyLive .m3u8 ডিকোডার (সম্পূর্ণ টোকেন ও এক্সপায়ারি সাপোর্টসহ)
+# -----------------------------------------------------------------------------
 async def decode_dlhd_m3u8(
     client: httpx.AsyncClient,
     channel_id: str,
@@ -335,7 +338,8 @@ async def decode_dlhd_m3u8(
     if not resp:
         return None
 
-    direct_match = re.search(r'["\'](https?://[^"\']+\.m3u8[^"\']*)["\']', resp.text)
+    # ১. সরাসরি m3u8 লিংক আছে কিনা চেক (টোকেনসহ)
+    direct_match = re.search(r'["\'](https?://[^"\']+\.m3u8(?:\?[^"\']*)?)["\']', resp.text)
     if direct_match:
         return direct_match.group(1), f"{BASE_URL}/"
 
@@ -356,6 +360,11 @@ async def decode_dlhd_m3u8(
     parsed_iframe = urlsplit(iframe_src)
     player_origin = f"{parsed_iframe.scheme}://{parsed_iframe.netloc}"
 
+    # আইফ্রেমের URL থেকে সম্ভাব্য টোকেন সংগ্রহ
+    iframe_query = dict(parse_qsl(parsed_iframe.query))
+    token_candidate = iframe_query.get("token") or iframe_query.get("auth_token")
+    expires_candidate = iframe_query.get("expires") or iframe_query.get("expiry")
+
     player_headers = {
         "User-Agent": UA,
         "Referer": f"{BASE_URL}/",
@@ -364,10 +373,12 @@ async def decode_dlhd_m3u8(
     if not player_resp:
         return None
 
-    player_match = re.search(r'["\'](https?://[^"\']+\.m3u8[^"\']*)["\']', player_resp.text)
+    # ২. প্লেয়ার পেজে সরাসরি m3u8 লিংক থাকলে
+    player_match = re.search(r'["\'](https?://[^"\']+\.m3u8(?:\?[^"\']*)?)["\']', player_resp.text)
     if player_match:
         return player_match.group(1), f"{player_origin}/"
 
+    # ৩. server_lookup.php কল করে server_key এবং টোকেন সংগ্রহ করা
     key_match = re.search(r'channel_id=([^"\'&\s]+)', player_resp.text)
     channel_key = key_match.group(1) if key_match else f"premium{clean_id}"
 
@@ -379,15 +390,60 @@ async def decode_dlhd_m3u8(
 
     server_key = "topembed"
     l_resp = await request(client, lookup_url, headers=lookup_headers, timeout=4.0)
+
     if l_resp:
         try:
             data = l_resp.json()
-            if "server_key" in data and data["server_key"]:
-                server_key = data["server_key"]
+            if isinstance(data, dict):
+                # যদি এপিআই নিজেই সম্পূর্ণ URL রিটার্ন করে
+                if "url" in data and ".m3u8" in str(data["url"]):
+                    return str(data["url"]), f"{player_origin}/"
+                if "stream" in data and ".m3u8" in str(data["stream"]):
+                    return str(data["stream"]), f"{player_origin}/"
+
+                if "server_key" in data and data["server_key"]:
+                    server_key = data["server_key"]
+
+                # এপিআই থেকে টোকেন ও এক্সপায়ারি ফিল্টার
+                if "token" in data and data["token"]:
+                    token_candidate = str(data["token"])
+                elif "auth_token" in data and data["auth_token"]:
+                    token_candidate = str(data["auth_token"])
+                elif "sig" in data and data["sig"]:
+                    token_candidate = str(data["sig"])
+
+                if "expires" in data and data["expires"]:
+                    expires_candidate = str(data["expires"])
+                elif "expiry" in data and data["expiry"]:
+                    expires_candidate = str(data["expiry"])
         except Exception:
             pass
 
-    m3u8_url = f"https://{server_key}new.newkso.ru/{server_key}/{channel_key}/mono.m3u8"
+    # ৪. যদি এপিআই-তে টোকেন না পাওয়া যায়, তবে প্লেয়ার জাভাস্ক্রিপ্ট থেকে খোঁজা
+    if not token_candidate:
+        token_match = re.search(r'["\']?token["\']?\s*[:=]\s*["\']([^"\'&\s]+)["\']', player_resp.text)
+        if token_match:
+            token_candidate = token_match.group(1)
+
+    # ৫. m3u8 বেস URL তৈরি
+    if "/" in server_key:
+        parts = server_key.split("/")
+        base_m3u8 = f"https://{parts[0]}.newkso.ru/{server_key}/{channel_key}/mono.m3u8"
+    else:
+        base_m3u8 = f"https://{server_key}new.newkso.ru/{server_key}/{channel_key}/mono.m3u8"
+
+    # টোকেন ও মেয়াদ (Expires) প্যারামিটার যুক্ত করা
+    query_parts = []
+    if token_candidate:
+        query_parts.append(f"token={token_candidate}")
+    if expires_candidate:
+        query_parts.append(f"expires={expires_candidate}")
+
+    if query_parts:
+        m3u8_url = f"{base_m3u8}?{'&'.join(query_parts)}"
+    else:
+        m3u8_url = base_m3u8
+
     return m3u8_url, f"{player_origin}/"
 
 
@@ -413,14 +469,9 @@ async def get_dlhd_events(client: httpx.AsyncClient) -> list[DLHDEvent]:
     now_utc = datetime.now(timezone.utc)
 
     for date_key, category_obj in schedule_data.items():
-        if isinstance(category_obj, list):
-            items_by_cat = {date_key: category_obj}
-        elif isinstance(category_obj, dict):
-            items_by_cat = category_obj
-        else:
-            continue
+        items = category_obj if isinstance(category_obj, dict) else {date_key: category_obj}
 
-        for sport_cat, games in items_by_cat.items():
+        for sport_cat, games in items.items():
             if not isinstance(games, list):
                 continue
 
@@ -436,17 +487,13 @@ async def get_dlhd_events(client: httpx.AsyncClient) -> list[DLHDEvent]:
                     continue
 
                 event_dt = now_utc
-                # এখানে আগের কাটা লাইনটি সম্পূর্ণ ফিক্স করা হয়েছে
                 time_match = re.search(r"(\d{1,2}):(\d{2})", time_str)
                 if time_match:
                     h, m = int(time_match.group(1)), int(time_match.group(2))
                     event_dt = now_utc.replace(hour=h, minute=m, second=0, microsecond=0)
 
-                # ৩ ঘণ্টার বেশি পুরানো ম্যাচ বাদ
                 if event_dt < now_utc - timedelta(hours=3):
                     continue
-
-                # আগামী ৬ ঘণ্টার মধ্যে শুরু হওয়া এবং লাইভ ম্যাচগুলো রাখা
                 if event_dt > now_utc + timedelta(hours=6):
                     continue
 
@@ -493,9 +540,9 @@ async def scrape() -> None:
 
         log.info(f"Processing {len(raw_events)} active DaddyLive event(s)...")
 
-        # ১. সকল চ্যানেল স্ট্রিম প্যারালালে ডিকোড
+        # ১. সকল চ্যানেল স্ট্রিম প্যারালালে ডিকোড (টোকেনসহ)
         unique_channel_ids = {ch.channel_id for ev in raw_events for ch in ev.channels}
-        log.info(f"Decoding {len(unique_channel_ids)} unique channels concurrently...")
+        log.info(f"Decoding {len(unique_channel_ids)} unique channels concurrently with tokens...")
 
         channel_map = {}
 
@@ -538,7 +585,6 @@ async def scrape() -> None:
                 team_a_name = t_names["team_a"]
                 team_b_name = t_names["team_b"]
 
-                # আপনার দেওয়া কাস্টম লোগো নির্ধারণ
                 event_logo = get_event_logo(ev.sport, ev.title)
                 detected_sub_category = get_sub_category(ev.sport, ev.title)
 
@@ -588,7 +634,7 @@ async def scrape() -> None:
             item.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info("Playlist generation completed successfully!")
+        log.info("Playlist generation completed successfully with tokens!")
 
 
 if __name__ == "__main__":
