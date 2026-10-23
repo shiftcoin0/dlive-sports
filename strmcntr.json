@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 23, 2026, 02:59:48 PM",
-  "event_count": 17,
+  "last_updated": "Oct 23, 2026, 03:49:55 PM",
+  "event_count": 21,
   "events": {
     "events": [
       {
@@ -241,7 +241,7 @@
         "title": "WRC Safari Rally Kenya | Special Stage 1 | Day 1",
         "sport": "Motorsport",
         "sub_category": "Motorsport",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "wrc-safari-rally-kenya-special-stage-1-day-1",
         "schedule": {
@@ -357,7 +357,7 @@
         "title": "Absa Cape Epic '25: Stage 4",
         "sport": "Cycling",
         "sub_category": "Cycling",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "absa-cape-epic-25-stage-4",
         "schedule": {
@@ -393,7 +393,7 @@
         "title": "Women's | Group Stage | World Championship : United States vs Norway",
         "sport": "Winter sports",
         "sub_category": "Winter sports",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "women-s-group-stage-world-championship-united-states-vs-norway",
         "schedule": {
@@ -988,6 +988,200 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium554/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium554/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "World - Friendly : Türkiye U20 vs Italy U20",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "world-friendly-türkiye-u20-vs-italy-u20",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 08:00:00 PM",
+          "end_time_bst": "Oct 23, 2026, 11:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "World - Friendly : Türkiye U20",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Italy U20",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "TRT Spor Turkey",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium889/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium889/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "WRC Safari Rally Kenya | Special Stage 2 | Day 1",
+        "sport": "Motorsport",
+        "sub_category": "Motorsport",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "wrc-safari-rally-kenya-special-stage-2-day-1",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 08:00:00 PM",
+          "end_time_bst": "Oct 23, 2026, 11:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "WRC Safari Rally Kenya | Special Stage 2 | Day 1",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "WRC Safari Rally Kenya | Special Stage 2 | Day 1",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Rally Tv",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium607/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium607/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TNT Sports 2 UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium32/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium32/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Motowizja Poland",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium563/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium563/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport TV2 Portugal",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium74/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium74/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Canal+ Sport360",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium464/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium464/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TV4 Motor",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium702/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium702/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Russia Superliga : Tyumen vs Torpedo Nizhny Novgorod",
+        "sport": "Futsal",
+        "sub_category": "Futsal",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "russia-superliga-tyumen-vs-torpedo-nizhny-novgorod",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 08:00:00 PM",
+          "end_time_bst": "Oct 23, 2026, 11:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Russia Superliga : Tyumen",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Torpedo Nizhny Novgorod",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Match Igra Russia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium76/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium76/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "KHL : Yekaterinburg vs SKA St. Petersburg",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "khl-yekaterinburg-vs-ska-st-petersburg",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 08:00:00 PM",
+          "end_time_bst": "Oct 23, 2026, 11:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "KHL : Yekaterinburg",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "SKA St. Petersburg",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "Match TV Russia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium127/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium127/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
