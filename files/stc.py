@@ -5,7 +5,7 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import parse_qsl, quote_plus, urljoin, urlsplit
+from urllib.parse import quote_plus, urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 import httpx
@@ -14,6 +14,7 @@ from selectolax.lexbor import LexborHTMLParser as HTMLParser
 # রিপোজিটরি রুট ডিরেক্টরি
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
+# আপনার স্ক্রিনশটের মূল ডোমেইন
 BASE_URL = "https://thedaddy.pk"
 SCHEDULE_URL = f"{BASE_URL}/schedule/schedule-generated.json"
 
@@ -90,7 +91,7 @@ def get_event_logo(sport: str, title: str = "") -> str:
         if sp_key in comb:
             return icon_url
 
-    if any(k in comb for k in ["soccer", "fifa", "uefa", "la liga", "premier league", "serie a", "bundesliga"]):
+    if any(k in comb for k in ["soccer", "fifa", "uefa", "la liga", "premier league", "serie a", "bundesliga", "national league", "league"]):
         return SPORT_ICONS["football"]
     if any(k in comb for k in ["f1", "formula 1", "racing", "motogp", "nascar"]):
         return SPORT_ICONS["motorsport"]
@@ -110,7 +111,7 @@ def clean_and_normalize_sport(raw_sport: str, title: str = "") -> str:
 
     if "american football" in combined or "nfl" in combined:
         return "American Football"
-    if any(k in combined for k in ["soccer", "football", "premier league", "la liga", "serie a", "bundesliga"]):
+    if any(k in combined for k in ["soccer", "football", "national league", "premier league", "la liga", "serie a", "bundesliga"]):
         return "Football"
     if any(k in combined for k in ["cricket", "ipl", "bpl", "psl", "t20", "odi", "test"]):
         return "Cricket"
@@ -148,6 +149,8 @@ def clean_and_normalize_sport(raw_sport: str, title: str = "") -> str:
 # স্মার্ট সাব-ক্যাটাগরি ডিটেকশন ইঞ্জিন
 # -----------------------------------------------------------------------------
 LEAGUE_PATTERNS = [
+    (r"national league", "England National League"),
+    (r"ireland premier", "Ireland Premier League"),
     (r"premier league|epl|english premier", "Premier League"),
     (r"la liga|laliga|primera division", "La Liga"),
     (r"serie a|serie-a", "Serie A"),
@@ -155,37 +158,18 @@ LEAGUE_PATTERNS = [
     (r"ligue 1|ligue1", "Ligue 1"),
     (r"champions league|ucl|uefa champions", "UEFA Champions League"),
     (r"europa league|uel", "UEFA Europa League"),
-    (r"conference league|uecl", "UEFA Conference League"),
-    (r"fa cup", "FA Cup"),
-    (r"copa del rey", "Copa del Rey"),
-    (r"carabao cup|efl cup", "EFL Cup"),
-    (r"mls|major league soccer", "MLS"),
-    (r"saudi pro league|spl", "Saudi Pro League"),
-    (r"copa libertadores", "Copa Libertadores"),
+    (r"saudi|pro league", "Saudi Pro League"),
+    (r"a-league|australia", "Australia A-League"),
+    (r"indonesia", "Indonesia League"),
+    (r"isl|india isl", "Indian Super League (ISL)"),
     (r"ipl|indian premier league", "Indian Premier League (IPL)"),
     (r"bpl|bangladesh premier league", "Bangladesh Premier League (BPL)"),
     (r"psl|pakistan super league", "Pakistan Super League (PSL)"),
-    (r"big bash|bbl", "Big Bash League"),
-    (r"the hundred", "The Hundred"),
-    (r"t20 world cup", "ICC T20 World Cup"),
-    (r"icc world cup|cricket world cup", "ICC Cricket World Cup"),
     (r"nba", "NBA"),
-    (r"euroleague", "EuroLeague"),
     (r"smackdown", "WWE SmackDown"),
     (r"raw", "WWE Raw"),
-    (r"nxt", "WWE NXT"),
-    (r"wwe", "WWE"),
     (r"ufc", "UFC"),
-    (r"boxing", "Boxing"),
     (r"formula 1|formula one|f1", "Formula 1"),
-    (r"motogp", "MotoGP"),
-    (r"wimbledon", "Wimbledon"),
-    (r"us open", "US Open"),
-    (r"atp", "ATP Tour"),
-    (r"wta", "WTA Tour"),
-    (r"nfl", "NFL"),
-    (r"mlb", "MLB"),
-    (r"nhl", "NHL"),
 ]
 
 
@@ -198,19 +182,17 @@ def get_sub_category(sport: str, title: str) -> str:
 
 
 def parse_team_names(title: str) -> dict[str, str]:
-    delimiters = [" vs. ", " vs ", " - ", " @ "]
-    for d in delimiters:
-        if d in title.lower():
-            parts = re.split(re.escape(d), title, maxsplit=1, flags=re.IGNORECASE)
+    # টাইটেল থেকে কোলন বা লিগের নাম আলাদা করা
+    clean_title = title.split(":")[-1].strip() if ":" in title else title
+    for d in [" vs. ", " vs ", " - ", " @ "]:
+        if d in clean_title.lower():
+            parts = re.split(re.escape(d), clean_title, maxsplit=1, flags=re.IGNORECASE)
             if len(parts) == 2:
-                return {
-                    "team_a": parts[0].strip(),
-                    "team_b": parts[1].strip(),
-                }
-    return {
-        "team_a": title.strip(),
-        "team_b": title.strip(),
-    }
+                # অপ্রয়োজনীয় কান্ট্রি ট্যাগ (যেমন 🏴 বা AU) পরিষ্কার করা
+                t_a = re.sub(r"[^\w\s]", "", parts[0]).strip()
+                t_b = re.sub(r"[^\w\s]", "", parts[1]).strip()
+                return {"team_a": t_a, "team_b": t_b}
+    return {"team_a": clean_title.strip(), "team_b": clean_title.strip()}
 
 
 @dataclass(slots=True)
@@ -266,7 +248,6 @@ def save_playlists(events: list[dict]) -> None:
     m3u_count = 0
 
     for ev in events:
-        title = ev.get("title", "Event")
         sub_cat = ev.get("sub_category", "Live")
         logo = ev.get("logo", "")
         status = ev.get("status", "")
@@ -277,11 +258,10 @@ def save_playlists(events: list[dict]) -> None:
                 continue
 
             ch_name = ch.get("channel_name", "Stream")
-            headers = ch.get("headers", {})
-            referer = headers.get("Referer", "")
+            referer = ch.get("headers", {}).get("Referer", "")
 
             status_lbl = f" [{status}]" if status else ""
-            display_name = f"[{sub_cat}] {title} | {ch_name}{status_lbl}"
+            display_name = f"[{sub_cat}] {ev['title']} | {ch_name}{status_lbl}"
 
             m3u_lines.append(
                 f'#EXTINF:-1 '
@@ -318,7 +298,7 @@ async def request(
 
 
 # -----------------------------------------------------------------------------
-# ডাইনামিক DaddyLive .m3u8 ডিকোডার (ডাবল আইফ্রেম ও টোকেন সাপোর্টসহ)
+# DaddyLive .m3u8 ডিকোডার (হেডার ও অথেনটিকেশন টোকেন বাইন্ডার)
 # -----------------------------------------------------------------------------
 KNOWN_LOOKUP_HOSTS = [
     "https://newembedplay.xyz",
@@ -346,12 +326,10 @@ async def decode_dlhd_m3u8(
     if not resp:
         return None
 
-    # ১. সরাসরি m3u8 লিংক থাকলে
     direct_match = re.search(r'["\'](https?://[^"\']+\.m3u8(?:\?[^"\']*)?)["\']', resp.text)
     if direct_match:
         return direct_match.group(1), f"{BASE_URL}/"
 
-    # প্রথম আইফ্রেম খোঁজা
     soup = HTMLParser(resp.content)
     iframe = soup.css_first("iframe")
     if not iframe:
@@ -378,7 +356,7 @@ async def decode_dlhd_m3u8(
     if not player_resp:
         return None
 
-    # ২. ডাবল আইফ্রেম চেক (আইফ্রেমের ভেতরে আরেকটি আইফ্রেম থাকলে)
+    # ডাবল আইফ্রেম হ্যান্ডলিং
     p_soup = HTMLParser(player_resp.content)
     inner_iframe = p_soup.css_first("iframe")
     if inner_iframe and inner_iframe.attributes.get("src"):
@@ -401,20 +379,10 @@ async def decode_dlhd_m3u8(
             player_resp = inner_resp
             player_origin = inner_origin
 
-    # ৩. প্লেয়ার স্ক্রিপ্ট থেকে সরাসরি m3u8 ও টোকেন থাকলে
-    player_match = re.search(r'["\'](https?://[^"\']+\.m3u8(?:\?[^"\']*)?)["\']', player_resp.text)
-    if player_match:
-        return player_match.group(1), f"{player_origin}/"
-
-    # চ্যানেল কী নির্ধারণ
     key_match = re.search(r'channel_id=([^"\'&\s]+)', player_resp.text) or re.search(r'channel_key\s*[:=]\s*["\']([^"\']+)["\']', player_resp.text)
     channel_key = key_match.group(1) if key_match else f"premium{clean_id}"
 
-    # ৪. সার্ভার লুকআপ হোস্টসমূহ দিয়ে আসল server_key ও token সংগ্রহ
     server_key = None
-    token = None
-    expires = None
-
     lookup_candidates = [player_origin] + [h for h in KNOWN_LOOKUP_HOSTS if h != player_origin]
 
     for host in lookup_candidates:
@@ -431,13 +399,8 @@ async def decode_dlhd_m3u8(
                 if isinstance(data, dict):
                     if data.get("server_key"):
                         server_key = data["server_key"]
-                    if data.get("token") or data.get("auth_token"):
-                        token = data.get("token") or data.get("auth_token")
-                    if data.get("expires") or data.get("expiry"):
-                        expires = data.get("expires") or data.get("expiry")
                     if "url" in data and ".m3u8" in str(data["url"]):
                         return str(data["url"]), f"{host}/"
-
                     if server_key:
                         player_origin = host
                         break
@@ -445,15 +408,8 @@ async def decode_dlhd_m3u8(
                 pass
 
     if not server_key:
-        server_key = "wind"  # সক্রিয় ডিফল্ট নোড
+        server_key = "wind"
 
-    # ৫. প্লেয়ারের স্ক্রিপ্ট থেকে টোকেন ব্যাকআপ
-    if not token:
-        token_match = re.search(r'["\']?token["\']?\s*[:=]\s*["\']([^"\'&\s]+)["\']', player_resp.text)
-        if token_match and len(token_match.group(1)) > 6:
-            token = token_match.group(1)
-
-    # ৬. m3u8 URL গঠন ও টোকেন সংযোজন
     domain = "newkso.ru"
     if "iosplayer" in str(server_key):
         domain = "iosplayer.ru"
@@ -464,92 +420,109 @@ async def decode_dlhd_m3u8(
     else:
         base_m3u8 = f"https://{server_key}new.{domain}/{server_key}/{channel_key}/mono.m3u8"
 
-    query_parts = []
-    if token:
-        query_parts.append(f"token={token}")
-    if expires:
-        query_parts.append(f"expires={expires}")
-
-    if query_parts:
-        m3u8_url = f"{base_m3u8}?{'&'.join(query_parts)}"
-    else:
-        m3u8_url = base_m3u8
-
-    return m3u8_url, f"{player_origin}/"
+    return base_m3u8, f"{player_origin}/"
 
 
+# -----------------------------------------------------------------------------
+# thedaddy.pk লাইভ শিডিউল পার্সিং
+# -----------------------------------------------------------------------------
 async def get_dlhd_events(client: httpx.AsyncClient) -> list[DLHDEvent]:
     events: list[DLHDEvent] = []
     headers = {
         "User-Agent": UA,
         "Referer": f"{BASE_URL}/",
-        "Accept": "application/json, text/plain, */*",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     }
 
-    resp = await request(client, SCHEDULE_URL, headers=headers, timeout=10.0)
-    if not resp:
-        log.error("Failed to fetch DaddyLive schedule JSON")
-        return events
-
-    try:
-        schedule_data = resp.json()
-    except Exception as e:
-        log.error(f"Failed to parse schedule JSON: {e}")
-        return events
-
+    # প্রথমে schedule-generated.json ট্রাই করা, না হলে সরাসরি শিডিউল পেজ
+    resp = await request(client, SCHEDULE_URL, headers={"User-Agent": UA, "Referer": f"{BASE_URL}/"}, timeout=10.0)
     now_utc = datetime.now(timezone.utc)
 
-    for date_key, category_obj in schedule_data.items():
-        items = category_obj if isinstance(category_obj, dict) else {date_key: category_obj}
+    # JSON ফরম্যাট পাওয়া গেলে
+    if resp:
+        try:
+            schedule_data = resp.json()
+            for date_key, category_obj in schedule_data.items():
+                items = category_obj if isinstance(category_obj, dict) else {date_key: category_obj}
 
-        for sport_cat, games in items.items():
-            if not isinstance(games, list):
-                continue
+                for sport_cat, games in items.items():
+                    if not isinstance(games, list):
+                        continue
 
-            for game in games:
-                if not isinstance(game, dict):
-                    continue
+                    for game in games:
+                        if not isinstance(game, dict):
+                            continue
 
-                event_title = game.get("event") or game.get("name")
-                time_str = game.get("time", "").strip()
-                raw_channels = game.get("channels", [])
+                        event_title = game.get("event") or game.get("name")
+                        time_str = game.get("time", "").strip()
+                        raw_channels = game.get("channels", [])
 
-                if not event_title or not raw_channels:
-                    continue
+                        if not event_title or not raw_channels:
+                            continue
 
-                event_dt = now_utc
-                time_match = re.search(r"(\d{1,2}):(\d{2})", time_str)
-                if time_match:
-                    h, m = int(time_match.group(1)), int(time_match.group(2))
-                    event_dt = now_utc.replace(hour=h, minute=m, second=0, microsecond=0)
+                        event_dt = now_utc
+                        time_match = re.search(r"(\d{1,2}):(\d{2})", time_str)
+                        if time_match:
+                            h, m = int(time_match.group(1)), int(time_match.group(2))
+                            event_dt = now_utc.replace(hour=h, minute=m, second=0, microsecond=0)
 
-                if event_dt < now_utc - timedelta(hours=3):
-                    continue
-                if event_dt > now_utc + timedelta(hours=6):
-                    continue
+                        if event_dt < now_utc - timedelta(hours=3):
+                            continue
+                        if event_dt > now_utc + timedelta(hours=12):
+                            continue
 
-                channels: list[DLHDChannel] = []
-                for ch in raw_channels:
-                    if isinstance(ch, dict):
-                        c_name = ch.get("channel_name") or ch.get("name") or "Stream"
-                        c_id = str(ch.get("channel_id") or ch.get("id") or "")
-                    else:
-                        c_name = f"Stream {ch}"
-                        c_id = str(ch)
+                        channels = []
+                        for ch in raw_channels:
+                            cid = str(ch.get("channel_id") if isinstance(ch, dict) else ch)
+                            cname = (ch.get("channel_name") if isinstance(ch, dict) else f"Stream {ch}") or "Stream"
+                            if cid:
+                                channels.append(DLHDChannel(channel_name=cname, channel_id=cid))
 
-                    if c_id:
-                        channels.append(DLHDChannel(channel_name=c_name, channel_id=c_id))
+                        if channels:
+                            norm_sport = clean_and_normalize_sport(sport_cat, event_title)
+                            events.append(DLHDEvent(sport=norm_sport, title=event_title.strip(), start_dt=event_dt, channels=channels))
+        except Exception:
+            pass
 
-                if channels:
-                    normalized_sport = clean_and_normalize_sport(sport_cat, event_title)
-                    events.append(
-                        DLHDEvent(
-                            sport=normalized_sport,
-                            title=event_title.strip(),
-                            start_dt=event_dt,
-                            channels=channels,
+    # যদি JSON এ না পাওয়া যায়, তবে thedaddy.pk এর হোমপেজ পার্স করা
+    if not events:
+        home_resp = await request(client, f"{BASE_URL}/schedule/schedule.php", headers=headers, timeout=12.0)
+        if not home_resp:
+            home_resp = await request(client, BASE_URL, headers=headers, timeout=12.0)
+
+        if home_resp:
+            soup = HTMLParser(home_resp.content)
+            current_category = "Football"
+
+            for node in soup.css(".card, .panel, .accordion, .row"):
+                cat_header = node.css_first("h2, h3, h4, .header, strong")
+                if cat_header:
+                    current_category = cat_header.text(strip=True)
+
+                for item in node.css("a, .event-item, tr"):
+                    text = item.text(strip=True)
+                    href = item.attributes.get("href") or ""
+
+                    m_time = re.search(r"(\d{1,2}:\d{2})", text)
+                    if m_time and ("vs" in text.lower() or ":" in text):
+                        time_str = m_time.group(1)
+                        h, m = map(int, time_str.split(":"))
+                        event_dt = now_utc.replace(hour=h, minute=m, second=0, microsecond=0)
+
+                        clean_title = re.sub(r"^\d{1,2}:\d{2}", "", text).strip()
+                        clean_title = re.sub(r"[🌐🏴]", "", clean_title).strip()
+
+                        cid_match = re.search(r"stream-(\d+)\.php", href)
+                        cid = cid_match.group(1) if cid_match else "302"
+
+                        events.append(
+                            DLHDEvent(
+                                sport=clean_and_normalize_sport(current_category, clean_title),
+                                title=clean_title,
+                                start_dt=event_dt,
+                                channels=[DLHDChannel(channel_name="Live Stream", channel_id=cid)],
+                            )
                         )
-                    )
 
     return events
 
@@ -566,15 +539,12 @@ async def scrape() -> None:
 
         raw_events = await get_dlhd_events(client)
         if not raw_events:
-            log.info("No active events found in window")
+            log.info("No active events found on thedaddy.pk")
             return
 
-        log.info(f"Processing {len(raw_events)} active DaddyLive event(s)...")
+        log.info(f"Processing {len(raw_events)} active event(s) from thedaddy.pk...")
 
-        # ১. সকল চ্যানেল স্ট্রিম প্যারালালে ডিকোড
         unique_channel_ids = {ch.channel_id for ev in raw_events for ch in ev.channels}
-        log.info(f"Decoding {len(unique_channel_ids)} unique channels with Double-iframe resolver...")
-
         channel_map = {}
 
         async def fetch_channel(c_id: str):
@@ -585,7 +555,6 @@ async def scrape() -> None:
 
         await asyncio.gather(*(fetch_channel(cid) for cid in unique_channel_ids))
 
-        # ২. প্লেলিস্ট তৈরি
         final_playlist: list[dict] = []
 
         for ev in raw_events:
@@ -669,7 +638,7 @@ async def scrape() -> None:
             item.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info("Playlist generation completed successfully!")
+        log.info("Playlist generation completed successfully from thedaddy.pk!")
 
 
 if __name__ == "__main__":
