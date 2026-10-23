@@ -469,3 +469,8 @@
 [2026-10-23 | 21:50:39] INFO     [SPORTS] Saved JSON Playlist: /home/runner/work/dlive-sports/dlive-sports/strmcntr.json (Total: 23 events) (stc.py:206)
 [2026-10-23 | 21:50:39] INFO     [SPORTS] Saved M3U Playlist: /home/runner/work/dlive-sports/dlive-sports/strmcntr.m3u (23 streams) (stc.py:243)
 [2026-10-23 | 21:50:39] INFO     [SPORTS] Successfully generated playlist with 23 live matches!                  (stc.py:534)
+[2026-10-23 | 21:54:33] INFO     [SPORTLIGHT] Connecting to https://sportlight.live...                               (stc.py:312)
+[2026-10-23 | 21:54:35] INFO     [SPORTLIGHT] Discovered 172 matches across all categories.                          (stc.py:321)
+[2026-10-23 | 21:56:49] INFO     [SPORTLIGHT] Saved JSON Playlist: /home/runner/work/dlive-sports/dlive-sports/strmcntr.json (Total: 172 events) (stc.py:129)
+[2026-10-23 | 21:56:49] INFO     [SPORTLIGHT] Saved M3U Playlist: /home/runner/work/dlive-sports/dlive-sports/strmcntr.m3u (stc.py:153)
+[2026-10-23 | 21:56:49] INFO     [SPORTLIGHT] Playlist generated successfully with SportLight data!                  (stc.py:373)
