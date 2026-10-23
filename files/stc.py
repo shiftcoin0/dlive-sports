@@ -87,100 +87,85 @@ COUNTRY_FLAGS = {
     "canada": "https://flagcdn.com/w320/ca.png",
 }
 
-# লিগ ভিত্তিক ব্যাকআপ ব্যাজ
+# লিগ ও স্পোর্টস ব্যাজ
 OFFICIAL_LEAGUE_LOGOS = {
-    "La Liga": "https://static.flashscore.com/res/image/data/COu8P3T3-tO4764m1.png",
-    "Premier League": "https://static.flashscore.com/res/image/data/2m9Y8Wll-zskCq9x7.png",
-    "Serie A": "https://static.flashscore.com/res/image/data/j3uI5lC3-Q1Oq3n8A.png",
-    "Bundesliga": "https://static.flashscore.com/res/image/data/Mctk2Nll-QsmjY37a.png",
-    "Ligue 1": "https://static.flashscore.com/res/image/data/2Rkm50V1-4Y4wW2p6.png",
-    "UEFA Champions League": "https://static.flashscore.com/res/image/data/z9uGgZll-Wre4i8k5.png",
-    "UEFA Europa League": "https://static.flashscore.com/res/image/data/Q3k5V7U1-bJ3Z1sM2.png",
-    "NBA": "https://static.flashscore.com/res/image/data/0G0W6fC3-nN7N7yE4.png",
-    "Indian Premier League (IPL)": "https://static.flashscore.com/res/image/data/v3xYv8C3-I9T79sA1.png",
-    "Formula 1": "https://static.flashscore.com/res/image/data/6X6W1bU1-vP3Z3wS2.png",
-    "UFC": "https://static.flashscore.com/res/image/data/4N4X9aC3-8Q7P7mE3.png",
+    "La Liga": "https://images.fotmob.com/image_resources/logo/leaguelogo/87.png",
+    "Premier League": "https://images.fotmob.com/image_resources/logo/leaguelogo/47.png",
+    "Serie A": "https://images.fotmob.com/image_resources/logo/leaguelogo/55.png",
+    "Bundesliga": "https://images.fotmob.com/image_resources/logo/leaguelogo/54.png",
+    "Ligue 1": "https://images.fotmob.com/image_resources/logo/leaguelogo/53.png",
+    "UEFA Champions League": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png",
+    "UEFA Europa League": "https://images.fotmob.com/image_resources/logo/leaguelogo/73.png",
+    "NBA": "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png",
+    "Formula 1": "https://a.espncdn.com/i/teamlogos/racing/500/f1.png",
+    "UFC": "https://a.espncdn.com/i/teamlogos/mma/500/ufc.png",
 }
 
-DEFAULT_LOGO = "https://static.flashscore.com/res/image/data/2m9Y8Wll-zskCq9x7.png"
+DEFAULT_LOGO = "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
 
 
 # -----------------------------------------------------------------------------
-# Flashscore ক্যাটাগরি ও ইভেন্ট ফিড লোডার (ম্যাচের আসল ইমেজ ম্যাপার)
+# আজকের সব লাইভ ম্যাচ থেকে সরাসরি টিম লোগো এক্সট্রাক্ট করার ইঞ্জিন
 # -----------------------------------------------------------------------------
-async def load_flashscore_category_logos(client: httpx.AsyncClient) -> dict[str, str]:
+async def load_today_match_logos(client: httpx.AsyncClient) -> dict[str, str]:
     """
-    Flashscore-এর ক্যাটাগরি ফিড (Football, Tennis, Basketball, Cricket) থেকে
-    আজকের সব ম্যাচের টিম নেম এবং ইমেজ সরাসরি ডিকশনারিতে ম্যাপ করে আনে।
+    আজকের চলমান ও আসন্ন সব ম্যাচের টিম আইডি এবং ডিরেক্ট পিএনজি ইমেজ সংগ্রহ
     """
     logo_map: dict[str, str] = {}
-
-    # Flashscore স্পোর্টস ফিড কোড: 1=Football, 2=Tennis, 3=Basketball, 4=Hockey, 13=Cricket
-    feed_urls = [
-        "https://www.flashscore.com/x/feed/f_1_0_1_en-gb_1",
-        "https://www.flashscore.com/x/feed/f_2_0_1_en-gb_1",
-        "https://www.flashscore.com/x/feed/f_3_0_1_en-gb_1",
-        "https://www.flashscore.com/x/feed/f_13_0_1_en-gb_1",
-    ]
+    today_str = datetime.now(timezone.utc).strftime("%Y%m%d")
+    matches_url = f"https://www.fotmob.com/api/matches?date={today_str}"
 
     headers = {
         "User-Agent": UA,
-        "Referer": "https://www.flashscore.com/",
-        "X-Fsign": "SW9D1eZo",
-        "Accept": "*/*"
+        "Accept": "application/json, text/plain, */*",
     }
 
-    for url in feed_urls:
-        try:
-            resp = await client.get(url, headers=headers, timeout=5.0)
-            if resp.status_code == 200:
-                text = resp.text
-                # Flashscore ডেটা ব্লক স্প্লিট (¬SA÷ বা ~)
-                blocks = text.split("~")
-                for block in blocks:
-                    # টিম নাম (ZH, ZE) এবং ইমেজ হ্যাশ (IA, IB) এক্সট্রাক্ট
-                    m_home = re.search(r"¬ZH÷([^¬]+)", block)
-                    m_away = re.search(r"¬ZE÷([^¬]+)", block)
-                    m_home_img = re.search(r"¬IA÷([a-zA-Z0-9_-]+)¬", block)
-                    m_away_img = re.search(r"¬IB÷([a-zA-Z0-9_-]+)¬", block)
+    try:
+        resp = await client.get(matches_url, headers=headers, timeout=6.0)
+        if resp.status_code == 200:
+            data = resp.json()
+            leagues = data.get("leagues", [])
+            for lg in leagues:
+                for match in lg.get("matches", []):
+                    home = match.get("home", {})
+                    away = match.get("away", {})
 
-                    if m_home and m_home_img:
-                        name = m_home.group(1).strip().lower()
-                        img_url = f"https://static.flashscore.com/res/image/data/{m_home_img.group(1)}.png"
-                        logo_map[name] = img_url
+                    if home.get("name") and home.get("id"):
+                        h_name = home["name"].strip().lower()
+                        # সরাসরি আসল ওপেন ইমেজ লিঙ্ক (ব্রাউজারে কোনো এরর দেয় না)
+                        logo_map[h_name] = f"https://images.fotmob.com/image_resources/logo/teamlogo/{home['id']}.png"
 
-                    if m_away and m_away_img:
-                        name = m_away.group(1).strip().lower()
-                        img_url = f"https://static.flashscore.com/res/image/data/{m_away_img.group(1)}.png"
-                        logo_map[name] = img_url
-        except Exception:
-            pass
+                    if away.get("name") and away.get("id"):
+                        a_name = away["name"].strip().lower()
+                        logo_map[a_name] = f"https://images.fotmob.com/image_resources/logo/teamlogo/{away['id']}.png"
+    except Exception:
+        pass
 
     return logo_map
 
 
-def match_team_logo(team_name: str, sub_category: str, fs_logo_map: dict[str, str]) -> str:
+def match_team_logo(team_name: str, sub_category: str, match_logos: dict[str, str]) -> str:
     cleaned = team_name.strip()
     if not cleaned:
         return OFFICIAL_LEAGUE_LOGOS.get(sub_category, DEFAULT_LOGO)
 
     c_low = cleaned.lower()
 
-    # ১. আন্তর্জাতিক দেশের সরাসরি পতাকা
+    # ১. আন্তর্জাতিক দলের ক্ষেত্রে অফিশিয়াল জাতীয় পতাকা
     for country, flag_url in COUNTRY_FLAGS.items():
         if country in c_low:
             return flag_url
 
-    # ২. Flashscore ক্যাটাগরি ফিড থেকে সরাসরি পারফেক্ট ম্যাচ
-    if c_low in fs_logo_map:
-        return fs_logo_map[c_low]
+    # ২. আজকের ম্যাচ ডাটাবেজ থেকে সরাসরি হুবহু ম্যাচ
+    if c_low in match_logos:
+        return match_logos[c_low]
 
-    # আংশিক নাম দিয়ে ম্যাচিং (যেমন 'Salzburg' মিললে)
-    for fs_name, img_url in fs_logo_map.items():
-        if len(fs_name) > 3 and (fs_name in c_low or c_low in fs_name):
+    # আংশিক নাম দিয়ে ম্যাচ (যেমন Celje বা Salzburg মিললে)
+    for name_key, img_url in match_logos.items():
+        if len(name_key) > 3 and (name_key in c_low or c_low in name_key):
             return img_url
 
-    # ৩. ব্যাকআপ: লিগের নিজস্ব অফিশিয়াল লোগো
+    # ৩. ব্যাকআপ: টুর্নামেন্টের আসল অফিশিয়াল লোগো
     return OFFICIAL_LEAGUE_LOGOS.get(sub_category, DEFAULT_LOGO)
 
 
@@ -262,26 +247,12 @@ LEAGUE_PATTERNS = [
     (r"nhl", "NHL"),
 ]
 
-TOP_CLUBS = {
-    "Premier League": ["arsenal", "chelsea", "liverpool", "manchester united", "manchester city", "tottenham", "newcastle", "aston villa", "everton", "west ham", "brighton", "wolves", "fulham", "crystal palace", "brentford"],
-    "La Liga": ["real madrid", "barcelona", "atletico madrid", "sevilla", "valencia", "athletic bilbao", "villarreal", "real betis", "real sociedad", "girona", "celta vigo", "mallorca", "osasuna", "getafe"],
-    "Serie A": ["juventus", "inter milan", "ac milan", "napoli", "as roma", "lazio", "atalanta", "fiorentina"],
-    "Bundesliga": ["bayern munich", "borussia dortmund", "dortmund", "bayer leverkusen", "leverkusen", "rb leipzig", "eintracht frankfurt"],
-    "Ligue 1": ["psg", "paris saint-germain", "marseille", "monaco", "lyon", "lille"],
-    "Indian Premier League (IPL)": ["chennai super kings", "csk", "mumbai indians", "mi", "royal challengers", "rcb", "kolkata knight riders", "kkr"],
-    "NBA": ["lakers", "warriors", "celtics", "bulls", "heat", "bucks", "mavericks", "suns", "clippers"]
-}
-
 
 def get_sub_category(sport: str, title: str) -> str:
     combined_text = f"{sport} {title}".lower()
     for pattern, league_name in LEAGUE_PATTERNS:
         if re.search(pattern, combined_text):
             return league_name
-    for league, teams in TOP_CLUBS.items():
-        for t in teams:
-            if t in combined_text:
-                return league
     return sport
 
 
@@ -316,7 +287,7 @@ class DLHDEvent:
 
 
 def create_slug(text: str) -> str:
-    return re.sub(r"[\W_]+", "-", text).strip("-")
+    return re.sub(r"[\W_]+", "-", text.lower().strip()).strip("-")
 
 
 def determine_status(start_dt: datetime, early_minutes: int = 15) -> str:
@@ -573,12 +544,12 @@ async def scrape() -> None:
 
         log.info(f"Processing {len(raw_events)} active DaddyLive event(s)...")
 
-        # ১. Flashscore-এর মূল ক্যাটাগরি ফিড লোড করা (সব ম্যাচের রিয়েল লোগো ম্যাপার)
-        log.info("Loading Flashscore Category Live Feeds...")
-        fs_logo_map = await load_flashscore_category_logos(client)
-        log.info(f"Loaded {len(fs_logo_map)} team images from Flashscore Feeds.")
+        # ১. আজকের সব লাইভ ম্যাচ থেকে টিম আইডি ও ডিরেক্ট পিএনজি ইমেজ লোড
+        log.info("Fetching real-time match logos from Live Fixtures...")
+        match_logos = await load_today_match_logos(client)
+        log.info(f"Loaded {len(match_logos)} unique team logos from active matches.")
 
-        # ২. সকল চ্যানেল স্ট্রিম প্যারালালে ডিকোড করা
+        # ২. সকল চ্যানেল স্ট্রিম প্যারালালে ডিকোড
         unique_channel_ids = {ch.channel_id for ev in raw_events for ch in ev.channels}
         log.info(f"Decoding {len(unique_channel_ids)} unique channels concurrently...")
 
@@ -625,9 +596,9 @@ async def scrape() -> None:
 
                 detected_sub_category = get_sub_category(ev.sport, ev.title)
 
-                # Flashscore ফিড থেকে সঠিক টিম ইমেজ সংগ্রহ
-                team_a_flag = match_team_logo(team_a_name, detected_sub_category, fs_logo_map)
-                team_b_flag = match_team_logo(team_b_name, detected_sub_category, fs_logo_map)
+                # ম্যাচ থেকে সরাসরি আসল পিএনজি লোগো সংগ্রহ
+                team_a_flag = match_team_logo(team_a_name, detected_sub_category, match_logos)
+                team_b_flag = match_team_logo(team_b_name, detected_sub_category, match_logos)
 
                 formatted_event = {
                     "title": ev.title,
@@ -651,7 +622,7 @@ async def scrape() -> None:
                             "flag": team_b_flag,
                         },
                     },
-                    "logo": team_a_flag,  # Team A-এর আসল Flashscore ইমেজ
+                    "logo": team_a_flag,  # Team A এর আসল লোগো
                     "channels": event_channels,
                     "_timestamp": ev.start_dt.timestamp(),
                 }
@@ -675,7 +646,7 @@ async def scrape() -> None:
             item.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info("Playlist generation completed with Flashscore Category Feeds!")
+        log.info("Playlist generation completed with Direct Match PNG Logos!")
 
 
 if __name__ == "__main__":
