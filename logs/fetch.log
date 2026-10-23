@@ -419,3 +419,8 @@
 [2026-10-23 | 19:56:25] INFO     [LIVETV] Playlist successfully generated with 4 LiveTV matches!                 (stc.py:470)
 [2026-10-23 | 20:03:25] INFO     [SPORTS] Fetching live events from API: "https://api.vebotv.org/api/match/featured"... (stc.py:239)
 [2026-10-23 | 20:03:25] ERROR    [SPORTS] Could not fetch API data.                                              (stc.py:255)
+[2026-10-23 | 20:15:00] INFO     [SPORTS] Fetching sports events from CricHD & EdgeStream...                     (stc.py:414)
+[2026-10-23 | 20:15:01] INFO     [SPORTS] Total 28 active sports matches found!                                  (stc.py:428)
+[2026-10-23 | 20:15:09] INFO     [SPORTS] Saved JSON Playlist: /home/runner/work/dlive-sports/dlive-sports/strmcntr.json (Total: 28 events) (stc.py:206)
+[2026-10-23 | 20:15:09] INFO     [SPORTS] Saved M3U Playlist: /home/runner/work/dlive-sports/dlive-sports/strmcntr.m3u (28 streams) (stc.py:243)
+[2026-10-23 | 20:15:09] INFO     [SPORTS] Successfully generated playlist with 28 live matches!                  (stc.py:534)
