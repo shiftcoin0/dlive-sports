@@ -1,80 +1,8 @@
 {
-  "last_updated": "Oct 24, 2026, 03:00:24 AM",
-  "event_count": 27,
+  "last_updated": "Oct 24, 2026, 03:15:30 AM",
+  "event_count": 25,
   "events": {
     "events": [
-      {
-        "title": "Brestvs.Nice",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "brestvs-nice",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 24, 2026, 12:45:00 AM",
-          "end_time_bst": "Oct 24, 2026, 03:45:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Brestvs.Nice",
-            "flag": "https://i.ibb.co.com/cSMrGjnb/Football.png"
-          },
-          "team_b": {
-            "name": "Brestvs.Nice",
-            "flag": "https://i.ibb.co.com/cSMrGjnb/Football.png"
-          }
-        },
-        "logo": "https://i.ibb.co.com/cSMrGjnb/Football.png",
-        "channels": [
-          {
-            "channel_name": "English Stream",
-            "stream_type": "HLS",
-            "url": "https://edgestream2.pro/hls/dza5z8f69.m3u8",
-            "raw_link": "https://edgestream2.pro/hls/dza5z8f69.m3u8|Referer=https://streame.center/",
-            "headers": {
-              "Referer": "https://streame.center/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Torinovs.Monza",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "torinovs-monza",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 24, 2026, 12:45:00 AM",
-          "end_time_bst": "Oct 24, 2026, 03:45:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Torinovs.Monza",
-            "flag": "https://i.ibb.co.com/cSMrGjnb/Football.png"
-          },
-          "team_b": {
-            "name": "Torinovs.Monza",
-            "flag": "https://i.ibb.co.com/cSMrGjnb/Football.png"
-          }
-        },
-        "logo": "https://i.ibb.co.com/cSMrGjnb/Football.png",
-        "channels": [
-          {
-            "channel_name": "English Stream",
-            "stream_type": "HLS",
-            "url": "https://edgestream2.pro/hls/syaLqucEne4k.m3u8",
-            "raw_link": "https://edgestream2.pro/hls/syaLqucEne4k.m3u8|Referer=https://streame.center/",
-            "headers": {
-              "Referer": "https://streame.center/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Ipswich Townvs.Nottingham Forest",
         "sport": "Football",
