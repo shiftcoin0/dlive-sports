@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 23, 2026, 11:16:55 PM",
-  "event_count": 116,
+  "last_updated": "Oct 23, 2026, 11:48:14 PM",
+  "event_count": 121,
   "events": {
     "events": [
       {
@@ -1917,7 +1917,7 @@
         "title": "Pictionary Season 3, Episode 114",
         "sport": "Tv shows",
         "sub_category": "Tv shows",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "pictionary-season-3-episode-114",
         "schedule": {
@@ -1953,7 +1953,7 @@
         "title": "Euroleague : BC Olympiakos Piraeus vs. KK Crvena zvezda Belgrade",
         "sport": "Basketball",
         "sub_category": "EuroLeague",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-bc-olympiakos-piraeus-vs-kk-crvena-zvezda-belgrade",
         "schedule": {
@@ -2039,7 +2039,7 @@
         "title": "Euroleague : AS Monaco vs. Fenerbahce Istanbul",
         "sport": "Basketball",
         "sub_category": "EuroLeague",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-as-monaco-vs-fenerbahce-istanbul",
         "schedule": {
@@ -2115,7 +2115,7 @@
         "title": "2025 NCAA Men's Basketball Tournament First Round: Southern Illinois-Edwardsville vs Houston",
         "sport": "Basketball",
         "sub_category": "Basketball",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "2025-ncaa-men-s-basketball-tournament-first-round-southern-illinois-edwardsville-vs-houston",
         "schedule": {
@@ -2151,7 +2151,7 @@
         "title": "Handball-Bundesliga : Rhein-Neckar Lowen vs. TSV Hannover-Burgdorf",
         "sport": "Football",
         "sub_category": "Bundesliga",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "handball-bundesliga-rhein-neckar-lowen-vs-tsv-hannover-burgdorf",
         "schedule": {
@@ -2217,7 +2217,7 @@
         "title": "Norway Eliteserien : Vaalerenga IF Oslo vs. Storhamar Hockey",
         "sport": "Hockey",
         "sub_category": "Hockey",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "norway-eliteserien-vaalerenga-if-oslo-vs-storhamar-hockey",
         "schedule": {
@@ -2253,7 +2253,7 @@
         "title": "SHL : Brynas IF vs. Malmo IF",
         "sport": "Hockey",
         "sub_category": "Hockey",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "shl-brynas-if-vs-malmo-if",
         "schedule": {
@@ -2319,7 +2319,7 @@
         "title": "HockeyAllsvenskan : Oskarshamn vs BIK Karlskoga",
         "sport": "Hockey",
         "sub_category": "Hockey",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "hockeyallsvenskan-oskarshamn-vs-bik-karlskoga",
         "schedule": {
@@ -2355,7 +2355,7 @@
         "title": "HockeyAllsvenskan : Mora vs Djurgardens",
         "sport": "Hockey",
         "sub_category": "Hockey",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "hockeyallsvenskan-mora-vs-djurgardens",
         "schedule": {
@@ -2391,7 +2391,7 @@
         "title": "HockeyAllsvenskan : Tingsryds vs Vimmerby",
         "sport": "Hockey",
         "sub_category": "Hockey",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "hockeyallsvenskan-tingsryds-vs-vimmerby",
         "schedule": {
@@ -6802,6 +6802,226 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium336/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium336/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "College Baseball : Tennessee vs Alabama",
+        "sport": "Baseball",
+        "sub_category": "Baseball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "college-baseball-tennessee-vs-alabama",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:30:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "College Baseball : Tennessee",
+            "flag": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
+          },
+          "team_b": {
+            "name": "Alabama",
+            "flag": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
+          }
+        },
+        "logo": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp",
+        "channels": [
+          {
+            "channel_name": "ESPNU USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium316/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium316/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "College Softball : Michigan vs Maryland (College Park)",
+        "sport": "Baseball",
+        "sub_category": "Baseball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "college-softball-michigan-vs-maryland-college-park",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:30:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "College Softball : Michigan",
+            "flag": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
+          },
+          "team_b": {
+            "name": "Maryland (College Park)",
+            "flag": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
+          }
+        },
+        "logo": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp",
+        "channels": [
+          {
+            "channel_name": "BTN USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium397/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium397/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "2025 NCAA Men's Basketball Tournament First Round: Drake vs Missouri",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "2025-ncaa-men-s-basketball-tournament-first-round-drake-vs-missouri",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:30:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "2025 NCAA Men's Basketball Tournament First Round: Drake",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          },
+          "team_b": {
+            "name": "Missouri",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg",
+        "channels": [
+          {
+            "channel_name": "truTV USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium341/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium341/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "NHL : Montréal Canadiens vs New York Islanders",
+        "sport": "Hockey",
+        "sub_category": "NHL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nhl-montréal-canadiens-vs-new-york-islanders",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:30:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "NHL : Montréal Canadiens",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          },
+          "team_b": {
+            "name": "New York Islanders",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg",
+        "channels": [
+          {
+            "channel_name": "Home Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium16/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium16/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Away Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium17/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium17/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TSN2",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium112/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium112/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "RDS CA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium839/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium839/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "NHL : Vancouver Canucks vs St. Louis Blues",
+        "sport": "Hockey",
+        "sub_category": "NHL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nhl-vancouver-canucks-vs-st-louis-blues",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:30:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "NHL : Vancouver Canucks",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          },
+          "team_b": {
+            "name": "St. Louis Blues",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg",
+        "channels": [
+          {
+            "channel_name": "Home Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium18/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium18/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Away Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium19/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium19/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
