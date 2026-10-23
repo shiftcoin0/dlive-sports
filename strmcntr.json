@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 23, 2026, 11:05:27 PM",
-  "event_count": 114,
+  "last_updated": "Oct 23, 2026, 11:16:55 PM",
+  "event_count": 116,
   "events": {
     "events": [
       {
@@ -1809,7 +1809,7 @@
         "title": "Premier League Pool: Day 1",
         "sport": "Football",
         "sub_category": "Premier League",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "premier-league-pool-day-1",
         "schedule": {
@@ -1845,7 +1845,7 @@
         "title": "2025 NCAA Men's Basketball Tournament First Round: Montana vs Wisconsin",
         "sport": "Basketball",
         "sub_category": "Basketball",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "2025-ncaa-men-s-basketball-tournament-first-round-montana-vs-wisconsin",
         "schedule": {
@@ -1881,7 +1881,7 @@
         "title": "Denmark, Handboldligaen : Skanderborg-Aarhus Haandbold vs. Soenderjyske HK",
         "sport": "Handball",
         "sub_category": "Handball",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "denmark-handboldligaen-skanderborg-aarhus-haandbold-vs-soenderjyske-hk",
         "schedule": {
@@ -6730,6 +6730,78 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium550/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium550/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "College Basketball - March Madness (RD1): Kansas vs Arkansas",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "college-basketball-march-madness-rd1-kansas-vs-arkansas",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:10:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:10:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "College Basketball - March Madness (RD1): Kansas",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          },
+          "team_b": {
+            "name": "Arkansas",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg",
+        "channels": [
+          {
+            "channel_name": "Sport Klub 2 Serbia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium102/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium102/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "2025 NCAA Men's Basketball Tournament First Round: Yale vs Texas A&amp;M",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "2025-ncaa-men-s-basketball-tournament-first-round-yale-vs-texas-a-amp-m",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:15:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:15:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "2025 NCAA Men's Basketball Tournament First Round: Yale",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          },
+          "team_b": {
+            "name": "Texas A&amp;M",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg",
+        "channels": [
+          {
+            "channel_name": "TBS USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium336/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium336/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
