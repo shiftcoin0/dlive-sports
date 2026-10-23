@@ -400,3 +400,5 @@
 [2026-10-23 | 19:32:51] INFO     [DLIVE] Saved JSON Playlist: /home/runner/work/dlive-sports/dlive-sports/strmcntr.json (Total: 105 events) (stc.py:245)
 [2026-10-23 | 19:32:51] INFO     [DLIVE] Saved M3U Playlist: /home/runner/work/dlive-sports/dlive-sports/strmcntr.m3u (354 streams) (stc.py:282)
 [2026-10-23 | 19:32:51] INFO     [DLIVE] Playlist generation completed successfully from thedaddy.pk!           (stc.py:641)
+[2026-10-23 | 19:38:43] INFO     [STREAMED] Scraping from "https://streamed.su/api/matches/all"...                 (stc.py:243)
+[2026-10-23 | 19:38:53] ERROR    [STREAMED] Error fetching Streamed API:                                           (stc.py:259)
