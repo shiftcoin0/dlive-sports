@@ -412,3 +412,8 @@
 [2026-10-23 | 19:49:06] INFO     [STREAMED] Fetching sports matches from Streamed.su endpoints...                  (stc.py:282)
 [2026-10-23 | 19:50:34] INFO     [STREAMED] Received total 0 unique matches across all sports.                     (stc.py:313)
 [2026-10-23 | 19:50:34] ERROR    [STREAMED] No matches returned from any sports category.                          (stc.py:316)
+[2026-10-23 | 19:55:46] INFO     [LIVETV] Scraping from "https://livetv808.me"...                                (stc.py:354)
+[2026-10-23 | 19:55:55] INFO     [LIVETV] Successfully received 4 active matches from LiveTV!                    (stc.py:371)
+[2026-10-23 | 19:56:25] INFO     [LIVETV] Saved JSON Playlist: /home/runner/work/dlive-sports/dlive-sports/strmcntr.json (Total: 4 events) (stc.py:208)
+[2026-10-23 | 19:56:25] INFO     [LIVETV] Saved M3U Playlist: /home/runner/work/dlive-sports/dlive-sports/strmcntr.m3u (4 streams) (stc.py:245)
+[2026-10-23 | 19:56:25] INFO     [LIVETV] Playlist successfully generated with 4 LiveTV matches!                 (stc.py:470)
