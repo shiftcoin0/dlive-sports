@@ -5,7 +5,7 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import quote_plus, urljoin, urlsplit
+from urllib.parse import parse_qsl, quote_plus, urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 import httpx
@@ -322,7 +322,6 @@ async def get_crichd_events(client: httpx.AsyncClient) -> list[SportsEvent]:
             if not event_title or event_title in seen_titles:
                 continue
 
-            # সময় খোঁজা
             row_text = row.text(strip=True)
             time_match = re.search(r"(\d{1,2}:\d{2})", row_text)
             event_dt = now_utc
@@ -330,7 +329,6 @@ async def get_crichd_events(client: httpx.AsyncClient) -> list[SportsEvent]:
                 h, m = map(int, time_match.group(1).split(":"))
                 event_dt = now_utc.replace(hour=h, minute=m, second=0, microsecond=0)
 
-            # অতীত ৩ ঘণ্টার পুরানো ম্যাচ বাদ
             if event_dt < now_utc - timedelta(hours=3):
                 continue
             if event_dt > now_utc + timedelta(hours=24):
@@ -338,7 +336,6 @@ async def get_crichd_events(client: httpx.AsyncClient) -> list[SportsEvent]:
 
             seen_titles.add(event_title)
 
-            # খেলা অনুমান করা
             sport = "Football"
             if any(k in event_title.lower() for k in ["cricket", "t20", "ipl", "bpl", "odi"]):
                 sport = "Cricket"
@@ -423,7 +420,6 @@ async def scrape() -> None:
         http2=True,
     ) as client:
 
-        # CricHD এবং EdgeStream উভয় সোর্স একসাথে কল করা
         crichd_task = get_crichd_events(client)
         streamcenter_task = get_streamcenter_events(client)
         results = await asyncio.gather(crichd_task, streamcenter_task)
@@ -445,7 +441,7 @@ async def scrape() -> None:
 
             event_channels = []
             for idx, slink in enumerate(ev.stream_links, start=1):
-                # লিঙ্ক যদি EdgeStream এর হয়
+                # EdgeStream লিঙ্ক হ্যান্ডলিং (parse_qsl দিয়ে ফিক্স করা)
                 if "game-cards" in slink["url"] or "streamcenter" in slink["url"]:
                     p_resp = await request(client, slink["url"])
                     if p_resp:
@@ -466,7 +462,7 @@ async def scrape() -> None:
                                     "drm_key": None
                                 })
                 else:
-                    # CricHD m3u8 এক্সট্রাক্ট করা
+                    # CricHD m3u8 লিঙ্ক
                     m3u8 = await extract_crichd_m3u8(client, slink["url"])
                     if m3u8:
                         event_channels.append({
