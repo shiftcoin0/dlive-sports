@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 23, 2026, 04:25:05 PM",
-  "event_count": 24,
+  "last_updated": "Oct 23, 2026, 04:50:20 PM",
+  "event_count": 20,
   "events": {
     "events": [
       {
@@ -84,40 +84,10 @@
             "drm_key": null
           },
           {
-            "channel_name": "beIN Sports 3 France",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium118/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium118/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
             "channel_name": "Sky Sport 1 NZ",
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium588/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium588/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sports Action UK",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium37/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium37/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "SPORT1+ DE",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium640/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium640/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
@@ -154,36 +124,6 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium379/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium379/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sportdigital FUSSBALL DE",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Nova Sport Bulgaria",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium468/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium468/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "beIN Sports MENA 3",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium93/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium93/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
@@ -286,66 +226,10 @@
             "drm_key": null
           },
           {
-            "channel_name": "TV4 Sportkanalen",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium707/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium707/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sport Top Event DE",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium556/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium556/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
             "channel_name": "Sky Sport Mix DE",
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium557/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium557/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Absa Cape Epic '25: Stage 4",
-        "sport": "Cycling",
-        "sub_category": "Cycling",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "absa-cape-epic-25-stage-4",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 04:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 07:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Absa Cape Epic '25: Stage 4",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "Absa Cape Epic '25: Stage 4",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "SuperSport Grandstand",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium412/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium412/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
@@ -444,16 +328,6 @@
             "drm_key": null
           },
           {
-            "channel_name": "Sportdigital FUSSBALL DE",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
             "channel_name": "ESPN Mexico",
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium925/index.m3u8",
@@ -502,16 +376,6 @@
               "Referer": "https://dembed.st/"
             },
             "drm_key": null
-          },
-          {
-            "channel_name": "Sport 5 Plus Israel",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium145/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium145/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
           }
         ]
       },
@@ -519,7 +383,7 @@
         "title": "World Cup Qualifying : Korea Republic vs Oman",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "world-cup-qualifying-korea-republic-vs-oman",
         "schedule": {
@@ -595,7 +459,7 @@
         "title": "Premier League Pool: Day 1",
         "sport": "Football",
         "sub_category": "Premier League",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "premier-league-pool-day-1",
         "schedule": {
@@ -631,7 +495,7 @@
         "title": "Asia Cup : Guam vs Thailand",
         "sport": "Basketball",
         "sub_category": "Basketball",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "asia-cup-guam-vs-thailand",
         "schedule": {
@@ -836,16 +700,6 @@
             "drm_key": null
           },
           {
-            "channel_name": "Sportdigital FUSSBALL DE",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
             "channel_name": "Sport Klub 1 Serbia",
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium101/index.m3u8",
@@ -881,16 +735,6 @@
         },
         "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
         "channels": [
-          {
-            "channel_name": "ITV 4 UK",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium353/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium353/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
           {
             "channel_name": "EuroSport 1 Poland",
             "stream_type": "HLS",
@@ -952,42 +796,6 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium554/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium554/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "World - Friendly : Türkiye U20 vs Italy U20",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "world-friendly-türkiye-u20-vs-italy-u20",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "World - Friendly : Türkiye U20",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "Italy U20",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "TRT Spor Turkey",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium889/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium889/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
@@ -1118,42 +926,6 @@
         ]
       },
       {
-        "title": "KHL : Yekaterinburg vs SKA St. Petersburg",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "khl-yekaterinburg-vs-ska-st-petersburg",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "KHL : Yekaterinburg",
-            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
-          },
-          "team_b": {
-            "name": "SKA St. Petersburg",
-            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
-          }
-        },
-        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
-        "channels": [
-          {
-            "channel_name": "Match TV Russia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium127/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium127/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
         "sport": "Tennis",
         "sub_category": "Tennis",
@@ -1182,16 +954,6 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium40/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium40/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "TSN2",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium112/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium112/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
@@ -1242,42 +1004,6 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium453/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium453/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "NBA G-League : Delaware 87ers vs Fort Wayne Mad Ants",
-        "sport": "Basketball",
-        "sub_category": "NBA",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "nba-g-league-delaware-87ers-vs-fort-wayne-mad-ants",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 09:00:00 PM",
-          "end_time_bst": "Oct 24, 2026, 12:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "NBA G-League : Delaware 87ers",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          },
-          "team_b": {
-            "name": "Fort Wayne Mad Ants",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          }
-        },
-        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
-        "channels": [
-          {
-            "channel_name": "ESPN+ USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium69/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium69/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
