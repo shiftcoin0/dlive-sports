@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 23, 2026, 06:15:26 PM",
-  "event_count": 49,
+  "last_updated": "Oct 23, 2026, 06:45:34 PM",
+  "event_count": 52,
   "events": {
     "events": [
       {
@@ -607,7 +607,7 @@
         "title": "World Cup Qualifying : Mozambique vs Uganda",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "world-cup-qualifying-mozambique-vs-uganda",
         "schedule": {
@@ -663,7 +663,7 @@
         "title": "Live Players Championship - Telford, England",
         "sport": "Snooker",
         "sub_category": "Snooker",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "live-players-championship-telford-england",
         "schedule": {
@@ -2750,6 +2750,114 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium494/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium494/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Premier League Pool: Day 1",
+        "sport": "Football",
+        "sub_category": "Premier League",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "premier-league-pool-day-1",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 11:30:00 PM",
+          "end_time_bst": "Oct 24, 2026, 02:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Premier League Pool: Day 1",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png"
+          },
+          "team_b": {
+            "name": "Premier League Pool: Day 1",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png",
+        "channels": [
+          {
+            "channel_name": "Sky Sport 9 NZ",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium596/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium596/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "2025 NCAA Men's Basketball Tournament First Round: Montana vs Wisconsin",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "2025-ncaa-men-s-basketball-tournament-first-round-montana-vs-wisconsin",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 11:30:00 PM",
+          "end_time_bst": "Oct 24, 2026, 02:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "2025 NCAA Men's Basketball Tournament First Round: Montana",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          },
+          "team_b": {
+            "name": "Wisconsin",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
+        "channels": [
+          {
+            "channel_name": "TNT USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium338/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium338/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Denmark, Handboldligaen : Skanderborg-Aarhus Haandbold vs. Soenderjyske HK",
+        "sport": "Handball",
+        "sub_category": "Handball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "denmark-handboldligaen-skanderborg-aarhus-haandbold-vs-soenderjyske-hk",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 11:30:00 PM",
+          "end_time_bst": "Oct 24, 2026, 02:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Denmark, Handboldligaen : Skanderborg-Aarhus Haandbold",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Soenderjyske HK",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "TV2 Sport Denmark",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium810/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium810/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
