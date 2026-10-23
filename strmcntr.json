@@ -1,614 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 10:49:03 AM",
-  "event_count": 22,
+  "last_updated": "Oct 23, 2026, 11:04:05 AM",
+  "event_count": 14,
   "events": {
     "events": [
-      {
-        "title": "NCAA March Madness 360 Live",
-        "sport": "Tv shows",
-        "sub_category": "Tv shows",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "ncaa-march-madness-360-live",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "NCAA March Madness 360 Live",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "NCAA March Madness 360 Live",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "CBS Sports Network USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium308/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium308/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "How I Escaped My Cult Season 1, Episode 3",
-        "sport": "Tv shows",
-        "sub_category": "Tv shows",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "how-i-escaped-my-cult-season-1-episode-3",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "How I Escaped My Cult Season 1, Episode 3",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "How I Escaped My Cult Season 1, Episode 3",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "Freeform USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium301/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium301/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Accused: Guilty or Innocent? Season 7, Episode 2",
-        "sport": "Tv shows",
-        "sub_category": "Tv shows",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "accused-guilty-or-innocent-season-7-episode-2",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Accused: Guilty or Innocent? Season 7, Episode 2",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "Accused: Guilty or Innocent? Season 7, Episode 2",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "A&amp;E TV USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium302/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium302/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "House Hunters International Season 195, Episode 8",
-        "sport": "Tv shows",
-        "sub_category": "Tv shows",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "house-hunters-international-season-195-episode-8",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "House Hunters International Season 195, Episode 8",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "House Hunters International Season 195, Episode 8",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "HGTV USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium382/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium382/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "My Hero Academia Season 1, Episode 5",
-        "sport": "Tv shows",
-        "sub_category": "Tv shows",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "my-hero-academia-season-1-episode-5",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "My Hero Academia Season 1, Episode 5",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png"
-          },
-          "team_b": {
-            "name": "My Hero Academia Season 1, Episode 5",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png",
-        "channels": [
-          {
-            "channel_name": "AXS TV USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium742/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium742/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Found Season 2, Episode 16",
-        "sport": "Tv shows",
-        "sub_category": "Tv shows",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "found-season-2-episode-16",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Found Season 2, Episode 16",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "Found Season 2, Episode 16",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "NBCNY USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium769/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium769/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "NBC USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium53/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium53/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Grey's Anatomy Season 21, Episode 11",
-        "sport": "Tv shows",
-        "sub_category": "Tv shows",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "grey-s-anatomy-season-21-episode-11",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Grey's Anatomy Season 21, Episode 11",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "Grey's Anatomy Season 21, Episode 11",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "ABC NY USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium766/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium766/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "NBA G-League : Agua Caliente Clippers vs Rio Grande Valley Vipers",
-        "sport": "Basketball",
-        "sub_category": "NBA",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "nba-g-league-agua-caliente-clippers-vs-rio-grande-valley-vipers",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "NBA G-League : Agua Caliente Clippers",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          },
-          "team_b": {
-            "name": "Rio Grande Valley Vipers",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          }
-        },
-        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
-        "channels": [
-          {
-            "channel_name": "ESPN+ USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium154/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium154/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "NBA : Toronto Raptors vs Golden State Warriors",
-        "sport": "Basketball",
-        "sub_category": "NBA",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "nba-toronto-raptors-vs-golden-state-warriors",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "NBA : Toronto Raptors",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          },
-          "team_b": {
-            "name": "Golden State Warriors",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          }
-        },
-        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
-        "channels": [
-          {
-            "channel_name": "Home Feed",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium105/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium105/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Away Feed",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium106/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium106/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "NBCS Bay Area",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium753/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium753/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sportsnet One",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium411/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium411/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Movistar Deportes Spain",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium436/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium436/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport TV5 Portugal",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium290/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium290/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "beIN Sports 4 Max France",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium494/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium494/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Cosmote Sport 7 Greece",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium628/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium628/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport 5 Live Israel",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium146/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium146/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "NBA : Chicago Bulls vs Sacramento Kings",
-        "sport": "Basketball",
-        "sub_category": "NBA",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "nba-chicago-bulls-vs-sacramento-kings",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "NBA : Chicago Bulls",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          },
-          "team_b": {
-            "name": "Sacramento Kings",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          }
-        },
-        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
-        "channels": [
-          {
-            "channel_name": "Home Feed",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium107/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium107/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Away Feed",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium108/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium108/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "NBCS California",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium755/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium755/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "NBA TV USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium404/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium404/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "NHL : Boston Bruins vs Vegas Golden Knights",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "nhl-boston-bruins-vs-vegas-golden-knights",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "NHL : Boston Bruins",
-            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
-          },
-          "team_b": {
-            "name": "Vegas Golden Knights",
-            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
-          }
-        },
-        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
-        "channels": [
-          {
-            "channel_name": "Home Feed",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium30/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium30/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Away Feed",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium55/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium55/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "NESN USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium762/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium762/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Viaplay Sports 1 UK",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium451/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium451/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "TVA Sports",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium833/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium833/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sportsnet 360",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium409/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium409/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sportsnet Ontario",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium406/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium406/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sportsnet East",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium408/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium408/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Max Sport 2 Bulgaria",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium473/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium473/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "V Sport Vinter",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium4/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium4/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "NCAA : NC Wilmington vs Texas Tech",
         "sport": "Basketball",
@@ -1388,6 +782,214 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium102/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium102/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "WRC Safari Rally Kenya | Special Stage 1 | Day 1",
+        "sport": "Motorsport",
+        "sub_category": "Motorsport",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "wrc-safari-rally-kenya-special-stage-1-day-1",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 04:00:00 PM",
+          "end_time_bst": "Oct 23, 2026, 07:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "WRC Safari Rally Kenya | Special Stage 1 | Day 1",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "WRC Safari Rally Kenya | Special Stage 1 | Day 1",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Rally Tv",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium607/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium607/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TNT Sports 2 UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium32/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium32/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Motowizja Poland",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium563/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium563/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Canal+ Sport360",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium464/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium464/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Arena Premium 3 Serbia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium139/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium139/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Arena Sport 1 Croatia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium432/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium432/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TV4 Sportkanalen",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium707/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium707/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sky Sport Top Event DE",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium556/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium556/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sky Sport Mix DE",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium557/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium557/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Absa Cape Epic '25: Stage 4",
+        "sport": "Cycling",
+        "sub_category": "Cycling",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "absa-cape-epic-25-stage-4",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 04:00:00 PM",
+          "end_time_bst": "Oct 23, 2026, 07:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Absa Cape Epic '25: Stage 4",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Absa Cape Epic '25: Stage 4",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "SuperSport Grandstand",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium412/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium412/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Women's | Group Stage | World Championship : United States vs Norway",
+        "sport": "Winter sports",
+        "sub_category": "Winter sports",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "women-s-group-stage-world-championship-united-states-vs-norway",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 04:00:00 PM",
+          "end_time_bst": "Oct 23, 2026, 07:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Women's | Group Stage | World Championship : United States",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Norway",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "EuroSport 1 Poland",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium57/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium57/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 1 Spain",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium524/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium524/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 1 France",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium772/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium772/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
