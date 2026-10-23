@@ -87,12 +87,10 @@ DEFAULT_LOGO = "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
 def get_event_logo(sport: str, title: str = "") -> str:
     comb = f"{sport} {title}".lower()
 
-    # ডিকশনারির কি-ওয়ার্ডের সাথে মেলানো
     for sp_key, icon_url in SPORT_ICONS.items():
         if sp_key in comb:
             return icon_url
 
-    # কিছু সাধারণ বিকল্প নাম
     if any(k in comb for k in ["soccer", "fifa", "uefa", "la liga", "premier league", "serie a", "bundesliga"]):
         return SPORT_ICONS["football"]
     if any(k in comb for k in ["f1", "formula 1", "racing", "motogp", "nascar"]):
@@ -438,4 +436,160 @@ async def get_dlhd_events(client: httpx.AsyncClient) -> list[DLHDEvent]:
                     continue
 
                 event_dt = now_utc
-                time_match = re.search(r"(\d{1,2}):
+                # এখানে আগের কাটা লাইনটি সম্পূর্ণ ফিক্স করা হয়েছে
+                time_match = re.search(r"(\d{1,2}):(\d{2})", time_str)
+                if time_match:
+                    h, m = int(time_match.group(1)), int(time_match.group(2))
+                    event_dt = now_utc.replace(hour=h, minute=m, second=0, microsecond=0)
+
+                # ৩ ঘণ্টার বেশি পুরানো ম্যাচ বাদ
+                if event_dt < now_utc - timedelta(hours=3):
+                    continue
+
+                # আগামী ৬ ঘণ্টার মধ্যে শুরু হওয়া এবং লাইভ ম্যাচগুলো রাখা
+                if event_dt > now_utc + timedelta(hours=6):
+                    continue
+
+                channels: list[DLHDChannel] = []
+                for ch in raw_channels:
+                    if isinstance(ch, dict):
+                        c_name = ch.get("channel_name") or ch.get("name") or "Stream"
+                        c_id = str(ch.get("channel_id") or ch.get("id") or "")
+                    else:
+                        c_name = f"Stream {ch}"
+                        c_id = str(ch)
+
+                    if c_id:
+                        channels.append(DLHDChannel(channel_name=c_name, channel_id=c_id))
+
+                if channels:
+                    normalized_sport = clean_and_normalize_sport(sport_cat, event_title)
+                    events.append(
+                        DLHDEvent(
+                            sport=normalized_sport,
+                            title=event_title.strip(),
+                            start_dt=event_dt,
+                            channels=channels,
+                        )
+                    )
+
+    return events
+
+
+async def scrape() -> None:
+    log.info(f'Scraping from "{BASE_URL}"')
+
+    async with httpx.AsyncClient(
+        headers={"User-Agent": UA, "Referer": f"{BASE_URL}/"},
+        follow_redirects=True,
+        timeout=10.0,
+        http2=True,
+    ) as client:
+
+        raw_events = await get_dlhd_events(client)
+        if not raw_events:
+            log.info("No active events found in window")
+            return
+
+        log.info(f"Processing {len(raw_events)} active DaddyLive event(s)...")
+
+        # ১. সকল চ্যানেল স্ট্রিম প্যারালালে ডিকোড
+        unique_channel_ids = {ch.channel_id for ev in raw_events for ch in ev.channels}
+        log.info(f"Decoding {len(unique_channel_ids)} unique channels concurrently...")
+
+        channel_map = {}
+
+        async def fetch_channel(c_id: str):
+            async with HTTP_SEMAPHORE:
+                res = await decode_dlhd_m3u8(client, c_id)
+                if res:
+                    channel_map[c_id] = res
+
+        await asyncio.gather(*(fetch_channel(cid) for cid in unique_channel_ids))
+
+        # ২. প্লেলিস্ট তৈরি
+        final_playlist: list[dict] = []
+
+        for ev in raw_events:
+            event_channels = []
+
+            for ch in ev.channels:
+                if ch.channel_id in channel_map:
+                    m3u8_url, referer = channel_map[ch.channel_id]
+                    event_channels.append(
+                        {
+                            "channel_name": ch.channel_name,
+                            "stream_type": "HLS",
+                            "url": m3u8_url,
+                            "raw_link": f"{m3u8_url}|Referer={referer}",
+                            "headers": {"Referer": referer},
+                            "drm_key": None,
+                        }
+                    )
+
+            if event_channels:
+                start_bst = ev.start_dt.astimezone(BST_TZ)
+                end_bst = start_bst + timedelta(hours=3)
+
+                start_str = start_bst.strftime("%b %d, %Y, %I:%M:%S %p")
+                end_str = end_bst.strftime("%b %d, %Y, %I:%M:%S %p")
+
+                t_names = parse_team_names(ev.title)
+                team_a_name = t_names["team_a"]
+                team_b_name = t_names["team_b"]
+
+                # আপনার দেওয়া কাস্টম লোগো নির্ধারণ
+                event_logo = get_event_logo(ev.sport, ev.title)
+                detected_sub_category = get_sub_category(ev.sport, ev.title)
+
+                formatted_event = {
+                    "title": ev.title,
+                    "sport": ev.sport,
+                    "sub_category": detected_sub_category,
+                    "status": determine_status(ev.start_dt, early_minutes=15),
+                    "is_hot": False,
+                    "slug": create_slug(ev.title),
+                    "schedule": {
+                        "timezone": "BST (UTC+6)",
+                        "start_time_bst": start_str,
+                        "end_time_bst": end_str,
+                    },
+                    "teams": {
+                        "team_a": {
+                            "name": team_a_name,
+                            "flag": event_logo,
+                        },
+                        "team_b": {
+                            "name": team_b_name,
+                            "flag": event_logo,
+                        },
+                    },
+                    "logo": event_logo,
+                    "channels": event_channels,
+                    "_timestamp": ev.start_dt.timestamp(),
+                }
+
+                final_playlist.append(formatted_event)
+
+        status_priority = {
+            "LIVE": 0,
+            "UPCOMING": 1,
+            "ENDED": 2,
+        }
+
+        final_playlist.sort(
+            key=lambda item: (
+                status_priority.get(item["status"], 99),
+                item["_timestamp"]
+            )
+        )
+
+        for item in final_playlist:
+            item.pop("_timestamp", None)
+
+        save_playlists(final_playlist)
+        log.info("Playlist generation completed successfully!")
+
+
+if __name__ == "__main__":
+    asyncio.run(scrape())
