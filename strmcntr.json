@@ -1,216 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 06:45:34 PM",
-  "event_count": 52,
+  "last_updated": "Oct 23, 2026, 07:00:42 PM",
+  "event_count": 59,
   "events": {
     "events": [
-      {
-        "title": "WRC Safari Rally Kenya | Special Stage 1 | Day 1",
-        "sport": "Motorsport",
-        "sub_category": "Motorsport",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "wrc-safari-rally-kenya-special-stage-1-day-1",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 04:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 07:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "WRC Safari Rally Kenya | Special Stage 1 | Day 1",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "WRC Safari Rally Kenya | Special Stage 1 | Day 1",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "Rally Tv",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium607/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium607/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "TNT Sports 2 UK",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium32/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium32/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Motowizja Poland",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium563/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium563/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Canal+ Sport360",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium464/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium464/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Arena Premium 3 Serbia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium139/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium139/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Arena Sport 1 Croatia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium432/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium432/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "TV4 Sportkanalen",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium707/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium707/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sport Top Event DE",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium556/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium556/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sport Mix DE",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium557/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium557/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Absa Cape Epic '25: Stage 4",
-        "sport": "Cycling",
-        "sub_category": "Cycling",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "absa-cape-epic-25-stage-4",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 04:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 07:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Absa Cape Epic '25: Stage 4",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "Absa Cape Epic '25: Stage 4",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "SuperSport Grandstand",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium412/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium412/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Women's | Group Stage | World Championship : United States vs Norway",
-        "sport": "Winter sports",
-        "sub_category": "Winter sports",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "women-s-group-stage-world-championship-united-states-vs-norway",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 04:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 07:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Women's | Group Stage | World Championship : United States",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "Norway",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "EuroSport 1 Poland",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium57/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium57/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "EuroSport 1 Spain",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium524/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium524/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "EuroSport 1 France",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium772/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium772/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "World Cup Qualifying : Japan vs Bahrain",
         "sport": "Football",
@@ -2858,6 +2650,516 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium810/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium810/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Pictionary Season 3, Episode 114",
+        "sport": "Tv shows",
+        "sub_category": "Tv shows",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "pictionary-season-3-episode-114",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Pictionary Season 3, Episode 114",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Pictionary Season 3, Episode 114",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "FOXNY USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium768/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium768/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Euroleague : BC Olympiakos Piraeus vs. KK Crvena zvezda Belgrade",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "euroleague-bc-olympiakos-piraeus-vs-kk-crvena-zvezda-belgrade",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Euroleague : BC Olympiakos Piraeus",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          },
+          "team_b": {
+            "name": "KK Crvena zvezda Belgrade",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
+        "channels": [
+          {
+            "channel_name": "Magenta Sport 304",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium20/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium20/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Nova Sports 4 Greece",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium634/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium634/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Movistar Deportes 4 Spain",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium527/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium527/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "MAX Sport 2 Bulgaria",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium473/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium473/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport Klub 1 Serbia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium101/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium101/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport 5 Live Israel",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium146/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium146/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Euroleague : AS Monaco vs. Fenerbahce Istanbul",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "euroleague-as-monaco-vs-fenerbahce-istanbul",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Euroleague : AS Monaco",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          },
+          "team_b": {
+            "name": "Fenerbahce Istanbul",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
+        "channels": [
+          {
+            "channel_name": "Magenta Sport 302",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium21/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium21/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Movistar Deportes 3 Spain",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium526/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium526/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Nova Sports 5 Greece",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium635/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium635/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "MAX Sport 4 Bulgaria",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium475/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium475/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport Klub 3 Serbia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium103/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium103/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "2025 NCAA Men's Basketball Tournament First Round: Southern Illinois-Edwardsville vs Houston",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "2025-ncaa-men-s-basketball-tournament-first-round-southern-illinois-edwardsville-vs-houston",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "2025 NCAA Men's Basketball Tournament First Round: Southern Illinois-Edwardsville",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          },
+          "team_b": {
+            "name": "Houston",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
+        "channels": [
+          {
+            "channel_name": "TBS USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium336/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium336/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Handball-Bundesliga : Rhein-Neckar Lowen vs. TSV Hannover-Burgdorf",
+        "sport": "Football",
+        "sub_category": "Bundesliga",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "handball-bundesliga-rhein-neckar-lowen-vs-tsv-hannover-burgdorf",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Handball-Bundesliga : Rhein-Neckar Lowen",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "TSV Hannover-Burgdorf",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "TV3 Max Denmark",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium223/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium223/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport 2 Hungary",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium27/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium27/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Cosmote Sport 8 Greece",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium629/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium629/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport Klub 4 Serbia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium104/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium104/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Norway Eliteserien : Vaalerenga IF Oslo vs. Storhamar Hockey",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "norway-eliteserien-vaalerenga-if-oslo-vs-storhamar-hockey",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Norway Eliteserien : Vaalerenga IF Oslo",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Storhamar Hockey",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "TV2 Sport 2 Norway",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium28/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium28/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "SHL : Brynas IF vs. Malmo IF",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "shl-brynas-if-vs-malmo-if",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "SHL : Brynas IF",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Malmo IF",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "TV4 Sport Live 2 Sweden",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium704/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium704/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Viaplay Sports 1 UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium451/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium451/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TV4 Hockey",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium700/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium700/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport1+ Germany",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium640/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium640/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "HockeyAllsvenskan : Oskarshamn vs BIK Karlskoga",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "hockeyallsvenskan-oskarshamn-vs-bik-karlskoga",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "HockeyAllsvenskan : Oskarshamn",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "BIK Karlskoga",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "TV4 Sport Live 1 Sweden",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium703/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium703/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "HockeyAllsvenskan : Mora vs Djurgardens",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "hockeyallsvenskan-mora-vs-djurgardens",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "HockeyAllsvenskan : Mora",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Djurgardens",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "TV4 Sport Live 3 Sweden",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium705/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium705/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "HockeyAllsvenskan : Tingsryds vs Vimmerby",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "hockeyallsvenskan-tingsryds-vs-vimmerby",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "HockeyAllsvenskan : Tingsryds",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Vimmerby",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "TV4 Sportkanalen",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium707/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium707/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
