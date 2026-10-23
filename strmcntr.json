@@ -1,84 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 06:00:25 PM",
+  "last_updated": "Oct 23, 2026, 06:10:25 PM",
   "event_count": 49,
   "events": {
     "events": [
-      {
-        "title": "World Cup Qualifying : Australia vs Indonesia",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "world-cup-qualifying-australia-vs-indonesia",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 03:10:00 PM",
-          "end_time_bst": "Oct 23, 2026, 06:10:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "World Cup Qualifying : Australia",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "Indonesia",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "ESPN 1 NL",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium379/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium379/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sportdigital FUSSBALL DE",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Nova Sport Bulgaria",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium468/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium468/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "beIN Sports MENA 3",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium93/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium93/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport Klub 2 Serbia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium102/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium102/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "WRC Safari Rally Kenya | Special Stage 1 | Day 1",
         "sport": "Motorsport",
@@ -2770,6 +2694,62 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium139/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium139/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "MLB : Philadelphia Phillies vs Atlanta Braves",
+        "sport": "Baseball",
+        "sub_category": "Baseball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "mlb-philadelphia-phillies-vs-atlanta-braves",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 11:05:00 PM",
+          "end_time_bst": "Oct 24, 2026, 02:05:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "MLB : Philadelphia Phillies",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Atlanta Braves",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "MLB Network",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium399/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium399/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sportsnet West",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium407/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium407/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "beIN Sports 4 Max France",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium494/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium494/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
