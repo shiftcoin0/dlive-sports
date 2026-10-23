@@ -1,114 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 07:23:49 PM",
+  "last_updated": "Oct 23, 2026, 07:35:50 PM",
   "event_count": 63,
   "events": {
     "events": [
-      {
-        "title": "World Cup Qualifying : Japan vs Bahrain",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "world-cup-qualifying-japan-vs-bahrain",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 04:35:00 PM",
-          "end_time_bst": "Oct 23, 2026, 07:35:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "World Cup Qualifying : Japan",
-            "flag": "https://static.flashscore.com/res/image/data/2m9Y8Wll-zskCq9x7.png"
-          },
-          "team_b": {
-            "name": "Bahrain",
-            "flag": "https://static.flashscore.com/res/image/data/2m9Y8Wll-zskCq9x7.png"
-          }
-        },
-        "logo": "https://static.flashscore.com/res/image/data/2m9Y8Wll-zskCq9x7.png",
-        "channels": [
-          {
-            "channel_name": "ESPN 2 NL",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium386/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium386/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sportdigital FUSSBALL DE",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "ESPN Mexico",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium925/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium925/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Diema Sport 2 Bulgaria",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium466/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium466/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "ESPN4 Brazil",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium85/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium85/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport Klub 1 Serbia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium101/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium101/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "beIN Sports MENA 2",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium92/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium92/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport 5 Plus Israel",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium145/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium145/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "World Cup Qualifying : Korea Republic vs Oman",
         "sport": "Football",
@@ -3364,6 +3258,42 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium91/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium91/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "2025 NCAA Men's Basketball Tournament First Round: Alabama State vs Auburn",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "2025-ncaa-men-s-basketball-tournament-first-round-alabama-state-vs-auburn",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 12:30:00 AM",
+          "end_time_bst": "Oct 24, 2026, 03:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "2025 NCAA Men's Basketball Tournament First Round: Alabama State",
+            "flag": "https://static.flashscore.com/res/image/data/2m9Y8Wll-zskCq9x7.png"
+          },
+          "team_b": {
+            "name": "Auburn",
+            "flag": "https://static.flashscore.com/res/image/data/2m9Y8Wll-zskCq9x7.png"
+          }
+        },
+        "logo": "https://static.flashscore.com/res/image/data/2m9Y8Wll-zskCq9x7.png",
+        "channels": [
+          {
+            "channel_name": "CBSNY USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium308/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium308/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
