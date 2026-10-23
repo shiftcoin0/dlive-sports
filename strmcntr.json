@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 23, 2026, 07:37:41 PM",
-  "event_count": 63,
+  "last_updated": "Oct 23, 2026, 07:45:51 PM",
+  "event_count": 64,
   "events": {
     "events": [
       {
@@ -451,7 +451,7 @@
         "title": "World - Friendly : Türkiye U20 vs Italy U20",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "World-Friendly-Türkiye-U20-vs-Italy-U20",
         "schedule": {
@@ -487,7 +487,7 @@
         "title": "WRC Safari Rally Kenya | Special Stage 2 | Day 1",
         "sport": "Motorsport",
         "sub_category": "Motorsport",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "WRC-Safari-Rally-Kenya-Special-Stage-2-Day-1",
         "schedule": {
@@ -573,7 +573,7 @@
         "title": "Russia Superliga : Tyumen vs Torpedo Nizhny Novgorod",
         "sport": "Futsal",
         "sub_category": "Futsal",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "Russia-Superliga-Tyumen-vs-Torpedo-Nizhny-Novgorod",
         "schedule": {
@@ -609,7 +609,7 @@
         "title": "KHL : Yekaterinburg vs SKA St. Petersburg",
         "sport": "Hockey",
         "sub_category": "Hockey",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "KHL-Yekaterinburg-vs-SKA-St-Petersburg",
         "schedule": {
@@ -3294,6 +3294,42 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium308/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium308/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Basquetebol: Men's March Madness #2 - College Basketball",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "Basquetebol-Men-s-March-Madness-2-College-Basketball",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 12:45:00 AM",
+          "end_time_bst": "Oct 24, 2026, 03:45:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Basquetebol: Men's March Madness #2",
+            "flag": "https://static.flashscore.com/res/image/data/COu8P3T3-tO4764m1.png"
+          },
+          "team_b": {
+            "name": "College Basketball",
+            "flag": "https://static.flashscore.com/res/image/data/COu8P3T3-tO4764m1.png"
+          }
+        },
+        "logo": "https://static.flashscore.com/res/image/data/COu8P3T3-tO4764m1.png",
+        "channels": [
+          {
+            "channel_name": "DAZN Eleven 1 Portugal",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium455/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium455/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
