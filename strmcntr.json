@@ -1,160 +1,8 @@
 {
-  "last_updated": "Oct 24, 2026, 01:23:05 AM",
+  "last_updated": "Oct 24, 2026, 01:32:51 AM",
   "event_count": 105,
   "events": {
     "events": [
-      {
-        "title": "Slovakia Extraliga : Spisska Nova Ves vs. HKM Zvolen",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "slovakia-extraliga-spisska-nova-ves-vs-hkm-zvolen",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 10:30:00 PM",
-          "end_time_bst": "Oct 24, 2026, 01:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Spisska Nova Ves",
-            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
-          },
-          "team_b": {
-            "name": "HKM Zvolen",
-            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
-          }
-        },
-        "logo": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg",
-        "channels": [
-          {
-            "channel_name": "Sport 2 Czech",
-            "stream_type": "HLS",
-            "url": "https://windnew.newkso.ru/wind/premium5/mono.m3u8",
-            "raw_link": "https://windnew.newkso.ru/wind/premium5/mono.m3u8|Referer=https://dembed.st/&User-Agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F134.0.0.0+Safari%2F537.36+Edg%2F134.0.0.0",
-            "headers": {
-              "Referer": "https://dembed.st/",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",
-              "Origin": "https://dembed.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "KHL : Spartak Moscow vs Sochi",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "khl-spartak-moscow-vs-sochi",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 10:30:00 PM",
-          "end_time_bst": "Oct 24, 2026, 01:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Spartak Moscow",
-            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
-          },
-          "team_b": {
-            "name": "Sochi",
-            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
-          }
-        },
-        "logo": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg",
-        "channels": [
-          {
-            "channel_name": "KHL Prime",
-            "stream_type": "HLS",
-            "url": "https://windnew.newkso.ru/wind/premium86/mono.m3u8",
-            "raw_link": "https://windnew.newkso.ru/wind/premium86/mono.m3u8|Referer=https://dembed.st/&User-Agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F134.0.0.0+Safari%2F537.36+Edg%2F134.0.0.0",
-            "headers": {
-              "Referer": "https://dembed.st/",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",
-              "Origin": "https://dembed.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "KHL : Nizhny Novgorod vs Cherepovets",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "khl-nizhny-novgorod-vs-cherepovets",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 10:30:00 PM",
-          "end_time_bst": "Oct 24, 2026, 01:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Nizhny Novgorod",
-            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
-          },
-          "team_b": {
-            "name": "Cherepovets",
-            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
-          }
-        },
-        "logo": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg",
-        "channels": [
-          {
-            "channel_name": "Match TV Russia",
-            "stream_type": "HLS",
-            "url": "https://windnew.newkso.ru/wind/premium127/mono.m3u8",
-            "raw_link": "https://windnew.newkso.ru/wind/premium127/mono.m3u8|Referer=https://dembed.st/&User-Agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F134.0.0.0+Safari%2F537.36+Edg%2F134.0.0.0",
-            "headers": {
-              "Referer": "https://dembed.st/",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",
-              "Origin": "https://dembed.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "PlusLiga : Barkom-Kazhany Lviv vs. Stal Nysa SA",
-        "sport": "Volleyball",
-        "sub_category": "Volleyball",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "plusliga-barkom-kazhany-lviv-vs-stal-nysa-sa",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 10:30:00 PM",
-          "end_time_bst": "Oct 24, 2026, 01:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "BarkomKazhany Lviv",
-            "flag": "https://i.ibb.co.com/Qv41gDKh/Volleyball.jpg"
-          },
-          "team_b": {
-            "name": "Stal Nysa SA",
-            "flag": "https://i.ibb.co.com/Qv41gDKh/Volleyball.jpg"
-          }
-        },
-        "logo": "https://i.ibb.co.com/Qv41gDKh/Volleyball.jpg",
-        "channels": [
-          {
-            "channel_name": "Polsat Sport 1 Poland",
-            "stream_type": "HLS",
-            "url": "https://windnew.newkso.ru/wind/premium47/mono.m3u8",
-            "raw_link": "https://windnew.newkso.ru/wind/premium47/mono.m3u8|Referer=https://dembed.st/&User-Agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F134.0.0.0+Safari%2F537.36+Edg%2F134.0.0.0",
-            "headers": {
-              "Referer": "https://dembed.st/",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",
-              "Origin": "https://dembed.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "NCAA : High Point vs Purdue",
         "sport": "Basketball",
@@ -2825,7 +2673,7 @@
         "title": "Premier League Darts : Humphries, Luke vs. van Gerwen, Michael",
         "sport": "Football",
         "sub_category": "Premier League",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "premier-league-darts-humphries-luke-vs-van-gerwen-michael",
         "schedule": {
@@ -2911,7 +2759,7 @@
         "title": "UEFA Nations League : Simulcast",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-simulcast",
         "schedule": {
@@ -2973,7 +2821,7 @@
         "title": "UEFA Nations League : Slovakia vs Slovenia",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-slovakia-vs-slovenia",
         "schedule": {
@@ -3023,7 +2871,7 @@
         "title": "UEFA Nations League : Bulgaria vs Ireland Republic",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-bulgaria-vs-ireland-republic",
         "schedule": {
@@ -3133,7 +2981,7 @@
         "title": "UEFA Nations League : Denmark vs Portugal",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-denmark-vs-portugal",
         "schedule": {
@@ -3315,7 +3163,7 @@
         "title": "UEFA Nations League : Kosovo vs Iceland",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-kosovo-vs-iceland",
         "schedule": {
@@ -3353,7 +3201,7 @@
         "title": "UEFA Nations League : Greece vs Scotland",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-greece-vs-scotland",
         "schedule": {
@@ -3475,7 +3323,7 @@
         "title": "UEFA Nations League : Ukraine vs Belgium",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-ukraine-vs-belgium",
         "schedule": {
@@ -3585,7 +3433,7 @@
         "title": "UEFA Nations League : Italy vs Germany",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-italy-vs-germany",
         "schedule": {
@@ -3875,7 +3723,7 @@
         "title": "UEFA Nations League : Croatia vs France",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-croatia-vs-france",
         "schedule": {
@@ -4105,7 +3953,7 @@
         "title": "UEFA Nations League : Netherlands vs Spain",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-netherlands-vs-spain",
         "schedule": {
@@ -4347,7 +4195,7 @@
         "title": "UEFA Nations League : Austria vs Serbia",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "uefa-nations-league-austria-vs-serbia",
         "schedule": {
@@ -4445,7 +4293,7 @@
         "title": "Euroleague : Real Madrid vs. ASVEL Lyon Villeurbanne",
         "sport": "Basketball",
         "sub_category": "Basketball",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "euroleague-real-madrid-vs-asvel-lyon-villeurbanne",
         "schedule": {
@@ -6972,6 +6820,158 @@
             "stream_type": "HLS",
             "url": "https://windnew.newkso.ru/wind/premium19/mono.m3u8",
             "raw_link": "https://windnew.newkso.ru/wind/premium19/mono.m3u8|Referer=https://dembed.st/&User-Agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F134.0.0.0+Safari%2F537.36+Edg%2F134.0.0.0",
+            "headers": {
+              "Referer": "https://dembed.st/",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",
+              "Origin": "https://dembed.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Slovakia Extraliga : Spisska Nova Ves vs. HKM Zvolen",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "ENDED",
+        "is_hot": false,
+        "slug": "slovakia-extraliga-spisska-nova-ves-vs-hkm-zvolen",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:30:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Spisska Nova Ves",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          },
+          "team_b": {
+            "name": "HKM Zvolen",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg",
+        "channels": [
+          {
+            "channel_name": "Sport 2 Czech",
+            "stream_type": "HLS",
+            "url": "https://windnew.newkso.ru/wind/premium5/mono.m3u8",
+            "raw_link": "https://windnew.newkso.ru/wind/premium5/mono.m3u8|Referer=https://dembed.st/&User-Agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F134.0.0.0+Safari%2F537.36+Edg%2F134.0.0.0",
+            "headers": {
+              "Referer": "https://dembed.st/",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",
+              "Origin": "https://dembed.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "KHL : Spartak Moscow vs Sochi",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "ENDED",
+        "is_hot": false,
+        "slug": "khl-spartak-moscow-vs-sochi",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:30:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Spartak Moscow",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          },
+          "team_b": {
+            "name": "Sochi",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg",
+        "channels": [
+          {
+            "channel_name": "KHL Prime",
+            "stream_type": "HLS",
+            "url": "https://windnew.newkso.ru/wind/premium86/mono.m3u8",
+            "raw_link": "https://windnew.newkso.ru/wind/premium86/mono.m3u8|Referer=https://dembed.st/&User-Agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F134.0.0.0+Safari%2F537.36+Edg%2F134.0.0.0",
+            "headers": {
+              "Referer": "https://dembed.st/",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",
+              "Origin": "https://dembed.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "KHL : Nizhny Novgorod vs Cherepovets",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "ENDED",
+        "is_hot": false,
+        "slug": "khl-nizhny-novgorod-vs-cherepovets",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:30:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Nizhny Novgorod",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          },
+          "team_b": {
+            "name": "Cherepovets",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg",
+        "channels": [
+          {
+            "channel_name": "Match TV Russia",
+            "stream_type": "HLS",
+            "url": "https://windnew.newkso.ru/wind/premium127/mono.m3u8",
+            "raw_link": "https://windnew.newkso.ru/wind/premium127/mono.m3u8|Referer=https://dembed.st/&User-Agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F134.0.0.0+Safari%2F537.36+Edg%2F134.0.0.0",
+            "headers": {
+              "Referer": "https://dembed.st/",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",
+              "Origin": "https://dembed.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "PlusLiga : Barkom-Kazhany Lviv vs. Stal Nysa SA",
+        "sport": "Volleyball",
+        "sub_category": "Volleyball",
+        "status": "ENDED",
+        "is_hot": false,
+        "slug": "plusliga-barkom-kazhany-lviv-vs-stal-nysa-sa",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:30:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "BarkomKazhany Lviv",
+            "flag": "https://i.ibb.co.com/Qv41gDKh/Volleyball.jpg"
+          },
+          "team_b": {
+            "name": "Stal Nysa SA",
+            "flag": "https://i.ibb.co.com/Qv41gDKh/Volleyball.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/Qv41gDKh/Volleyball.jpg",
+        "channels": [
+          {
+            "channel_name": "Polsat Sport 1 Poland",
+            "stream_type": "HLS",
+            "url": "https://windnew.newkso.ru/wind/premium47/mono.m3u8",
+            "raw_link": "https://windnew.newkso.ru/wind/premium47/mono.m3u8|Referer=https://dembed.st/&User-Agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F134.0.0.0+Safari%2F537.36+Edg%2F134.0.0.0",
             "headers": {
               "Referer": "https://dembed.st/",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",
