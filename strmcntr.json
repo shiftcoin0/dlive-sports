@@ -1,242 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 11:48:14 PM",
-  "event_count": 121,
+  "last_updated": "Oct 24, 2026, 12:04:28 AM",
+  "event_count": 117,
   "events": {
     "events": [
-      {
-        "title": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
-        "sport": "Tennis",
-        "sub_category": "ATP Tour",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "2025-miami-open-tennis-atp-1st-round-wta-2nd-round",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 09:00:00 PM",
-          "end_time_bst": "Oct 24, 2026, 12:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
-            "flag": "https://i.ibb.co.com/fz9WSxtQ/Tennis.webp"
-          },
-          "team_b": {
-            "name": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
-            "flag": "https://i.ibb.co.com/fz9WSxtQ/Tennis.webp"
-          }
-        },
-        "logo": "https://i.ibb.co.com/fz9WSxtQ/Tennis.webp",
-        "channels": [
-          {
-            "channel_name": "Tennis Channel",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium40/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium40/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "TSN2",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium112/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium112/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "TSN3",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium113/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium113/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sky Sports Tennis UK",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium46/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium46/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "TV4 Tennis",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium701/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium701/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "CANAL+ Sport Poland",
-            "stream_type": "HLS",
-            "url": "https://live-aka-canalplus-pol.akamaized.net/live/store01/Cplus-Stream1/hd2-dashdrm02/Cplus-Stream1.m3u8",
-            "raw_link": "https://live-aka-canalplus-pol.akamaized.net/live/store01/Cplus-Stream1/hd2-dashdrm02/Cplus-Stream1.m3u8|Referer=https://vcdn-4758.website/",
-            "headers": {
-              "Referer": "https://vcdn-4758.website/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport Klub HD Serbia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium453/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium453/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "NBA G-League : Delaware 87ers vs Fort Wayne Mad Ants",
-        "sport": "Basketball",
-        "sub_category": "NBA",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "nba-g-league-delaware-87ers-vs-fort-wayne-mad-ants",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 09:00:00 PM",
-          "end_time_bst": "Oct 24, 2026, 12:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "NBA G-League : Delaware 87ers",
-            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
-          },
-          "team_b": {
-            "name": "Fort Wayne Mad Ants",
-            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
-          }
-        },
-        "logo": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg",
-        "channels": [
-          {
-            "channel_name": "ESPN+ USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium69/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium69/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Women's Futsal 2025 World Cup Qualifiers : Hungary vs Portugal",
-        "sport": "Futsal",
-        "sub_category": "Futsal",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "women-s-futsal-2025-world-cup-qualifiers-hungary-vs-portugal",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 09:00:00 PM",
-          "end_time_bst": "Oct 24, 2026, 12:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Women's Futsal 2025 World Cup Qualifiers : Hungary",
-            "flag": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
-          },
-          "team_b": {
-            "name": "Portugal",
-            "flag": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
-          }
-        },
-        "logo": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp",
-        "channels": [
-          {
-            "channel_name": "Canal 11 Portugal",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium540/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium540/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "European Open Classic Powerlifting Championships Session 3 | Malaga",
-        "sport": "Weightlifting",
-        "sub_category": "Weightlifting",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "european-open-classic-powerlifting-championships-session-3-malaga",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 09:00:00 PM",
-          "end_time_bst": "Oct 24, 2026, 12:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "European Open Classic Powerlifting Championships Session 3 | Malaga",
-            "flag": "https://i.ibb.co.com/wrpLVMpz/Weightlifting.jpg"
-          },
-          "team_b": {
-            "name": "European Open Classic Powerlifting Championships Session 3 | Malaga",
-            "flag": "https://i.ibb.co.com/wrpLVMpz/Weightlifting.jpg"
-          }
-        },
-        "logo": "https://i.ibb.co.com/wrpLVMpz/Weightlifting.jpg",
-        "channels": [
-          {
-            "channel_name": "TNT Sports 4 UK",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium34/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium34/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "EuroSport 2 Poland",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium58/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium58/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "EuroSport 2 Spain",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium525/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium525/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "EuroSport 2 France",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium773/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium773/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Life Below Zero: Next Generation Season 2, Episode 11",
         "sport": "Tv shows",
@@ -2427,7 +2193,7 @@
         "title": "World Cup Qualifying : Saudi Arabia vs China",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "world-cup-qualifying-saudi-arabia-vs-china",
         "schedule": {
@@ -2503,7 +2269,7 @@
         "title": "World Cup Qualifying : Iraq vs Kuwait",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "world-cup-qualifying-iraq-vs-kuwait",
         "schedule": {
@@ -2539,7 +2305,7 @@
         "title": "World Cup Qualifying : Jordan vs Palestine",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "world-cup-qualifying-jordan-vs-palestine",
         "schedule": {
@@ -2585,7 +2351,7 @@
         "title": "World Cup Qualifying : Qatar vs Korea DPR",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "world-cup-qualifying-qatar-vs-korea-dpr",
         "schedule": {
