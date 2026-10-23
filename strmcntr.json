@@ -1,54 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 11:04:05 AM",
-  "event_count": 14,
+  "last_updated": "Oct 23, 2026, 11:14:07 AM",
+  "event_count": 13,
   "events": {
     "events": [
-      {
-        "title": "NCAA : NC Wilmington vs Texas Tech",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "ncaa-nc-wilmington-vs-texas-tech",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:10:00 AM",
-          "end_time_bst": "Oct 23, 2026, 11:10:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "NCAA : NC Wilmington",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png"
-          },
-          "team_b": {
-            "name": "Texas Tech",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png",
-        "channels": [
-          {
-            "channel_name": "truTV USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium341/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium341/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "TSN2",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium112/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium112/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "CONCACAF Nations League : Canada vs Mexico",
         "sport": "Football",
