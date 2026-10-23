@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 23, 2026, 02:19:43 PM",
-  "event_count": 16,
+  "last_updated": "Oct 23, 2026, 02:49:43 PM",
+  "event_count": 17,
   "events": {
     "events": [
       {
@@ -89,7 +89,7 @@
         "title": "National Rugby League : Melbourne Storm vs Penrith Panthers",
         "sport": "Rugby league",
         "sub_category": "Rugby league",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "national-rugby-league-melbourne-storm-vs-penrith-panthers",
         "schedule": {
@@ -952,6 +952,42 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium772/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium772/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Live racing from Chepstow, Sedgfield and Newcastle",
+        "sport": "Motorsport",
+        "sub_category": "Motorsport",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "live-racing-from-chepstow-sedgfield-and-newcastle",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 07:30:00 PM",
+          "end_time_bst": "Oct 23, 2026, 10:30:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Live racing from Chepstow, Sedgfield and Newcastle",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Live racing from Chepstow, Sedgfield and Newcastle",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Sky Sports Racing UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium554/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium554/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
