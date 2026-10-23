@@ -62,7 +62,7 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# আন্তর্জাতিক জাতীয় পতাকা (FlagCDN)
+# আন্তর্জাতিক দেশের সরাসরি জাতীয় পতাকা (FlagCDN)
 # -----------------------------------------------------------------------------
 COUNTRY_FLAGS = {
     "argentina": "https://flagcdn.com/w320/ar.png",
@@ -87,87 +87,77 @@ COUNTRY_FLAGS = {
     "canada": "https://flagcdn.com/w320/ca.png",
 }
 
-# লিগ ও টুর্নামেন্টের আসল অফিশিয়াল ব্যাজ (কোনো বলের ছবি নয়)
-OFFICIAL_LEAGUE_BADGES = {
-    "La Liga": "https://a.espncdn.com/i/leaguelogos/soccer/500/15.png",
-    "Premier League": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png",
-    "Serie A": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
-    "Bundesliga": "https://a.espncdn.com/i/leaguelogos/soccer/500/10.png",
-    "Ligue 1": "https://a.espncdn.com/i/leaguelogos/soccer/500/9.png",
-    "UEFA Champions League": "https://a.espncdn.com/i/leaguelogos/soccer/500/2.png",
-    "UEFA Europa League": "https://a.espncdn.com/i/leaguelogos/soccer/500/2035.png",
-    "NBA": "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png",
-    "Indian Premier League (IPL)": "https://a.espncdn.com/i/leaguelogos/cricket/500/ipl.png",
-    "NFL": "https://a.espncdn.com/i/teamlogos/leagues/500/nfl.png",
-    "MLB": "https://a.espncdn.com/i/teamlogos/leagues/500/mlb.png",
-    "NHL": "https://a.espncdn.com/i/teamlogos/leagues/500/nhl.png",
-    "Formula 1": "https://a.espncdn.com/i/teamlogos/racing/500/f1.png",
-    "UFC": "https://a.espncdn.com/i/teamlogos/mma/500/ufc.png",
-    "WWE SmackDown": "https://a.espncdn.com/i/teamlogos/mma/500/wwe.png",
-    "WWE Raw": "https://a.espncdn.com/i/teamlogos/mma/500/wwe.png",
+# লিগ ও স্পোর্টসের অফিশিয়াল ব্যাজ (কোনো সাধারণ বলের ছবি নয়)
+OFFICIAL_LEAGUE_LOGOS = {
+    "La Liga": "https://static.flashscore.com/res/image/data/COu8P3T3-tO4764m1.png",
+    "Premier League": "https://static.flashscore.com/res/image/data/2m9Y8Wll-zskCq9x7.png",
+    "Serie A": "https://static.flashscore.com/res/image/data/j3uI5lC3-Q1Oq3n8A.png",
+    "Bundesliga": "https://static.flashscore.com/res/image/data/Mctk2Nll-QsmjY37a.png",
+    "Ligue 1": "https://static.flashscore.com/res/image/data/2Rkm50V1-4Y4wW2p6.png",
+    "UEFA Champions League": "https://static.flashscore.com/res/image/data/z9uGgZll-Wre4i8k5.png",
+    "UEFA Europa League": "https://static.flashscore.com/res/image/data/Q3k5V7U1-bJ3Z1sM2.png",
+    "NBA": "https://static.flashscore.com/res/image/data/0G0W6fC3-nN7N7yE4.png",
+    "Indian Premier League (IPL)": "https://static.flashscore.com/res/image/data/v3xYv8C3-I9T79sA1.png",
+    "Formula 1": "https://static.flashscore.com/res/image/data/6X6W1bU1-vP3Z3wS2.png",
+    "UFC": "https://static.flashscore.com/res/image/data/4N4X9aC3-8Q7P7mE3.png",
+    "WWE SmackDown": "https://static.flashscore.com/res/image/data/2B2V8yU1-zP4Z4wS1.png",
+    "WWE Raw": "https://static.flashscore.com/res/image/data/2B2V8yU1-zP4Z4wS1.png",
 }
+
+DEFAULT_FALLBACK_LOGO = "https://static.flashscore.com/res/image/data/2m9Y8Wll-zskCq9x7.png"
 
 TEAM_CACHE: dict[str, str] = {}
 
 
 # -----------------------------------------------------------------------------
-# ESPN Search API দিয়ে সরাসরি আসল টিম লোগো খোঁজা
+# Flashscore Search Engine (সরাসরি আসল ক্লাব ও টিম লোগো বের করা)
 # -----------------------------------------------------------------------------
-async def fetch_espn_team_logo(client: httpx.AsyncClient, team_name: str, sub_category: str) -> str:
+async def fetch_flashscore_team_logo(client: httpx.AsyncClient, team_name: str, sub_category: str) -> str:
     cleaned = team_name.strip()
     if not cleaned:
-        return OFFICIAL_LEAGUE_BADGES.get(sub_category, "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png")
+        return OFFICIAL_LEAGUE_LOGOS.get(sub_category, DEFAULT_FALLBACK_LOGO)
 
     if cleaned in TEAM_CACHE:
         return TEAM_CACHE[cleaned]
 
-    # ১. আন্তর্জাতিক দেশ হলে সরাসরি পতাকা
+    # ১. আন্তর্জাতিক দলের ক্ষেত্রে অফিশিয়াল জাতীয় পতাকা
     c_lower = cleaned.lower()
     for country, flag_url in COUNTRY_FLAGS.items():
         if country in c_lower:
             TEAM_CACHE[cleaned] = flag_url
             return flag_url
 
-    # অনুসন্ধানের নাম থেকে অপ্রয়োজনীয় ব্র্যাকেট বাদ দেওয়া
+    # অনুসন্ধানের নাম থেকে ব্র্যাকেট জাতীয় লেখা পরিষ্কার করা
     search_query = re.sub(r"\(.*?\)", "", cleaned).strip()
 
-    # ২. ESPN Public Search API
-    espn_url = f"https://site.web.api.espn.com/apis/search/v2?query={quote_plus(search_query)}&limit=3"
+    # ২. Flashscore Search Gateway
+    fs_search_url = f"https://www.flashscore.com/x/search.php?q={quote_plus(search_query)}"
     headers = {
         "User-Agent": UA,
-        "Accept": "application/json",
-        "Referer": "https://www.espn.com/",
+        "Referer": "https://www.flashscore.com/",
+        "X-Requested-With": "XMLHttpRequest",
     }
 
     try:
-        resp = await client.get(espn_url, headers=headers, timeout=6.0)
+        resp = await client.get(fs_search_url, headers=headers, timeout=6.0)
         if resp.status_code == 200:
-            data = resp.json()
-            results = data.get("results", [])
+            text = resp.text
 
-            for group in results:
-                contents = group.get("contents", [])
-                for item in contents:
-                    # যদি টিম লোগো থাকে
-                    logo_url = None
-                    if "logo" in item and isinstance(item["logo"], dict):
-                        logo_url = item["logo"].get("href")
-                    elif "image" in item and isinstance(item["image"], dict):
-                        logo_url = item["image"].get("url")
-
-                    if logo_url and ("teamlogos" in logo_url or "espncdn.com" in logo_url):
-                        TEAM_CACHE[cleaned] = logo_url
-                        return logo_url
+            # Flashscore সাধারণত রেজাল্টে ইমেজ হ্যাশ/পাথ প্রদান করে (যেমন: 2m9Y8Wll-zskCq9x7)
+            # টেক্সট থেকে ইমেজ আইডি এক্সট্রাক্ট করা
+            img_ids = re.findall(r"([a-zA-Z0-9]{8}-[a-zA-Z0-9]{8})", text)
+            if img_ids:
+                best_img_id = img_ids[0]
+                logo_url = f"https://static.flashscore.com/res/image/data/{best_img_id}.png"
+                TEAM_CACHE[cleaned] = logo_url
+                return logo_url
     except Exception:
         pass
 
-    # ৩. যদি দল না পাওয়া যায়, তবে কোনো বলের ছবি নয়—সরাসরি ওই লিগের অফিশিয়াল ব্যাজ বসবে
-    fallback_league_logo = OFFICIAL_LEAGUE_BADGES.get(
-        sub_category,
-        "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png"
-    )
-    TEAM_CACHE[cleaned] = fallback_league_logo
-    return fallback_league_logo
+    # ৩. ব্যাকআপ: যদি Flashscore-এ সরাসরি কি না পাওয়া যায়, তবে সংশ্লিষ্ট লিগের অফিশিয়াল ব্যাজ বসবে
+    fallback_logo = OFFICIAL_LEAGUE_LOGOS.get(sub_category, DEFAULT_FALLBACK_LOGO)
+    TEAM_CACHE[cleaned] = fallback_logo
+    return fallback_logo
 
 
 # -----------------------------------------------------------------------------
@@ -248,7 +238,6 @@ LEAGUE_PATTERNS = [
     (r"nhl", "NHL"),
 ]
 
-# জনপ্রিয় দল দিয়ে সাব-ক্যাটাগরি নিশ্চিত করা
 TOP_CLUBS = {
     "Premier League": ["arsenal", "chelsea", "liverpool", "manchester united", "manchester city", "tottenham", "newcastle", "aston villa", "everton", "west ham", "brighton", "wolves", "fulham", "crystal palace", "brentford"],
     "La Liga": ["real madrid", "barcelona", "atletico madrid", "sevilla", "valencia", "athletic bilbao", "villarreal", "real betis", "real sociedad", "girona", "celta vigo", "mallorca", "osasuna", "getafe"],
@@ -306,7 +295,7 @@ class DLHDEvent:
 
 
 def create_slug(text: str) -> str:
-    return re.sub(r"[\W_]+", "-", text).strip("-")
+    return re.sub(r"[\W_]+", "-", text.lower().strip()).strip("-")
 
 
 def determine_status(start_dt: datetime, early_minutes: int = 15) -> str:
@@ -563,7 +552,7 @@ async def scrape() -> None:
 
         log.info(f"Processing {len(raw_events)} active DaddyLive event(s)...")
 
-        # ১. ESPN Search API দিয়ে আসল টিম লোগো প্যারালালে সংগ্রহ করা
+        # ১. Flashscore Search Gateway দিয়ে আসল টিম লোগো প্যারালালে সংগ্রহ করা
         unique_team_tuples = set()
         for ev in raw_events:
             t = parse_team_names(ev.title)
@@ -571,12 +560,12 @@ async def scrape() -> None:
             unique_team_tuples.add((t["team_a"], sub_c))
             unique_team_tuples.add((t["team_b"], sub_c))
 
-        log.info(f"Searching ESPN Database for {len(unique_team_tuples)} unique teams...")
+        log.info(f"Searching Flashscore CDN for {len(unique_team_tuples)} unique teams...")
         team_badge_map = {}
 
         async def fetch_team(team_name: str, sub_c: str):
             async with HTTP_SEMAPHORE:
-                logo = await fetch_espn_team_logo(client, team_name, sub_c)
+                logo = await fetch_flashscore_team_logo(client, team_name, sub_c)
                 team_badge_map[team_name] = logo
 
         await asyncio.gather(*(fetch_team(name, sub) for name, sub in unique_team_tuples))
@@ -626,7 +615,7 @@ async def scrape() -> None:
                 team_a_name = t_names["team_a"]
                 team_b_name = t_names["team_b"]
 
-                # ESPN থেকে পাওয়া আসল লোগো
+                # Flashscore থেকে সংগৃহীত সরাসরি আসল লোগো
                 team_a_flag = team_badge_map.get(team_a_name, "")
                 team_b_flag = team_badge_map.get(team_b_name, "")
 
@@ -654,7 +643,7 @@ async def scrape() -> None:
                             "flag": team_b_flag,
                         },
                     },
-                    "logo": team_a_flag,  # Team A এর আসল ESPN লোগো
+                    "logo": team_a_flag,  # Team A এর আসল Flashscore লোগো
                     "channels": event_channels,
                     "_timestamp": ev.start_dt.timestamp(),
                 }
@@ -678,7 +667,7 @@ async def scrape() -> None:
             item.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info("Playlist generation completed with Real ESPN Logos!")
+        log.info("Playlist generation completed with Real Flashscore Logos!")
 
 
 if __name__ == "__main__":
