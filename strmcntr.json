@@ -1,54 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 04:50:20 PM",
-  "event_count": 20,
+  "last_updated": "Oct 23, 2026, 05:35:18 PM",
+  "event_count": 39,
   "events": {
     "events": [
-      {
-        "title": "AFL : Carlton Blues vs Hawthorn Hawks",
-        "sport": "Aussie rules",
-        "sub_category": "Aussie rules",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "afl-carlton-blues-vs-hawthorn-hawks",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 02:30:00 PM",
-          "end_time_bst": "Oct 23, 2026, 05:30:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "AFL : Carlton Blues",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "Hawthorn Hawks",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "TNT Sports 1 UK",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium31/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium31/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "FOX Sports 2 USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium758/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium758/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "National Rugby League : Melbourne Storm vs Penrith Panthers",
         "sport": "Rugby league",
@@ -84,10 +38,40 @@
             "drm_key": null
           },
           {
+            "channel_name": "beIN Sports 3 France",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium118/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium118/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
             "channel_name": "Sky Sport 1 NZ",
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium588/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium588/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sky Sports Action UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium37/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium37/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "SPORT1+ DE",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium640/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium640/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
@@ -124,6 +108,36 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium379/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium379/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sportdigital FUSSBALL DE",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Nova Sport Bulgaria",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium468/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium468/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "beIN Sports MENA 3",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium93/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium93/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
@@ -226,10 +240,66 @@
             "drm_key": null
           },
           {
+            "channel_name": "TV4 Sportkanalen",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium707/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium707/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sky Sport Top Event DE",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium556/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium556/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
             "channel_name": "Sky Sport Mix DE",
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium557/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium557/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Absa Cape Epic '25: Stage 4",
+        "sport": "Cycling",
+        "sub_category": "Cycling",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "absa-cape-epic-25-stage-4",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 04:00:00 PM",
+          "end_time_bst": "Oct 23, 2026, 07:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Absa Cape Epic '25: Stage 4",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Absa Cape Epic '25: Stage 4",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "SuperSport Grandstand",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium412/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium412/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
@@ -328,6 +398,16 @@
             "drm_key": null
           },
           {
+            "channel_name": "Sportdigital FUSSBALL DE",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
             "channel_name": "ESPN Mexico",
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium925/index.m3u8",
@@ -372,6 +452,16 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium92/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium92/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport 5 Plus Israel",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium145/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium145/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
@@ -700,6 +790,16 @@
             "drm_key": null
           },
           {
+            "channel_name": "Sportdigital FUSSBALL DE",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
             "channel_name": "Sport Klub 1 Serbia",
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium101/index.m3u8",
@@ -735,6 +835,16 @@
         },
         "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
         "channels": [
+          {
+            "channel_name": "ITV 4 UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium353/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium353/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
           {
             "channel_name": "EuroSport 1 Poland",
             "stream_type": "HLS",
@@ -796,6 +906,42 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium554/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium554/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "World - Friendly : Türkiye U20 vs Italy U20",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "world-friendly-türkiye-u20-vs-italy-u20",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 08:00:00 PM",
+          "end_time_bst": "Oct 23, 2026, 11:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "World - Friendly : Türkiye U20",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Italy U20",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "TRT Spor Turkey",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium889/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium889/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
@@ -926,6 +1072,42 @@
         ]
       },
       {
+        "title": "KHL : Yekaterinburg vs SKA St. Petersburg",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "khl-yekaterinburg-vs-ska-st-petersburg",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 08:00:00 PM",
+          "end_time_bst": "Oct 23, 2026, 11:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "KHL : Yekaterinburg",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "SKA St. Petersburg",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "Match TV Russia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium127/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium127/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
         "title": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
         "sport": "Tennis",
         "sub_category": "Tennis",
@@ -954,6 +1136,16 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium40/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium40/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TSN2",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium112/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium112/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
@@ -1004,6 +1196,42 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium453/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium453/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "NBA G-League : Delaware 87ers vs Fort Wayne Mad Ants",
+        "sport": "Basketball",
+        "sub_category": "NBA",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nba-g-league-delaware-87ers-vs-fort-wayne-mad-ants",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 09:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 12:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "NBA G-League : Delaware 87ers",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          },
+          "team_b": {
+            "name": "Fort Wayne Mad Ants",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
+        "channels": [
+          {
+            "channel_name": "ESPN+ USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium69/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium69/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
@@ -1106,6 +1334,672 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium773/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium773/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Life Below Zero: Next Generation Season 2, Episode 11",
+        "sport": "Tv shows",
+        "sub_category": "Tv shows",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "life-below-zero-next-generation-season-2-episode-11",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Life Below Zero: Next Generation Season 2, Episode 11",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Life Below Zero: Next Generation Season 2, Episode 11",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Nat Geo Wild",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium745/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium745/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "World Cup Qualifying : Sierra Leone vs Guinea-Bissau",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "world-cup-qualifying-sierra-leone-vs-guinea-bissau",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "World Cup Qualifying : Sierra Leone",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Guinea-Bissau",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Sport TV4 Portugal",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium289/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium289/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "World Cup Qualifying : Iran vs United Arab Emirates",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "world-cup-qualifying-iran-vs-united-arab-emirates",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "World Cup Qualifying : Iran",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "United Arab Emirates",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Sportdigital FUSSBALL DE",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Diema Sport Bulgaria",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium465/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium465/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport Klub 4 Serbia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium104/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium104/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "World Cup Qualifying : Uzbekistan vs Kyrgyzstan",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "world-cup-qualifying-uzbekistan-vs-kyrgyzstan",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "World Cup Qualifying : Uzbekistan",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Kyrgyzstan",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Astro Grandstand",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium123/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium123/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "beIN Sports MENA 6",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium96/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium96/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "World Cup Qualifying : Cape Verde Islands vs Mauritius",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "world-cup-qualifying-cape-verde-islands-vs-mauritius",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "World Cup Qualifying : Cape Verde Islands",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Mauritius",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Sport TV1 Portugal",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium49/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium49/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "ESPN 1 NL",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium379/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium379/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Men's College Wrestling NCAA Championship, First Round",
+        "sport": "Wrestling",
+        "sub_category": "Wrestling",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "men-s-college-wrestling-ncaa-championship-first-round",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Men's College Wrestling NCAA Championship, First Round",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Men's College Wrestling NCAA Championship, First Round",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "ESPNU USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium316/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium316/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "First Round 2025 NCAA Men's Basketball Tournament",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "first-round-2025-ncaa-men-s-basketball-tournament",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "First Round 2025 NCAA Men's Basketball Tournament",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          },
+          "team_b": {
+            "name": "First Round 2025 NCAA Men's Basketball Tournament",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
+        "channels": [
+          {
+            "channel_name": "TSN5",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium115/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium115/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TSN4",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium114/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium114/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "2025 NCAA Men's Basketball Tournament First Round: Creighton vs Louisville",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "2025-ncaa-men-s-basketball-tournament-first-round-creighton-vs-louisville",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "2025 NCAA Men's Basketball Tournament First Round: Creighton",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          },
+          "team_b": {
+            "name": "Louisville",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
+        "channels": [
+          {
+            "channel_name": "CBSNY USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium308/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium308/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Russia Super League : Chekhovskie Medvedi Chekhov vs Dinamo-Sungul Snezhinsk",
+        "sport": "Handball",
+        "sub_category": "Handball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "russia-super-league-chekhovskie-medvedi-chekhov-vs-dinamo-sungul-snezhinsk",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Russia Super League : Chekhovskie Medvedi Chekhov",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Dinamo-Sungul Snezhinsk",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Match Igra Russia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium76/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium76/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "KHL : Vityaz Moscow Oblast vs Avangard Omsk",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "khl-vityaz-moscow-oblast-vs-avangard-omsk",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "KHL : Vityaz Moscow Oblast",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Avangard Omsk",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "KHL TV",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium7/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium7/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Lahti | Women's HS 130 World Cup",
+        "sport": "Ski jumping",
+        "sub_category": "Ski jumping",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "lahti-women-s-hs-130-world-cup",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Lahti | Women's HS 130 World Cup",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Lahti | Women's HS 130 World Cup",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "TNT Sports 1 UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium31/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium31/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 1 Poland",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium57/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium57/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 1 Spain",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium524/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium524/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 1 France",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium772/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium772/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Basquetebol: Men's March Madness #1 - College Basketball",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "basquetebol-men-s-march-madness-1-college-basketball",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:15:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:15:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Basquetebol: Men's March Madness #1",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          },
+          "team_b": {
+            "name": "College Basketball",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
+        "channels": [
+          {
+            "channel_name": "DAZN Eleven 1 Portugal",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium455/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium455/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport Klub 2 Serbia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium102/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium102/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Slovakia Extraliga : Spisska Nova Ves vs. HKM Zvolen",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "slovakia-extraliga-spisska-nova-ves-vs-hkm-zvolen",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:30:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Slovakia Extraliga : Spisska Nova Ves",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "HKM Zvolen",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "Sport 2 Czech",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium5/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium5/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "KHL : Spartak Moscow vs Sochi",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "khl-spartak-moscow-vs-sochi",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:30:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "KHL : Spartak Moscow",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Sochi",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "KHL Prime",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium86/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium86/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "KHL : Nizhny Novgorod vs Cherepovets",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "khl-nizhny-novgorod-vs-cherepovets",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:30:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "KHL : Nizhny Novgorod",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Cherepovets",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "Match TV Russia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium127/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium127/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "PlusLiga : Barkom-Kazhany Lviv vs. Stal Nysa SA",
+        "sport": "Volleyball",
+        "sub_category": "Volleyball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "plusliga-barkom-kazhany-lviv-vs-stal-nysa-sa",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 10:30:00 PM",
+          "end_time_bst": "Oct 24, 2026, 01:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "PlusLiga : Barkom-Kazhany Lviv",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Stal Nysa SA",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Polsat Sport 1 Poland",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium47/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium47/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
