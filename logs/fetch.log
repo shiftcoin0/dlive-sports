@@ -417,3 +417,5 @@
 [2026-10-23 | 19:56:25] INFO     [LIVETV] Saved JSON Playlist: /home/runner/work/dlive-sports/dlive-sports/strmcntr.json (Total: 4 events) (stc.py:208)
 [2026-10-23 | 19:56:25] INFO     [LIVETV] Saved M3U Playlist: /home/runner/work/dlive-sports/dlive-sports/strmcntr.m3u (4 streams) (stc.py:245)
 [2026-10-23 | 19:56:25] INFO     [LIVETV] Playlist successfully generated with 4 LiveTV matches!                 (stc.py:470)
+[2026-10-23 | 20:03:25] INFO     [SPORTS] Fetching live events from API: "https://api.vebotv.org/api/match/featured"... (stc.py:239)
+[2026-10-23 | 20:03:25] ERROR    [SPORTS] Could not fetch API data.                                              (stc.py:255)
