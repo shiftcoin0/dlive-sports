@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 23, 2026, 07:58:29 AM",
-  "event_count": 53,
+  "last_updated": "Oct 23, 2026, 08:18:31 AM",
+  "event_count": 54,
   "events": {
     "events": [
       {
@@ -2259,7 +2259,7 @@
         "title": "CONCACAF Nations League : Canada vs Mexico",
         "sport": "Football",
         "sub_category": "Football",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "concacaf-nations-league-canada-vs-mexico",
         "schedule": {
@@ -2365,7 +2365,7 @@
         "title": "NBA : Milwaukee Bucks vs Los Angeles Lakers",
         "sport": "Basketball",
         "sub_category": "NBA",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "nba-milwaukee-bucks-vs-los-angeles-lakers",
         "schedule": {
@@ -2551,7 +2551,7 @@
         "title": "NHL : Carolina Hurricanes vs San Jose Sharks",
         "sport": "Hockey",
         "sub_category": "Hockey",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "nhl-carolina-hurricanes-vs-san-jose-sharks",
         "schedule": {
@@ -2754,6 +2754,42 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium590/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium590/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "World Surf League: 2025 WSL Championship Tour: MEO Rip Curl Pro Portugal",
+        "sport": "Sailing / boating",
+        "sub_category": "Sailing / boating",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "world-surf-league-2025-wsl-championship-tour-meo-rip-curl-pro-portugal",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 01:00:00 PM",
+          "end_time_bst": "Oct 23, 2026, 04:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "World Surf League: 2025 WSL Championship Tour: MEO Rip Curl Pro Portugal",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "World Surf League: 2025 WSL Championship Tour: MEO Rip Curl Pro Portugal",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Sportv3 Brazil",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium80/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium80/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
