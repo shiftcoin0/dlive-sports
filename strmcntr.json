@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 23, 2026, 07:14:50 PM",
-  "event_count": 59,
+  "last_updated": "Oct 23, 2026, 07:15:46 PM",
+  "event_count": 63,
   "events": {
     "events": [
       {
@@ -521,7 +521,7 @@
         "title": "Live racing from Chepstow, Sedgfield and Newcastle",
         "sport": "Motorsport",
         "sub_category": "Premier League",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "Live-racing-from-Chepstow-Sedgfield-and-Newcastle",
         "schedule": {
@@ -3160,6 +3160,210 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium707/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium707/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "World Cup Qualifying : Saudi Arabia vs China",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "World-Cup-Qualifying-Saudi-Arabia-vs-China",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 12:15:00 AM",
+          "end_time_bst": "Oct 24, 2026, 03:15:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "World Cup Qualifying : Saudi Arabia",
+            "flag": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png"
+          },
+          "team_b": {
+            "name": "China",
+            "flag": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png"
+          }
+        },
+        "logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png",
+        "channels": [
+          {
+            "channel_name": "ESPN 2 NL",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium386/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium386/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Astro Grandstand",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium123/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium123/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sportdigital FUSSBALL DE",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "ESPN4 Mexico",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium928/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium928/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport 5 Stars Israel",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium147/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium147/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "World Cup Qualifying : Iraq vs Kuwait",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "World-Cup-Qualifying-Iraq-vs-Kuwait",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 12:15:00 AM",
+          "end_time_bst": "Oct 24, 2026, 03:15:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "World Cup Qualifying : Iraq",
+            "flag": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png"
+          },
+          "team_b": {
+            "name": "Kuwait",
+            "flag": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png"
+          }
+        },
+        "logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png",
+        "channels": [
+          {
+            "channel_name": "beIN Sports MENA 4",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium94/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium94/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "World Cup Qualifying : Jordan vs Palestine",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "World-Cup-Qualifying-Jordan-vs-Palestine",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 12:15:00 AM",
+          "end_time_bst": "Oct 24, 2026, 03:15:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "World Cup Qualifying : Jordan",
+            "flag": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png"
+          },
+          "team_b": {
+            "name": "Palestine",
+            "flag": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png"
+          }
+        },
+        "logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png",
+        "channels": [
+          {
+            "channel_name": "Jordan Sport",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium4/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium4/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "beIN Sports MENA 5",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium95/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium95/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "World Cup Qualifying : Qatar vs Korea DPR",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "World-Cup-Qualifying-Qatar-vs-Korea-DPR",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 12:15:00 AM",
+          "end_time_bst": "Oct 24, 2026, 03:15:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "World Cup Qualifying : Qatar",
+            "flag": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png"
+          },
+          "team_b": {
+            "name": "Korea DPR",
+            "flag": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png"
+          }
+        },
+        "logo": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png",
+        "channels": [
+          {
+            "channel_name": "Astro Football",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium124/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium124/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "beIN Sports MENA 1",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium91/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium91/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
