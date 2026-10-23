@@ -1,44 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 03:49:55 PM",
-  "event_count": 21,
+  "last_updated": "Oct 23, 2026, 04:05:00 PM",
+  "event_count": 24,
   "events": {
     "events": [
-      {
-        "title": "World Surf League: 2025 WSL Championship Tour: MEO Rip Curl Pro Portugal",
-        "sport": "Sailing / boating",
-        "sub_category": "Sailing / boating",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "world-surf-league-2025-wsl-championship-tour-meo-rip-curl-pro-portugal",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 01:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 04:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "World Surf League: 2025 WSL Championship Tour: MEO Rip Curl Pro Portugal",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "World Surf League: 2025 WSL Championship Tour: MEO Rip Curl Pro Portugal",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "Sportv3 Brazil",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium80/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium80/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "AFL : Carlton Blues vs Hawthorn Hawks",
         "sport": "Aussie rules",
@@ -1182,6 +1146,240 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium127/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium127/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
+        "sport": "Tennis",
+        "sub_category": "Tennis",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "2025-miami-open-tennis-atp-1st-round-wta-2nd-round",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 09:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 12:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png"
+          },
+          "team_b": {
+            "name": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png",
+        "channels": [
+          {
+            "channel_name": "Tennis Channel",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium40/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium40/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TSN2",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium112/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium112/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TSN3",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium113/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium113/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sky Sports Tennis UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium46/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium46/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TV4 Tennis",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium701/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium701/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "CANAL+ Sport Poland",
+            "stream_type": "HLS",
+            "url": "https://live-aka-canalplus-pol.akamaized.net/live/store01/Cplus-Stream1/hd2-dashdrm02/Cplus-Stream1.m3u8",
+            "raw_link": "https://live-aka-canalplus-pol.akamaized.net/live/store01/Cplus-Stream1/hd2-dashdrm02/Cplus-Stream1.m3u8|Referer=https://vcdn-4758.website/",
+            "headers": {
+              "Referer": "https://vcdn-4758.website/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport Klub HD Serbia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium453/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium453/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "NBA G-League : Delaware 87ers vs Fort Wayne Mad Ants",
+        "sport": "Basketball",
+        "sub_category": "NBA",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nba-g-league-delaware-87ers-vs-fort-wayne-mad-ants",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 09:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 12:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "NBA G-League : Delaware 87ers",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          },
+          "team_b": {
+            "name": "Fort Wayne Mad Ants",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
+        "channels": [
+          {
+            "channel_name": "ESPN+ USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium69/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium69/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Women's Futsal 2025 World Cup Qualifiers : Hungary vs Portugal",
+        "sport": "Futsal",
+        "sub_category": "Futsal",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "women-s-futsal-2025-world-cup-qualifiers-hungary-vs-portugal",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 09:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 12:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Women's Futsal 2025 World Cup Qualifiers : Hungary",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Portugal",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Canal 11 Portugal",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium540/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium540/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "European Open Classic Powerlifting Championships Session 3 | Malaga",
+        "sport": "Weightlifting",
+        "sub_category": "Weightlifting",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "european-open-classic-powerlifting-championships-session-3-malaga",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 09:00:00 PM",
+          "end_time_bst": "Oct 24, 2026, 12:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "European Open Classic Powerlifting Championships Session 3 | Malaga",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "European Open Classic Powerlifting Championships Session 3 | Malaga",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "TNT Sports 4 UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium34/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium34/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 2 Poland",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium58/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium58/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 2 Spain",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium525/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium525/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 2 France",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium773/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium773/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
