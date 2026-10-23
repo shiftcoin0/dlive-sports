@@ -90,13 +90,13 @@ KNOWN_TEAM_LOGOS = {
 
 SPORT_ICONS = {
     "football": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-    "cricket": "https://cdn-icons-png.flaticon.com/512/1071/1071178.png",
+    "cricket": "https://pngtree.com/so/cricket",
     "basketball": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
     "tennis": "https://cdn-icons-png.flaticon.com/512/709/709605.png",
     "hockey": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
 }
 
-DEFAULT_LOGO = "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+DEFAULT_LOGO = "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
 
 
 def get_real_team_badge(team_name: str, sport: str = "Football") -> str:
