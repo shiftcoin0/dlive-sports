@@ -30,7 +30,6 @@ UA = (
     "Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
 )
 
-# একসাথে ১৫টি প্যারালাল রিকোয়েস্ট
 HTTP_SEMAPHORE = asyncio.Semaphore(15)
 BST_TZ = ZoneInfo("Asia/Dhaka")
 
@@ -140,51 +139,103 @@ def save_playlists(events: list[dict]) -> None:
                 continue
 
             ch_name = ch.get("channel_name", "Stream")
-            referer = ch.get("headers", {}).get("Referer", f"{BASE_URL}/")
+            headers = ch.get("headers", {})
+            referer = headers.get("Referer", "https://embed.st/")
+            origin = headers.get("Origin", "https://embed.st")
             status_lbl = f" [{status}]" if status else ""
             display_name = f"[{sub_cat}] {ev['title']} | {ch_name}{status_lbl}"
 
             m3u_lines.append(f'#EXTINF:-1 tvg-id="Live.Event.us" tvg-logo="{logo}" group-title="{sub_cat}",{display_name}')
             if referer:
                 m3u_lines.append(f'#EXTVLCOPT:http-referrer={referer}')
+                m3u_lines.append(f'#EXTVLCOPT:http-origin={origin}')
             m3u_lines.append(url)
 
     M3U_OUTPUT.write_text("\n".join(m3u_lines) + "\n", encoding="utf-8")
     log.info(f"Saved M3U Playlist: {M3U_OUTPUT}")
 
 
-async def resolve_embed_st_m3u8(client: httpx.AsyncClient, embed_url: str) -> tuple[str, str]:
-    headers = {"User-Agent": UA, "Referer": f"{BASE_URL}/"}
+# -----------------------------------------------------------------------------
+# strmd.st এবং embed.st থেকে সরাসরি .m3u8 ডিকোডার
+# -----------------------------------------------------------------------------
+async def resolve_embed_st_m3u8(client: httpx.AsyncClient, embed_url: str) -> tuple[str, dict]:
+    """
+    আপনার দেওয়া স্ক্রিনশটের lb*.strmd.st এর m3u8 স্ট্রিম এবং সঠিক হেডার এক্সট্রাক্ট করে
+    """
+    req_headers = {
+        "User-Agent": UA,
+        "Referer": f"{BASE_URL}/",
+    }
+    standard_stream_headers = {
+        "Referer": "https://embed.st/",
+        "Origin": "https://embed.st"
+    }
+
     try:
-        resp = await client.get(embed_url, headers=headers, timeout=4.0)
+        resp = await client.get(embed_url, headers=req_headers, timeout=6.0)
         if resp.status_code != 200:
-            return embed_url, f"{BASE_URL}/"
+            return embed_url, standard_stream_headers
 
         html_text = resp.text
 
-        # ১. সরাসরি .m3u8 লিংক
-        m3u8_find = re.search(r'["\'](https?://[^"\']+\.m3u8[^"\']*)["\']', html_text)
-        if m3u8_find:
-            m3u8_link = m3u8_find.group(1).replace("\\/", "/")
-            parsed_origin = f"{urlsplit(embed_url).scheme}://{urlsplit(embed_url).netloc}/"
-            return m3u8_link, parsed_origin
+        # ১. সরাসরি strmd.st এর m3u8 লিংক খোঁজা (স্ক্রিনশট অনুযায়ী প্যাটার্ন)
+        strmd_match = re.search(r'["\'](https?://[a-zA-Z0-9_\-\.]*strmd\.st/[^"\']+\.m3u8[^"\']*)["\']', html_text)
+        if strmd_match:
+            final_url = strmd_match.group(1).replace("\\/", "/")
+            return final_url, standard_stream_headers
 
-        # ২. Base64 ডিকোড
+        # ২. যেকোনো সাধারণ .m3u8 ইউআরএল খোঁজা
+        general_m3u8 = re.search(r'["\'](https?://[^"\']+\.m3u8[^"\']*)["\']', html_text)
+        if general_m3u8:
+            final_url = general_m3u8.group(1).replace("\\/", "/")
+            return final_url, standard_stream_headers
+
+        # ৩. JavaScript ভ্যারিয়েবল এবং কনফিগারেশন থেকে লিঙ্ক তৈরি
+        # embed.st প্রায়শই "source", "file", বা টোকেন ভ্যারিয়েবল ব্যবহার করে
+        token_match = re.search(r'source\s*:\s*["\']([^"\']+)["\']', html_text) or \
+                      re.search(r'file\s*:\s*["\']([^"\']+)["\']', html_text) or \
+                      re.search(r'url\s*:\s*["\']([^"\']+)["\']', html_text)
+
+        if token_match:
+            raw_src = token_match.group(1).replace("\\/", "/")
+            if ".m3u8" in raw_src:
+                if not raw_src.startswith("http"):
+                    raw_src = urljoin("https://embed.st", raw_src)
+                return raw_src, standard_stream_headers
+
+        # ৪. Base64 এনকোড করা লিঙ্ক ডিকোড
         b64_matches = re.findall(r'atob\(["\']([A-Za-z0-9+/=]+)["\']\)', html_text)
         for b in b64_matches:
             try:
                 decoded = base64.b64decode(b).decode('utf-8')
-                if ".m3u8" in decoded:
+                if ".m3u8" in decoded or "strmd.st" in decoded:
                     m = re.search(r'(https?://[^\s"\']+\.m3u8[^\s"\']*)', decoded)
                     if m:
-                        return m.group(1), f"{urlsplit(embed_url).scheme}://{urlsplit(embed_url).netloc}/"
+                        return m.group(1).replace("\\/", "/"), standard_stream_headers
             except Exception:
                 pass
 
-    except Exception:
-        pass
+        # ৫. embed.st এর ভেতরের নেস্টেড আইফ্রেম চেক করা
+        soup = HTMLParser(resp.content)
+        iframe = soup.css_first("iframe[src]")
+        if iframe:
+            sub_src = iframe.attributes.get("src")
+            if sub_src:
+                sub_url = urljoin(embed_url, sub_src)
+                sub_resp = await client.get(sub_url, headers={"User-Agent": UA, "Referer": embed_url}, timeout=5.0)
+                if sub_resp.status_code == 200:
+                    sub_strmd = re.search(r'["\'](https?://[a-zA-Z0-9_\-\.]*strmd\.st/[^"\']+\.m3u8[^"\']*)["\']', sub_resp.text)
+                    if sub_strmd:
+                        return sub_strmd.group(1).replace("\\/", "/"), standard_stream_headers
+                    sub_m3u8 = re.search(r'["\'](https?://[^"\']+\.m3u8[^"\']*)["\']', sub_resp.text)
+                    if sub_m3u8:
+                        return sub_m3u8.group(1).replace("\\/", "/"), standard_stream_headers
 
-    return embed_url, f"{BASE_URL}/"
+    except Exception as e:
+        log.debug(f"Error decoding embed: {e}")
+
+    # ডিকোড না করা গেলে প্লেয়ারের লিঙ্ক ও হেডার
+    return embed_url, standard_stream_headers
 
 
 async def extract_streams_from_page(client: httpx.AsyncClient, page_url: str) -> list[dict]:
@@ -192,7 +243,7 @@ async def extract_streams_from_page(client: httpx.AsyncClient, page_url: str) ->
     headers = {"User-Agent": UA, "Referer": f"{BASE_URL}/"}
 
     try:
-        resp = await client.get(page_url, headers=headers, timeout=4.0)
+        resp = await client.get(page_url, headers=headers, timeout=5.0)
         if resp.status_code != 200:
             return streams
 
@@ -218,21 +269,23 @@ async def extract_streams_from_page(client: httpx.AsyncClient, page_url: str) ->
                 "channel_name": "Server 1",
                 "stream_type": "HLS",
                 "url": page_url,
-                "raw_link": f"{page_url}|Referer={BASE_URL}/",
-                "headers": {"Referer": f"{BASE_URL}/"},
+                "raw_link": f"{page_url}|Referer=https://embed.st/",
+                "headers": {"Referer": "https://embed.st/", "Origin": "https://embed.st"},
                 "drm_key": None
             })
             return streams
 
         idx = 1
         for emb_url in embed_links:
-            final_m3u8, referer = await resolve_embed_st_m3u8(client, emb_url)
+            # m3u8 এবং সঠিক হেডার সংগ্রহ
+            final_m3u8, stream_headers = await resolve_embed_st_m3u8(client, emb_url)
+            ref = stream_headers.get("Referer", "https://embed.st/")
             streams.append({
                 "channel_name": f"Server {idx}",
                 "stream_type": "HLS",
                 "url": final_m3u8,
-                "raw_link": f"{final_m3u8}|Referer={referer}",
-                "headers": {"Referer": referer},
+                "raw_link": f"{final_m3u8}|Referer={ref}",
+                "headers": stream_headers,
                 "drm_key": None
             })
             idx += 1
@@ -335,9 +388,6 @@ async def parse_sport_page(client: httpx.AsyncClient, sport_name: str, page_url:
 
 
 async def process_single_match(client: httpx.AsyncClient, m: RawMatch):
-    """
-    একটি ম্যাচের স্ট্রিম প্যারালালে প্রসেস করার ফাংশন
-    """
     async with HTTP_SEMAPHORE:
         streams = await extract_streams_from_page(client, m.match_url)
         if not streams:
@@ -380,7 +430,6 @@ async def scrape():
     headers = {"User-Agent": UA, "Referer": f"{BASE_URL}/"}
 
     async with httpx.AsyncClient(headers=headers, timeout=6.0, follow_redirects=True) as client:
-        # সকল ক্যাটাগরি পেজ একসাথে প্যারালালে ফেচ করা (মাত্র ২-৩ সেকেন্ড)
         tasks = [parse_sport_page(client, s_name, p_url) for s_name, p_url in SPORT_PAGES]
         results = await asyncio.gather(*tasks)
 
@@ -391,10 +440,6 @@ async def scrape():
             log.info("No matches found.")
             return
 
-        # ---------------------------------------------------------------------
-        # স্পিড অপ্টিমাইজেশন:
-        # শুধুমাত্র LIVE এবং আগামী ৫ ঘণ্টার মধ্যে শুরু হতে যাওয়া ম্যাচগুলোর ওপর ফোকাস করা
-        # ---------------------------------------------------------------------
         now_utc = datetime.now(timezone.utc)
         active_matches = []
         for m in all_matches:
@@ -403,21 +448,19 @@ async def scrape():
             elif m.start_dt <= now_utc + timedelta(hours=5):
                 active_matches.append(m)
 
-        log.info(f"Filtered to {len(active_matches)} active/near-time matches. Extracting streams in parallel...")
+        log.info(f"Filtered to {len(active_matches)} active matches. Extracting m3u8 streams in parallel...")
 
-        # সব ম্যাচের স্ট্রিম একযোগে প্যারালালে প্রসেস হবে (সব মিলিয়ে মাত্র ৫-৭ সেকেন্ড)
         match_tasks = [process_single_match(client, m) for m in active_matches]
         processed_matches = await asyncio.gather(*match_tasks)
 
         final_playlist = [item for item in processed_matches if item is not None]
 
-        # LIVE সবার উপরে রাখার সর্টিং
         final_playlist.sort(key=lambda x: ({"LIVE": 0, "UPCOMING": 1, "ENDED": 2}.get(x["status"], 99), x["_timestamp"]))
         for it in final_playlist:
             it.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info(f"Playlist successfully generated with {len(final_playlist)} matches in lightning speed!")
+        log.info(f"Playlist successfully generated with {len(final_playlist)} matches!")
 
 
 if __name__ == "__main__":
