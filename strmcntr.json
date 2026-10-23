@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 23, 2026, 01:04:24 PM",
-  "event_count": 13,
+  "last_updated": "Oct 23, 2026, 02:19:43 PM",
+  "event_count": 16,
   "events": {
     "events": [
       {
@@ -43,7 +43,7 @@
         "title": "AFL : Carlton Blues vs Hawthorn Hawks",
         "sport": "Aussie rules",
         "sub_category": "Aussie rules",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "afl-carlton-blues-vs-hawthorn-hawks",
         "schedule": {
@@ -794,6 +794,164 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium773/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium773/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "KHL : Sibir Novosibirsk vs Salavat Yulaev Ufa",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "khl-sibir-novosibirsk-vs-salavat-yulaev-ufa",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 06:30:00 PM",
+          "end_time_bst": "Oct 23, 2026, 09:30:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "KHL : Sibir Novosibirsk",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Salavat Yulaev Ufa",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "KHL TV",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium7/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium7/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "World Cup Qualifying : Mozambique vs Uganda",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "world-cup-qualifying-mozambique-vs-uganda",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 07:00:00 PM",
+          "end_time_bst": "Oct 23, 2026, 10:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "World Cup Qualifying : Mozambique",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Uganda",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Sport TV1 Portugal",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium49/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium49/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sportdigital FUSSBALL DE",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport Klub 1 Serbia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium101/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium101/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Live Players Championship - Telford, England",
+        "sport": "Snooker",
+        "sub_category": "Snooker",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "live-players-championship-telford-england",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 07:00:00 PM",
+          "end_time_bst": "Oct 23, 2026, 10:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Live Players Championship",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Telford, England",
+            "flag": "https://flagcdn.com/w320/gb-eng.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "ITV 4 UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium353/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium353/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 1 Poland",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium57/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium57/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 1 Spain",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium524/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium524/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "EuroSport 1 France",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium772/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium772/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
