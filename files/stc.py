@@ -5,16 +5,19 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import quote_plus
 from zoneinfo import ZoneInfo
 
 import httpx
 
-# রিপোজিটরি রুট ডিরেক্টরি
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
-# সম্পূর্ণ নতুন ও ভিন্ন সোর্স API
-API_BASE = "https://streamed.su/api"
-MATCHES_URL = f"{API_BASE}/matches/all"
+# নির্ভরযোগ্য একাধিক লাইভ API মিরর
+API_ENDPOINTS = [
+    "https://api.streamed.pk/api/matches/all-today",
+    "https://streamed.su/api/matches/all-today",
+    "https://streamed.su/api/matches/live",
+]
 
 TAG = "STREAMED"
 
@@ -61,7 +64,7 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# আপনার দেওয়া কাস্টম স্পোর্টস আইকন ও ডিফল্ট লোগো
+# কাস্টম স্পোর্টস আইকন ও ডিফল্ট লোগো
 # -----------------------------------------------------------------------------
 SPORT_ICONS = {
     "football": "https://i.ibb.co.com/cSMrGjnb/Football.png",
@@ -224,10 +227,10 @@ def save_playlists(events: list[dict]) -> None:
 
 
 # -----------------------------------------------------------------------------
-# Streamed.su API থেকে স্ট্রিম ডেটা সংগ্রহ
+# ডাইনামিক স্ট্রিম সোর্স ফেচ করা
 # -----------------------------------------------------------------------------
-async def fetch_stream_sources(client: httpx.AsyncClient, source: str, stream_id: str) -> list[dict]:
-    url = f"{API_BASE}/stream/{source}/{stream_id}"
+async def fetch_stream_sources(client: httpx.AsyncClient, base_api: str, source: str, stream_id: str) -> list[dict]:
+    url = f"{base_api}/stream/{source}/{stream_id}"
     try:
         resp = await client.get(url, timeout=5.0)
         if resp.status_code == 200:
@@ -240,45 +243,64 @@ async def fetch_stream_sources(client: httpx.AsyncClient, source: str, stream_id
 
 
 async def scrape() -> None:
-    log.info(f'Scraping from "{MATCHES_URL}"...')
-
     async with httpx.AsyncClient(
-        headers={"User-Agent": UA, "Referer": "https://streamed.su/"},
+        headers={
+            "User-Agent": UA,
+            "Accept": "application/json, text/plain, */*",
+            "Referer": "https://streamed.pk/"
+        },
         follow_redirects=True,
-        timeout=10.0,
+        timeout=12.0,
         http2=True,
     ) as client:
 
-        try:
-            resp = await client.get(MATCHES_URL)
-            if resp.status_code != 200:
-                log.error(f"Failed to fetch matches: HTTP {resp.status_code}")
-                return
-            matches = resp.json()
-        except Exception as e:
-            log.error(f"Error fetching Streamed API: {e}")
+        matches = []
+        base_api_used = "https://api.streamed.pk/api"
+
+        # অটো-ফলব্যাক: একটি অ্যান্ডপয়েন্ট ব্যর্থ হলে অন্যটি চেষ্টা করবে
+        for endpoint in API_ENDPOINTS:
+            try:
+                log.info(f'Trying to fetch from: "{endpoint}"')
+                resp = await client.get(endpoint)
+                if resp.status_code == 200:
+                    data = resp.json()
+                    if isinstance(data, list) and len(data) > 0:
+                        matches = data
+                        base_api_used = endpoint.split("/matches")[0]
+                        log.info(f"Successfully received {len(matches)} raw matches from {endpoint}!")
+                        break
+            except Exception as e:
+                log.warning(f"Failed on {endpoint}: {e}")
+
+        if not matches:
+            log.error("Could not fetch matches from any Streamed API endpoint.")
             return
 
         now_utc = datetime.now(timezone.utc)
         active_matches = []
 
-        # আগামী ১২ ঘণ্টার ম্যাচ ও চলমান ম্যাচ ফিল্টার করা
+        # খেলাগুলোর সময় ফিল্টার
         for m in matches:
             date_val = m.get("date")
             if not date_val:
                 continue
 
-            # মিলিসেকেন্ড থেকে ডেটটাইম কনভার্সন
-            start_dt = datetime.fromtimestamp(date_val / 1000.0, tz=timezone.utc)
+            try:
+                # মিলিসেকেন্ড ভ্যালু পার্স করা
+                start_dt = datetime.fromtimestamp(float(date_val) / 1000.0, tz=timezone.utc)
+            except Exception:
+                continue
 
+            # অতীত ৩ ঘণ্টার পুরানো ম্যাচ বাদ
             if start_dt < now_utc - timedelta(hours=3):
                 continue
-            if start_dt > now_utc + timedelta(hours=14):
+            # আগামী ২৪ ঘণ্টার ম্যাচগুলো রাখা হবে
+            if start_dt > now_utc + timedelta(hours=24):
                 continue
 
             active_matches.append((m, start_dt))
 
-        log.info(f"Found {len(active_matches)} active events. Processing streams...")
+        log.info(f"Filtered {len(active_matches)} active matches. Extracting streams...")
 
         final_playlist: list[dict] = []
 
@@ -289,17 +311,19 @@ async def scrape() -> None:
             sub_category = get_sub_category(sport, title)
             event_logo = get_event_logo(sport, title)
 
-            # টিম নাম ও ফ্ল্যাগ
             teams_obj = m.get("teams", {})
-            team_a_name = teams_obj.get("home", {}).get("name") if isinstance(teams_obj, dict) else ""
-            team_b_name = teams_obj.get("away", {}).get("name") if isinstance(teams_obj, dict) else ""
+            team_a_name = ""
+            team_b_name = ""
+
+            if isinstance(teams_obj, dict):
+                team_a_name = teams_obj.get("home", {}).get("name", "")
+                team_b_name = teams_obj.get("away", {}).get("name", "")
 
             if not team_a_name or not team_b_name:
                 parts = title.split(" vs ") if " vs " in title else title.split(" - ")
                 team_a_name = parts[0].strip() if len(parts) == 2 else title
                 team_b_name = parts[1].strip() if len(parts) == 2 else title
 
-            # সোর্স থেকে স্ট্রিম চ্যানেল নিয়ে আসা
             event_channels = []
             sources_list = m.get("sources", [])
 
@@ -309,20 +333,19 @@ async def scrape() -> None:
                 if not src_name or not src_id:
                     continue
 
-                async def get_streams():
+                async def get_streams(s_name=src_name, s_id=src_id):
                     async with HTTP_SEMAPHORE:
-                        return await fetch_stream_sources(client, src_name, src_id)
+                        return await fetch_stream_sources(client, base_api_used, s_name, s_id)
 
                 stream_results = await get_streams()
 
-                for st in stream_results:
-                    # স্ট্রিম লিঙ্ক পাওয়া গেলে
-                    stream_url = st.get("embedUrl") or st.get("streamUrl")
+                for idx, st in enumerate(stream_results, start=1):
+                    stream_url = st.get("embedUrl") or st.get("streamUrl") or st.get("url")
                     if not stream_url:
                         continue
 
-                    channel_title = f"{src_name.upper()} - {st.get('streamNo', 1)}"
-                    referer = "https://streamed.su/"
+                    channel_title = f"{src_name.upper()} - Stream {idx}"
+                    referer = "https://streamed.pk/"
 
                     event_channels.append(
                         {
@@ -371,7 +394,6 @@ async def scrape() -> None:
 
                 final_playlist.append(formatted_event)
 
-        # LIVE ইভেন্ট সবসময় উপরে রাখার সর্টিং
         status_priority = {
             "LIVE": 0,
             "UPCOMING": 1,
@@ -389,7 +411,7 @@ async def scrape() -> None:
             item.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info("Playlist generation completed from Streamed API!")
+        log.info("Playlist generation completed successfully from live Streamed API!")
 
 
 if __name__ == "__main__":
