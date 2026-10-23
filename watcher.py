@@ -46,7 +46,7 @@ class HealthServer(BaseHTTPRequestHandler):
         self.wfile.write(json.dumps(response).encode("utf-8"))
 
     def log_message(self, format, *args):
-        pass  # কনসোলে অপ্রয়োজনীয় হেলথ চেক লগ বন্ধ রাখতে
+        pass
 
 
 def start_health_server():
@@ -104,7 +104,6 @@ async def trigger_github(client: httpx.AsyncClient):
 
 # মূল ওয়াচার লুপ (প্রতি ৫ মিনিট পর পর চেক করবে)
 async def watch_schedule():
-    # ফাইল থেকে পূর্বের স্টেট লোড করা (রিস্টার্ট হলেও যেন মনে থাকে)
     last_state = ""
     if os.path.exists(STATE_FILE):
         try:
@@ -116,7 +115,12 @@ async def watch_schedule():
 
     log.info("Schedule Watcher started. Polling every 5 minutes...")
 
-    async with httpx.AsyncClient(headers={"User-Agent": UA}, timeout=15.0) as client:
+    # follow_redirects=True যুক্ত করা হয়েছে রিডাইরেক্ট হ্যান্ডেল করতে
+    async with httpx.AsyncClient(
+        headers={"User-Agent": UA, "Referer": "https://dlive.sx/"},
+        follow_redirects=True,
+        timeout=15.0
+    ) as client:
         while True:
             try:
                 resp = await client.get(SCHEDULE_URL)
@@ -153,7 +157,6 @@ async def watch_schedule():
                                 h, minute = int(m.group(1)), int(m.group(2))
                                 event_dt = now_utc.replace(hour=h, minute=minute, second=0, microsecond=0)
 
-                            # ৩ ঘণ্টার বেশি পুরনো ম্যাচ বাদ
                             if event_dt < now_utc - timedelta(hours=3):
                                 continue
 
@@ -162,14 +165,12 @@ async def watch_schedule():
 
                 new_state = "#".join(sorted(current_events))
 
-                # ১. প্রথমবার চালু হলে স্টেট সেভ হবে (কোনো ফলস লুপ ট্রিগার হবে না)
                 if last_state == "":
                     log.info(f"Initialized with {len(current_events)} active events.")
                     last_state = new_state
                     with open(STATE_FILE, "w", encoding="utf-8") as f:
                         f.write(new_state)
 
-                # ২. যদি কোনো ম্যাচ লাইভ হয় (১৫ মিনিট আগে) অথবা নতুন ম্যাচ যোগ/বাদ হয়
                 elif new_state != last_state:
                     log.info("Real change detected! Triggering GitHub Action...")
                     success = await trigger_github(client)
@@ -183,7 +184,7 @@ async def watch_schedule():
             except Exception as e:
                 log.error(f"Watcher loop exception: {e}")
 
-            # ঠিক ৫ মিনিট (৩০০ সেকেন্ড) অপেক্ষা করবে
+            # ঠিক ৫ মিনিট অপেক্ষা
             await asyncio.sleep(300)
 
 
