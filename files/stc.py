@@ -89,11 +89,20 @@ KNOWN_TEAM_LOGOS = {
 }
 
 SPORT_ICONS = {
-    "football": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-    "cricket": "https://pngtree.com/so/cricket",
-    "basketball": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
-    "tennis": "https://cdn-icons-png.flaticon.com/512/709/709605.png",
-    "hockey": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+    "football": "https://i.ibb.co.com/cSMrGjnb/Football.png",
+    "cricket": "https://i.ibb.co.com/yccjsRfP/cricket.webp",
+    "basketball": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg",
+    "tennis": "https://i.ibb.co.com/fz9WSxtQ/Tennis.webp",
+    "weightlifting": "https://i.ibb.co.com/wrpLVMpz/Weightlifting.jpg",
+    "volleyball": "https://i.ibb.co.com/Qv41gDKh/Volleyball.jpg",
+    "hockey": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg",
+    "wrestling": "https://i.ibb.co.com/rGgCRXn0/Wrestling.png",
+    "winter sports": "https://i.ibb.co.com/Jw9mKdTV/Winter-sports.jpg",
+    "ski jumping": "https://i.ibb.co.com/8gr732c3/Ski-jumping.jpg",
+    "handball": "https://i.ibb.co.com/yn02tv2n/Handball.webp",
+    "snooker": "https://i.ibb.co.com/rGpnJSJj/Snooker.png",
+    "golf": "https://i.ibb.co.com/kgfDcDfc/Golf.jpg",
+    "motorsport": "https://i.ibb.co.com/B5jKv66s/Motorsport.png",
 }
 
 DEFAULT_LOGO = "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
