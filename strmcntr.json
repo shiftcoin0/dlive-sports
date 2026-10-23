@@ -1,44 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 10:34:02 AM",
-  "event_count": 25,
+  "last_updated": "Oct 23, 2026, 10:43:58 AM",
+  "event_count": 24,
   "events": {
     "events": [
-      {
-        "title": "MLB : Texas Rangers vs San Diego Padres",
-        "sport": "Baseball",
-        "sub_category": "Baseball",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "mlb-texas-rangers-vs-san-diego-padres",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 07:40:00 AM",
-          "end_time_bst": "Oct 23, 2026, 10:40:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "MLB : Texas Rangers",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "San Diego Padres",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "MLB Network",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium399/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium399/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "College Basketball - March Madness (RD1): St. John's vs Omaha",
         "sport": "Basketball",
