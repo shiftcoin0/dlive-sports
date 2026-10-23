@@ -62,8 +62,88 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# আন্তর্জাতিক দেশের সরাসরি জাতীয় পতাকা (FlagCDN)
+# প্রতিটি সাব-ক্যাটাগরির নিজস্ব অফিশিয়াল এইচডি লোগো ডিকশনারি (ESPN Open CDN)
+# ব্রাউজারে লিংক দিলে কোনোদিন পেজ এরর আসবে না
 # -----------------------------------------------------------------------------
+SUBCATEGORY_LOGOS = {
+    # Football / Soccer Leagues
+    "Premier League": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png",
+    "La Liga": "https://a.espncdn.com/i/leaguelogos/soccer/500/15.png",
+    "Serie A": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+    "Bundesliga": "https://a.espncdn.com/i/leaguelogos/soccer/500/10.png",
+    "Ligue 1": "https://a.espncdn.com/i/leaguelogos/soccer/500/9.png",
+    "UEFA Champions League": "https://a.espncdn.com/i/leaguelogos/soccer/500/2.png",
+    "UEFA Europa League": "https://a.espncdn.com/i/leaguelogos/soccer/500/2035.png",
+    "UEFA Conference League": "https://a.espncdn.com/i/leaguelogos/soccer/500/20268.png",
+    "FA Cup": "https://a.espncdn.com/i/leaguelogos/soccer/500/20.png",
+    "Copa del Rey": "https://a.espncdn.com/i/leaguelogos/soccer/500/83.png",
+    "EFL Cup": "https://a.espncdn.com/i/leaguelogos/soccer/500/22.png",
+    "MLS": "https://a.espncdn.com/i/leaguelogos/soccer/500/19.png",
+    "Saudi Pro League": "https://a.espncdn.com/i/leaguelogos/soccer/500/2844.png",
+    "Copa Libertadores": "https://a.espncdn.com/i/leaguelogos/soccer/500/2038.png",
+    "Football": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png",
+
+    # Cricket
+    "Indian Premier League (IPL)": "https://a.espncdn.com/i/leaguelogos/cricket/500/ipl.png",
+    "Bangladesh Premier League (BPL)": "https://a.espncdn.com/i/leaguelogos/cricket/500/bpl.png",
+    "Pakistan Super League (PSL)": "https://a.espncdn.com/i/leaguelogos/cricket/500/psl.png",
+    "Big Bash League": "https://a.espncdn.com/i/leaguelogos/cricket/500/bbl.png",
+    "The Hundred": "https://a.espncdn.com/i/leaguelogos/cricket/500/hundred.png",
+    "ICC T20 World Cup": "https://a.espncdn.com/i/leaguelogos/cricket/500/t20wc.png",
+    "ICC Cricket World Cup": "https://a.espncdn.com/i/leaguelogos/cricket/500/cwc.png",
+    "Cricket": "https://a.espncdn.com/i/leaguelogos/cricket/500/ipl.png",
+
+    # Basketball
+    "NBA": "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png",
+    "WNBA": "https://a.espncdn.com/i/teamlogos/leagues/500/wnba.png",
+    "EuroLeague": "https://a.espncdn.com/i/teamlogos/leagues/500/euroleague.png",
+    "NCAA Basketball": "https://a.espncdn.com/i/teamlogos/ncaa/500/ncaa.png",
+    "Basketball": "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png",
+
+    # Hockey
+    "NHL": "https://a.espncdn.com/i/teamlogos/leagues/500/nhl.png",
+    "Hockey": "https://a.espncdn.com/i/teamlogos/leagues/500/nhl.png",
+
+    # Baseball
+    "MLB": "https://a.espncdn.com/i/teamlogos/leagues/500/mlb.png",
+    "Baseball": "https://a.espncdn.com/i/teamlogos/leagues/500/mlb.png",
+
+    # American Football
+    "NFL": "https://a.espncdn.com/i/teamlogos/leagues/500/nfl.png",
+    "American Football": "https://a.espncdn.com/i/teamlogos/leagues/500/nfl.png",
+
+    # Motorsport
+    "Formula 1": "https://a.espncdn.com/i/teamlogos/racing/500/f1.png",
+    "MotoGP": "https://a.espncdn.com/i/teamlogos/racing/500/motogp.png",
+    "NASCAR": "https://a.espncdn.com/i/teamlogos/racing/500/nascar.png",
+    "IndyCar": "https://a.espncdn.com/i/teamlogos/racing/500/indycar.png",
+    "Motorsport": "https://a.espncdn.com/i/teamlogos/racing/500/f1.png",
+
+    # Tennis
+    "Wimbledon": "https://a.espncdn.com/i/teamlogos/tennis/500/wimbledon.png",
+    "US Open": "https://a.espncdn.com/i/teamlogos/tennis/500/usopen.png",
+    "French Open": "https://a.espncdn.com/i/teamlogos/tennis/500/rolandgarros.png",
+    "Australian Open": "https://a.espncdn.com/i/teamlogos/tennis/500/ausopen.png",
+    "ATP Tour": "https://a.espncdn.com/i/teamlogos/tennis/500/atp.png",
+    "WTA Tour": "https://a.espncdn.com/i/teamlogos/tennis/500/wta.png",
+    "Tennis": "https://a.espncdn.com/i/teamlogos/tennis/500/atp.png",
+
+    # Combat / Wrestling
+    "WWE SmackDown": "https://a.espncdn.com/i/teamlogos/mma/500/wwe.png",
+    "WWE Raw": "https://a.espncdn.com/i/teamlogos/mma/500/wwe.png",
+    "WWE NXT": "https://a.espncdn.com/i/teamlogos/mma/500/wwe.png",
+    "WWE": "https://a.espncdn.com/i/teamlogos/mma/500/wwe.png",
+    "AEW": "https://a.espncdn.com/i/teamlogos/mma/500/aew.png",
+    "UFC": "https://a.espncdn.com/i/teamlogos/mma/500/ufc.png",
+    "Boxing": "https://a.espncdn.com/i/teamlogos/mma/500/ufc.png",
+    "Fighting": "https://a.espncdn.com/i/teamlogos/mma/500/ufc.png",
+    "Wrestling": "https://a.espncdn.com/i/teamlogos/mma/500/wwe.png",
+
+    # Rugby
+    "Rugby": "https://a.espncdn.com/i/teamlogos/rugby/500/rugby.png",
+}
+
+# আন্তর্জাতিক দেশের সরাসরি জাতীয় পতাকা (FlagCDN)
 COUNTRY_FLAGS = {
     "argentina": "https://flagcdn.com/w320/ar.png",
     "brazil": "https://flagcdn.com/w320/br.png",
@@ -87,86 +167,51 @@ COUNTRY_FLAGS = {
     "canada": "https://flagcdn.com/w320/ca.png",
 }
 
-# লিগ ও স্পোর্টস ব্যাজ
-OFFICIAL_LEAGUE_LOGOS = {
-    "La Liga": "https://images.fotmob.com/image_resources/logo/leaguelogo/87.png",
-    "Premier League": "https://images.fotmob.com/image_resources/logo/leaguelogo/47.png",
-    "Serie A": "https://images.fotmob.com/image_resources/logo/leaguelogo/55.png",
-    "Bundesliga": "https://images.fotmob.com/image_resources/logo/leaguelogo/54.png",
-    "Ligue 1": "https://images.fotmob.com/image_resources/logo/leaguelogo/53.png",
-    "UEFA Champions League": "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png",
-    "UEFA Europa League": "https://images.fotmob.com/image_resources/logo/leaguelogo/73.png",
-    "NBA": "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png",
-    "Formula 1": "https://a.espncdn.com/i/teamlogos/racing/500/f1.png",
-    "UFC": "https://a.espncdn.com/i/teamlogos/mma/500/ufc.png",
-}
-
-DEFAULT_LOGO = "https://images.fotmob.com/image_resources/logo/leaguelogo/42.png"
-
 
 # -----------------------------------------------------------------------------
-# আজকের সব লাইভ ম্যাচ থেকে সরাসরি টিম লোগো এক্সট্রাক্ট করার ইঞ্জিন
+# সাব-ক্যাটাগরি অনুযায়ী সরাসরি নিজস্ব লোগো নির্ধারণের ফাংশন
 # -----------------------------------------------------------------------------
-async def load_today_match_logos(client: httpx.AsyncClient) -> dict[str, str]:
-    """
-    আজকের চলমান ও আসন্ন সব ম্যাচের টিম আইডি এবং ডিরেক্ট পিএনজি ইমেজ সংগ্রহ
-    """
-    logo_map: dict[str, str] = {}
-    today_str = datetime.now(timezone.utc).strftime("%Y%m%d")
-    matches_url = f"https://www.fotmob.com/api/matches?date={today_str}"
+def get_category_logo(sub_category: str, sport: str) -> str:
+    # ১. সাব-ক্যাটাগরির হুবহু নাম চেক
+    if sub_category in SUBCATEGORY_LOGOS:
+        return SUBCATEGORY_LOGOS[sub_category]
 
-    headers = {
-        "User-Agent": UA,
-        "Accept": "application/json, text/plain, */*",
-    }
+    sub_low = sub_category.lower()
+    for cat_name, img_url in SUBCATEGORY_LOGOS.items():
+        if cat_name.lower() in sub_low or sub_low in cat_name.lower():
+            return img_url
 
-    try:
-        resp = await client.get(matches_url, headers=headers, timeout=6.0)
-        if resp.status_code == 200:
-            data = resp.json()
-            leagues = data.get("leagues", [])
-            for lg in leagues:
-                for match in lg.get("matches", []):
-                    home = match.get("home", {})
-                    away = match.get("away", {})
+    # ২. খেলার নাম অনুযায়ী নিজস্ব লোগো
+    sp_low = sport.lower()
+    for cat_name, img_url in SUBCATEGORY_LOGOS.items():
+        if cat_name.lower() in sp_low:
+            return img_url
 
-                    if home.get("name") and home.get("id"):
-                        h_name = home["name"].strip().lower()
-                        # সরাসরি আসল ওপেন ইমেজ লিঙ্ক (ব্রাউজারে কোনো এরর দেয় না)
-                        logo_map[h_name] = f"https://images.fotmob.com/image_resources/logo/teamlogo/{home['id']}.png"
+    # ৩. স্পোর্ট টাইপ অনুযায়ী নির্দিষ্ট লোগো
+    if "crick" in sp_low:
+        return SUBCATEGORY_LOGOS["Cricket"]
+    if "basket" in sp_low:
+        return SUBCATEGORY_LOGOS["Basketball"]
+    if "hock" in sp_low:
+        return SUBCATEGORY_LOGOS["Hockey"]
+    if "tenn" in sp_low:
+        return SUBCATEGORY_LOGOS["Tennis"]
+    if "rac" in sp_low or "motor" in sp_low:
+        return SUBCATEGORY_LOGOS["Formula 1"]
+    if "fight" in sp_low or "mma" in sp_low or "box" in sp_low:
+        return SUBCATEGORY_LOGOS["UFC"]
+    if "wrest" in sp_low:
+        return SUBCATEGORY_LOGOS["WWE"]
 
-                    if away.get("name") and away.get("id"):
-                        a_name = away["name"].strip().lower()
-                        logo_map[a_name] = f"https://images.fotmob.com/image_resources/logo/teamlogo/{away['id']}.png"
-    except Exception:
-        pass
-
-    return logo_map
+    return SUBCATEGORY_LOGOS["Football"]
 
 
-def match_team_logo(team_name: str, sub_category: str, match_logos: dict[str, str]) -> str:
-    cleaned = team_name.strip()
-    if not cleaned:
-        return OFFICIAL_LEAGUE_LOGOS.get(sub_category, DEFAULT_LOGO)
-
-    c_low = cleaned.lower()
-
-    # ১. আন্তর্জাতিক দলের ক্ষেত্রে অফিশিয়াল জাতীয় পতাকা
+def get_team_flag_or_badge(team_name: str, category_logo: str) -> str:
+    c_low = team_name.strip().lower()
     for country, flag_url in COUNTRY_FLAGS.items():
         if country in c_low:
             return flag_url
-
-    # ২. আজকের ম্যাচ ডাটাবেজ থেকে সরাসরি হুবহু ম্যাচ
-    if c_low in match_logos:
-        return match_logos[c_low]
-
-    # আংশিক নাম দিয়ে ম্যাচ (যেমন Celje বা Salzburg মিললে)
-    for name_key, img_url in match_logos.items():
-        if len(name_key) > 3 and (name_key in c_low or c_low in name_key):
-            return img_url
-
-    # ৩. ব্যাকআপ: টুর্নামেন্টের আসল অফিশিয়াল লোগো
-    return OFFICIAL_LEAGUE_LOGOS.get(sub_category, DEFAULT_LOGO)
+    return category_logo
 
 
 # -----------------------------------------------------------------------------
@@ -200,7 +245,7 @@ def clean_and_normalize_sport(raw_sport: str, title: str = "") -> str:
     if any(k in combined for k in ["rugby", "afl"]):
         return "Rugby"
 
-    return clean.capitalize() or "Live Sports"
+    return clean.capitalize() or "Football"
 
 
 # -----------------------------------------------------------------------------
@@ -247,12 +292,29 @@ LEAGUE_PATTERNS = [
     (r"nhl", "NHL"),
 ]
 
+TOP_CLUBS = {
+    "Premier League": ["arsenal", "chelsea", "liverpool", "manchester united", "manchester city", "tottenham", "newcastle", "aston villa", "everton", "west ham", "brighton", "wolves", "fulham", "crystal palace", "brentford"],
+    "La Liga": ["real madrid", "barcelona", "atletico madrid", "sevilla", "valencia", "athletic bilbao", "villarreal", "real betis", "real不断", "girona", "celta vigo", "mallorca", "osasuna", "getafe", "salzburg", "celje"],
+    "Serie A": ["juventus", "inter milan", "ac milan", "napoli", "as roma", "lazio", "atalanta", "fiorentina"],
+    "Bundesliga": ["bayern munich", "borussia dortmund", "dortmund", "bayer leverkusen", "leverkusen", "rb leipzig", "eintracht frankfurt"],
+    "Ligue 1": ["psg", "paris saint-germain", "marseille", "monaco", "lyon", "lille"],
+    "Indian Premier League (IPL)": ["chennai super kings", "csk", "mumbai indians", "mi", "royal challengers", "rcb", "kolkata knight riders", "kkr"],
+    "NBA": ["lakers", "warriors", "celtics", "bulls", "heat", "bucks", "mavericks", "suns", "clippers"]
+}
+
 
 def get_sub_category(sport: str, title: str) -> str:
     combined_text = f"{sport} {title}".lower()
+
     for pattern, league_name in LEAGUE_PATTERNS:
         if re.search(pattern, combined_text):
             return league_name
+
+    for league, teams in TOP_CLUBS.items():
+        for t in teams:
+            if t in combined_text:
+                return league
+
     return sport
 
 
@@ -544,12 +606,7 @@ async def scrape() -> None:
 
         log.info(f"Processing {len(raw_events)} active DaddyLive event(s)...")
 
-        # ১. আজকের সব লাইভ ম্যাচ থেকে টিম আইডি ও ডিরেক্ট পিএনজি ইমেজ লোড
-        log.info("Fetching real-time match logos from Live Fixtures...")
-        match_logos = await load_today_match_logos(client)
-        log.info(f"Loaded {len(match_logos)} unique team logos from active matches.")
-
-        # ২. সকল চ্যানেল স্ট্রিম প্যারালালে ডিকোড
+        # ১. সকল চ্যানেল স্ট্রিম প্যারালালে ডিকোড করা (দ্রুতগতির জন্য)
         unique_channel_ids = {ch.channel_id for ev in raw_events for ch in ev.channels}
         log.info(f"Decoding {len(unique_channel_ids)} unique channels concurrently...")
 
@@ -563,7 +620,7 @@ async def scrape() -> None:
 
         await asyncio.gather(*(fetch_channel(cid) for cid in unique_channel_ids))
 
-        # ৩. চূড়ান্ত প্লেলিস্ট তৈরি
+        # ২. চূড়ান্ত প্লেলিস্ট তৈরি (সাব-ক্যাটাগরি অনুযায়ী আসল লোগো সেট করা)
         final_playlist: list[dict] = []
 
         for ev in raw_events:
@@ -594,11 +651,15 @@ async def scrape() -> None:
                 team_a_name = t_names["team_a"]
                 team_b_name = t_names["team_b"]
 
+                # নির্ধারিত সাব-ক্যাটাগরি
                 detected_sub_category = get_sub_category(ev.sport, ev.title)
 
-                # ম্যাচ থেকে সরাসরি আসল পিএনজি লোগো সংগ্রহ
-                team_a_flag = match_team_logo(team_a_name, detected_sub_category, match_logos)
-                team_b_flag = match_team_logo(team_b_name, detected_sub_category, match_logos)
+                # ওই সাব-ক্যাটাগরির নিজস্ব অফিশিয়াল এইচডি লোগো
+                category_official_logo = get_category_logo(detected_sub_category, ev.sport)
+
+                # টিম এ এবং টিম বি এর লোগো নির্ধারণ
+                team_a_flag = get_team_flag_or_badge(team_a_name, category_official_logo)
+                team_b_flag = get_team_flag_or_badge(team_b_name, category_official_logo)
 
                 formatted_event = {
                     "title": ev.title,
@@ -622,7 +683,7 @@ async def scrape() -> None:
                             "flag": team_b_flag,
                         },
                     },
-                    "logo": team_a_flag,  # Team A এর আসল লোগো
+                    "logo": category_official_logo,  # ক্যাটাগরির নিজস্ব আসল লোগো
                     "channels": event_channels,
                     "_timestamp": ev.start_dt.timestamp(),
                 }
@@ -646,7 +707,7 @@ async def scrape() -> None:
             item.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info("Playlist generation completed with Direct Match PNG Logos!")
+        log.info("Playlist generation completed with Official Sub-Category Logos!")
 
 
 if __name__ == "__main__":
