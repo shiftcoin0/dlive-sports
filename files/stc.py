@@ -62,7 +62,7 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# আন্তর্জাতিক দেশের সরাসরি জাতীয় পতাকা (FlagCDN)
+# আন্তর্জাতিক জাতীয় পতাকা (FlagCDN)
 # -----------------------------------------------------------------------------
 COUNTRY_FLAGS = {
     "argentina": "https://flagcdn.com/w320/ar.png",
@@ -87,7 +87,7 @@ COUNTRY_FLAGS = {
     "canada": "https://flagcdn.com/w320/ca.png",
 }
 
-# লিগ ও স্পোর্টসের অফিশিয়াল ব্যাজ (কোনো সাধারণ বলের ছবি নয়)
+# লিগ ও স্পোর্টসের অফিশিয়াল ব্যাজ
 OFFICIAL_LEAGUE_LOGOS = {
     "La Liga": "https://static.flashscore.com/res/image/data/COu8P3T3-tO4764m1.png",
     "Premier League": "https://static.flashscore.com/res/image/data/2m9Y8Wll-zskCq9x7.png",
@@ -104,13 +104,13 @@ OFFICIAL_LEAGUE_LOGOS = {
     "WWE Raw": "https://static.flashscore.com/res/image/data/2B2V8yU1-zP4Z4wS1.png",
 }
 
-DEFAULT_FALLBACK_LOGO = "https://static.flashscore.com/res/image/data/2m9Y8Wll-zskCq9x7.png"
+DEFAULT_FALLBACK_LOGO = "https://static.flashscore.com/res/image/data/COu8P3T3-tO4764m1.png"
 
 TEAM_CACHE: dict[str, str] = {}
 
 
 # -----------------------------------------------------------------------------
-# Flashscore Search Engine (সরাসরি আসল ক্লাব ও টিম লোগো বের করা)
+# Flashscore লাইভ ফিড এক্সট্রাক্টর (আসল ছবির হ্যাশ সংগ্রহ)
 # -----------------------------------------------------------------------------
 async def fetch_flashscore_team_logo(client: httpx.AsyncClient, team_name: str, sub_category: str) -> str:
     cleaned = team_name.strip()
@@ -127,15 +127,15 @@ async def fetch_flashscore_team_logo(client: httpx.AsyncClient, team_name: str, 
             TEAM_CACHE[cleaned] = flag_url
             return flag_url
 
-    # অনুসন্ধানের নাম থেকে ব্র্যাকেট জাতীয় লেখা পরিষ্কার করা
     search_query = re.sub(r"\(.*?\)", "", cleaned).strip()
 
-    # ২. Flashscore Search Gateway
-    fs_search_url = f"https://www.flashscore.com/x/search.php?q={quote_plus(search_query)}"
+    # ২. Flashscore API সার্চ
+    fs_search_url = f"https://www.flashscore.com/x/search.php?q={quote_plus(search_query)}&l=1&s=1"
     headers = {
         "User-Agent": UA,
         "Referer": "https://www.flashscore.com/",
         "X-Requested-With": "XMLHttpRequest",
+        "Accept": "*/*"
     }
 
     try:
@@ -143,18 +143,22 @@ async def fetch_flashscore_team_logo(client: httpx.AsyncClient, team_name: str, 
         if resp.status_code == 200:
             text = resp.text
 
-            # Flashscore সাধারণত রেজাল্টে ইমেজ হ্যাশ/পাথ প্রদান করে (যেমন: 2m9Y8Wll-zskCq9x7)
-            # টেক্সট থেকে ইমেজ আইডি এক্সট্রাক্ট করা
-            img_ids = re.findall(r"([a-zA-Z0-9]{8}-[a-zA-Z0-9]{8})", text)
-            if img_ids:
-                best_img_id = img_ids[0]
-                logo_url = f"https://static.flashscore.com/res/image/data/{best_img_id}.png"
+            # Flashscore রেজাল্ট ফরম্যাট: ¬IA÷{IMAGE_HASH}¬ অথবা হ্যাশ প্যাটার্ন
+            # সরাসরি ছবির হ্যাশ বের করার উন্নত রেগেক্স
+            hash_match = re.search(r"¬IA÷([a-zA-Z0-9_-]+)¬", text)
+            if not hash_match:
+                hash_match = re.search(r"([a-zA-Z0-9]{8}-[a-zA-Z0-9]{8})", text)
+
+            if hash_match:
+                img_hash = hash_match.group(1)
+                # সরাসরি Flashscore-এর আসল ইমেজ লিঙ্ক
+                logo_url = f"https://static.flashscore.com/res/image/data/{img_hash}.png"
                 TEAM_CACHE[cleaned] = logo_url
                 return logo_url
     except Exception:
         pass
 
-    # ৩. ব্যাকআপ: যদি Flashscore-এ সরাসরি কি না পাওয়া যায়, তবে সংশ্লিষ্ট লিগের অফিশিয়াল ব্যাজ বসবে
+    # ৩. ব্যাকআপ: যদি দলের ইমেজ হ্যাশ না পাওয়া যায়, তবে টুর্নামেন্টের অফিশিয়াল ব্যাজ বসবে
     fallback_logo = OFFICIAL_LEAGUE_LOGOS.get(sub_category, DEFAULT_FALLBACK_LOGO)
     TEAM_CACHE[cleaned] = fallback_logo
     return fallback_logo
@@ -295,7 +299,7 @@ class DLHDEvent:
 
 
 def create_slug(text: str) -> str:
-    return re.sub(r"[\W_]+", "-", text.lower().strip()).strip("-")
+    return re.sub(r"[\W_]+", "-", text).strip("-")
 
 
 def determine_status(start_dt: datetime, early_minutes: int = 15) -> str:
@@ -552,7 +556,7 @@ async def scrape() -> None:
 
         log.info(f"Processing {len(raw_events)} active DaddyLive event(s)...")
 
-        # ১. Flashscore Search Gateway দিয়ে আসল টিম লোগো প্যারালালে সংগ্রহ করা
+        # ১. Flashscore ফিড থেকে আসল ইমেজ হ্যাশ সংগ্রহ করা
         unique_team_tuples = set()
         for ev in raw_events:
             t = parse_team_names(ev.title)
@@ -560,7 +564,7 @@ async def scrape() -> None:
             unique_team_tuples.add((t["team_a"], sub_c))
             unique_team_tuples.add((t["team_b"], sub_c))
 
-        log.info(f"Searching Flashscore CDN for {len(unique_team_tuples)} unique teams...")
+        log.info(f"Extracting Flashscore logo hashes for {len(unique_team_tuples)} unique teams...")
         team_badge_map = {}
 
         async def fetch_team(team_name: str, sub_c: str):
@@ -615,7 +619,7 @@ async def scrape() -> None:
                 team_a_name = t_names["team_a"]
                 team_b_name = t_names["team_b"]
 
-                # Flashscore থেকে সংগৃহীত সরাসরি আসল লোগো
+                # Flashscore-এর ডিরেক্ট পিএনজি ইমেজ লিংক
                 team_a_flag = team_badge_map.get(team_a_name, "")
                 team_b_flag = team_badge_map.get(team_b_name, "")
 
@@ -643,7 +647,7 @@ async def scrape() -> None:
                             "flag": team_b_flag,
                         },
                     },
-                    "logo": team_a_flag,  # Team A এর আসল Flashscore লোগো
+                    "logo": team_a_flag,  # Team A-এর আসল Flashscore ইমেজ
                     "channels": event_channels,
                     "_timestamp": ev.start_dt.timestamp(),
                 }
@@ -667,7 +671,7 @@ async def scrape() -> None:
             item.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info("Playlist generation completed with Real Flashscore Logos!")
+        log.info("Playlist generation completed with Direct Flashscore Logos!")
 
 
 if __name__ == "__main__":
