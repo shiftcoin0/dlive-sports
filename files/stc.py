@@ -5,17 +5,21 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import quote_plus
+from urllib.parse import quote_plus, urljoin
 from zoneinfo import ZoneInfo
 
 import httpx
+from selectolax.lexbor import LexborHTMLParser as HTMLParser
 
 # রিপোজিটরি রুট ডিরেক্টরি
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
-BASE_API = "https://streamed.su/api"
+# সম্পূর্ণ ভিন্ন ও স্বাধীন আন্তর্জাতিক সোর্স
+BASE_URL = "https://livetv808.me"
+ALT_URL = "https://livetv.sx"
+SCHEDULE_PATH = "/enx/allupcoming/"
 
-TAG = "STREAMED"
+TAG = "LIVETV"
 
 # প্লেলিস্ট পাথ
 JSON_OUTPUT = ROOT_DIR / "strmcntr.json"
@@ -32,7 +36,7 @@ UA = (
     "Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
 )
 
-HTTP_SEMAPHORE = asyncio.Semaphore(15)
+HTTP_SEMAPHORE = asyncio.Semaphore(10)
 BST_TZ = ZoneInfo("Asia/Dhaka")
 
 LOG_FMT = (
@@ -60,7 +64,7 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# আপনার দেওয়া কাস্টম স্পোর্টস আইকন ও ডিফল্ট লোগো
+# কাস্টম স্পোর্টস আইকন ও ডিফল্ট লোগো
 # -----------------------------------------------------------------------------
 SPORT_ICONS = {
     "football": "https://i.ibb.co.com/cSMrGjnb/Football.png",
@@ -88,11 +92,11 @@ def get_event_logo(sport: str, title: str = "") -> str:
         if sp_key in comb:
             return icon_url
 
-    if any(k in comb for k in ["soccer", "fifa", "uefa", "la liga", "premier league", "serie a", "bundesliga"]):
+    if any(k in comb for k in ["soccer", "football", "premier league", "la liga", "serie a", "bundesliga"]):
         return SPORT_ICONS["football"]
-    if any(k in comb for k in ["f1", "formula 1", "racing", "motogp", "nascar"]):
+    if any(k in comb for k in ["f1", "formula 1", "racing", "motogp"]):
         return SPORT_ICONS["motorsport"]
-    if any(k in comb for k in ["wwe", "smackdown", "raw", "aew", "ufc", "fighting", "mma", "boxing"]):
+    if any(k in comb for k in ["wwe", "smackdown", "raw", "ufc", "fighting", "boxing"]):
         return SPORT_ICONS["wrestling"]
 
     return DEFAULT_LOGO
@@ -108,16 +112,14 @@ def clean_and_normalize_sport(raw_sport: str) -> str:
         return "Basketball"
     if "tennis" in clean:
         return "Tennis"
-    if "hockey" in clean:
+    if "hockey" in clean or "ice hockey" in clean:
         return "Hockey"
-    if any(k in clean for k in ["motorsport", "motor-sports", "racing", "f1"]):
+    if any(k in clean for k in ["motorsport", "racing", "f1"]):
         return "Motorsport"
-    if any(k in clean for k in ["wwe", "wrestling", "fight", "fighting", "ufc", "mma"]):
+    if any(k in clean for k in ["wwe", "wrestling", "fight", "fighting", "ufc", "boxing"]):
         return "Fighting"
     if "baseball" in clean:
         return "Baseball"
-    if "american-football" in clean:
-        return "American Football"
     return clean.capitalize() or "Live Sports"
 
 
@@ -130,6 +132,7 @@ LEAGUE_PATTERNS = [
     (r"champions league|ucl", "UEFA Champions League"),
     (r"europa league|uel", "UEFA Europa League"),
     (r"saudi pro league|spl", "Saudi Pro League"),
+    (r"national league", "National League"),
     (r"ipl|indian premier league", "Indian Premier League (IPL)"),
     (r"bpl", "Bangladesh Premier League (BPL)"),
     (r"psl", "Pakistan Super League (PSL)"),
@@ -137,7 +140,6 @@ LEAGUE_PATTERNS = [
     (r"smackdown", "WWE SmackDown"),
     (r"raw", "WWE Raw"),
     (r"ufc", "UFC"),
-    (r"formula 1|f1", "Formula 1"),
 ]
 
 
@@ -147,6 +149,27 @@ def get_sub_category(sport: str, title: str) -> str:
         if re.search(pat, comb):
             return league
     return sport
+
+
+def parse_team_names(title: str) -> dict[str, str]:
+    clean = title.split(":")[-1].strip() if ":" in title else title
+    for d in [" vs. ", " vs ", " - ", " @ "]:
+        if d in clean.lower():
+            parts = re.split(re.escape(d), clean, maxsplit=1, flags=re.IGNORECASE)
+            if len(parts) == 2:
+                return {
+                    "team_a": parts[0].strip(),
+                    "team_b": parts[1].strip(),
+                }
+    return {"team_a": clean.strip(), "team_b": clean.strip()}
+
+
+@dataclass(slots=True)
+class LiveTVEvent:
+    sport: str
+    title: str
+    start_dt: datetime
+    page_url: str
 
 
 def create_slug(text: str) -> str:
@@ -222,219 +245,209 @@ def save_playlists(events: list[dict]) -> None:
     log.info(f"Saved M3U Playlist: {M3U_OUTPUT} ({m3u_count} streams)")
 
 
+async def request(
+    client: httpx.AsyncClient,
+    url: str,
+    headers: dict | None = None,
+    timeout: float = 8.0,
+) -> httpx.Response | None:
+    try:
+        response = await client.get(url, headers=headers, timeout=timeout)
+        if response.status_code == 200:
+            return response
+        return None
+    except Exception:
+        return None
+
+
 # -----------------------------------------------------------------------------
-# আসল Streamed.su API থেকে সকল স্পোর্টস ম্যাচ সংগ্রহ (প্যারালাল ফেচিং)
+# LiveTV ইভেন্ট পেজ থেকে প্লে-যোগ্য স্ট্রিম এক্সট্র্যাক্ট করা
 # -----------------------------------------------------------------------------
-ACTIVE_SPORT_CATEGORIES = [
-    "football",
-    "cricket",
-    "basketball",
-    "tennis",
-    "motor-sports",
-    "fight",
-    "hockey",
-    "baseball",
-    "american-football",
-    "rugby",
-]
+async def fetch_livetv_streams(client: httpx.AsyncClient, event_page_url: str) -> list[dict]:
+    streams = []
+    resp = await request(client, event_page_url)
+    if not resp:
+        return streams
+
+    soup = HTMLParser(resp.content)
+    # ব্রডকাস্ট টেবিল থেকে লিঙ্ক সংগ্রহ
+    for row in soup.css("table.lnktbj tr"):
+        link_elem = row.css_first("a[href*='webplayer.php'], a[href*='stream']")
+        if not link_elem:
+            continue
+
+        raw_href = link_elem.attributes.get("href") or ""
+        stream_url = urljoin(BASE_URL, raw_href)
+        channel_name = link_elem.text(strip=True) or "Live Broadcast"
+
+        streams.append({
+            "channel_name": channel_name,
+            "url": stream_url,
+            "referer": f"{BASE_URL}/"
+        })
+
+    return streams
 
 
-async def fetch_category_matches(client: httpx.AsyncClient, sport_id: str) -> list[dict]:
-    url = f"{BASE_API}/matches/{sport_id}/all"
-    try:
-        resp = await client.get(url, timeout=8.0)
-        if resp.status_code == 200:
-            data = resp.json()
-            if isinstance(data, list):
-                return data
-    except Exception:
-        pass
-    return []
+async def get_livetv_events(client: httpx.AsyncClient) -> list[LiveTVEvent]:
+    events = []
+    target_url = f"{BASE_URL}{SCHEDULE_PATH}"
+    resp = await request(client, target_url)
 
+    if not resp:
+        resp = await request(client, f"{ALT_URL}{SCHEDULE_PATH}")
 
-async def fetch_live_matches(client: httpx.AsyncClient) -> list[dict]:
-    url = f"{BASE_API}/matches/live"
-    try:
-        resp = await client.get(url, timeout=8.0)
-        if resp.status_code == 200:
-            data = resp.json()
-            if isinstance(data, list):
-                return data
-    except Exception:
-        pass
-    return []
+    if not resp:
+        log.error("Could not fetch LiveTV upcoming schedule.")
+        return events
 
+    soup = HTMLParser(resp.content)
+    now_utc = datetime.now(timezone.utc)
 
-async def fetch_stream_sources(client: httpx.AsyncClient, source: str, stream_id: str) -> list[dict]:
-    url = f"{BASE_API}/stream/{source}/{stream_id}"
-    try:
-        resp = await client.get(url, timeout=5.0)
-        if resp.status_code == 200:
-            data = resp.json()
-            if isinstance(data, list):
-                return data
-    except Exception:
-        pass
-    return []
+    # টেবিলের প্রতিটি খেলার রো পার্স করা
+    for row in soup.css("table tr"):
+        title_elem = row.css_first("a.live")
+        time_elem = row.css_first("span.date")
+
+        if not title_elem or not time_elem:
+            continue
+
+        title = title_elem.text(strip=True)
+        href = title_elem.attributes.get("href") or ""
+        time_text = time_elem.text(strip=True)
+
+        if not title or not href:
+            continue
+
+        # সময় পার্সিং (LiveTV সময় CET/UTC অনুযায়ী থাকে)
+        event_dt = now_utc
+        time_match = re.search(r"(\d{1,2}):(\d{2})", time_text)
+        if time_match:
+            h, m = int(time_match.group(1)), int(time_match.group(2))
+            event_dt = now_utc.replace(hour=h, minute=m, second=0, microsecond=0)
+
+        # অতীত ৩ ঘণ্টার পুরানো ম্যাচ বাদ
+        if event_dt < now_utc - timedelta(hours=3):
+            continue
+        # আগামী ২৪ ঘণ্টার ম্যাচগুলো রাখা হবে
+        if event_dt > now_utc + timedelta(hours=24):
+            continue
+
+        # ক্যাটাগরি আইকন বা স্পোর্টস অনুমান
+        sport = "Football"
+        if any(k in title.lower() for k in ["nba", "basket", "lakers", "celtics"]):
+            sport = "Basketball"
+        elif any(k in title.lower() for k in ["cricket", "ipl", "t20"]):
+            sport = "Cricket"
+        elif any(k in title.lower() for k in ["tennis", "atp", "wta", "open"]):
+            sport = "Tennis"
+        elif any(k in title.lower() for k in ["hockey", "nhl"]):
+            sport = "Hockey"
+
+        full_event_url = urljoin(BASE_URL, href)
+        events.append(LiveTVEvent(sport=sport, title=title, start_dt=event_dt, page_url=full_event_url))
+
+    return events
 
 
 async def scrape() -> None:
-    log.info("Fetching sports matches from Streamed.su endpoints...")
+    log.info(f'Scraping from "{BASE_URL}"...')
 
     async with httpx.AsyncClient(
         headers={
             "User-Agent": UA,
-            "Accept": "application/json, text/plain, */*",
-            "Referer": "https://streamed.su/",
-            "Origin": "https://streamed.su"
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         },
         follow_redirects=True,
-        timeout=12.0,
+        timeout=10.0,
         http2=True,
     ) as client:
 
-        # ১. লাইভ ম্যাচ এবং সবগুলো স্পোর্টস ক্যাটাগরি একসাথে প্যারালালে কল করা
-        tasks = [fetch_live_matches(client)] + [
-            fetch_category_matches(client, cat) for cat in ACTIVE_SPORT_CATEGORIES
-        ]
-        results = await asyncio.gather(*tasks)
-
-        # সব ম্যাচ এক তালিকায় জমা এবং ডুপ্লিকেট ম্যাচ আইডি রিমুভ করা
-        all_raw_matches = []
-        seen_ids = set()
-
-        for match_list in results:
-            for m in match_list:
-                m_id = m.get("id") or m.get("title")
-                if m_id and m_id not in seen_ids:
-                    seen_ids.add(m_id)
-                    all_raw_matches.append(m)
-
-        log.info(f"Received total {len(all_raw_matches)} unique matches across all sports.")
-
-        if not all_raw_matches:
-            log.error("No matches returned from any sports category.")
+        raw_events = await get_livetv_events(client)
+        if not raw_events:
+            log.info("No active events found on LiveTV.")
             return
 
-        now_utc = datetime.now(timezone.utc)
-        active_matches = []
-
-        # আগামী ১৮ ঘণ্টার ম্যাচ ও চলমান ম্যাচ ফিল্টার করা
-        for m in all_raw_matches:
-            date_val = m.get("date")
-            if not date_val:
-                continue
-
-            try:
-                # মিলিসেকেন্ড থেকে ডেটটাইম কনভার্সন
-                start_dt = datetime.fromtimestamp(float(date_val) / 1000.0, tz=timezone.utc)
-            except Exception:
-                continue
-
-            # অতীত ৩ ঘণ্টার পুরানো ম্যাচ বাদ
-            if start_dt < now_utc - timedelta(hours=3):
-                continue
-            # আগামী ১৮ ঘণ্টার ম্যাচগুলো রাখা হবে
-            if start_dt > now_utc + timedelta(hours=18):
-                continue
-
-            active_matches.append((m, start_dt))
-
-        log.info(f"Processing {len(active_matches)} active events in window...")
+        log.info(f"Successfully received {len(raw_events)} active matches from LiveTV!")
 
         final_playlist: list[dict] = []
 
-        for m, start_dt in active_matches:
-            title = m.get("title", "").strip()
-            raw_sport = m.get("category", "football")
-            sport = clean_and_normalize_sport(raw_sport)
-            sub_category = get_sub_category(sport, title)
-            event_logo = get_event_logo(sport, title)
+        # প্রথম ৩০টি অতি গুরুত্বপূর্ণ ম্যাচের স্ট্রিম দ্রুত লোড করা
+        for ev in raw_events[:30]:
+            async def get_streams():
+                async with HTTP_SEMAPHORE:
+                    return await fetch_livetv_streams(client, ev.page_url)
 
-            # টিম নাম ও ফ্ল্যাগ
-            teams_obj = m.get("teams", {})
-            team_a_name = ""
-            team_b_name = ""
-
-            if isinstance(teams_obj, dict):
-                team_a_name = teams_obj.get("home", {}).get("name", "")
-                team_b_name = teams_obj.get("away", {}).get("name", "")
-
-            if not team_a_name or not team_b_name:
-                parts = title.split(" vs ") if " vs " in title else title.split(" - ")
-                team_a_name = parts[0].strip() if len(parts) == 2 else title
-                team_b_name = parts[1].strip() if len(parts) == 2 else title
-
-            # সোর্স থেকে স্ট্রিম লিঙ্ক সংগ্রহ করা
+            stream_results = await get_streams()
             event_channels = []
-            sources_list = m.get("sources", [])
 
-            for s in sources_list:
-                src_name = s.get("source")
-                src_id = s.get("id")
-                if not src_name or not src_id:
-                    continue
-
-                async def get_streams(s_name=src_name, s_id=src_id):
-                    async with HTTP_SEMAPHORE:
-                        return await fetch_stream_sources(client, s_name, s_id)
-
-                stream_results = await get_streams()
-
-                for idx, st in enumerate(stream_results, start=1):
-                    stream_url = st.get("embedUrl") or st.get("streamUrl") or st.get("url")
-                    if not stream_url:
-                        continue
-
-                    channel_title = f"{src_name.upper()} - Feed {idx}"
-                    referer = "https://streamed.su/"
-
-                    event_channels.append(
-                        {
-                            "channel_name": channel_title,
-                            "stream_type": "HLS",
-                            "url": stream_url,
-                            "raw_link": f"{stream_url}|Referer={referer}&User-Agent={quote_plus(UA)}",
-                            "headers": {
-                                "Referer": referer,
-                                "User-Agent": UA,
-                            },
-                            "drm_key": None,
-                        }
-                    )
-
-            if event_channels:
-                start_bst = start_dt.astimezone(BST_TZ)
-                end_bst = start_bst + timedelta(hours=3)
-
-                formatted_event = {
-                    "title": title,
-                    "sport": sport,
-                    "sub_category": sub_category,
-                    "status": determine_status(start_dt, early_minutes=15),
-                    "is_hot": False,
-                    "slug": create_slug(title),
-                    "schedule": {
-                        "timezone": "BST (UTC+6)",
-                        "start_time_bst": start_bst.strftime("%b %d, %Y, %I:%M:%S %p"),
-                        "end_time_bst": end_bst.strftime("%b %d, %Y, %I:%M:%S %p"),
-                    },
-                    "teams": {
-                        "team_a": {
-                            "name": team_a_name,
-                            "flag": event_logo,
+            for idx, st in enumerate(stream_results, start=1):
+                stream_url = st["url"]
+                event_channels.append(
+                    {
+                        "channel_name": f"Stream {idx} - {st['channel_name']}",
+                        "stream_type": "HLS",
+                        "url": stream_url,
+                        "raw_link": f"{stream_url}|Referer={st['referer']}&User-Agent={quote_plus(UA)}",
+                        "headers": {
+                            "Referer": st["referer"],
+                            "User-Agent": UA,
                         },
-                        "team_b": {
-                            "name": team_b_name,
-                            "flag": event_logo,
-                        },
-                    },
-                    "logo": event_logo,
-                    "channels": event_channels,
-                    "_timestamp": start_dt.timestamp(),
-                }
+                        "drm_key": None,
+                    }
+                )
 
-                final_playlist.append(formatted_event)
+            # কোনো ব্রোকেন স্ট্রিম ছাড়া ইভেন্ট যোগ করা
+            if not event_channels:
+                event_channels.append(
+                    {
+                        "channel_name": "Live Broadcast Feed",
+                        "stream_type": "HLS",
+                        "url": ev.page_url,
+                        "raw_link": f"{ev.page_url}|Referer={BASE_URL}/",
+                        "headers": {"Referer": f"{BASE_URL}/"},
+                        "drm_key": None,
+                    }
+                )
+
+            start_bst = ev.start_dt.astimezone(BST_TZ)
+            end_bst = start_bst + timedelta(hours=3)
+
+            t_names = parse_team_names(ev.title)
+            team_a_name = t_names["team_a"]
+            team_b_name = t_names["team_b"]
+
+            event_logo = get_event_logo(ev.sport, ev.title)
+            sub_category = get_sub_category(ev.sport, ev.title)
+
+            formatted_event = {
+                "title": ev.title,
+                "sport": ev.sport,
+                "sub_category": sub_category,
+                "status": determine_status(ev.start_dt, early_minutes=15),
+                "is_hot": False,
+                "slug": create_slug(ev.title),
+                "schedule": {
+                    "timezone": "BST (UTC+6)",
+                    "start_time_bst": start_bst.strftime("%b %d, %Y, %I:%M:%S %p"),
+                    "end_time_bst": end_bst.strftime("%b %d, %Y, %I:%M:%S %p"),
+                },
+                "teams": {
+                    "team_a": {
+                        "name": team_a_name,
+                        "flag": event_logo,
+                    },
+                    "team_b": {
+                        "name": team_b_name,
+                        "flag": event_logo,
+                    },
+                },
+                "logo": event_logo,
+                "channels": event_channels,
+                "_timestamp": ev.start_dt.timestamp(),
+            }
+
+            final_playlist.append(formatted_event)
 
         # LIVE ইভেন্ট সবসময় উপরে রাখার সর্টিং
         status_priority = {
@@ -454,7 +467,7 @@ async def scrape() -> None:
             item.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info(f"Successfully generated playlist with {len(final_playlist)} matches!")
+        log.info(f"Playlist successfully generated with {len(final_playlist)} LiveTV matches!")
 
 
 if __name__ == "__main__":
