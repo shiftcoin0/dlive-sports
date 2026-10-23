@@ -1,202 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 10:59:14 PM",
-  "event_count": 99,
+  "last_updated": "Oct 23, 2026, 11:05:27 PM",
+  "event_count": 114,
   "events": {
     "events": [
-      {
-        "title": "World - Friendly : Türkiye U20 vs Italy U20",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "world-friendly-türkiye-u20-vs-italy-u20",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "World - Friendly : Türkiye U20",
-            "flag": "https://i.ibb.co.com/cSMrGjnb/Football.png"
-          },
-          "team_b": {
-            "name": "Italy U20",
-            "flag": "https://i.ibb.co.com/cSMrGjnb/Football.png"
-          }
-        },
-        "logo": "https://i.ibb.co.com/cSMrGjnb/Football.png",
-        "channels": [
-          {
-            "channel_name": "TRT Spor Turkey",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium889/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium889/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "WRC Safari Rally Kenya | Special Stage 2 | Day 1",
-        "sport": "Motorsport",
-        "sub_category": "Motorsport",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "wrc-safari-rally-kenya-special-stage-2-day-1",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "WRC Safari Rally Kenya | Special Stage 2 | Day 1",
-            "flag": "https://i.ibb.co.com/B5jKv66s/Motorsport.png"
-          },
-          "team_b": {
-            "name": "WRC Safari Rally Kenya | Special Stage 2 | Day 1",
-            "flag": "https://i.ibb.co.com/B5jKv66s/Motorsport.png"
-          }
-        },
-        "logo": "https://i.ibb.co.com/B5jKv66s/Motorsport.png",
-        "channels": [
-          {
-            "channel_name": "Rally Tv",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium607/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium607/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "TNT Sports 2 UK",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium32/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium32/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Motowizja Poland",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium563/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium563/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Sport TV2 Portugal",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium74/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium74/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "Canal+ Sport360",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium464/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium464/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "TV4 Motor",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium702/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium702/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Russia Superliga : Tyumen vs Torpedo Nizhny Novgorod",
-        "sport": "Futsal",
-        "sub_category": "Futsal",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "russia-superliga-tyumen-vs-torpedo-nizhny-novgorod",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Russia Superliga : Tyumen",
-            "flag": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
-          },
-          "team_b": {
-            "name": "Torpedo Nizhny Novgorod",
-            "flag": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
-          }
-        },
-        "logo": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp",
-        "channels": [
-          {
-            "channel_name": "Match Igra Russia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium76/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium76/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "KHL : Yekaterinburg vs SKA St. Petersburg",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "khl-yekaterinburg-vs-ska-st-petersburg",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 08:00:00 PM",
-          "end_time_bst": "Oct 23, 2026, 11:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "KHL : Yekaterinburg",
-            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
-          },
-          "team_b": {
-            "name": "SKA St. Petersburg",
-            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
-          }
-        },
-        "logo": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg",
-        "channels": [
-          {
-            "channel_name": "Match TV Russia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium127/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium127/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
         "sport": "Tennis",
@@ -5800,6 +5606,1130 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium101/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium101/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Jeopardy! Season 41, Episode 139",
+        "sport": "Tv shows",
+        "sub_category": "Tv shows",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "jeopardy-season-41-episode-139",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Jeopardy! Season 41, Episode 139",
+            "flag": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
+          },
+          "team_b": {
+            "name": "Jeopardy! Season 41, Episode 139",
+            "flag": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
+          }
+        },
+        "logo": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp",
+        "channels": [
+          {
+            "channel_name": "ABC NY USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium766/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium766/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "World Cup Qualifying : Paraguay vs Chile",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "world-cup-qualifying-paraguay-vs-chile",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "World Cup Qualifying : Paraguay",
+            "flag": "https://i.ibb.co.com/cSMrGjnb/Football.png"
+          },
+          "team_b": {
+            "name": "Chile",
+            "flag": "https://i.ibb.co.com/cSMrGjnb/Football.png"
+          }
+        },
+        "logo": "https://i.ibb.co.com/cSMrGjnb/Football.png",
+        "channels": [
+          {
+            "channel_name": "Astro Grandstand",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium123/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium123/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Eleven Sports 1 Poland",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium71/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium71/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Movistar Liga de Campeones 2",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium1/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium1/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "#Vamos ES",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium521/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium521/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TYC Sports Argentina",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium746/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium746/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Match! Football 1 Russia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium136/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium136/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Arena Sport 1 Croatia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium432/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium432/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sportv2 Brazil",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium79/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium79/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Arena 3 Premium Serbia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium139/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium139/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport 3 Israel",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium142/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium142/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "CONCACAF Nations League : USA vs Panama",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "concacaf-nations-league-usa-vs-panama",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "CONCACAF Nations League : USA",
+            "flag": "https://i.ibb.co.com/cSMrGjnb/Football.png"
+          },
+          "team_b": {
+            "name": "Panama",
+            "flag": "https://i.ibb.co.com/cSMrGjnb/Football.png"
+          }
+        },
+        "logo": "https://i.ibb.co.com/cSMrGjnb/Football.png",
+        "channels": [
+          {
+            "channel_name": "CBS Sports Golazo USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium910/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium910/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "ESPN 3 NL",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium888/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium888/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TUDN USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium66/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium66/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Univision",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium132/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium132/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport TV6 Portugal",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium291/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium291/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport Klub 4 Serbia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium104/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium104/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "5 Plus Israel",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium145/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium145/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Uruguay - Primera Division : Peñarol vs Liverpool",
+        "sport": "Football",
+        "sub_category": "La Liga",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "uruguay-primera-division-peñarol-vs-liverpool",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Uruguay - Primera Division : Peñarol",
+            "flag": "https://i.ibb.co.com/cSMrGjnb/Football.png"
+          },
+          "team_b": {
+            "name": "Liverpool",
+            "flag": "https://i.ibb.co.com/cSMrGjnb/Football.png"
+          }
+        },
+        "logo": "https://i.ibb.co.com/cSMrGjnb/Football.png",
+        "channels": [
+          {
+            "channel_name": "VTV+ Uruguay",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium391/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium391/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "GOLTV USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium597/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium597/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
+        "sport": "Tennis",
+        "sub_category": "ATP Tour",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "2025-miami-open-tennis-atp-1st-round-wta-2nd-round",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
+            "flag": "https://i.ibb.co.com/fz9WSxtQ/Tennis.webp"
+          },
+          "team_b": {
+            "name": "2025 Miami Open Tennis ATP 1st Round; WTA 2nd Round",
+            "flag": "https://i.ibb.co.com/fz9WSxtQ/Tennis.webp"
+          }
+        },
+        "logo": "https://i.ibb.co.com/fz9WSxtQ/Tennis.webp",
+        "channels": [
+          {
+            "channel_name": "Tennis Channel",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium40/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium40/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sky Sports Tennis UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium46/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium46/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TV4 Tennis",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium701/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium701/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Men's College Wrestling NCAA Champonships, Second Round",
+        "sport": "Wrestling",
+        "sub_category": "Wrestling",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "men-s-college-wrestling-ncaa-champonships-second-round",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Men's College Wrestling NCAA Champonships, Second Round",
+            "flag": "https://i.ibb.co.com/rGgCRXn0/Wrestling.png"
+          },
+          "team_b": {
+            "name": "Men's College Wrestling NCAA Champonships, Second Round",
+            "flag": "https://i.ibb.co.com/rGgCRXn0/Wrestling.png"
+          }
+        },
+        "logo": "https://i.ibb.co.com/rGgCRXn0/Wrestling.png",
+        "channels": [
+          {
+            "channel_name": "ESPN USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium44/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium44/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "College Baseball : Texas A&amp;M vs Vanderbilt",
+        "sport": "Baseball",
+        "sub_category": "Baseball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "college-baseball-texas-a-amp-m-vs-vanderbilt",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "College Baseball : Texas A&amp;M",
+            "flag": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
+          },
+          "team_b": {
+            "name": "Vanderbilt",
+            "flag": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
+          }
+        },
+        "logo": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp",
+        "channels": [
+          {
+            "channel_name": "SEC Network USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium385/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium385/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "College Baseball : Florida State vs Miami",
+        "sport": "Baseball",
+        "sub_category": "Baseball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "college-baseball-florida-state-vs-miami",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "College Baseball : Florida State",
+            "flag": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
+          },
+          "team_b": {
+            "name": "Miami",
+            "flag": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp"
+          }
+        },
+        "logo": "https://i.ibb.co.com/pjRdKp8g/Live-Streaming.webp",
+        "channels": [
+          {
+            "channel_name": "ACC Network USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium664/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium664/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "NBA G-League : Maine Celtics vs Lakeland Magic",
+        "sport": "Basketball",
+        "sub_category": "NBA",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nba-g-league-maine-celtics-vs-lakeland-magic",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "NBA G-League : Maine Celtics",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          },
+          "team_b": {
+            "name": "Lakeland Magic",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg",
+        "channels": [
+          {
+            "channel_name": "NBCS Boston USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium754/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium754/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "NBA G-League : Wisconsin Herd vs Long Island Nets",
+        "sport": "Basketball",
+        "sub_category": "NBA",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nba-g-league-wisconsin-herd-vs-long-island-nets",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "NBA G-League : Wisconsin Herd",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          },
+          "team_b": {
+            "name": "Long Island Nets",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg",
+        "channels": [
+          {
+            "channel_name": "ESPN+ USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium151/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium151/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "2025 NCAA Women's Basketball Tournament First Four: Washington vs Columbia",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "2025-ncaa-women-s-basketball-tournament-first-four-washington-vs-columbia",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "2025 NCAA Women's Basketball Tournament First Four: Washington",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          },
+          "team_b": {
+            "name": "Columbia",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg",
+        "channels": [
+          {
+            "channel_name": "ESPN2 USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium45/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium45/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "2025 NCAA Women's Basketball Tournament First Four: Washington vs Columbia",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "2025-ncaa-women-s-basketball-tournament-first-four-washington-vs-columbia",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "2025 NCAA Women's Basketball Tournament First Four: Washington",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          },
+          "team_b": {
+            "name": "Columbia",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg",
+        "channels": [
+          {
+            "channel_name": "ESPN2 USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium45/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium45/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "NBA : New York Knicks vs Charlotte Hornets",
+        "sport": "Basketball",
+        "sub_category": "NBA",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nba-new-york-knicks-vs-charlotte-hornets",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "NBA : New York Knicks",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          },
+          "team_b": {
+            "name": "Charlotte Hornets",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg",
+        "channels": [
+          {
+            "channel_name": "Home Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium69/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium69/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Away Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium76/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium76/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "MSG USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium765/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium765/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "NBA : Brooklyn Nets vs Indiana Pacers",
+        "sport": "Basketball",
+        "sub_category": "NBA",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nba-brooklyn-nets-vs-indiana-pacers",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "NBA : Brooklyn Nets",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          },
+          "team_b": {
+            "name": "Indiana Pacers",
+            "flag": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/393JJ6zq/Basketball.jpg",
+        "channels": [
+          {
+            "channel_name": "Home Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium77/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium77/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Away Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium86/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium86/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "YES USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium763/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium763/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "NBA TV USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium404/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium404/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "NHL : Colorado Avalanche vs Ottawa Senators",
+        "sport": "Hockey",
+        "sub_category": "NHL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nhl-colorado-avalanche-vs-ottawa-senators",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "NHL : Colorado Avalanche",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          },
+          "team_b": {
+            "name": "Ottawa Senators",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg",
+        "channels": [
+          {
+            "channel_name": "Home Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium5/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium5/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Away Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium6/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium6/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TSN5",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium115/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium115/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "RDS 2 CA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium840/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium840/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Altitude USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium923/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium923/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "NHL : Calgary Flames vs New Jersey Devils",
+        "sport": "Hockey",
+        "sub_category": "NHL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nhl-calgary-flames-vs-new-jersey-devils",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "NHL : Calgary Flames",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          },
+          "team_b": {
+            "name": "New Jersey Devils",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg",
+        "channels": [
+          {
+            "channel_name": "Home Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium7/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium7/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Away Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium8/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium8/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sportsnet One",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium411/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium411/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Vodafone Sport",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium260/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium260/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "NHL : Toronto Maple Leafs vs New York Rangers",
+        "sport": "Hockey",
+        "sub_category": "NHL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nhl-toronto-maple-leafs-vs-new-york-rangers",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "NHL : Toronto Maple Leafs",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          },
+          "team_b": {
+            "name": "New York Rangers",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg",
+        "channels": [
+          {
+            "channel_name": "Home Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium9/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium9/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Away Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium10/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium10/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sportsnet Ontario",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium406/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium406/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "V Sport Vinter",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium4/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium4/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "NHL : Philadelphia Flyers vs Washington Capitals",
+        "sport": "Hockey",
+        "sub_category": "NHL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nhl-philadelphia-flyers-vs-washington-capitals",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "NHL : Philadelphia Flyers",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          },
+          "team_b": {
+            "name": "Washington Capitals",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg",
+        "channels": [
+          {
+            "channel_name": "Home Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium12/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium12/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Away Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium13/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium13/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sportsnet East",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium408/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium408/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Monumental Sports Network",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium778/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium778/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "ESPN 2 NL",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium386/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium386/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "NBCS Philadelphia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium777/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium777/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sky Sport Mix Germany",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium557/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium557/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TV3 Sport Denmark HD",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium809/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium809/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "V Sport Premium Sweden",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium11/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium11/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport 5 Stars Israel",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium147/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium147/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "NHL : Florida Panthers vs Columbus Blue Jackets",
+        "sport": "Hockey",
+        "sub_category": "NHL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nhl-florida-panthers-vs-columbus-blue-jackets",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 24, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "NHL : Florida Panthers",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          },
+          "team_b": {
+            "name": "Columbus Blue Jackets",
+            "flag": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg"
+          }
+        },
+        "logo": "https://i.ibb.co.com/4RrQy0BV/Hockey.jpg",
+        "channels": [
+          {
+            "channel_name": "Home Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium14/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium14/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Away Feed",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium15/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium15/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Viaplay Sports 2 UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium550/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium550/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
