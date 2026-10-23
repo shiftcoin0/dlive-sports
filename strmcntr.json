@@ -1,44 +1,8 @@
 {
-  "last_updated": "Oct 23, 2026, 10:03:54 AM",
+  "last_updated": "Oct 23, 2026, 10:23:57 AM",
   "event_count": 28,
   "events": {
     "events": [
-      {
-        "title": "College Basketball - March Madness (RD1): UCLA vs Utah State",
-        "sport": "Basketball",
-        "sub_category": "UEFA Champions League",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "college-basketball-march-madness-rd1-ucla-vs-utah-state",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 23, 2026, 07:20:00 AM",
-          "end_time_bst": "Oct 23, 2026, 10:20:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "College Basketball - March Madness (RD1): UCLA",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          },
-          "team_b": {
-            "name": "Utah State",
-            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
-          }
-        },
-        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
-        "channels": [
-          {
-            "channel_name": "Sport Klub 1 Serbia",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium101/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium101/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Swamp Mysteries Season 3, Episode 4",
         "sport": "Tv shows",
@@ -1624,6 +1588,82 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium640/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium640/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "World Cup Qualifying : Australia vs Indonesia",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "world-cup-qualifying-australia-vs-indonesia",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 23, 2026, 03:10:00 PM",
+          "end_time_bst": "Oct 23, 2026, 06:10:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "World Cup Qualifying : Australia",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Indonesia",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "ESPN 1 NL",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium379/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium379/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sportdigital FUSSBALL DE",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium571/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Nova Sport Bulgaria",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium468/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium468/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "beIN Sports MENA 3",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium93/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium93/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport Klub 2 Serbia",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium102/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium102/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
