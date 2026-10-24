@@ -1,46 +1,8 @@
 {
-  "last_updated": "Oct 25, 2026, 01:00:43 AM",
-  "event_count": 56,
+  "last_updated": "Oct 25, 2026, 01:05:47 AM",
+  "event_count": 55,
   "events": {
     "events": [
-      {
-        "title": "Villarreal at Valencia",
-        "sport": "Football",
-        "sub_category": "La Liga",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "villarreal-at-valencia",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 24, 2026, 10:30:00 PM",
-          "end_time_bst": "Oct 25, 2026, 01:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Villarreal",
-            "flag": "https://streamcenter.st/api/images/badge/9221ce1e-819e-41c1-9b76-90e80f422be2.webp"
-          },
-          "team_b": {
-            "name": "Valencia",
-            "flag": "https://streamcenter.st/api/images/badge/9cde9d59-fab8-4d9a-8484-ea225b77c29b.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/9221ce1e-819e-41c1-9b76-90e80f422be2.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/6.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/6.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://streame.center",
-              "Origin": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Golden State Valkyries at Atlanta Dream",
         "sport": "Basketball",
@@ -942,8 +904,8 @@
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream2.pro/hls/mlkijfezag65.m3u8",
-            "raw_link": "https://edgestream2.pro/hls/mlkijfezag65.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "url": "https://edgestream3.pro/stream/65.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/65.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://streame.center",
@@ -1752,44 +1714,6 @@
         ]
       },
       {
-        "title": "UTSA Roadrunners at Tulane Green Wave",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "utsa-roadrunners-at-tulane-green-wave",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "UTSA Roadrunners",
-            "flag": "https://streamcenter.st/api/images/badge/8d080361-7136-4ab6-ae0e-750ec254b340.webp"
-          },
-          "team_b": {
-            "name": "Tulane Green Wave",
-            "flag": "https://streamcenter.st/api/images/badge/79d5db17-e627-4ff3-bcb5-166b63abb38c.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/8d080361-7136-4ab6-ae0e-750ec254b340.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/93.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/93.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://streame.center",
-              "Origin": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Tampa Bay Rays at Milwaukee Brewers",
         "sport": "Baseball",
         "sub_category": "Baseball",
@@ -1818,6 +1742,44 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/15.m3u8",
             "raw_link": "https://edgestream3.pro/stream/15.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "UTSA Roadrunners at Tulane Green Wave",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "utsa-roadrunners-at-tulane-green-wave",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "UTSA Roadrunners",
+            "flag": "https://streamcenter.st/api/images/badge/8d080361-7136-4ab6-ae0e-750ec254b340.webp"
+          },
+          "team_b": {
+            "name": "Tulane Green Wave",
+            "flag": "https://streamcenter.st/api/images/badge/79d5db17-e627-4ff3-bcb5-166b63abb38c.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/8d080361-7136-4ab6-ae0e-750ec254b340.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/93.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/93.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://streame.center",
