@@ -1,110 +1,8 @@
 {
-  "last_updated": "Oct 24, 2026, 08:47:21 PM",
-  "event_count": 86,
+  "last_updated": "Oct 24, 2026, 09:02:28 PM",
+  "event_count": 90,
   "events": {
     "events": [
-      {
-        "title": "Hell's Kitchen Season 12, Episode 17",
-        "sport": "Tv shows",
-        "sub_category": "Tv shows",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "hell-s-kitchen-season-12-episode-17",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 24, 2026, 06:00:00 PM",
-          "end_time_bst": "Oct 24, 2026, 09:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Hell's Kitchen Season 12, Episode 17",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "Hell's Kitchen Season 12, Episode 17",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "AXS TV USA",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium742/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium742/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Engadin | Parallel Giant Slalom World Championships",
-        "sport": "Winter sports",
-        "sub_category": "Winter sports",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "engadin-parallel-giant-slalom-world-championships",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 24, 2026, 06:00:00 PM",
-          "end_time_bst": "Oct 24, 2026, 09:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Engadin | Parallel Giant Slalom World Championships",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          },
-          "team_b": {
-            "name": "Engadin | Parallel Giant Slalom World Championships",
-            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-          }
-        },
-        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-        "channels": [
-          {
-            "channel_name": "TNT Sports 4 UK",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium34/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium34/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "EuroSport 2 Poland",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium58/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium58/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "EuroSport 2 Spain",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium525/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium525/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          },
-          {
-            "channel_name": "EuroSport 2 France",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium773/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium773/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "KHL : Sibir Novosibirsk vs Salavat Yulaev Ufa",
         "sport": "Hockey",
@@ -5282,6 +5180,242 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium145/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium145/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "FanDuel Racing Live",
+        "sport": "Motorsport",
+        "sub_category": "UEFA Europa League",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "fanduel-racing-live",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 02:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 05:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "FanDuel Racing Live",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "FanDuel Racing Live",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "NBC Sports Bay Area",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium753/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium753/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Uruguay - Primera Division : Torque vs Juventud",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "uruguay-primera-division-torque-vs-juventud",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 02:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 05:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Uruguay - Primera Division : Torque",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Juventud",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "VTV+ Uruguay",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium391/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium391/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "GOLTV USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium597/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium597/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Spain Copa de la Reina, Women : Valencia Basket vs Cb Jairis",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "spain-copa-de-la-reina-women-valencia-basket-vs-cb-jairis",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 02:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 05:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Spain Copa de la Reina, Women : Valencia Basket",
+            "flag": "https://flagcdn.com/w320/es.png"
+          },
+          "team_b": {
+            "name": "Cb Jairis",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          }
+        },
+        "logo": "https://flagcdn.com/w320/es.png",
+        "channels": [
+          {
+            "channel_name": "Teledeporte Spain (TDP)",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium529/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium529/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "2025 NCAA Men's Basketball Tournament First Round: VCU vs BYU",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "2025-ncaa-men-s-basketball-tournament-first-round-vcu-vs-byu",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 02:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 05:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "2025 NCAA Men's Basketball Tournament First Round: VCU",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          },
+          "team_b": {
+            "name": "BYU",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
+        "channels": [
+          {
+            "channel_name": "TNT USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium338/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium338/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "College Hockey Hockey East Tournament : Connecticut vs Boston University",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "college-hockey-hockey-east-tournament-connecticut-vs-boston-university",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 02:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 05:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "College Hockey Hockey East Tournament : Connecticut",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Boston University",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "NESN USA",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium762/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium762/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Super League Rugby : Salford Red Devils vs Huddersfield",
+        "sport": "Rugby league",
+        "sub_category": "Rugby league",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "super-league-rugby-salford-red-devils-vs-huddersfield",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 02:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 05:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Super League Rugby : Salford Red Devils",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Huddersfield",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Fox Soccer Plus",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium756/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium756/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sportsnet World",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium410/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium410/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
