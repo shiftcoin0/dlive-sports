@@ -2,20 +2,18 @@ import asyncio
 import json
 import logging
 import os
-import re
 from datetime import datetime, timedelta, timezone
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import threading
 import httpx
 
-# এনভায়রনমেন্ট ভ্যারিয়েবল
 GH_TOKEN = os.getenv("GH_TOKEN")
 GH_OWNER = os.getenv("GH_OWNER", "shiftcoin0")
 GH_REPO = os.getenv("GH_REPO", "dlive-sports")
 PORT = int(os.getenv("PORT", 10000))
 
-SCHEDULE_URL = "https://vortextv.modsdone.com/cricfy.php/events"
-STATE_FILE = "last_state.txt"
+BASE_URL = "https://streamcenter.st"
+API_SPORTS = f"{BASE_URL}/api/sports"
 
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -30,34 +28,26 @@ logging.basicConfig(
 )
 log = logging.getLogger("Watcher")
 
-
-# Render হেলথ চেক সার্ভার
 class HealthServer(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.send_header("Content-type", "application/json")
         self.end_headers()
         response = {
-            "status": "healthy",
-            "service": "DLHD Watcher",
-            "interval": "5 minutes",
+            "status": "running",
+            "service": "StreamCenter API Watcher",
             "timestamp": datetime.now(timezone.utc).isoformat()
         }
         self.wfile.write(json.dumps(response).encode("utf-8"))
 
-    def log_message(self, format, *args):
-        pass
-
-
 def start_health_server():
     server = HTTPServer(("0.0.0.0", PORT), HealthServer)
+    log.info(f"Health server running on port {PORT}")
     server.serve_forever()
 
-
-# ১৫ মিনিট আগে লাইভ স্ট্যাটাস ক্যালকুলেশন
-def get_event_status(start_dt: datetime) -> str:
+def get_event_status(match_dt: datetime) -> str:
     now_utc = datetime.now(timezone.utc)
-    start_utc = start_dt.astimezone(timezone.utc)
+    start_utc = match_dt.astimezone(timezone.utc)
     live_start = start_utc - timedelta(minutes=15)
     end_time = start_utc + timedelta(hours=3)
 
@@ -67,8 +57,6 @@ def get_event_status(start_dt: datetime) -> str:
         return "UPCOMING"
     return "ENDED"
 
-
-# GitHub Trigger কল করা
 async def trigger_github(client: httpx.AsyncClient):
     if not GH_TOKEN:
         log.error("GH_TOKEN is missing!")
@@ -84,7 +72,7 @@ async def trigger_github(client: httpx.AsyncClient):
     payload = {
         "event_type": "source_updated",
         "client_payload": {
-            "triggered_by": "Render Watcher",
+            "triggered_by": "StreamCenter Watcher",
             "timestamp": datetime.now(timezone.utc).isoformat()
         }
     }
@@ -101,98 +89,66 @@ async def trigger_github(client: httpx.AsyncClient):
         log.error(f"Error calling GitHub API: {e}")
         return False
 
-
-# মূল ওয়াচার লুপ (প্রতি ৫ মিনিট পর পর চেক করবে)
-async def watch_schedule():
+async def watch_streamcenter():
     last_state = ""
-    if os.path.exists(STATE_FILE):
-        try:
-            with open(STATE_FILE, "r", encoding="utf-8") as f:
-                last_state = f.read().strip()
-            log.info("Loaded previous state from file.")
-        except Exception:
-            last_state = ""
+    log.info("StreamCenter Watcher started. Polling every 5 minutes...")
 
-    log.info("Schedule Watcher started. Polling every 5 minutes...")
-
-    # follow_redirects=True যুক্ত করা হয়েছে রিডাইরেক্ট হ্যান্ডেল করতে
-    async with httpx.AsyncClient(
-        headers={"User-Agent": UA, "Referer": "https://dlive.sx/"},
-        follow_redirects=True,
-        timeout=15.0
-    ) as client:
+    async with httpx.AsyncClient(headers={"User-Agent": UA, "Referer": f"{BASE_URL}/"}, timeout=12.0) as client:
         while True:
             try:
-                resp = await client.get(SCHEDULE_URL)
-                if resp.status_code != 200:
-                    log.warning(f"Failed to fetch schedule, HTTP: {resp.status_code}")
+                sports_res = await client.get(API_SPORTS)
+                if sports_res.status_code != 200:
+                    log.warning(f"Failed to fetch sports: {sports_res.status_code}")
                     await asyncio.sleep(60)
                     continue
 
-                schedule_data = resp.json()
-                now_utc = datetime.now(timezone.utc)
+                sports_list = sports_res.json()
                 current_events = []
+                now_utc = datetime.now(timezone.utc)
 
-                for date_key, category_obj in schedule_data.items():
-                    items = category_obj if isinstance(category_obj, dict) else {date_key: category_obj}
+                async def check_sport(sp):
+                    sp_id = sp.get("id")
+                    if not sp_id:
+                        return
+                    try:
+                        m_res = await client.get(f"{BASE_URL}/api/matches/{sp_id}", timeout=6.0)
+                        if m_res.status_code == 200:
+                            for m in m_res.json():
+                                title = m.get("title") or m.get("name")
+                                date_ms = m.get("date")
+                                sources = m.get("sources", [])
+                                if title and date_ms and sources:
+                                    dt = datetime.fromtimestamp(date_ms / 1000.0, tz=timezone.utc)
+                                    if dt >= now_utc - timedelta(hours=3) and dt <= now_utc + timedelta(hours=18):
+                                        st = get_event_status(dt)
+                                        current_events.append(f"{title}|{st}|{len(sources)}")
+                    except Exception:
+                        pass
 
-                    for sport_cat, games in items.items():
-                        if not isinstance(games, list):
-                            continue
-
-                        for game in games:
-                            if not isinstance(game, dict):
-                                continue
-
-                            title = game.get("event") or game.get("name")
-                            time_str = game.get("time", "").strip()
-                            channels = game.get("channels", [])
-
-                            if not title or not channels:
-                                continue
-
-                            event_dt = now_utc
-                            m = re.search(r"(\d{1,2}):(\d{2})", time_str)
-                            if m:
-                                h, minute = int(m.group(1)), int(m.group(2))
-                                event_dt = now_utc.replace(hour=h, minute=minute, second=0, microsecond=0)
-
-                            if event_dt < now_utc - timedelta(hours=3):
-                                continue
-
-                            status = get_event_status(event_dt)
-                            current_events.append(f"{title}|{status}|{len(channels)}")
+                await asyncio.gather(*(check_sport(sp) for sp in sports_list))
 
                 new_state = "#".join(sorted(current_events))
 
                 if last_state == "":
-                    log.info(f"Initialized with {len(current_events)} active events.")
-                    last_state = new_state
-                    with open(STATE_FILE, "w", encoding="utf-8") as f:
-                        f.write(new_state)
-
-                elif new_state != last_state:
-                    log.info("Real change detected! Triggering GitHub Action...")
-                    success = await trigger_github(client)
-                    if success:
+                    log.info(f"Initial run: {len(current_events)} active events. Syncing...")
+                    if await trigger_github(client):
                         last_state = new_state
-                        with open(STATE_FILE, "w", encoding="utf-8") as f:
-                            f.write(new_state)
+                elif new_state != last_state:
+                    log.info("Change detected! (Event added/removed or status changed to LIVE)")
+                    if await trigger_github(client):
+                        last_state = new_state
                 else:
-                    log.info("No change detected. Everything up-to-date.")
+                    log.info("No status change or source update. Skipping.")
 
             except Exception as e:
                 log.error(f"Watcher loop exception: {e}")
 
-            # ঠিক ৫ মিনিট অপেক্ষা
             await asyncio.sleep(300)
-
 
 def main():
     t = threading.Thread(target=start_health_server, daemon=True)
     t.start()
-    asyncio.run(watch_schedule())
-
+    asyncio.run(watch_streamcenter())
 
 if __name__ == "__main__":
     main()
