@@ -1,8 +1,44 @@
 {
-  "last_updated": "Oct 24, 2026, 11:14:48 PM",
-  "event_count": 56,
+  "last_updated": "Oct 24, 2026, 11:19:51 PM",
+  "event_count": 60,
   "events": {
     "events": [
+      {
+        "title": "ESPN News",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "espn-news",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 09:49:00 PM",
+          "end_time_bst": "Oct 25, 2026, 12:49:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "ESPN News",
+            "flag": null
+          },
+          "team_b": {
+            "name": "ESPN News",
+            "flag": null
+          }
+        },
+        "logo": null,
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/13.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/13.m3u8|Referer=https://streame.center",
+            "headers": {
+              "Referer": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
       {
         "title": "ESPN2",
         "sport": "Football",
@@ -220,42 +256,6 @@
         ]
       },
       {
-        "title": "Pittsburgh Panthers at Miami Hurricanes",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "pittsburgh-panthers-at-miami-hurricanes",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 24, 2026, 10:00:00 PM",
-          "end_time_bst": "Oct 25, 2026, 01:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Pittsburgh Panthers",
-            "flag": "https://streamcenter.st/api/images/badge/1579c1f7-046d-47d2-81b5-b4a3168223f1.webp"
-          },
-          "team_b": {
-            "name": "Miami Hurricanes",
-            "flag": "https://streamcenter.st/api/images/badge/9c9cb2b0-6be0-4009-a845-2cfdb4fe357c.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/1579c1f7-046d-47d2-81b5-b4a3168223f1.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/20.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/20.m3u8|Referer=https://streame.center",
-            "headers": {
-              "Referer": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Indiana Hoosiers at Michigan Wolverines",
         "sport": "Football",
         "sub_category": "NCAA Football",
@@ -364,6 +364,42 @@
         ]
       },
       {
+        "title": "Western Michigan Broncos at Toledo Rockets",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "western-michigan-broncos-at-toledo-rockets",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 10:00:00 PM",
+          "end_time_bst": "Oct 25, 2026, 01:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Western Michigan Broncos",
+            "flag": "https://streamcenter.st/api/images/badge/b8cdc25a-f486-406e-ac29-84cdc19664fa.webp"
+          },
+          "team_b": {
+            "name": "Toledo Rockets",
+            "flag": "https://streamcenter.st/api/images/badge/2082df86-65d9-4b1e-b924-3a898fdffd86.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/b8cdc25a-f486-406e-ac29-84cdc19664fa.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/24.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/24.m3u8|Referer=https://streame.center",
+            "headers": {
+              "Referer": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
         "title": "Tottenham Hotspur at Chelsea",
         "sport": "Football",
         "sub_category": "Premier League",
@@ -392,42 +428,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/3.m3u8",
             "raw_link": "https://edgestream3.pro/stream/3.m3u8|Referer=https://streame.center",
-            "headers": {
-              "Referer": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Villarreal at Valencia",
-        "sport": "Football",
-        "sub_category": "La Liga",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "villarreal-at-valencia",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 24, 2026, 10:30:00 PM",
-          "end_time_bst": "Oct 25, 2026, 01:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Villarreal",
-            "flag": "https://streamcenter.st/api/images/badge/9221ce1e-819e-41c1-9b76-90e80f422be2.webp"
-          },
-          "team_b": {
-            "name": "Valencia",
-            "flag": "https://streamcenter.st/api/images/badge/9cde9d59-fab8-4d9a-8484-ea225b77c29b.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/9221ce1e-819e-41c1-9b76-90e80f422be2.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/6.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/6.m3u8|Referer=https://streame.center",
             "headers": {
               "Referer": "https://streame.center"
             },
@@ -544,34 +544,34 @@
         ]
       },
       {
-        "title": "MSC Cruises United States Grand Prix — FP3",
-        "sport": "Racing",
-        "sub_category": "Racing",
-        "status": "UPCOMING",
+        "title": "Golden State Valkyries at Atlanta Dream",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "LIVE",
         "is_hot": false,
-        "slug": "msc-cruises-united-states-grand-prix-fp3",
+        "slug": "golden-state-valkyries-at-atlanta-dream",
         "schedule": {
           "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 24, 2026, 11:30:00 PM",
-          "end_time_bst": "Oct 25, 2026, 02:30:00 AM"
+          "start_time_bst": "Oct 24, 2026, 11:00:00 PM",
+          "end_time_bst": "Oct 25, 2026, 02:00:00 AM"
         },
         "teams": {
           "team_a": {
-            "name": "MSC Cruises United States Grand Prix — FP3",
-            "flag": null
+            "name": "Golden State Valkyries",
+            "flag": "https://streamcenter.st/api/images/badge/49c26719-8998-410f-80e0-0fb41761a015.webp"
           },
           "team_b": {
-            "name": "MSC Cruises United States Grand Prix — FP3",
-            "flag": null
+            "name": "Atlanta Dream",
+            "flag": "https://streamcenter.st/api/images/badge/6fc1f7c0-ce6f-47c3-9e76-a22ab3cb1ea3.webp"
           }
         },
-        "logo": null,
+        "logo": "https://streamcenter.st/api/images/badge/49c26719-8998-410f-80e0-0fb41761a015.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/49.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/49.m3u8|Referer=https://streame.center",
+            "url": "https://edgestream3.pro/stream/80.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/80.m3u8|Referer=https://streame.center",
             "headers": {
               "Referer": "https://streame.center"
             },
@@ -652,6 +652,42 @@
         ]
       },
       {
+        "title": "Parma at Lazio",
+        "sport": "Football",
+        "sub_category": "Serie A",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "parma-at-lazio",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 12:45:00 AM",
+          "end_time_bst": "Oct 25, 2026, 03:45:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Parma",
+            "flag": "https://streamcenter.st/api/images/badge/62bf701d-975c-4b10-a3e9-7620bf03b88a.webp"
+          },
+          "team_b": {
+            "name": "Lazio",
+            "flag": "https://streamcenter.st/api/images/badge/25ccec8e-318e-46f4-aad0-d6431a8bf823.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/62bf701d-975c-4b10-a3e9-7620bf03b88a.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/9.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/9.m3u8|Referer=https://streame.center",
+            "headers": {
+              "Referer": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
         "title": "Deportivo at Atlético Madrid",
         "sport": "Football",
         "sub_category": "Football",
@@ -680,6 +716,42 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/6.m3u8",
             "raw_link": "https://edgestream3.pro/stream/6.m3u8|Referer=https://streame.center",
+            "headers": {
+              "Referer": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Oregon Ducks at Illinois Fighting Illini",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "oregon-ducks-at-illinois-fighting-illini",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 01:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 04:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Oregon Ducks",
+            "flag": "https://streamcenter.st/api/images/badge/fe77edc1-76c3-41e9-9ea9-60df86f8ccf2.webp"
+          },
+          "team_b": {
+            "name": "Illinois Fighting Illini",
+            "flag": "https://streamcenter.st/api/images/badge/1da23903-f07d-468e-a5d6-871e829774d4.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/fe77edc1-76c3-41e9-9ea9-60df86f8ccf2.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/26.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/26.m3u8|Referer=https://streame.center",
             "headers": {
               "Referer": "https://streame.center"
             },
@@ -796,42 +868,6 @@
         ]
       },
       {
-        "title": "Tennessee Volunteers at South Carolina Gamecocks",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "tennessee-volunteers-at-south-carolina-gamecocks",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Tennessee Volunteers",
-            "flag": "https://streamcenter.st/api/images/badge/499d6304-225a-4a27-a756-b161a26ecb47.webp"
-          },
-          "team_b": {
-            "name": "South Carolina Gamecocks",
-            "flag": "https://streamcenter.st/api/images/badge/5a99a92a-9d3e-4e27-a8ac-865f47c24d30.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/499d6304-225a-4a27-a756-b161a26ecb47.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/29.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/29.m3u8|Referer=https://streame.center",
-            "headers": {
-              "Referer": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "BYU Cougars at UCF Knights",
         "sport": "Football",
         "sub_category": "Football",
@@ -860,42 +896,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/30.m3u8",
             "raw_link": "https://edgestream3.pro/stream/30.m3u8|Referer=https://streame.center",
-            "headers": {
-              "Referer": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Iowa Hawkeyes at Minnesota Golden Gophers",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "iowa-hawkeyes-at-minnesota-golden-gophers",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Iowa Hawkeyes",
-            "flag": "https://streamcenter.st/api/images/badge/126940aa-9272-40f8-862b-8053ddd8d0f9.webp"
-          },
-          "team_b": {
-            "name": "Minnesota Golden Gophers",
-            "flag": "https://streamcenter.st/api/images/badge/1292a244-0921-4c5e-ad42-b76aef2e9ebb.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/126940aa-9272-40f8-862b-8053ddd8d0f9.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/32.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/32.m3u8|Referer=https://streame.center",
             "headers": {
               "Referer": "https://streame.center"
             },
@@ -976,6 +976,42 @@
         ]
       },
       {
+        "title": "Kansas State Wildcats at Arizona State Sun Devils",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "kansas-state-wildcats-at-arizona-state-sun-devils",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 01:45:00 AM",
+          "end_time_bst": "Oct 25, 2026, 04:45:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Kansas State Wildcats",
+            "flag": "https://streamcenter.st/api/images/badge/cb79cc4d-6fa9-40d8-b9c7-95d1ff274cbc.webp"
+          },
+          "team_b": {
+            "name": "Arizona State Sun Devils",
+            "flag": "https://streamcenter.st/api/images/badge/8a86c4b1-9557-4bf5-a56c-575dbc82a3aa.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/cb79cc4d-6fa9-40d8-b9c7-95d1ff274cbc.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/35.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/35.m3u8|Referer=https://streame.center",
+            "headers": {
+              "Referer": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
         "title": "Eastern Michigan Eagles at Ohio Bobcats",
         "sport": "Football",
         "sub_category": "Football",
@@ -1012,12 +1048,12 @@
         ]
       },
       {
-        "title": "MSC Cruises United States Grand Prix — Qual",
-        "sport": "Racing",
-        "sub_category": "Racing",
+        "title": "Emanuel Navarrete vs. O'Shaquie Foster",
+        "sport": "Boxing",
+        "sub_category": "Boxing",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "msc-cruises-united-states-grand-prix-qual",
+        "slug": "emanuel-navarrete-vs-o-shaquie-foster",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 25, 2026, 03:00:00 AM",
@@ -1025,11 +1061,11 @@
         },
         "teams": {
           "team_a": {
-            "name": "MSC Cruises United States Grand Prix — Qual",
+            "name": "Emanuel Navarrete",
             "flag": null
           },
           "team_b": {
-            "name": "MSC Cruises United States Grand Prix — Qual",
+            "name": "O'Shaquie Foster",
             "flag": null
           }
         },
@@ -1038,8 +1074,8 @@
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/49.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/49.m3u8|Referer=https://streame.center",
+            "url": "https://edgestream3.pro/stream/45.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/45.m3u8|Referer=https://streame.center",
             "headers": {
               "Referer": "https://streame.center"
             },
@@ -1084,6 +1120,42 @@
         ]
       },
       {
+        "title": "MSC Cruises United States Grand Prix — Qual",
+        "sport": "Racing",
+        "sub_category": "Racing",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "msc-cruises-united-states-grand-prix-qual",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 03:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 06:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "MSC Cruises United States Grand Prix — Qual",
+            "flag": null
+          },
+          "team_b": {
+            "name": "MSC Cruises United States Grand Prix — Qual",
+            "flag": null
+          }
+        },
+        "logo": null,
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/49.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/49.m3u8|Referer=https://streame.center",
+            "headers": {
+              "Referer": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
         "title": "Boise State Broncos at Washington State Cougars",
         "sport": "Football",
         "sub_category": "Football",
@@ -1112,6 +1184,42 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/83.m3u8",
             "raw_link": "https://edgestream3.pro/stream/83.m3u8|Referer=https://streame.center",
+            "headers": {
+              "Referer": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Miami Heat at Charlotte Hornets",
+        "sport": "Basketball",
+        "sub_category": "NBA",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "miami-heat-at-charlotte-hornets",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 04:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 07:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Miami Heat",
+            "flag": "https://streamcenter.st/api/images/badge/0494a5d3-2758-4599-8add-b06144a2a4d2.webp"
+          },
+          "team_b": {
+            "name": "Charlotte Hornets",
+            "flag": "https://streamcenter.st/api/images/badge/3967b4fa-d3db-4c52-8523-bece9b205c5e.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/0494a5d3-2758-4599-8add-b06144a2a4d2.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream2.pro/hls/mlkijfezag65.m3u8",
+            "raw_link": "https://edgestream2.pro/hls/mlkijfezag65.m3u8|Referer=https://streame.center",
             "headers": {
               "Referer": "https://streame.center"
             },
@@ -1228,42 +1336,6 @@
         ]
       },
       {
-        "title": "Nashville Predators at Pittsburgh Penguins",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "nashville-predators-at-pittsburgh-penguins",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 05:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 08:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Nashville Predators",
-            "flag": "https://streamcenter.st/api/images/badge/cf193378-d6e6-4cac-aa1b-1d4dde3e7221.webp"
-          },
-          "team_b": {
-            "name": "Pittsburgh Penguins",
-            "flag": "https://streamcenter.st/api/images/badge/c5124d32-cc38-4513-ab70-f67698171bff.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/cf193378-d6e6-4cac-aa1b-1d4dde3e7221.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/54.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/54.m3u8|Referer=https://streame.center",
-            "headers": {
-              "Referer": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Buffalo Sabres at Washington Capitals",
         "sport": "Hockey",
         "sub_category": "Hockey",
@@ -1292,6 +1364,42 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/55.m3u8",
             "raw_link": "https://edgestream3.pro/stream/55.m3u8|Referer=https://streame.center",
+            "headers": {
+              "Referer": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Vegas Golden Knights at Columbus Blue Jackets",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "vegas-golden-knights-at-columbus-blue-jackets",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Vegas Golden Knights",
+            "flag": "https://streamcenter.st/api/images/badge/a12d8b8b-0691-418e-93a2-1d7af8926439.webp"
+          },
+          "team_b": {
+            "name": "Columbus Blue Jackets",
+            "flag": "https://streamcenter.st/api/images/badge/15506e97-07f7-4138-8d2f-48830c5f4445.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/a12d8b8b-0691-418e-93a2-1d7af8926439.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/56.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/56.m3u8|Referer=https://streame.center",
             "headers": {
               "Referer": "https://streame.center"
             },
@@ -1436,78 +1544,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/86.m3u8",
             "raw_link": "https://edgestream3.pro/stream/86.m3u8|Referer=https://streame.center",
-            "headers": {
-              "Referer": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Brooklyn Nets at Cleveland Cavaliers",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "brooklyn-nets-at-cleveland-cavaliers",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 05:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 08:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Brooklyn Nets",
-            "flag": "https://streamcenter.st/api/images/badge/34976ee6-0def-4ee5-b23f-3d67b151e780.webp"
-          },
-          "team_b": {
-            "name": "Cleveland Cavaliers",
-            "flag": "https://streamcenter.st/api/images/badge/ff3fac0c-fcff-45f0-b979-8a183d32390c.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/34976ee6-0def-4ee5-b23f-3d67b151e780.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/66.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/66.m3u8|Referer=https://streame.center",
-            "headers": {
-              "Referer": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Milwaukee Bucks at Philadelphia 76ers",
-        "sport": "Basketball",
-        "sub_category": "NBA",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "milwaukee-bucks-at-philadelphia-76ers",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 05:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 08:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Milwaukee Bucks",
-            "flag": "https://streamcenter.st/api/images/badge/3f0f83c7-b6fb-4a6d-864c-873a66795e84.webp"
-          },
-          "team_b": {
-            "name": "Philadelphia 76ers",
-            "flag": "https://streamcenter.st/api/images/badge/1e7d7289-c94a-4896-9b74-ed4d2d337f4d.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/3f0f83c7-b6fb-4a6d-864c-873a66795e84.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/67.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/67.m3u8|Referer=https://streame.center",
             "headers": {
               "Referer": "https://streame.center"
             },
@@ -1732,6 +1768,150 @@
         ]
       },
       {
+        "title": "Brooklyn Nets at Cleveland Cavaliers",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "brooklyn-nets-at-cleveland-cavaliers",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 05:30:00 AM",
+          "end_time_bst": "Oct 25, 2026, 08:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Brooklyn Nets",
+            "flag": "https://streamcenter.st/api/images/badge/34976ee6-0def-4ee5-b23f-3d67b151e780.webp"
+          },
+          "team_b": {
+            "name": "Cleveland Cavaliers",
+            "flag": "https://streamcenter.st/api/images/badge/ff3fac0c-fcff-45f0-b979-8a183d32390c.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/34976ee6-0def-4ee5-b23f-3d67b151e780.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/66.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/66.m3u8|Referer=https://streame.center",
+            "headers": {
+              "Referer": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Milwaukee Bucks at Philadelphia 76ers",
+        "sport": "Basketball",
+        "sub_category": "NBA",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "milwaukee-bucks-at-philadelphia-76ers",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 05:30:00 AM",
+          "end_time_bst": "Oct 25, 2026, 08:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Milwaukee Bucks",
+            "flag": "https://streamcenter.st/api/images/badge/3f0f83c7-b6fb-4a6d-864c-873a66795e84.webp"
+          },
+          "team_b": {
+            "name": "Philadelphia 76ers",
+            "flag": "https://streamcenter.st/api/images/badge/1e7d7289-c94a-4896-9b74-ed4d2d337f4d.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/3f0f83c7-b6fb-4a6d-864c-873a66795e84.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/67.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/67.m3u8|Referer=https://streame.center",
+            "headers": {
+              "Referer": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Tampa Bay Rays at Milwaukee Brewers",
+        "sport": "Baseball",
+        "sub_category": "Baseball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "tampa-bay-rays-at-milwaukee-brewers",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Tampa Bay Rays",
+            "flag": "https://streamcenter.st/api/images/badge/693e4904-9299-4803-b649-2a9b37ad5089.webp"
+          },
+          "team_b": {
+            "name": "Milwaukee Brewers",
+            "flag": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/693e4904-9299-4803-b649-2a9b37ad5089.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/15.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/15.m3u8|Referer=https://streame.center",
+            "headers": {
+              "Referer": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "UTSA Roadrunners at Tulane Green Wave",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "utsa-roadrunners-at-tulane-green-wave",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "UTSA Roadrunners",
+            "flag": "https://streamcenter.st/api/images/badge/8d080361-7136-4ab6-ae0e-750ec254b340.webp"
+          },
+          "team_b": {
+            "name": "Tulane Green Wave",
+            "flag": "https://streamcenter.st/api/images/badge/79d5db17-e627-4ff3-bcb5-166b63abb38c.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/8d080361-7136-4ab6-ae0e-750ec254b340.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/93.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/93.m3u8|Referer=https://streame.center",
+            "headers": {
+              "Referer": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
         "title": "Washington Wizards at Chicago Bulls",
         "sport": "Basketball",
         "sub_category": "NBA",
@@ -1804,42 +1984,6 @@
         ]
       },
       {
-        "title": "UTSA Roadrunners at Tulane Green Wave",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "utsa-roadrunners-at-tulane-green-wave",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "UTSA Roadrunners",
-            "flag": "https://streamcenter.st/api/images/badge/8d080361-7136-4ab6-ae0e-750ec254b340.webp"
-          },
-          "team_b": {
-            "name": "Tulane Green Wave",
-            "flag": "https://streamcenter.st/api/images/badge/79d5db17-e627-4ff3-bcb5-166b63abb38c.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/8d080361-7136-4ab6-ae0e-750ec254b340.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/93.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/93.m3u8|Referer=https://streame.center",
-            "headers": {
-              "Referer": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Houston Rockets at Atlanta Hawks",
         "sport": "Basketball",
         "sub_category": "Basketball",
@@ -1876,34 +2020,34 @@
         ]
       },
       {
-        "title": "New Orleans Pelicans at Denver Nuggets",
-        "sport": "Basketball",
-        "sub_category": "NBA",
+        "title": "Minnesota Wild at Seattle Kraken",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "new-orleans-pelicans-at-denver-nuggets",
+        "slug": "minnesota-wild-at-seattle-kraken",
         "schedule": {
           "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 07:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 10:00:00 AM"
+          "start_time_bst": "Oct 25, 2026, 08:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 11:00:00 AM"
         },
         "teams": {
           "team_a": {
-            "name": "New Orleans Pelicans",
-            "flag": "https://streamcenter.st/api/images/badge/0acf1a39-8f3a-48e3-91f3-d16ed98e27cd.webp"
+            "name": "Minnesota Wild",
+            "flag": "https://streamcenter.st/api/images/badge/58e1055d-df86-4f5b-a9a9-5e32ea674a84.webp"
           },
           "team_b": {
-            "name": "Denver Nuggets",
-            "flag": "https://streamcenter.st/api/images/badge/303d0ee1-c5f9-4ee2-a745-e01af517c96d.webp"
+            "name": "Seattle Kraken",
+            "flag": "https://streamcenter.st/api/images/badge/7280c674-1cd2-4120-ac33-602759ffa569.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/0acf1a39-8f3a-48e3-91f3-d16ed98e27cd.webp",
+        "logo": "https://streamcenter.st/api/images/badge/58e1055d-df86-4f5b-a9a9-5e32ea674a84.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/71.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/71.m3u8|Referer=https://streame.center",
+            "url": "https://edgestream3.pro/stream/61.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/61.m3u8|Referer=https://streame.center",
             "headers": {
               "Referer": "https://streame.center"
             },
@@ -1912,34 +2056,34 @@
         ]
       },
       {
-        "title": "Tampa Bay Lightning at Utah Mammoth",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
+        "title": "North Dakota State Bison at New Mexico Lobos",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "tampa-bay-lightning-at-utah-mammoth",
+        "slug": "north-dakota-state-bison-at-new-mexico-lobos",
         "schedule": {
           "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 07:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 10:00:00 AM"
+          "start_time_bst": "Oct 25, 2026, 08:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 11:00:00 AM"
         },
         "teams": {
           "team_a": {
-            "name": "Tampa Bay Lightning",
-            "flag": "https://streamcenter.st/api/images/badge/9bbc874b-2df6-44ce-a6b4-52b0f47d9514.webp"
+            "name": "North Dakota State Bison",
+            "flag": "https://streamcenter.st/api/images/badge/a8233d60-be13-4e4b-9aa6-4144db441dda.webp"
           },
           "team_b": {
-            "name": "Utah Mammoth",
-            "flag": "https://streamcenter.st/api/images/badge/341ae09d-6283-4d99-8b40-6bf0865884ab.webp"
+            "name": "New Mexico Lobos",
+            "flag": "https://streamcenter.st/api/images/badge/13c072f5-aa6c-4b3c-a03e-ecb0217b93d8.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/9bbc874b-2df6-44ce-a6b4-52b0f47d9514.webp",
+        "logo": "https://streamcenter.st/api/images/badge/a8233d60-be13-4e4b-9aa6-4144db441dda.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/59.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/59.m3u8|Referer=https://streame.center",
+            "url": "https://edgestream3.pro/stream/94.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/94.m3u8|Referer=https://streame.center",
             "headers": {
               "Referer": "https://streame.center"
             },
