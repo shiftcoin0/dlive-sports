@@ -13,7 +13,7 @@ from selectolax.lexbor import LexborHTMLParser as HTMLParser
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
-BASE_URL = "https://dlive.sx"
+BASE_URL = "https://thedaddy.pk"
 SCHEDULE_URL = f"{BASE_URL}/schedule/schedule-generated.json"
 
 TAG = "DLIVE"
