@@ -15,22 +15,22 @@ from selectolax.lexbor import LexborHTMLParser as HTMLParser
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
 BASE_URL = "https://streamcenter.st"
-# আপনার নির্দেশিত নতুন রেফারার
-STREAM_REFERER = "https://embedcenter.st/"
 API_SPORTS = f"{BASE_URL}/api/sports"
 
 TAG = "STRMCNTR"
+
+# -----------------------------------------------------------------------------
+# আপনার নির্দেশিত স্ট্রিমিং হেডারসমূহ
+# -----------------------------------------------------------------------------
+STREAM_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"
+STREAM_REFERER = "https://streame.center"
+STREAM_ORIGIN = "https://streame.center"
+STREAM_PIPE_HEADERS = f"User-Agent={STREAM_UA}&Referer={STREAM_REFERER}&Origin={STREAM_ORIGIN}"
 
 JSON_OUTPUT = ROOT_DIR / "strmcntr.json"
 M3U_OUTPUT = ROOT_DIR / "strmcntr.m3u"
 LOG_DIR = ROOT_DIR / "logs"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
-
-UA = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-    "AppleWebKit/537.36 (KHTML, like Gecko) "
-    "Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
-)
 
 HTTP_SEMAPHORE = asyncio.Semaphore(12)
 BST_TZ = ZoneInfo("Asia/Dhaka")
@@ -60,7 +60,7 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# সরাসরি StreamCenter API অ্যাসেট আইডি থেকে ইমেজ (Poster / Badge) তৈরির ফাংশন
+# সরাসরি StreamCenter API অ্যাসেট আইডি থেকে ইমেজ তৈরির ফাংশন
 # -----------------------------------------------------------------------------
 def format_api_asset(raw_asset, asset_type="badge") -> str | None:
     if not raw_asset:
@@ -99,7 +99,6 @@ def extract_api_badges(m: dict, sport_default_poster: str | None = None) -> tupl
     flag_a = None
     flag_b = None
 
-    # ১. টিমগুলোর জন্য ব্যাজ খোঁজা
     teams_data = m.get("teams") or m.get("competitors")
     if isinstance(teams_data, dict):
         home = teams_data.get("home") or teams_data.get("team1") or teams_data.get("team_a")
@@ -125,7 +124,6 @@ def extract_api_badges(m: dict, sport_default_poster: str | None = None) -> tupl
     if not flag_b:
         flag_b = event_badge
 
-    # মেইন লোগো: পোস্টার -> ব্যাজ -> টিম ১ ব্যাজ -> স্পোর্ট পোস্টার
     main_event_logo = event_poster or event_badge or flag_a or flag_b or sport_default_poster
 
     if not flag_a:
@@ -278,33 +276,41 @@ def save_playlists(events: list[dict]) -> None:
 
         for ch in ev.get("channels", []):
             url = ch.get("url")
+            raw_link = ch.get("raw_link") or url
             if not url:
                 continue
 
             ch_name = ch.get("channel_name", "Stream")
-            referer = ch.get("headers", {}).get("Referer", STREAM_REFERER)
+            headers = ch.get("headers", {})
+            referer = headers.get("Referer", STREAM_REFERER)
+            user_agent = headers.get("User-Agent", STREAM_UA)
+
             status_lbl = f" [{status}]" if status else ""
             display_name = f"[{sub_cat}] {ev['title']} | {ch_name}{status_lbl}"
 
             m3u_lines.append(f'#EXTINF:-1 tvg-id="Live.Event.us" tvg-logo="{logo}" group-title="{sub_cat}",{display_name}')
             if referer:
                 m3u_lines.append(f'#EXTVLCOPT:http-referrer={referer}')
-            m3u_lines.append(url)
+            if user_agent:
+                m3u_lines.append(f'#EXTVLCOPT:http-user-agent={user_agent}')
+
+            m3u_lines.append(raw_link)
 
     M3U_OUTPUT.write_text("\n".join(m3u_lines) + "\n", encoding="utf-8")
     log.info(f"Saved M3U: {M3U_OUTPUT}")
 
 
-async def resolve_m3u8_from_embed(client: httpx.AsyncClient, embed_url: str) -> tuple[str, str] | None:
+async def resolve_m3u8_from_embed(client: httpx.AsyncClient, embed_url: str) -> str | None:
     if not embed_url:
         return None
 
     if ".m3u8" in embed_url:
-        return embed_url, STREAM_REFERER
+        return embed_url
 
     headers = {
-        "User-Agent": UA,
+        "User-Agent": STREAM_UA,
         "Referer": STREAM_REFERER,
+        "Origin": STREAM_ORIGIN,
     }
 
     try:
@@ -316,7 +322,7 @@ async def resolve_m3u8_from_embed(client: httpx.AsyncClient, embed_url: str) -> 
 
         m3u8_match = re.search(r'["\'](https?://[^"\'\s]+\.m3u8[^"\'\s]*)["\']', content)
         if m3u8_match:
-            return m3u8_match.group(1), STREAM_REFERER
+            return m3u8_match.group(1)
 
         soup = HTMLParser(resp.content)
         iframe = soup.css_first("iframe")
@@ -334,20 +340,20 @@ async def resolve_m3u8_from_embed(client: httpx.AsyncClient, embed_url: str) -> 
 
             if stream_id:
                 if stream_id.isdigit():
-                    return f"https://edgestream3.pro/stream/{stream_id}.m3u8", STREAM_REFERER
-                return f"https://edgestream2.pro/hls/{stream_id}.m3u8", STREAM_REFERER
+                    return f"https://edgestream3.pro/stream/{stream_id}.m3u8"
+                return f"https://edgestream2.pro/hls/{stream_id}.m3u8"
 
         js_m = re.search(r'stream(?:_id)?\s*[:=]\s*["\']?([a-zA-Z0-9_\-]+)["\']?', content, re.IGNORECASE)
         if js_m:
             s_id = js_m.group(1)
             if s_id.isdigit():
-                return f"https://edgestream3.pro/stream/{s_id}.m3u8", STREAM_REFERER
-            return f"https://edgestream2.pro/hls/{s_id}.m3u8", STREAM_REFERER
+                return f"https://edgestream3.pro/stream/{s_id}.m3u8"
+            return f"https://edgestream2.pro/hls/{s_id}.m3u8"
 
         ch_m = re.search(r'ch(\d+)', embed_url)
         if ch_m:
             ch_num = ch_m.group(1)
-            return f"https://edgestream3.pro/stream/{ch_num}.m3u8", STREAM_REFERER
+            return f"https://edgestream3.pro/stream/{ch_num}.m3u8"
 
     except Exception as e:
         log.debug(f"Error resolving embed {embed_url}: {e}")
@@ -375,7 +381,13 @@ async def resolve_stream_group(client: httpx.AsyncClient, source: str, match_id:
 async def scrape():
     log.info(f"Scraping StreamCenter API from {API_SPORTS}...")
 
-    async with httpx.AsyncClient(headers={"User-Agent": UA, "Referer": f"{BASE_URL}/"}, timeout=12.0) as client:
+    client_headers = {
+        "User-Agent": STREAM_UA,
+        "Referer": STREAM_REFERER,
+        "Origin": STREAM_ORIGIN,
+    }
+
+    async with httpx.AsyncClient(headers=client_headers, timeout=12.0) as client:
         sport_poster_map = {}
         try:
             sports_res = await client.get(API_SPORTS)
@@ -482,15 +494,22 @@ async def scrape():
                 for item in stream_items:
                     raw_embed = item.get("embedUrl") or item.get("webUrl")
                     if raw_embed in embed_m3u8_cache:
-                        m3u8_url, ref = embed_m3u8_cache[raw_embed]
+                        m3u8_url = embed_m3u8_cache[raw_embed]
                         ch_name = item.get("stream") or item.get("name") or s.get("source", "Stream")
+
+                        # আপনার নির্দেশিত নির্দিষ্ট ফরম্যাটে raw_link এবং headers তৈরি
+                        raw_link = f"{m3u8_url}|{STREAM_PIPE_HEADERS}"
 
                         event_channels.append({
                             "channel_name": str(ch_name),
                             "stream_type": "HLS",
                             "url": m3u8_url,
-                            "raw_link": f"{m3u8_url}|Referer={ref}",
-                            "headers": {"Referer": ref},
+                            "raw_link": raw_link,
+                            "headers": {
+                                "User-Agent": STREAM_UA,
+                                "Referer": STREAM_REFERER,
+                                "Origin": STREAM_ORIGIN,
+                            },
                             "drm_key": None
                         })
 
@@ -538,7 +557,7 @@ async def scrape():
             it.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info("Playlists with https://embedcenter.st/ Referer generated successfully!")
+        log.info("Playlists with full Stream Headers generated successfully!")
 
 
 if __name__ == "__main__":
