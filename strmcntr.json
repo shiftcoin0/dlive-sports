@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 25, 2026, 04:47:00 AM",
-  "event_count": 36,
+  "last_updated": "Oct 25, 2026, 04:52:04 AM",
+  "event_count": 31,
   "events": {
     "events": [
       {
@@ -108,44 +108,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/45.m3u8",
             "raw_link": "https://edgestream3.pro/stream/45.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://streame.center",
-              "Origin": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "MSC Cruises United States Grand Prix — Qual",
-        "sport": "Racing",
-        "sub_category": "Racing",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "msc-cruises-united-states-grand-prix-qual",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 03:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 06:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "MSC Cruises United States Grand Prix — Qual",
-            "flag": null
-          },
-          "team_b": {
-            "name": "MSC Cruises United States Grand Prix — Qual",
-            "flag": null
-          }
-        },
-        "logo": null,
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/49.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/49.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://streame.center",
@@ -336,82 +298,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/86.m3u8",
             "raw_link": "https://edgestream3.pro/stream/86.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://streame.center",
-              "Origin": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "San Jose Sharks at Boston Bruins",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "san-jose-sharks-at-boston-bruins",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 05:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 08:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "San Jose Sharks",
-            "flag": "https://streamcenter.st/api/images/badge/42d789de-401c-499f-8372-51ddc8bc2ddb.webp"
-          },
-          "team_b": {
-            "name": "Boston Bruins",
-            "flag": "https://streamcenter.st/api/images/badge/b35c349b-ef6c-4208-87f0-2c7ba21071ab.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/42d789de-401c-499f-8372-51ddc8bc2ddb.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/52.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/52.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://streame.center",
-              "Origin": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "New York Rangers at Ottawa Senators",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "new-york-rangers-at-ottawa-senators",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 05:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 08:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "New York Rangers",
-            "flag": "https://streamcenter.st/api/images/badge/967db9c2-4152-4893-b255-df00248b82d1.webp"
-          },
-          "team_b": {
-            "name": "Ottawa Senators",
-            "flag": "https://streamcenter.st/api/images/badge/2b61dab9-9852-430e-8f29-91e4adb82bbf.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/967db9c2-4152-4893-b255-df00248b82d1.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/53.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/53.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://streame.center",
@@ -764,44 +650,6 @@
         ]
       },
       {
-        "title": "USC Trojans at Wisconsin Badgers",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "usc-trojans-at-wisconsin-badgers",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 05:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 08:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "USC Trojans",
-            "flag": "https://streamcenter.st/api/images/badge/99ac733b-1f55-4957-855d-dc48105d5136.webp"
-          },
-          "team_b": {
-            "name": "Wisconsin Badgers",
-            "flag": "https://streamcenter.st/api/images/badge/9e0233f8-2ff6-48f2-9e85-c7cdf5481481.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/99ac733b-1f55-4957-855d-dc48105d5136.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/91.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/91.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://streame.center",
-              "Origin": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Utah State Aggies at Texas State Bobcats",
         "sport": "Football",
         "sub_category": "Football",
@@ -1020,44 +868,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/68.m3u8",
             "raw_link": "https://edgestream3.pro/stream/68.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://streame.center",
-              "Origin": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "San Antonio Spurs at Dallas Mavericks",
-        "sport": "Basketball",
-        "sub_category": "NBA",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "san-antonio-spurs-at-dallas-mavericks",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "San Antonio Spurs",
-            "flag": "https://streamcenter.st/api/images/badge/5a3ac75c-7122-4ece-aad5-2dc3550a0e4d.webp"
-          },
-          "team_b": {
-            "name": "Dallas Mavericks",
-            "flag": "https://streamcenter.st/api/images/badge/53c69c5f-5a1e-44a8-b7df-863eaac1cc06.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/5a3ac75c-7122-4ece-aad5-2dc3550a0e4d.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/69.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/69.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://streame.center",
