@@ -59,21 +59,20 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# সরাসরি StreamCenter API অ্যাসেট আইডি থেকে ইমেজ তৈরির ফাংশন
+# সরাসরি StreamCenter API অ্যাসেট আইডি থেকে ইমেজ (Poster / Badge) তৈরির ফাংশন
 # -----------------------------------------------------------------------------
 def format_api_asset(raw_asset, asset_type="badge") -> str | None:
     if not raw_asset:
         return None
 
-    # যদি অবজেক্ট বা ডিকশনারি আকারে আসে
     if isinstance(raw_asset, dict):
         raw_asset = (
             raw_asset.get("assetId")
             or raw_asset.get("id")
             or raw_asset.get("url")
             or raw_asset.get("src")
-            or raw_asset.get("badge")
             or raw_asset.get("poster")
+            or raw_asset.get("badge")
         )
         if not raw_asset:
             return None
@@ -88,55 +87,55 @@ def format_api_asset(raw_asset, asset_type="badge") -> str | None:
     if val.startswith("/"):
         return f"{BASE_URL}{val}"
 
-    # .webp ডাবল এক্সটেনশন রোধ করা
     clean_id = val[:-5] if val.endswith(".webp") else val
     return f"{BASE_URL}/api/images/{asset_type}/{clean_id}.webp"
 
 
-def extract_api_badges(m: dict, sport_default_badge: str | None = None) -> tuple[str | None, str | None, str | None]:
+def extract_api_badges(m: dict, sport_default_poster: str | None = None) -> tuple[str | None, str | None, str | None]:
     """
-    ম্যাচ ডেটার সকল সম্ভাব্য স্থান থেকে সরাসরি StreamCenter-এর নিজস্ব লোগো সংগ্রহ করে
+    রিটার্ন করবে:
+    ১. main_event_logo: ইভেন্টের আসল কভার ইমেজ / পোস্টার (16:9 Poster)
+    ২. flag_a: টিম A এর ব্যাজ
+    ৩. flag_b: টিম B এর ব্যাজ
     """
-    # ১. ম্যাচের মূল badge বা poster
-    event_badge = (
-        format_api_asset(m.get("badge"), "badge")
-        or format_api_asset(m.get("poster"), "poster")
-        or format_api_asset(m.get("image"), "badge")
-        or format_api_asset(m.get("logo"), "badge")
-        or format_api_asset(m.get("icon"), "badge")
-    )
+    # ১. ইভেন্টের আসল কভার ইমেজ (Poster) অগ্রাধিকার পাবে
+    event_poster = format_api_asset(m.get("poster"), "poster")
+    event_badge = format_api_asset(m.get("badge"), "badge")
+
+    # মেইন লোগো হবে সরাসরি ইভেন্টের কভার ইমেজ / পোস্টার
+    main_event_logo = event_poster or event_badge or sport_default_poster
 
     flag_a = None
     flag_b = None
 
-    # ২. যদি API-এর ভেতরে teams অবজেক্ট বা অ্যারে থাকে
+    # ২. টিমগুলোর জন্য ব্যাজ খোঁজা
     teams_data = m.get("teams") or m.get("competitors")
     if isinstance(teams_data, dict):
         home = teams_data.get("home") or teams_data.get("team1") or teams_data.get("team_a")
         away = teams_data.get("away") or teams_data.get("team2") or teams_data.get("team_b")
         if isinstance(home, dict):
-            flag_a = format_api_asset(home.get("badge") or home.get("logo") or home.get("image"))
+            flag_a = format_api_asset(home.get("badge") or home.get("logo") or home.get("image"), "badge")
         if isinstance(away, dict):
-            flag_b = format_api_asset(away.get("badge") or away.get("logo") or away.get("image"))
+            flag_b = format_api_asset(away.get("badge") or away.get("logo") or away.get("image"), "badge")
     elif isinstance(teams_data, list) and len(teams_data) >= 2:
         t1, t2 = teams_data[0], teams_data[1]
         if isinstance(t1, dict):
-            flag_a = format_api_asset(t1.get("badge") or t1.get("logo") or t1.get("image"))
+            flag_a = format_api_asset(t1.get("badge") or t1.get("logo") or t1.get("image"), "badge")
         if isinstance(t2, dict):
-            flag_b = format_api_asset(t2.get("badge") or t2.get("logo") or t2.get("image"))
+            flag_b = format_api_asset(t2.get("badge") or t2.get("logo") or t2.get("image"), "badge")
 
-    # ৩. আলাদা homeBadge বা awayBadge ফিল্ড থাকলে
     if not flag_a:
-        flag_a = format_api_asset(m.get("homeBadge")) or format_api_asset(m.get("team1Badge"))
+        flag_a = format_api_asset(m.get("homeBadge"), "badge") or format_api_asset(m.get("team1Badge"), "badge")
     if not flag_b:
-        flag_b = format_api_asset(m.get("awayBadge")) or format_api_asset(m.get("team2Badge"))
+        flag_b = format_api_asset(m.get("awayBadge"), "badge") or format_api_asset(m.get("team2Badge"), "badge")
 
-    # ৪. ম্যাচ ব্যাজ বা স্পোর্টস ক্যাটালগের ব্যাজ ব্যবহার করা
-    final_event_logo = event_badge or flag_a or flag_b or sport_default_badge
-    final_flag_a = flag_a or final_event_logo
-    final_flag_b = flag_b or final_event_logo
+    # টিম ব্যাজ না থাকলে ইভেন্টের ব্যাজ বসবে
+    if not flag_a:
+        flag_a = event_badge or main_event_logo
+    if not flag_b:
+        flag_b = event_badge or main_event_logo
 
-    return final_event_logo, final_flag_a, final_flag_b
+    return main_event_logo, flag_a, flag_b
 
 
 # -----------------------------------------------------------------------------
@@ -221,9 +220,6 @@ def clean_sport_name(sport_slug: str) -> str:
     return sport_slug.replace("-", " ").title()
 
 
-# -----------------------------------------------------------------------------
-# টিম নাম ভাগ করা (" at " সহ সব আমেরিকান/ইউরোপিয়ান ডিলিমিটার সাপোর্ট)
-# -----------------------------------------------------------------------------
 def parse_team_names(title: str) -> dict[str, str]:
     delimiters = [" vs. ", " vs ", " v ", " - ", " @ ", " at "]
     for d in delimiters:
@@ -376,8 +372,8 @@ async def scrape():
     log.info(f"Scraping StreamCenter API from {API_SPORTS}...")
 
     async with httpx.AsyncClient(headers={"User-Agent": UA, "Referer": f"{BASE_URL}/"}, timeout=12.0) as client:
-        # ১. স্পোর্টস ক্যাটালগ ও তাদের অফিশিয়াল ব্যাজ সংগ্রহ
-        sport_badge_map = {}
+        # ১. স্পোর্টস ক্যাটালগ এবং তাদের পোস্টার/ব্যানার সংরক্ষণ
+        sport_poster_map = {}
         try:
             sports_res = await client.get(API_SPORTS)
             if sports_res.status_code != 200:
@@ -386,9 +382,10 @@ async def scrape():
             sports_list = sports_res.json()
             for sp in sports_list:
                 s_id = sp.get("id")
-                s_badge = format_api_asset(sp.get("badge") or sp.get("poster") or sp.get("icon") or sp.get("image"))
+                # ক্যাটাগরি পোস্টার/কভার ইমেজ
+                s_poster = format_api_asset(sp.get("poster"), "poster") or format_api_asset(sp.get("badge"), "badge")
                 if s_id:
-                    sport_badge_map[s_id] = s_badge
+                    sport_poster_map[s_id] = s_poster
         except Exception as e:
             log.error(f"Error fetching sports: {e}")
             return
@@ -416,7 +413,7 @@ async def scrape():
         await asyncio.gather(*(fetch_sport_matches(sp) for sp in sports_list))
         log.info(f"Retrieved {len(all_raw_matches)} total matches.")
 
-        # ৩. সময় অনুযায়ী ফিল্টার
+        # ৩. সময় ফিল্টারিং
         valid_matches = []
         for m in all_raw_matches:
             title = m.get("title") or m.get("name")
@@ -451,7 +448,7 @@ async def scrape():
 
         await asyncio.gather(*(fetch_stream_data(src, sid) for src, sid in unique_groups))
 
-        # ৫. সকল এমবেড লিঙ্ক প্যারালালে .m3u8 এ রূপান্তর করা
+        # ৫. এমবেড লিঙ্ক প্যারালালে আসল .m3u8 এ রূপান্তর
         unique_embed_urls = set()
         for _, m in valid_matches:
             for s in m.get("sources", []):
@@ -472,7 +469,7 @@ async def scrape():
 
         await asyncio.gather(*(fetch_real_m3u8(u) for u in unique_embed_urls))
 
-        # ৬. প্লেলিস্ট তৈরি
+        # ৬. চূড়ান্ত প্লেলিস্ট তৈরি
         final_playlist = []
 
         for match_dt, m in valid_matches:
@@ -509,12 +506,12 @@ async def scrape():
                 t_b = t_names["team_b"]
 
                 # -------------------------------------------------------------
-                # সম্পূর্ণ StreamCenter API থেকে ইমেজ/ব্যাজ বের করা
+                # ইভেন্টের আসল কভার ইমেজ (Poster) এবং টিম ব্যাজ বের করা
                 # -------------------------------------------------------------
-                sp_default = sport_badge_map.get(sport_slug)
-                event_logo, flag_a, flag_b = extract_api_badges(m, sp_default)
+                sp_default_poster = sport_poster_map.get(sport_slug)
+                event_cover_poster, flag_a, flag_b = extract_api_badges(m, sp_default_poster)
 
-                # সাব-ক্যাটাগরি নির্ধারণ
+                # সাব-ক্যাটাগরি
                 api_league = m.get("league") or m.get("competition") or m.get("tournament")
                 if api_league and isinstance(api_league, str) and api_league.strip():
                     sub_cat = api_league.strip()
@@ -537,7 +534,7 @@ async def scrape():
                         "team_a": {"name": t_a, "flag": flag_a},
                         "team_b": {"name": t_b, "flag": flag_b}
                     },
-                    "logo": event_logo,  # সরাসরি তাদের API লোগো
+                    "logo": event_cover_poster,  # সরাসরি ইভেন্টের আসল কভার ইমেজ (Poster)
                     "channels": event_channels,
                     "_timestamp": match_dt.timestamp()
                 })
@@ -548,7 +545,7 @@ async def scrape():
             it.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info("Playlists with 100% StreamCenter API badges generated successfully!")
+        log.info("Playlists with Event Posters generated successfully!")
 
 
 if __name__ == "__main__":
