@@ -1,44 +1,8 @@
 {
-  "last_updated": "Oct 24, 2026, 09:02:28 PM",
-  "event_count": 90,
+  "last_updated": "Oct 24, 2026, 09:32:40 PM",
+  "event_count": 91,
   "events": {
     "events": [
-      {
-        "title": "KHL : Sibir Novosibirsk vs Salavat Yulaev Ufa",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "khl-sibir-novosibirsk-vs-salavat-yulaev-ufa",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 24, 2026, 06:30:00 PM",
-          "end_time_bst": "Oct 24, 2026, 09:30:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "KHL : Sibir Novosibirsk",
-            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
-          },
-          "team_b": {
-            "name": "Salavat Yulaev Ufa",
-            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
-          }
-        },
-        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
-        "channels": [
-          {
-            "channel_name": "KHL TV",
-            "stream_type": "HLS",
-            "url": "https://edge.cowedd4855ws.sbs/premium7/index.m3u8",
-            "raw_link": "https://edge.cowedd4855ws.sbs/premium7/index.m3u8|Referer=https://dembed.st/",
-            "headers": {
-              "Referer": "https://dembed.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "World Cup Qualifying : Mozambique vs Uganda",
         "sport": "Football",
@@ -5416,6 +5380,118 @@
             "stream_type": "HLS",
             "url": "https://edge.cowedd4855ws.sbs/premium410/index.m3u8",
             "raw_link": "https://edge.cowedd4855ws.sbs/premium410/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "MLB : Los Angeles Angels vs Chicago White Sox",
+        "sport": "Baseball",
+        "sub_category": "Baseball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "mlb-los-angeles-angels-vs-chicago-white-sox",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 02:05:00 AM",
+          "end_time_bst": "Oct 25, 2026, 05:05:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "MLB : Los Angeles Angels",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Chicago White Sox",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "MLB Network",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium399/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium399/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Premier League Darts : Littler, Luke vs. Aspinall, Nathan",
+        "sport": "Football",
+        "sub_category": "Premier League",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "premier-league-darts-littler-luke-vs-aspinall-nathan",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 02:10:00 AM",
+          "end_time_bst": "Oct 25, 2026, 05:10:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Premier League Darts : Littler, Luke",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png"
+          },
+          "team_b": {
+            "name": "Aspinall, Nathan",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/6576.png",
+        "channels": [
+          {
+            "channel_name": "Sky Sports Action UK",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium37/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium37/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sport1 DE",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium641/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium641/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sky Sports Main Event",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium38/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium38/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "TV3 Sport Denmark",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium809/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium809/index.m3u8|Referer=https://dembed.st/",
+            "headers": {
+              "Referer": "https://dembed.st/"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sky Sport Select NZ",
+            "stream_type": "HLS",
+            "url": "https://edge.cowedd4855ws.sbs/premium587/index.m3u8",
+            "raw_link": "https://edge.cowedd4855ws.sbs/premium587/index.m3u8|Referer=https://dembed.st/",
             "headers": {
               "Referer": "https://dembed.st/"
             },
