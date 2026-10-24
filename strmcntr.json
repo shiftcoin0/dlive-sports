@@ -1,8 +1,46 @@
 {
-  "last_updated": "Oct 24, 2026, 11:27:51 PM",
-  "event_count": 52,
+  "last_updated": "Oct 24, 2026, 11:48:17 PM",
+  "event_count": 57,
   "events": {
     "events": [
+      {
+        "title": "ESPN News",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "espn-news",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 09:49:00 PM",
+          "end_time_bst": "Oct 25, 2026, 12:49:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "ESPN News",
+            "flag": null
+          },
+          "team_b": {
+            "name": "ESPN News",
+            "flag": null
+          }
+        },
+        "logo": null,
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/13.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/13.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
       {
         "title": "ESPN2",
         "sport": "Football",
@@ -31,9 +69,87 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/14.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/14.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/14.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "AS Roma at Napoli",
+        "sport": "Football",
+        "sub_category": "Serie A",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "as-roma-at-napoli",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 10:00:00 PM",
+          "end_time_bst": "Oct 25, 2026, 01:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "AS Roma",
+            "flag": "https://streamcenter.st/api/images/badge/d94af7cb-d92c-4cc9-b0d4-0200deeb01d7.webp"
+          },
+          "team_b": {
+            "name": "Napoli",
+            "flag": "https://streamcenter.st/api/images/badge/f2fe4c24-3b5a-4eba-ba9c-9813cfafc73c.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/d94af7cb-d92c-4cc9-b0d4-0200deeb01d7.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/9.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/9.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "LSU Tigers at Auburn Tigers",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "lsu-tigers-at-auburn-tigers",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 10:00:00 PM",
+          "end_time_bst": "Oct 25, 2026, 01:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "LSU Tigers",
+            "flag": "https://streamcenter.st/api/images/badge/07dc56ff-6739-43c0-8535-e6b64dbeef62.webp"
+          },
+          "team_b": {
+            "name": "Auburn Tigers",
+            "flag": "https://streamcenter.st/api/images/badge/3cf2d544-3894-4276-9228-3034673ad633.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/07dc56ff-6739-43c0-8535-e6b64dbeef62.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/16.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/16.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -67,9 +183,49 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/17.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/17.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/17.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "West Virginia Mountaineers at TCU Horned Frogs",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "west-virginia-mountaineers-at-tcu-horned-frogs",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 10:00:00 PM",
+          "end_time_bst": "Oct 25, 2026, 01:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "West Virginia Mountaineers",
+            "flag": "https://streamcenter.st/api/images/badge/643d9300-7b24-4e5e-9494-b97a79e1ecd0.webp"
+          },
+          "team_b": {
+            "name": "TCU Horned Frogs",
+            "flag": "https://streamcenter.st/api/images/badge/ac375449-c69f-4b9e-9a52-fec90bcbbddf.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/643d9300-7b24-4e5e-9494-b97a79e1ecd0.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/18.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/18.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -103,9 +259,49 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/19.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/19.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/19.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Pittsburgh Panthers at Miami Hurricanes",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "pittsburgh-panthers-at-miami-hurricanes",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 24, 2026, 10:00:00 PM",
+          "end_time_bst": "Oct 25, 2026, 01:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Pittsburgh Panthers",
+            "flag": "https://streamcenter.st/api/images/badge/1579c1f7-046d-47d2-81b5-b4a3168223f1.webp"
+          },
+          "team_b": {
+            "name": "Miami Hurricanes",
+            "flag": "https://streamcenter.st/api/images/badge/9c9cb2b0-6be0-4009-a845-2cfdb4fe357c.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/1579c1f7-046d-47d2-81b5-b4a3168223f1.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/20.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/20.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -139,9 +335,11 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/21.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/21.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/21.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -175,21 +373,23 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/22.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/22.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/22.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Rice Owls at Florida Atlantic Owls",
+        "title": "Western Michigan Broncos at Toledo Rockets",
         "sport": "Football",
         "sub_category": "Football",
         "status": "LIVE",
         "is_hot": false,
-        "slug": "rice-owls-at-florida-atlantic-owls",
+        "slug": "western-michigan-broncos-at-toledo-rockets",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 24, 2026, 10:00:00 PM",
@@ -197,23 +397,25 @@
         },
         "teams": {
           "team_a": {
-            "name": "Rice Owls",
-            "flag": "https://streamcenter.st/api/images/badge/be6f5f1b-e8dd-4606-a417-d395f89d4a5d.webp"
+            "name": "Western Michigan Broncos",
+            "flag": "https://streamcenter.st/api/images/badge/b8cdc25a-f486-406e-ac29-84cdc19664fa.webp"
           },
           "team_b": {
-            "name": "Florida Atlantic Owls",
-            "flag": "https://streamcenter.st/api/images/badge/f3ce836d-1013-4ef9-9ea1-59a26467193b.webp"
+            "name": "Toledo Rockets",
+            "flag": "https://streamcenter.st/api/images/badge/2082df86-65d9-4b1e-b924-3a898fdffd86.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/be6f5f1b-e8dd-4606-a417-d395f89d4a5d.webp",
+        "logo": "https://streamcenter.st/api/images/badge/b8cdc25a-f486-406e-ac29-84cdc19664fa.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/23.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/23.m3u8|Referer=https://embedcenter.st/",
+            "url": "https://edgestream3.pro/stream/24.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/24.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -247,9 +449,11 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/3.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/3.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/3.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -283,9 +487,11 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/6.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/6.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/6.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -319,21 +525,23 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/1.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/1.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Baylor Bears at Kansas Jayhawks",
-        "sport": "Football",
-        "sub_category": "Football",
+        "title": "Golden State Valkyries at Atlanta Dream",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
         "status": "LIVE",
         "is_hot": false,
-        "slug": "baylor-bears-at-kansas-jayhawks",
+        "slug": "golden-state-valkyries-at-atlanta-dream",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 24, 2026, 11:00:00 PM",
@@ -341,59 +549,63 @@
         },
         "teams": {
           "team_a": {
-            "name": "Baylor Bears",
-            "flag": "https://streamcenter.st/api/images/badge/3935e301-0134-4769-ac40-3788a8e5cde6.webp"
+            "name": "Golden State Valkyries",
+            "flag": "https://streamcenter.st/api/images/badge/49c26719-8998-410f-80e0-0fb41761a015.webp"
           },
           "team_b": {
-            "name": "Kansas Jayhawks",
-            "flag": "https://streamcenter.st/api/images/badge/35a17779-6184-4bb0-8a21-4f5939f9616d.webp"
+            "name": "Atlanta Dream",
+            "flag": "https://streamcenter.st/api/images/badge/6fc1f7c0-ce6f-47c3-9e76-a22ab3cb1ea3.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/3935e301-0134-4769-ac40-3788a8e5cde6.webp",
+        "logo": "https://streamcenter.st/api/images/badge/49c26719-8998-410f-80e0-0fb41761a015.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/25.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/25.m3u8|Referer=https://embedcenter.st/",
+            "url": "https://edgestream3.pro/stream/80.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/80.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Anaheim Ducks at Philadelphia Flyers",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
+        "title": "MSC Cruises United States Grand Prix — FP3",
+        "sport": "Racing",
+        "sub_category": "Racing",
         "status": "LIVE",
         "is_hot": false,
-        "slug": "anaheim-ducks-at-philadelphia-flyers",
+        "slug": "msc-cruises-united-states-grand-prix-fp3",
         "schedule": {
           "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 24, 2026, 11:00:00 PM",
-          "end_time_bst": "Oct 25, 2026, 02:00:00 AM"
+          "start_time_bst": "Oct 24, 2026, 11:30:00 PM",
+          "end_time_bst": "Oct 25, 2026, 02:30:00 AM"
         },
         "teams": {
           "team_a": {
-            "name": "Anaheim Ducks",
-            "flag": "https://streamcenter.st/api/images/badge/36cc4665-ff40-4500-9daf-7822a241548a.webp"
+            "name": "MSC Cruises United States Grand Prix — FP3",
+            "flag": null
           },
           "team_b": {
-            "name": "Philadelphia Flyers",
-            "flag": "https://streamcenter.st/api/images/badge/8d661920-97ad-4e18-9ae1-5943982608a0.webp"
+            "name": "MSC Cruises United States Grand Prix — FP3",
+            "flag": null
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/36cc4665-ff40-4500-9daf-7822a241548a.webp",
+        "logo": null,
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/50.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/50.m3u8|Referer=https://embedcenter.st/",
+            "url": "https://edgestream3.pro/stream/49.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/49.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -403,7 +615,7 @@
         "title": "Dalton Smith vs Alberto Puello Fight",
         "sport": "Boxing",
         "sub_category": "Boxing",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "dalton-smith-vs-alberto-puello-fight",
         "schedule": {
@@ -427,9 +639,49 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/46.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/46.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/46.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Paris FC at Lens",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "paris-fc-at-lens",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 12:45:00 AM",
+          "end_time_bst": "Oct 25, 2026, 03:45:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Paris FC",
+            "flag": "https://streamcenter.st/api/images/badge/98931701-8d05-424c-961a-8f19781b74ca.webp"
+          },
+          "team_b": {
+            "name": "Lens",
+            "flag": "https://streamcenter.st/api/images/badge/f268516f-da68-438d-9465-4ad1731ba281.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/98931701-8d05-424c-961a-8f19781b74ca.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/7.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/7.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -463,9 +715,11 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/9.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/9.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/9.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -499,297 +753,11 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/6.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/6.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/6.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Oregon Ducks at Illinois Fighting Illini",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "oregon-ducks-at-illinois-fighting-illini",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 01:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 04:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Oregon Ducks",
-            "flag": "https://streamcenter.st/api/images/badge/fe77edc1-76c3-41e9-9ea9-60df86f8ccf2.webp"
-          },
-          "team_b": {
-            "name": "Illinois Fighting Illini",
-            "flag": "https://streamcenter.st/api/images/badge/1da23903-f07d-468e-a5d6-871e829774d4.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/fe77edc1-76c3-41e9-9ea9-60df86f8ccf2.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/26.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/26.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Texas A&M Aggies at Alabama Crimson Tide",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "texas-a-m-aggies-at-alabama-crimson-tide",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Texas A&M Aggies",
-            "flag": "https://streamcenter.st/api/images/badge/37253245-5c30-4692-a126-c3f76b5e2cdb.webp"
-          },
-          "team_b": {
-            "name": "Alabama Crimson Tide",
-            "flag": "https://streamcenter.st/api/images/badge/f1853927-7512-4ef0-adb7-9f16b92344e6.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/37253245-5c30-4692-a126-c3f76b5e2cdb.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/27.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/27.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Oklahoma Sooners at Mississippi State Bulldogs",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "oklahoma-sooners-at-mississippi-state-bulldogs",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Oklahoma Sooners",
-            "flag": "https://streamcenter.st/api/images/badge/b3aa28fc-9cc7-4218-bc69-8d4ac5c5801e.webp"
-          },
-          "team_b": {
-            "name": "Mississippi State Bulldogs",
-            "flag": "https://streamcenter.st/api/images/badge/dda84b93-d3ba-42ab-a9df-2b50cbddcaec.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/b3aa28fc-9cc7-4218-bc69-8d4ac5c5801e.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/28.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/28.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Tennessee Volunteers at South Carolina Gamecocks",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "tennessee-volunteers-at-south-carolina-gamecocks",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Tennessee Volunteers",
-            "flag": "https://streamcenter.st/api/images/badge/499d6304-225a-4a27-a756-b161a26ecb47.webp"
-          },
-          "team_b": {
-            "name": "South Carolina Gamecocks",
-            "flag": "https://streamcenter.st/api/images/badge/5a99a92a-9d3e-4e27-a8ac-865f47c24d30.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/499d6304-225a-4a27-a756-b161a26ecb47.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/29.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/29.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "BYU Cougars at UCF Knights",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "byu-cougars-at-ucf-knights",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "BYU Cougars",
-            "flag": "https://streamcenter.st/api/images/badge/38fe1c61-b2a9-4cc1-a8ac-204788be934f.webp"
-          },
-          "team_b": {
-            "name": "UCF Knights",
-            "flag": "https://streamcenter.st/api/images/badge/35ac7848-b483-4f0b-ab05-860dd1b68c55.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/38fe1c61-b2a9-4cc1-a8ac-204788be934f.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/30.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/30.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Boston College Eagles at Georgia Tech Yellow Jackets",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "boston-college-eagles-at-georgia-tech-yellow-jackets",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Boston College Eagles",
-            "flag": "https://streamcenter.st/api/images/badge/1ffbdd19-8bf5-4705-9524-c792ea96d4af.webp"
-          },
-          "team_b": {
-            "name": "Georgia Tech Yellow Jackets",
-            "flag": "https://streamcenter.st/api/images/badge/4fcef70c-402c-441d-9545-93d1e773d72b.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/1ffbdd19-8bf5-4705-9524-c792ea96d4af.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/31.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/31.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Iowa Hawkeyes at Minnesota Golden Gophers",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "iowa-hawkeyes-at-minnesota-golden-gophers",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Iowa Hawkeyes",
-            "flag": "https://streamcenter.st/api/images/badge/126940aa-9272-40f8-862b-8053ddd8d0f9.webp"
-          },
-          "team_b": {
-            "name": "Minnesota Golden Gophers",
-            "flag": "https://streamcenter.st/api/images/badge/1292a244-0921-4c5e-ad42-b76aef2e9ebb.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/126940aa-9272-40f8-862b-8053ddd8d0f9.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/32.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/32.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Michigan State Spartans at UCLA Bruins",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "michigan-state-spartans-at-ucla-bruins",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Michigan State Spartans",
-            "flag": "https://streamcenter.st/api/images/badge/b7a6b63f-696c-450a-b484-554ef7369ea8.webp"
-          },
-          "team_b": {
-            "name": "UCLA Bruins",
-            "flag": "https://streamcenter.st/api/images/badge/333ee286-e70c-4ebb-98fd-0fce47711c91.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/b7a6b63f-696c-450a-b484-554ef7369ea8.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/33.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/33.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -823,9 +791,315 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/51.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/51.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/51.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Texas A&M Aggies at Alabama Crimson Tide",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "texas-a-m-aggies-at-alabama-crimson-tide",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
+          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Texas A&M Aggies",
+            "flag": "https://streamcenter.st/api/images/badge/37253245-5c30-4692-a126-c3f76b5e2cdb.webp"
+          },
+          "team_b": {
+            "name": "Alabama Crimson Tide",
+            "flag": "https://streamcenter.st/api/images/badge/f1853927-7512-4ef0-adb7-9f16b92344e6.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/37253245-5c30-4692-a126-c3f76b5e2cdb.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/27.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/27.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Oklahoma Sooners at Mississippi State Bulldogs",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "oklahoma-sooners-at-mississippi-state-bulldogs",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
+          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Oklahoma Sooners",
+            "flag": "https://streamcenter.st/api/images/badge/b3aa28fc-9cc7-4218-bc69-8d4ac5c5801e.webp"
+          },
+          "team_b": {
+            "name": "Mississippi State Bulldogs",
+            "flag": "https://streamcenter.st/api/images/badge/dda84b93-d3ba-42ab-a9df-2b50cbddcaec.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/b3aa28fc-9cc7-4218-bc69-8d4ac5c5801e.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/28.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/28.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Tennessee Volunteers at South Carolina Gamecocks",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "tennessee-volunteers-at-south-carolina-gamecocks",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
+          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Tennessee Volunteers",
+            "flag": "https://streamcenter.st/api/images/badge/499d6304-225a-4a27-a756-b161a26ecb47.webp"
+          },
+          "team_b": {
+            "name": "South Carolina Gamecocks",
+            "flag": "https://streamcenter.st/api/images/badge/5a99a92a-9d3e-4e27-a8ac-865f47c24d30.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/499d6304-225a-4a27-a756-b161a26ecb47.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/29.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/29.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "BYU Cougars at UCF Knights",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "byu-cougars-at-ucf-knights",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
+          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "BYU Cougars",
+            "flag": "https://streamcenter.st/api/images/badge/38fe1c61-b2a9-4cc1-a8ac-204788be934f.webp"
+          },
+          "team_b": {
+            "name": "UCF Knights",
+            "flag": "https://streamcenter.st/api/images/badge/35ac7848-b483-4f0b-ab05-860dd1b68c55.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/38fe1c61-b2a9-4cc1-a8ac-204788be934f.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/30.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/30.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Boston College Eagles at Georgia Tech Yellow Jackets",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "boston-college-eagles-at-georgia-tech-yellow-jackets",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
+          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Boston College Eagles",
+            "flag": "https://streamcenter.st/api/images/badge/1ffbdd19-8bf5-4705-9524-c792ea96d4af.webp"
+          },
+          "team_b": {
+            "name": "Georgia Tech Yellow Jackets",
+            "flag": "https://streamcenter.st/api/images/badge/4fcef70c-402c-441d-9545-93d1e773d72b.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/1ffbdd19-8bf5-4705-9524-c792ea96d4af.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/31.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/31.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Iowa Hawkeyes at Minnesota Golden Gophers",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "iowa-hawkeyes-at-minnesota-golden-gophers",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
+          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Iowa Hawkeyes",
+            "flag": "https://streamcenter.st/api/images/badge/126940aa-9272-40f8-862b-8053ddd8d0f9.webp"
+          },
+          "team_b": {
+            "name": "Minnesota Golden Gophers",
+            "flag": "https://streamcenter.st/api/images/badge/1292a244-0921-4c5e-ad42-b76aef2e9ebb.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/126940aa-9272-40f8-862b-8053ddd8d0f9.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/32.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/32.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Michigan State Spartans at UCLA Bruins",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "michigan-state-spartans-at-ucla-bruins",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
+          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Michigan State Spartans",
+            "flag": "https://streamcenter.st/api/images/badge/b7a6b63f-696c-450a-b484-554ef7369ea8.webp"
+          },
+          "team_b": {
+            "name": "UCLA Bruins",
+            "flag": "https://streamcenter.st/api/images/badge/333ee286-e70c-4ebb-98fd-0fce47711c91.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/b7a6b63f-696c-450a-b484-554ef7369ea8.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/33.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/33.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Hawai'i Rainbow Warriors at Northern Illinois Huskies",
+        "sport": "Football",
+        "sub_category": "NBA",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "hawai-i-rainbow-warriors-at-northern-illinois-huskies",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 01:30:00 AM",
+          "end_time_bst": "Oct 25, 2026, 04:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Hawai'i Rainbow Warriors",
+            "flag": "https://streamcenter.st/api/images/badge/e0820d72-a5e6-4cab-b2d6-12c259b4fa4e.webp"
+          },
+          "team_b": {
+            "name": "Northern Illinois Huskies",
+            "flag": "https://streamcenter.st/api/images/badge/6c9d8e55-3b55-421f-860f-c7fe085acd48.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/e0820d72-a5e6-4cab-b2d6-12c259b4fa4e.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/34.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/34.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -859,9 +1133,11 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/35.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/35.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/35.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -895,81 +1171,11 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/81.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/81.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/81.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Emanuel Navarrete vs. O'Shaquie Foster",
-        "sport": "Boxing",
-        "sub_category": "Boxing",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "emanuel-navarrete-vs-o-shaquie-foster",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 03:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 06:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Emanuel Navarrete",
-            "flag": null
-          },
-          "team_b": {
-            "name": "O'Shaquie Foster",
-            "flag": null
-          }
-        },
-        "logo": null,
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/45.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/45.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "San José State Spartans at Nevada Wolf Pack",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "san-josé-state-spartans-at-nevada-wolf-pack",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 03:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 06:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "San José State Spartans",
-            "flag": "https://streamcenter.st/api/images/badge/9357ae69-1ef9-4e7f-bd38-73b429511471.webp"
-          },
-          "team_b": {
-            "name": "Nevada Wolf Pack",
-            "flag": "https://streamcenter.st/api/images/badge/5d066cb6-e869-456c-beda-027c30e99b4e.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/9357ae69-1ef9-4e7f-bd38-73b429511471.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/82.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/82.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -1003,45 +1209,49 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/49.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/49.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/49.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Boise State Broncos at Washington State Cougars",
+        "title": "San José State Spartans at Nevada Wolf Pack",
         "sport": "Football",
         "sub_category": "Football",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "boise-state-broncos-at-washington-state-cougars",
+        "slug": "san-josé-state-spartans-at-nevada-wolf-pack",
         "schedule": {
           "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 04:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 07:00:00 AM"
+          "start_time_bst": "Oct 25, 2026, 03:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 06:00:00 AM"
         },
         "teams": {
           "team_a": {
-            "name": "Boise State Broncos",
-            "flag": "https://streamcenter.st/api/images/badge/19f2679e-ce1c-4147-9c91-400e94f560cf.webp"
+            "name": "San José State Spartans",
+            "flag": "https://streamcenter.st/api/images/badge/9357ae69-1ef9-4e7f-bd38-73b429511471.webp"
           },
           "team_b": {
-            "name": "Washington State Cougars",
-            "flag": "https://streamcenter.st/api/images/badge/c0a34b28-d270-4232-8529-eeee78ea3d4c.webp"
+            "name": "Nevada Wolf Pack",
+            "flag": "https://streamcenter.st/api/images/badge/5d066cb6-e869-456c-beda-027c30e99b4e.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/19f2679e-ce1c-4147-9c91-400e94f560cf.webp",
+        "logo": "https://streamcenter.st/api/images/badge/9357ae69-1ef9-4e7f-bd38-73b429511471.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/83.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/83.m3u8|Referer=https://embedcenter.st/",
+            "url": "https://edgestream3.pro/stream/82.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/82.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -1075,9 +1285,49 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream2.pro/hls/mlkijfezag65.m3u8",
-            "raw_link": "https://edgestream2.pro/hls/mlkijfezag65.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream2.pro/hls/mlkijfezag65.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Boise State Broncos at Washington State Cougars",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "boise-state-broncos-at-washington-state-cougars",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 04:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 07:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Boise State Broncos",
+            "flag": "https://streamcenter.st/api/images/badge/19f2679e-ce1c-4147-9c91-400e94f560cf.webp"
+          },
+          "team_b": {
+            "name": "Washington State Cougars",
+            "flag": "https://streamcenter.st/api/images/badge/c0a34b28-d270-4232-8529-eeee78ea3d4c.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/19f2679e-ce1c-4147-9c91-400e94f560cf.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/83.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/83.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -1111,117 +1361,11 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/84.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/84.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/84.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Colorado Buffaloes at Oklahoma State Cowboys",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "colorado-buffaloes-at-oklahoma-state-cowboys",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 05:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 08:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Colorado Buffaloes",
-            "flag": "https://streamcenter.st/api/images/badge/26f15923-7624-4fe6-840e-dbc7fec9dd3c.webp"
-          },
-          "team_b": {
-            "name": "Oklahoma State Cowboys",
-            "flag": "https://streamcenter.st/api/images/badge/58278fa1-544d-4439-889d-6ea5a5d7d04b.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/26f15923-7624-4fe6-840e-dbc7fec9dd3c.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/85.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/85.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Virginia Tech Hokies at Clemson Tigers",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "virginia-tech-hokies-at-clemson-tigers",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 05:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 08:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Virginia Tech Hokies",
-            "flag": "https://streamcenter.st/api/images/badge/ef6ab522-a683-4ea1-ad88-328fe6e075f9.webp"
-          },
-          "team_b": {
-            "name": "Clemson Tigers",
-            "flag": "https://streamcenter.st/api/images/badge/ad69a4e7-73da-4d91-a5b5-00cbe98b9909.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/ef6ab522-a683-4ea1-ad88-328fe6e075f9.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/86.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/86.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "San Jose Sharks at Boston Bruins",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "san-jose-sharks-at-boston-bruins",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 05:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 08:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "San Jose Sharks",
-            "flag": "https://streamcenter.st/api/images/badge/42d789de-401c-499f-8372-51ddc8bc2ddb.webp"
-          },
-          "team_b": {
-            "name": "Boston Bruins",
-            "flag": "https://streamcenter.st/api/images/badge/b35c349b-ef6c-4208-87f0-2c7ba21071ab.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/42d789de-401c-499f-8372-51ddc8bc2ddb.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/52.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/52.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -1255,9 +1399,49 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/53.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/53.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/53.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Nashville Predators at Pittsburgh Penguins",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nashville-predators-at-pittsburgh-penguins",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Nashville Predators",
+            "flag": "https://streamcenter.st/api/images/badge/cf193378-d6e6-4cac-aa1b-1d4dde3e7221.webp"
+          },
+          "team_b": {
+            "name": "Pittsburgh Penguins",
+            "flag": "https://streamcenter.st/api/images/badge/c5124d32-cc38-4513-ab70-f67698171bff.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/cf193378-d6e6-4cac-aa1b-1d4dde3e7221.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/54.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/54.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -1291,21 +1475,23 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/55.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/55.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/55.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Vegas Golden Knights at Columbus Blue Jackets",
+        "title": "Toronto Maple Leafs at Edmonton Oilers",
         "sport": "Hockey",
         "sub_category": "Hockey",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "vegas-golden-knights-at-columbus-blue-jackets",
+        "slug": "toronto-maple-leafs-at-edmonton-oilers",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 25, 2026, 05:00:00 AM",
@@ -1313,35 +1499,37 @@
         },
         "teams": {
           "team_a": {
-            "name": "Vegas Golden Knights",
-            "flag": "https://streamcenter.st/api/images/badge/a12d8b8b-0691-418e-93a2-1d7af8926439.webp"
+            "name": "Toronto Maple Leafs",
+            "flag": "https://streamcenter.st/api/images/badge/b8e3bc3f-e11d-4755-8dda-90164ea3b014.webp"
           },
           "team_b": {
-            "name": "Columbus Blue Jackets",
-            "flag": "https://streamcenter.st/api/images/badge/15506e97-07f7-4138-8d2f-48830c5f4445.webp"
+            "name": "Edmonton Oilers",
+            "flag": "https://streamcenter.st/api/images/badge/c8e7e89d-6d9b-430d-af6d-84936d17d75a.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/a12d8b8b-0691-418e-93a2-1d7af8926439.webp",
+        "logo": "https://streamcenter.st/api/images/badge/b8e3bc3f-e11d-4755-8dda-90164ea3b014.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/56.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/56.m3u8|Referer=https://embedcenter.st/",
+            "url": "https://edgestream3.pro/stream/58.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/58.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Carolina Hurricanes at St. Louis Blues",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
+        "title": "Colorado Buffaloes at Oklahoma State Cowboys",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "carolina-hurricanes-at-st-louis-blues",
+        "slug": "colorado-buffaloes-at-oklahoma-state-cowboys",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 25, 2026, 05:00:00 AM",
@@ -1349,167 +1537,63 @@
         },
         "teams": {
           "team_a": {
-            "name": "Carolina Hurricanes",
-            "flag": "https://streamcenter.st/api/images/badge/5132e046-2483-4cc1-bf41-6f7eb254766a.webp"
+            "name": "Colorado Buffaloes",
+            "flag": "https://streamcenter.st/api/images/badge/26f15923-7624-4fe6-840e-dbc7fec9dd3c.webp"
           },
           "team_b": {
-            "name": "St. Louis Blues",
-            "flag": "https://streamcenter.st/api/images/badge/851def80-1466-4a0d-92b4-de8a24e103ae.webp"
+            "name": "Oklahoma State Cowboys",
+            "flag": "https://streamcenter.st/api/images/badge/58278fa1-544d-4439-889d-6ea5a5d7d04b.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/5132e046-2483-4cc1-bf41-6f7eb254766a.webp",
+        "logo": "https://streamcenter.st/api/images/badge/26f15923-7624-4fe6-840e-dbc7fec9dd3c.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/57.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/57.m3u8|Referer=https://embedcenter.st/",
+            "url": "https://edgestream3.pro/stream/85.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/85.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Ole Miss Rebels at Texas Longhorns",
+        "title": "Virginia Tech Hokies at Clemson Tigers",
         "sport": "Football",
         "sub_category": "Football",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "ole-miss-rebels-at-texas-longhorns",
+        "slug": "virginia-tech-hokies-at-clemson-tigers",
         "schedule": {
           "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 05:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 08:30:00 AM"
+          "start_time_bst": "Oct 25, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 08:00:00 AM"
         },
         "teams": {
           "team_a": {
-            "name": "Ole Miss Rebels",
-            "flag": "https://streamcenter.st/api/images/badge/bc115abb-68a4-4b87-b60d-e37c69ab2d5a.webp"
+            "name": "Virginia Tech Hokies",
+            "flag": "https://streamcenter.st/api/images/badge/ef6ab522-a683-4ea1-ad88-328fe6e075f9.webp"
           },
           "team_b": {
-            "name": "Texas Longhorns",
-            "flag": "https://streamcenter.st/api/images/badge/0d124a12-2abc-4a79-bebc-88cf599111df.webp"
+            "name": "Clemson Tigers",
+            "flag": "https://streamcenter.st/api/images/badge/ad69a4e7-73da-4d91-a5b5-00cbe98b9909.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/bc115abb-68a4-4b87-b60d-e37c69ab2d5a.webp",
+        "logo": "https://streamcenter.st/api/images/badge/ef6ab522-a683-4ea1-ad88-328fe6e075f9.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/88.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/88.m3u8|Referer=https://embedcenter.st/",
+            "url": "https://edgestream3.pro/stream/86.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/86.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Iowa State Cyclones at Arizona Wildcats",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "iowa-state-cyclones-at-arizona-wildcats",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 05:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 08:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Iowa State Cyclones",
-            "flag": "https://streamcenter.st/api/images/badge/8c6e00d6-1adb-4cd8-8613-154fe00da27b.webp"
-          },
-          "team_b": {
-            "name": "Arizona Wildcats",
-            "flag": "https://streamcenter.st/api/images/badge/86c6aed3-aa4f-4827-aa5d-e1b08c71a2df.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/8c6e00d6-1adb-4cd8-8613-154fe00da27b.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/89.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/89.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Syracuse Orange at North Carolina Tar Heels",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "syracuse-orange-at-north-carolina-tar-heels",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 05:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 08:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Syracuse Orange",
-            "flag": "https://streamcenter.st/api/images/badge/4a6c4c71-9c72-439d-a700-2ea1642569d2.webp"
-          },
-          "team_b": {
-            "name": "North Carolina Tar Heels",
-            "flag": "https://streamcenter.st/api/images/badge/4970500d-8009-4ba7-8a6f-13260e92cbe5.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/4a6c4c71-9c72-439d-a700-2ea1642569d2.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/90.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/90.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Brooklyn Nets at Cleveland Cavaliers",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "brooklyn-nets-at-cleveland-cavaliers",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 05:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 08:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Brooklyn Nets",
-            "flag": "https://streamcenter.st/api/images/badge/34976ee6-0def-4ee5-b23f-3d67b151e780.webp"
-          },
-          "team_b": {
-            "name": "Cleveland Cavaliers",
-            "flag": "https://streamcenter.st/api/images/badge/ff3fac0c-fcff-45f0-b979-8a183d32390c.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/34976ee6-0def-4ee5-b23f-3d67b151e780.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/66.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/66.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -1543,117 +1627,239 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/67.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/67.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/67.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Tampa Bay Rays at Milwaukee Brewers",
-        "sport": "Baseball",
-        "sub_category": "Baseball",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "tampa-bay-rays-at-milwaukee-brewers",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Tampa Bay Rays",
-            "flag": "https://streamcenter.st/api/images/badge/693e4904-9299-4803-b649-2a9b37ad5089.webp"
-          },
-          "team_b": {
-            "name": "Milwaukee Brewers",
-            "flag": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/693e4904-9299-4803-b649-2a9b37ad5089.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/15.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/15.m3u8|Referer=https://embedcenter.st/",
-            "headers": {
-              "Referer": "https://embedcenter.st/"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "UTSA Roadrunners at Tulane Green Wave",
+        "title": "Vanderbilt Commodores at Kentucky Wildcats",
         "sport": "Football",
         "sub_category": "Football",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "utsa-roadrunners-at-tulane-green-wave",
+        "slug": "vanderbilt-commodores-at-kentucky-wildcats",
         "schedule": {
           "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 09:00:00 AM"
+          "start_time_bst": "Oct 25, 2026, 05:30:00 AM",
+          "end_time_bst": "Oct 25, 2026, 08:30:00 AM"
         },
         "teams": {
           "team_a": {
-            "name": "UTSA Roadrunners",
-            "flag": "https://streamcenter.st/api/images/badge/8d080361-7136-4ab6-ae0e-750ec254b340.webp"
+            "name": "Vanderbilt Commodores",
+            "flag": "https://streamcenter.st/api/images/badge/d0ed40e0-7ff3-44a3-b4db-0d6585356f83.webp"
           },
           "team_b": {
-            "name": "Tulane Green Wave",
-            "flag": "https://streamcenter.st/api/images/badge/79d5db17-e627-4ff3-bcb5-166b63abb38c.webp"
+            "name": "Kentucky Wildcats",
+            "flag": "https://streamcenter.st/api/images/badge/4aae09cd-6c81-4630-8508-b9824802dded.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/8d080361-7136-4ab6-ae0e-750ec254b340.webp",
+        "logo": "https://streamcenter.st/api/images/badge/d0ed40e0-7ff3-44a3-b4db-0d6585356f83.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/93.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/93.m3u8|Referer=https://embedcenter.st/",
+            "url": "https://edgestream3.pro/stream/87.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/87.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Washington Wizards at Chicago Bulls",
-        "sport": "Basketball",
-        "sub_category": "NBA",
+        "title": "Ole Miss Rebels at Texas Longhorns",
+        "sport": "Football",
+        "sub_category": "Football",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "washington-wizards-at-chicago-bulls",
+        "slug": "ole-miss-rebels-at-texas-longhorns",
         "schedule": {
           "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 09:00:00 AM"
+          "start_time_bst": "Oct 25, 2026, 05:30:00 AM",
+          "end_time_bst": "Oct 25, 2026, 08:30:00 AM"
         },
         "teams": {
           "team_a": {
-            "name": "Washington Wizards",
-            "flag": "https://streamcenter.st/api/images/badge/37b86493-9307-46a3-aa5c-9a24138ff0cb.webp"
+            "name": "Ole Miss Rebels",
+            "flag": "https://streamcenter.st/api/images/badge/bc115abb-68a4-4b87-b60d-e37c69ab2d5a.webp"
           },
           "team_b": {
-            "name": "Chicago Bulls",
-            "flag": "https://streamcenter.st/api/images/badge/5209cf6f-a3aa-49c2-a31d-3171d477088e.webp"
+            "name": "Texas Longhorns",
+            "flag": "https://streamcenter.st/api/images/badge/0d124a12-2abc-4a79-bebc-88cf599111df.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/37b86493-9307-46a3-aa5c-9a24138ff0cb.webp",
+        "logo": "https://streamcenter.st/api/images/badge/bc115abb-68a4-4b87-b60d-e37c69ab2d5a.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/68.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/68.m3u8|Referer=https://embedcenter.st/",
+            "url": "https://edgestream3.pro/stream/88.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/88.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Iowa State Cyclones at Arizona Wildcats",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "iowa-state-cyclones-at-arizona-wildcats",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 05:30:00 AM",
+          "end_time_bst": "Oct 25, 2026, 08:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Iowa State Cyclones",
+            "flag": "https://streamcenter.st/api/images/badge/8c6e00d6-1adb-4cd8-8613-154fe00da27b.webp"
+          },
+          "team_b": {
+            "name": "Arizona Wildcats",
+            "flag": "https://streamcenter.st/api/images/badge/86c6aed3-aa4f-4827-aa5d-e1b08c71a2df.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/8c6e00d6-1adb-4cd8-8613-154fe00da27b.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/89.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/89.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Syracuse Orange at North Carolina Tar Heels",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "syracuse-orange-at-north-carolina-tar-heels",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 05:30:00 AM",
+          "end_time_bst": "Oct 25, 2026, 08:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Syracuse Orange",
+            "flag": "https://streamcenter.st/api/images/badge/4a6c4c71-9c72-439d-a700-2ea1642569d2.webp"
+          },
+          "team_b": {
+            "name": "North Carolina Tar Heels",
+            "flag": "https://streamcenter.st/api/images/badge/4970500d-8009-4ba7-8a6f-13260e92cbe5.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/4a6c4c71-9c72-439d-a700-2ea1642569d2.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/90.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/90.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "USC Trojans at Wisconsin Badgers",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "usc-trojans-at-wisconsin-badgers",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 05:30:00 AM",
+          "end_time_bst": "Oct 25, 2026, 08:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "USC Trojans",
+            "flag": "https://streamcenter.st/api/images/badge/99ac733b-1f55-4957-855d-dc48105d5136.webp"
+          },
+          "team_b": {
+            "name": "Wisconsin Badgers",
+            "flag": "https://streamcenter.st/api/images/badge/9e0233f8-2ff6-48f2-9e85-c7cdf5481481.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/99ac733b-1f55-4957-855d-dc48105d5136.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/91.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/91.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Utah State Aggies at Texas State Bobcats",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "utah-state-aggies-at-texas-state-bobcats",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 05:30:00 AM",
+          "end_time_bst": "Oct 25, 2026, 08:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Utah State Aggies",
+            "flag": "https://streamcenter.st/api/images/badge/948f18e3-fd90-4462-9a3c-e2b2c9104dc6.webp"
+          },
+          "team_b": {
+            "name": "Texas State Bobcats",
+            "flag": "https://streamcenter.st/api/images/badge/e091b442-1ab3-4e15-8dd6-c9011f5e1378.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/948f18e3-fd90-4462-9a3c-e2b2c9104dc6.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/92.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/92.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -1687,9 +1893,49 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/69.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/69.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/69.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Tampa Bay Rays at Milwaukee Brewers",
+        "sport": "Baseball",
+        "sub_category": "Baseball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "tampa-bay-rays-at-milwaukee-brewers",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Tampa Bay Rays",
+            "flag": "https://streamcenter.st/api/images/badge/693e4904-9299-4803-b649-2a9b37ad5089.webp"
+          },
+          "team_b": {
+            "name": "Milwaukee Brewers",
+            "flag": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/693e4904-9299-4803-b649-2a9b37ad5089.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/15.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/15.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -1723,81 +1969,87 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/70.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/70.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/70.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "North Dakota State Bison at New Mexico Lobos",
-        "sport": "Football",
-        "sub_category": "Football",
+        "title": "New Orleans Pelicans at Denver Nuggets",
+        "sport": "Basketball",
+        "sub_category": "NBA",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "north-dakota-state-bison-at-new-mexico-lobos",
+        "slug": "new-orleans-pelicans-at-denver-nuggets",
         "schedule": {
           "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 11:00:00 AM"
+          "start_time_bst": "Oct 25, 2026, 07:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 10:00:00 AM"
         },
         "teams": {
           "team_a": {
-            "name": "North Dakota State Bison",
-            "flag": "https://streamcenter.st/api/images/badge/a8233d60-be13-4e4b-9aa6-4144db441dda.webp"
+            "name": "New Orleans Pelicans",
+            "flag": "https://streamcenter.st/api/images/badge/0acf1a39-8f3a-48e3-91f3-d16ed98e27cd.webp"
           },
           "team_b": {
-            "name": "New Mexico Lobos",
-            "flag": "https://streamcenter.st/api/images/badge/13c072f5-aa6c-4b3c-a03e-ecb0217b93d8.webp"
+            "name": "Denver Nuggets",
+            "flag": "https://streamcenter.st/api/images/badge/303d0ee1-c5f9-4ee2-a745-e01af517c96d.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/a8233d60-be13-4e4b-9aa6-4144db441dda.webp",
+        "logo": "https://streamcenter.st/api/images/badge/0acf1a39-8f3a-48e3-91f3-d16ed98e27cd.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/94.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/94.m3u8|Referer=https://embedcenter.st/",
+            "url": "https://edgestream3.pro/stream/71.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/71.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Detroit Red Wings at Calgary Flames",
+        "title": "Tampa Bay Lightning at Utah Mammoth",
         "sport": "Hockey",
         "sub_category": "Hockey",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "detroit-red-wings-at-calgary-flames",
+        "slug": "tampa-bay-lightning-at-utah-mammoth",
         "schedule": {
           "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 11:00:00 AM"
+          "start_time_bst": "Oct 25, 2026, 07:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 10:00:00 AM"
         },
         "teams": {
           "team_a": {
-            "name": "Detroit Red Wings",
-            "flag": "https://streamcenter.st/api/images/badge/60a78682-cae9-4dc6-bd8f-9898c18e0dc5.webp"
+            "name": "Tampa Bay Lightning",
+            "flag": "https://streamcenter.st/api/images/badge/9bbc874b-2df6-44ce-a6b4-52b0f47d9514.webp"
           },
           "team_b": {
-            "name": "Calgary Flames",
-            "flag": "https://streamcenter.st/api/images/badge/6086a21f-0c8e-48b8-8899-3bb8c76d68d4.webp"
+            "name": "Utah Mammoth",
+            "flag": "https://streamcenter.st/api/images/badge/341ae09d-6283-4d99-8b40-6bf0865884ab.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/60a78682-cae9-4dc6-bd8f-9898c18e0dc5.webp",
+        "logo": "https://streamcenter.st/api/images/badge/9bbc874b-2df6-44ce-a6b4-52b0f47d9514.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/60.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/60.m3u8|Referer=https://embedcenter.st/",
+            "url": "https://edgestream3.pro/stream/59.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/59.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
@@ -1831,45 +2083,87 @@
             "channel_name": "iframe",
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/72.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/72.m3u8|Referer=https://embedcenter.st/",
+            "raw_link": "https://edgestream3.pro/stream/72.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Houston Cougars at Utah Utes",
-        "sport": "Football",
-        "sub_category": "Football",
+        "title": "Minnesota Wild at Seattle Kraken",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "houston-cougars-at-utah-utes",
+        "slug": "minnesota-wild-at-seattle-kraken",
         "schedule": {
           "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 08:15:00 AM",
-          "end_time_bst": "Oct 25, 2026, 11:15:00 AM"
+          "start_time_bst": "Oct 25, 2026, 08:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 11:00:00 AM"
         },
         "teams": {
           "team_a": {
-            "name": "Houston Cougars",
-            "flag": "https://streamcenter.st/api/images/badge/3065736d-1316-41b2-839e-e20595e0d7d6.webp"
+            "name": "Minnesota Wild",
+            "flag": "https://streamcenter.st/api/images/badge/58e1055d-df86-4f5b-a9a9-5e32ea674a84.webp"
           },
           "team_b": {
-            "name": "Utah Utes",
-            "flag": "https://streamcenter.st/api/images/badge/d6cc21b6-3402-43c7-89d5-a0a3b6d2284d.webp"
+            "name": "Seattle Kraken",
+            "flag": "https://streamcenter.st/api/images/badge/7280c674-1cd2-4120-ac33-602759ffa569.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/3065736d-1316-41b2-839e-e20595e0d7d6.webp",
+        "logo": "https://streamcenter.st/api/images/badge/58e1055d-df86-4f5b-a9a9-5e32ea674a84.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/95.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/95.m3u8|Referer=https://embedcenter.st/",
+            "url": "https://edgestream3.pro/stream/61.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/61.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
-              "Referer": "https://embedcenter.st/"
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "North Dakota State Bison at New Mexico Lobos",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "north-dakota-state-bison-at-new-mexico-lobos",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 08:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 11:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "North Dakota State Bison",
+            "flag": "https://streamcenter.st/api/images/badge/a8233d60-be13-4e4b-9aa6-4144db441dda.webp"
+          },
+          "team_b": {
+            "name": "New Mexico Lobos",
+            "flag": "https://streamcenter.st/api/images/badge/13c072f5-aa6c-4b3c-a03e-ecb0217b93d8.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/a8233d60-be13-4e4b-9aa6-4144db441dda.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/94.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/94.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
             },
             "drm_key": null
           }
