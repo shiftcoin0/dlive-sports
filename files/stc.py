@@ -9,11 +9,13 @@ from urllib.parse import parse_qsl, quote_plus, urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 import httpx
+from selectolax.lexbor import LexborHTMLParser as HTMLParser
 
 # রিপোজিটরি রুট ডিরেক্টরি
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
 BASE_URL = "https://streamcenter.st"
+ALT_REFERER = "https://streame.center"
 API_SPORTS = f"{BASE_URL}/api/sports"
 
 TAG = "STRMCNTR"
@@ -30,8 +32,7 @@ UA = (
     "Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
 )
 
-# API রেট-লিমিট (৬০ রিকোয়েস্ট/মিনিট) মেনে চলার জন্য সেমাফোর
-HTTP_SEMAPHORE = asyncio.Semaphore(8)
+HTTP_SEMAPHORE = asyncio.Semaphore(12)
 BST_TZ = ZoneInfo("Asia/Dhaka")
 
 LOG_FMT = (
@@ -59,7 +60,7 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# টিম লোগো এবং ফ্ল্যাগ সিডিএন
+# টিম লোগো সিডিএন
 # -----------------------------------------------------------------------------
 KNOWN_TEAM_LOGOS = {
     "arsenal": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
@@ -212,7 +213,7 @@ def save_playlists(events: list[dict]) -> None:
                 continue
 
             ch_name = ch.get("channel_name", "Stream")
-            referer = ch.get("headers", {}).get("Referer", "")
+            referer = ch.get("headers", {}).get("Referer", ALT_REFERER)
             status_lbl = f" [{status}]" if status else ""
             display_name = f"[{sub_cat}] {ev['title']} | {ch_name}{status_lbl}"
 
@@ -226,40 +227,89 @@ def save_playlists(events: list[dict]) -> None:
 
 
 # -----------------------------------------------------------------------------
-# StreamCenter API থেকে স্ট্রিম রেজোলিউশন
+# আসল .m3u8 রেজোলিউশন ইঞ্জিন (streamec.st এমবেড পেজ ডিকোডার)
 # -----------------------------------------------------------------------------
+async def resolve_m3u8_from_embed(client: httpx.AsyncClient, embed_url: str) -> tuple[str, str] | None:
+    """
+    এমবেড লিঙ্ক (যেমন: https://streamec.st/embed/ch48.php) থেকে আসল .m3u8 বের করা
+    """
+    if not embed_url:
+        return None
+
+    # সরাসরি .m3u8 লিংক হলে
+    if ".m3u8" in embed_url:
+        return embed_url, ALT_REFERER
+
+    headers = {
+        "User-Agent": UA,
+        "Referer": f"{BASE_URL}/",
+    }
+
+    try:
+        # ১. এমবেড পেজ ফেচ করা
+        resp = await client.get(embed_url, headers=headers, timeout=6.0)
+        if resp.status_code != 200:
+            return None
+
+        content = resp.text
+
+        # ২. সোর্সে সরাসরি .m3u8 থাকলে
+        m3u8_match = re.search(r'["\'](https?://[^"\'\s]+\.m3u8[^"\'\s]*)["\']', content)
+        if m3u8_match:
+            return m3u8_match.group(1), ALT_REFERER
+
+        # ৩. <iframe> ট্যাগ থেকে stream_id বের করা
+        soup = HTMLParser(resp.content)
+        iframe = soup.css_first("iframe")
+        iframe_src = iframe.attributes.get("src") if iframe else None
+
+        if not iframe_src:
+            src_m = re.search(r'<iframe[^>]+src=["\']([^"\']+)["\']', content, re.IGNORECASE)
+            if src_m:
+                iframe_src = src_m.group(1)
+
+        if iframe_src:
+            parsed = urlsplit(iframe_src)
+            params = dict(parse_qsl(parsed.query))
+            stream_id = params.get("stream") or params.get("id")
+
+            if stream_id:
+                if stream_id.isdigit():
+                    return f"https://edgestream3.pro/stream/{stream_id}.m3u8", ALT_REFERER
+                return f"https://edgestream2.pro/hls/{stream_id}.m3u8", ALT_REFERER
+
+        # ৪. JS কোড থেকে stream= বা stream: খোঁজা
+        js_m = re.search(r'stream(?:_id)?\s*[:=]\s*["\']?([a-zA-Z0-9_\-]+)["\']?', content, re.IGNORECASE)
+        if js_m:
+            s_id = js_m.group(1)
+            if s_id.isdigit():
+                return f"https://edgestream3.pro/stream/{s_id}.m3u8", ALT_REFERER
+            return f"https://edgestream2.pro/hls/{s_id}.m3u8", ALT_REFERER
+
+        # ৫. URL প্যাটার্ন (ch48.php ইত্যাদি) হলে সরাসরি edgestream নম্বর ব্যবহার করা
+        ch_m = re.search(r'ch(\d+)', embed_url)
+        if ch_m:
+            ch_num = ch_m.group(1)
+            return f"https://edgestream3.pro/stream/{ch_num}.m3u8", ALT_REFERER
+
+    except Exception as e:
+        log.debug(f"Error resolving embed {embed_url}: {e}")
+
+    return None
+
+
 async def resolve_stream_group(client: httpx.AsyncClient, source: str, match_id: str) -> list[dict]:
     url = f"{BASE_URL}/api/stream/{quote_plus(source)}/{quote_plus(match_id)}"
     try:
         async with HTTP_SEMAPHORE:
             res = await client.get(url, timeout=8.0)
-            if res.status_code != 200:
-                return []
-            data = res.json()
-            if not isinstance(data, list):
-                return []
-            return data
+            if res.status_code == 200:
+                data = res.json()
+                if isinstance(data, list):
+                    return data
     except Exception:
-        return []
-
-
-def parse_m3u8_from_embed(embed_url: str) -> str | None:
-    if not embed_url:
-        return None
-
-    if ".m3u8" in embed_url:
-        return embed_url
-
-    parsed = urlsplit(embed_url)
-    params = dict(parse_qsl(parsed.query))
-    stream_id = params.get("stream")
-
-    if stream_id:
-        if stream_id.isdigit():
-            return f"https://edgestream3.pro/stream/{stream_id}.m3u8"
-        return f"https://edgestream2.pro/hls/{stream_id}.m3u8"
-
-    return embed_url
+        pass
+    return []
 
 
 # -----------------------------------------------------------------------------
@@ -269,7 +319,7 @@ async def scrape():
     log.info(f"Scraping StreamCenter API from {API_SPORTS}...")
 
     async with httpx.AsyncClient(headers={"User-Agent": UA, "Referer": f"{BASE_URL}/"}, timeout=12.0) as client:
-        # ১. স্পোর্টস ক্যাটালগ ফেচ করা
+        # ১. স্পোর্টস ক্যাটালগ ফেচ
         try:
             sports_res = await client.get(API_SPORTS)
             if sports_res.status_code != 200:
@@ -300,7 +350,7 @@ async def scrape():
                 pass
 
         await asyncio.gather(*(fetch_sport_matches(sp) for sp in sports_list))
-        log.info(f"Retrieved {len(all_raw_matches)} total matches across all sports.")
+        log.info(f"Retrieved {len(all_raw_matches)} total matches.")
 
         # ৩. সময় অনুযায়ী ফিল্টার (৩ ঘণ্টা আগের থেকে পরবর্তী ১৮ ঘণ্টার ম্যাচ)
         valid_matches = []
@@ -321,7 +371,7 @@ async def scrape():
 
             valid_matches.append((match_dt, m))
 
-        log.info(f"Processing {len(valid_matches)} active matches in window...")
+        log.info(f"Processing {len(valid_matches)} active matches...")
 
         # ৪. স্ট্রিম গ্রুপ রেজোলিউশন
         unique_groups = set()
@@ -337,7 +387,28 @@ async def scrape():
 
         await asyncio.gather(*(fetch_stream_data(src, sid) for src, sid in unique_groups))
 
-        # ৫. প্লেলিস্ট তৈরি
+        # ৫. সকল এমবেড লিঙ্ককে প্যারালালে আসল .m3u8 এ রূপান্তর করা
+        unique_embed_urls = set()
+        for _, m in valid_matches:
+            for s in m.get("sources", []):
+                key = (s["source"], s["id"])
+                for item in stream_cache.get(key, []):
+                    raw_embed = item.get("embedUrl") or item.get("webUrl")
+                    if raw_embed:
+                        unique_embed_urls.add(raw_embed)
+
+        log.info(f"Resolving {len(unique_embed_urls)} embed URLs into actual .m3u8 streams...")
+        embed_m3u8_cache = {}
+
+        async def fetch_real_m3u8(emb_url):
+            async with HTTP_SEMAPHORE:
+                res = await resolve_m3u8_from_embed(client, emb_url)
+                if res:
+                    embed_m3u8_cache[emb_url] = res
+
+        await asyncio.gather(*(fetch_real_m3u8(u) for u in unique_embed_urls))
+
+        # ৬. চূড়ান্ত প্লেলিস্ট তৈরি
         final_playlist = []
 
         for match_dt, m in valid_matches:
@@ -351,16 +422,15 @@ async def scrape():
 
                 for item in stream_items:
                     raw_embed = item.get("embedUrl") or item.get("webUrl")
-                    stream_url = parse_m3u8_from_embed(raw_embed)
-
-                    if stream_url:
+                    if raw_embed in embed_m3u8_cache:
+                        m3u8_url, ref = embed_m3u8_cache[raw_embed]
                         ch_name = item.get("stream") or item.get("name") or s.get("source", "Stream")
-                        ref = BASE_URL
+
                         event_channels.append({
                             "channel_name": str(ch_name),
                             "stream_type": "HLS",
-                            "url": stream_url,
-                            "raw_link": f"{stream_url}|Referer={ref}",
+                            "url": m3u8_url,  # আসল .m3u8 লিংক
+                            "raw_link": f"{m3u8_url}|Referer={ref}",
                             "headers": {"Referer": ref},
                             "drm_key": None
                         })
@@ -403,7 +473,7 @@ async def scrape():
             it.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info("StreamCenter playlist generated successfully!")
+        log.info("Playlists with Real .m3u8 Streams generated successfully!")
 
 
 if __name__ == "__main__":
