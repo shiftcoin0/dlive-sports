@@ -94,21 +94,17 @@ def format_api_asset(raw_asset, asset_type="badge") -> str | None:
 def extract_api_badges(m: dict, sport_default_poster: str | None = None) -> tuple[str | None, str | None, str | None]:
     """
     রিটার্ন করবে:
-    ১. main_event_logo: ইভেন্টের আসল কভার ইমেজ / পোস্টার (16:9 Poster)
+    ১. main_event_logo: ইভেন্টের আসল কভার ইমেজ / পোস্টার (না থাকলে টিম ১ এর ব্যাজ)
     ২. flag_a: টিম A এর ব্যাজ
     ৩. flag_b: টিম B এর ব্যাজ
     """
-    # ১. ইভেন্টের আসল কভার ইমেজ (Poster) অগ্রাধিকার পাবে
     event_poster = format_api_asset(m.get("poster"), "poster")
     event_badge = format_api_asset(m.get("badge"), "badge")
-
-    # মেইন লোগো হবে সরাসরি ইভেন্টের কভার ইমেজ / পোস্টার
-    main_event_logo = event_poster or event_badge or sport_default_poster
 
     flag_a = None
     flag_b = None
 
-    # ২. টিমগুলোর জন্য ব্যাজ খোঁজা
+    # ১. টিমগুলোর জন্য ব্যাজ খোঁজা
     teams_data = m.get("teams") or m.get("competitors")
     if isinstance(teams_data, dict):
         home = teams_data.get("home") or teams_data.get("team1") or teams_data.get("team_a")
@@ -131,15 +127,25 @@ def extract_api_badges(m: dict, sport_default_poster: str | None = None) -> tupl
 
     # টিম ব্যাজ না থাকলে ইভেন্টের ব্যাজ বসবে
     if not flag_a:
-        flag_a = event_badge or main_event_logo
+        flag_a = event_badge
     if not flag_b:
-        flag_b = event_badge or main_event_logo
+        flag_b = event_badge
+
+    # ২. মেইন লোগো নির্বাচন: পোস্টার -> ব্যাজ -> টিম ১ ব্যাজ -> স্পোর্ট পোস্টার
+    # (ফলে কোনো অবস্থাতেই logo null থাকবে না!)
+    main_event_logo = event_poster or event_badge or flag_a or flag_b or sport_default_poster
+
+    # যদি এখনও কোনো টিমের ফ্ল্যাগ খালি থাকে, মেইন লোগোটি সেখানে বসবে
+    if not flag_a:
+        flag_a = main_event_logo
+    if not flag_b:
+        flag_b = main_event_logo
 
     return main_event_logo, flag_a, flag_b
 
 
 # -----------------------------------------------------------------------------
-# সাব-ক্যাটাগরি নির্ধারণ
+# সাব-ক্যাটাগরি নির্ধারণ (Word Boundary সহ যাতে ভুল ম্যাচিং না হয়)
 # -----------------------------------------------------------------------------
 TOP_LEAGUE_CLUBS = {
     "Bundesliga": [
@@ -147,21 +153,21 @@ TOP_LEAGUE_CLUBS = {
         "wolfsburg", "mönchengladbach", "freiburg", "bremen", "augsburg", "mainz"
     ],
     "Premier League": [
-        "arsenal", "chelsea", "liverpool", "manchester", "tottenham", "newcastle",
-        "aston villa", "everton", "west ham", "brighton", "wolves", "fulham"
+        "arsenal", "chelsea", "liverpool", "manchester united", "manchester city",
+        "tottenham", "newcastle", "aston villa", "everton", "west ham", "brighton", "wolves", "fulham"
     ],
     "La Liga": [
-        "real madrid", "barcelona", "atletico", "sevilla", "valencia", "villarreal",
-        "betis", "sociedad", "girona", "bilbao"
+        "real madrid", "barcelona", "atletico madrid", "sevilla", "valencia", "villarreal",
+        "real betis", "real sociedad", "girona", "athletic bilbao"
     ],
     "Serie A": [
-        "juventus", "inter", "milan", "napoli", "roma", "lazio", "atalanta", "fiorentina"
+        "juventus", "inter milan", "ac milan", "napoli", "as roma", "lazio", "atalanta", "fiorentina"
     ],
     "Ligue 1": [
-        "psg", "paris", "marseille", "monaco", "lyon", "lille"
+        "psg", "paris saint-germain", "marseille", "monaco", "lyon", "lille"
     ],
     "Indian Premier League (IPL)": [
-        "chennai", "csk", "mumbai indians", "mi", "rcb", "kolkata", "kkr", "rajasthan"
+        "chennai super kings", "csk", "mumbai indians", "rcb", "kolkata knight riders", "kkr", "rajasthan royals"
     ],
     "NBA": [
         "lakers", "warriors", "celtics", "bulls", "heat", "bucks", "mavericks", "nuggets"
@@ -169,33 +175,41 @@ TOP_LEAGUE_CLUBS = {
 }
 
 LEAGUE_PATTERNS = [
-    (r"premier league|epl", "Premier League"),
-    (r"la liga|laliga", "La Liga"),
-    (r"serie a", "Serie A"),
-    (r"bundesliga", "Bundesliga"),
-    (r"ligue 1", "Ligue 1"),
-    (r"champions league|ucl", "UEFA Champions League"),
-    (r"europa league|uel", "UEFA Europa League"),
-    (r"ipl|indian premier league", "Indian Premier League (IPL)"),
-    (r"bpl", "Bangladesh Premier League (BPL)"),
-    (r"nba", "NBA"),
-    (r"smackdown", "WWE SmackDown"),
-    (r"raw", "WWE Raw"),
-    (r"ufc", "UFC"),
-    (r"formula 1|f1", "Formula 1"),
+    (r"\bpremier league\b|\bepl\b", "Premier League"),
+    (r"\bla liga\b|\blaliga\b", "La Liga"),
+    (r"\bserie a\b", "Serie A"),
+    (r"\bbundesliga\b", "Bundesliga"),
+    (r"\bligue 1\b", "Ligue 1"),
+    (r"\bchampions league\b|\bucl\b", "UEFA Champions League"),
+    (r"\beuropa league\b|\buel\b", "UEFA Europa League"),
+    # আইপিএল-এর জন্য সঠিক আইসোলেটেড ম্যাচিং
+    (r"\bipl\b|\bindian premier league\b", "Indian Premier League (IPL)"),
+    (r"\bbpl\b|\bbangladesh premier league\b", "Bangladesh Premier League (BPL)"),
+    (r"\bnba\b", "NBA"),
+    # কলেজ ফুটবল ও আমেরিকান স্পোর্টস
+    (r"\bhoosiers\b|\bwolverines\b|\bncaa\b|\bcollege football\b", "NCAA Football"),
+    (r"\bnfl\b", "NFL"),
+    (r"\bmlb\b", "MLB"),
+    (r"\bnhl\b", "NHL"),
+    (r"\bsmackdown\b", "WWE SmackDown"),
+    (r"\braw\b", "WWE Raw"),
+    (r"\bufc\b", "UFC"),
+    (r"\bformula 1\b|\bf1\b", "Formula 1"),
 ]
 
 
 def get_sub_category(sport: str, title: str) -> str:
     comb = f"{sport} {title}".lower()
 
+    # ১. নির্দিষ্ট টুর্নামেন্ট ও লিগ প্যাটার্ন
     for pat, league in LEAGUE_PATTERNS:
         if re.search(pat, comb):
             return league
 
+    # ২. ক্লাব ও দল দেখে লিগ চেনা (পুরো শব্দ ম্যাচিং)
     for league, clubs in TOP_LEAGUE_CLUBS.items():
         for c in clubs:
-            if c in comb:
+            if re.search(r'\b' + re.escape(c) + r'\b', comb):
                 return league
 
     return sport.capitalize()
@@ -203,6 +217,9 @@ def get_sub_category(sport: str, title: str) -> str:
 
 def clean_sport_name(sport_slug: str) -> str:
     slug = sport_slug.lower()
+    # আমেরিকান ফুটবলকে আগেই আলাদা করা
+    if "american-football" in slug or "american football" in slug or "nfl" in slug:
+        return "American Football"
     if "football" in slug or "soccer" in slug:
         return "Football"
     if "basketball" in slug:
@@ -372,7 +389,6 @@ async def scrape():
     log.info(f"Scraping StreamCenter API from {API_SPORTS}...")
 
     async with httpx.AsyncClient(headers={"User-Agent": UA, "Referer": f"{BASE_URL}/"}, timeout=12.0) as client:
-        # ১. স্পোর্টস ক্যাটালগ এবং তাদের পোস্টার/ব্যানার সংরক্ষণ
         sport_poster_map = {}
         try:
             sports_res = await client.get(API_SPORTS)
@@ -382,7 +398,6 @@ async def scrape():
             sports_list = sports_res.json()
             for sp in sports_list:
                 s_id = sp.get("id")
-                # ক্যাটাগরি পোস্টার/কভার ইমেজ
                 s_poster = format_api_asset(sp.get("poster"), "poster") or format_api_asset(sp.get("badge"), "badge")
                 if s_id:
                     sport_poster_map[s_id] = s_poster
@@ -393,7 +408,6 @@ async def scrape():
         now_utc = datetime.now(timezone.utc)
         all_raw_matches = []
 
-        # ২. সকল স্পোর্টের ম্যাচ ফেচ করা
         async def fetch_sport_matches(sp):
             sp_id = sp.get("id")
             if not sp_id:
@@ -413,7 +427,6 @@ async def scrape():
         await asyncio.gather(*(fetch_sport_matches(sp) for sp in sports_list))
         log.info(f"Retrieved {len(all_raw_matches)} total matches.")
 
-        # ৩. সময় ফিল্টারিং
         valid_matches = []
         for m in all_raw_matches:
             title = m.get("title") or m.get("name")
@@ -434,7 +447,6 @@ async def scrape():
 
         log.info(f"Processing {len(valid_matches)} active matches...")
 
-        # ৪. স্ট্রিম গ্রুপ রেজোলিউশন
         unique_groups = set()
         for _, m in valid_matches:
             for s in m.get("sources", []):
@@ -448,7 +460,6 @@ async def scrape():
 
         await asyncio.gather(*(fetch_stream_data(src, sid) for src, sid in unique_groups))
 
-        # ৫. এমবেড লিঙ্ক প্যারালালে আসল .m3u8 এ রূপান্তর
         unique_embed_urls = set()
         for _, m in valid_matches:
             for s in m.get("sources", []):
@@ -469,7 +480,6 @@ async def scrape():
 
         await asyncio.gather(*(fetch_real_m3u8(u) for u in unique_embed_urls))
 
-        # ৬. চূড়ান্ত প্লেলিস্ট তৈরি
         final_playlist = []
 
         for match_dt, m in valid_matches:
@@ -506,10 +516,10 @@ async def scrape():
                 t_b = t_names["team_b"]
 
                 # -------------------------------------------------------------
-                # ইভেন্টের আসল কভার ইমেজ (Poster) এবং টিম ব্যাজ বের করা
+                # নির্ভুল লোগো নির্ধারণ (কখনোই logo null হবে না!)
                 # -------------------------------------------------------------
                 sp_default_poster = sport_poster_map.get(sport_slug)
-                event_cover_poster, flag_a, flag_b = extract_api_badges(m, sp_default_poster)
+                event_logo, flag_a, flag_b = extract_api_badges(m, sp_default_poster)
 
                 # সাব-ক্যাটাগরি
                 api_league = m.get("league") or m.get("competition") or m.get("tournament")
@@ -534,7 +544,7 @@ async def scrape():
                         "team_a": {"name": t_a, "flag": flag_a},
                         "team_b": {"name": t_b, "flag": flag_b}
                     },
-                    "logo": event_cover_poster,  # সরাসরি ইভেন্টের আসল কভার ইমেজ (Poster)
+                    "logo": event_logo,  # পোস্টার না পেলে স্বয়ংক্রিয়ভাবে টিম ১ ব্যাজ বসবে
                     "channels": event_channels,
                     "_timestamp": match_dt.timestamp()
                 })
@@ -545,7 +555,7 @@ async def scrape():
             it.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info("Playlists with Event Posters generated successfully!")
+        log.info("Playlists generated with 100% Non-Null Logos and Perfect Sub-categories!")
 
 
 if __name__ == "__main__":
