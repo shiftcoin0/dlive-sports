@@ -14,7 +14,7 @@ GH_OWNER = os.getenv("GH_OWNER", "shiftcoin0")
 GH_REPO = os.getenv("GH_REPO", "dlive-sports")
 PORT = int(os.getenv("PORT", 10000))
 
-SCHEDULE_URL = "https://dlive.sx/schedule/schedule-generated.json"
+SCHEDULE_URL = "https://vortextv.modsdone.com/cricfy.php/events"
 STATE_FILE = "last_state.txt"
 
 UA = (
