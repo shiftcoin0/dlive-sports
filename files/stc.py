@@ -20,7 +20,6 @@ API_SPORTS = f"{BASE_URL}/api/sports"
 
 TAG = "STRMCNTR"
 
-# আউটপুট পাথ
 JSON_OUTPUT = ROOT_DIR / "strmcntr.json"
 M3U_OUTPUT = ROOT_DIR / "strmcntr.m3u"
 LOG_DIR = ROOT_DIR / "logs"
@@ -60,31 +59,116 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# সরাসরি StreamCenter API থেকে ইমেজ/ব্যাজ তৈরির ফাংশন
+# সরাসরি StreamCenter API অ্যাসেট আইডি থেকে ইমেজ তৈরির ফাংশন
 # -----------------------------------------------------------------------------
-def get_api_badge_url(asset_id: str | None) -> str | None:
-    if not asset_id:
+def format_api_asset(raw_asset, asset_type="badge") -> str | None:
+    if not raw_asset:
         return None
 
-    asset_str = str(asset_id).strip()
-    if not asset_str:
+    # যদি অবজেক্ট বা ডিকশনারি আকারে আসে
+    if isinstance(raw_asset, dict):
+        raw_asset = (
+            raw_asset.get("assetId")
+            or raw_asset.get("id")
+            or raw_asset.get("url")
+            or raw_asset.get("src")
+            or raw_asset.get("badge")
+            or raw_asset.get("poster")
+        )
+        if not raw_asset:
+            return None
+
+    val = str(raw_asset).strip()
+    if not val or val.lower() in ["none", "null", "undefined"]:
         return None
 
-    # যদি ইতোমধ্যে সম্পূর্ণ URL থাকে
-    if asset_str.startswith("http://") or asset_str.startswith("https://"):
-        return asset_str
+    if val.startswith("http://") or val.startswith("https://"):
+        return val
 
-    if asset_str.startswith("/"):
-        return f"{BASE_URL}{asset_str}"
+    if val.startswith("/"):
+        return f"{BASE_URL}{val}"
 
-    # .webp এক্সটেনশন থাকলে তা ক্লিন করে ফর্ম্যাট করা
-    clean_id = asset_str[:-5] if asset_str.endswith(".webp") else asset_str
-    return f"{BASE_URL}/api/images/badge/{clean_id}.webp"
+    # .webp ডাবল এক্সটেনশন রোধ করা
+    clean_id = val[:-5] if val.endswith(".webp") else val
+    return f"{BASE_URL}/api/images/{asset_type}/{clean_id}.webp"
+
+
+def extract_api_badges(m: dict, sport_default_badge: str | None = None) -> tuple[str | None, str | None, str | None]:
+    """
+    ম্যাচ ডেটার সকল সম্ভাব্য স্থান থেকে সরাসরি StreamCenter-এর নিজস্ব লোগো সংগ্রহ করে
+    """
+    # ১. ম্যাচের মূল badge বা poster
+    event_badge = (
+        format_api_asset(m.get("badge"), "badge")
+        or format_api_asset(m.get("poster"), "poster")
+        or format_api_asset(m.get("image"), "badge")
+        or format_api_asset(m.get("logo"), "badge")
+        or format_api_asset(m.get("icon"), "badge")
+    )
+
+    flag_a = None
+    flag_b = None
+
+    # ২. যদি API-এর ভেতরে teams অবজেক্ট বা অ্যারে থাকে
+    teams_data = m.get("teams") or m.get("competitors")
+    if isinstance(teams_data, dict):
+        home = teams_data.get("home") or teams_data.get("team1") or teams_data.get("team_a")
+        away = teams_data.get("away") or teams_data.get("team2") or teams_data.get("team_b")
+        if isinstance(home, dict):
+            flag_a = format_api_asset(home.get("badge") or home.get("logo") or home.get("image"))
+        if isinstance(away, dict):
+            flag_b = format_api_asset(away.get("badge") or away.get("logo") or away.get("image"))
+    elif isinstance(teams_data, list) and len(teams_data) >= 2:
+        t1, t2 = teams_data[0], teams_data[1]
+        if isinstance(t1, dict):
+            flag_a = format_api_asset(t1.get("badge") or t1.get("logo") or t1.get("image"))
+        if isinstance(t2, dict):
+            flag_b = format_api_asset(t2.get("badge") or t2.get("logo") or t2.get("image"))
+
+    # ৩. আলাদা homeBadge বা awayBadge ফিল্ড থাকলে
+    if not flag_a:
+        flag_a = format_api_asset(m.get("homeBadge")) or format_api_asset(m.get("team1Badge"))
+    if not flag_b:
+        flag_b = format_api_asset(m.get("awayBadge")) or format_api_asset(m.get("team2Badge"))
+
+    # ৪. ম্যাচ ব্যাজ বা স্পোর্টস ক্যাটালগের ব্যাজ ব্যবহার করা
+    final_event_logo = event_badge or flag_a or flag_b or sport_default_badge
+    final_flag_a = flag_a or final_event_logo
+    final_flag_b = flag_b or final_event_logo
+
+    return final_event_logo, final_flag_a, final_flag_b
 
 
 # -----------------------------------------------------------------------------
-# সাব-ক্যাটাগরি ও স্পোর্টস ক্লিনার
+# সাব-ক্যাটাগরি নির্ধারণ
 # -----------------------------------------------------------------------------
+TOP_LEAGUE_CLUBS = {
+    "Bundesliga": [
+        "dortmund", "frankfurt", "bayern", "leverkusen", "leipzig", "stuttgart",
+        "wolfsburg", "mönchengladbach", "freiburg", "bremen", "augsburg", "mainz"
+    ],
+    "Premier League": [
+        "arsenal", "chelsea", "liverpool", "manchester", "tottenham", "newcastle",
+        "aston villa", "everton", "west ham", "brighton", "wolves", "fulham"
+    ],
+    "La Liga": [
+        "real madrid", "barcelona", "atletico", "sevilla", "valencia", "villarreal",
+        "betis", "sociedad", "girona", "bilbao"
+    ],
+    "Serie A": [
+        "juventus", "inter", "milan", "napoli", "roma", "lazio", "atalanta", "fiorentina"
+    ],
+    "Ligue 1": [
+        "psg", "paris", "marseille", "monaco", "lyon", "lille"
+    ],
+    "Indian Premier League (IPL)": [
+        "chennai", "csk", "mumbai indians", "mi", "rcb", "kolkata", "kkr", "rajasthan"
+    ],
+    "NBA": [
+        "lakers", "warriors", "celtics", "bulls", "heat", "bucks", "mavericks", "nuggets"
+    ]
+}
+
 LEAGUE_PATTERNS = [
     (r"premier league|epl", "Premier League"),
     (r"la liga|laliga", "La Liga"),
@@ -105,9 +189,16 @@ LEAGUE_PATTERNS = [
 
 def get_sub_category(sport: str, title: str) -> str:
     comb = f"{sport} {title}".lower()
+
     for pat, league in LEAGUE_PATTERNS:
         if re.search(pat, comb):
             return league
+
+    for league, clubs in TOP_LEAGUE_CLUBS.items():
+        for c in clubs:
+            if c in comb:
+                return league
+
     return sport.capitalize()
 
 
@@ -130,13 +221,23 @@ def clean_sport_name(sport_slug: str) -> str:
     return sport_slug.replace("-", " ").title()
 
 
+# -----------------------------------------------------------------------------
+# টিম নাম ভাগ করা (" at " সহ সব আমেরিকান/ইউরোপিয়ান ডিলিমিটার সাপোর্ট)
+# -----------------------------------------------------------------------------
 def parse_team_names(title: str) -> dict[str, str]:
-    for d in [" vs. ", " vs ", " - ", " @ "]:
+    delimiters = [" vs. ", " vs ", " v ", " - ", " @ ", " at "]
+    for d in delimiters:
         if d in title.lower():
             parts = re.split(re.escape(d), title, maxsplit=1, flags=re.IGNORECASE)
-            if len(parts) == 2:
-                return {"team_a": parts[0].strip(), "team_b": parts[1].strip()}
-    return {"team_a": title.strip(), "team_b": title.strip()}
+            if len(parts) == 2 and parts[0].strip() and parts[1].strip():
+                return {
+                    "team_a": parts[0].strip(),
+                    "team_b": parts[1].strip()
+                }
+    return {
+        "team_a": title.strip(),
+        "team_b": title.strip()
+    }
 
 
 def create_slug(text: str) -> str:
@@ -194,9 +295,6 @@ def save_playlists(events: list[dict]) -> None:
     log.info(f"Saved M3U: {M3U_OUTPUT}")
 
 
-# -----------------------------------------------------------------------------
-# আসল .m3u8 রেজোলিউশন ইঞ্জিন (streamec.st এমবেড পেজ ডিকোডার)
-# -----------------------------------------------------------------------------
 async def resolve_m3u8_from_embed(client: httpx.AsyncClient, embed_url: str) -> tuple[str, str] | None:
     if not embed_url:
         return None
@@ -278,12 +376,19 @@ async def scrape():
     log.info(f"Scraping StreamCenter API from {API_SPORTS}...")
 
     async with httpx.AsyncClient(headers={"User-Agent": UA, "Referer": f"{BASE_URL}/"}, timeout=12.0) as client:
+        # ১. স্পোর্টস ক্যাটালগ ও তাদের অফিশিয়াল ব্যাজ সংগ্রহ
+        sport_badge_map = {}
         try:
             sports_res = await client.get(API_SPORTS)
             if sports_res.status_code != 200:
                 log.error(f"Failed to fetch sports catalog: {sports_res.status_code}")
                 return
             sports_list = sports_res.json()
+            for sp in sports_list:
+                s_id = sp.get("id")
+                s_badge = format_api_asset(sp.get("badge") or sp.get("poster") or sp.get("icon") or sp.get("image"))
+                if s_id:
+                    sport_badge_map[s_id] = s_badge
         except Exception as e:
             log.error(f"Error fetching sports: {e}")
             return
@@ -291,6 +396,7 @@ async def scrape():
         now_utc = datetime.now(timezone.utc)
         all_raw_matches = []
 
+        # ২. সকল স্পোর্টের ম্যাচ ফেচ করা
         async def fetch_sport_matches(sp):
             sp_id = sp.get("id")
             if not sp_id:
@@ -301,6 +407,7 @@ async def scrape():
                     matches = m_res.json()
                     if isinstance(matches, list):
                         for m in matches:
+                            m["_sport_slug"] = sp_id
                             m["_sport_name"] = clean_sport_name(sp_id)
                             all_raw_matches.append(m)
             except Exception:
@@ -309,6 +416,7 @@ async def scrape():
         await asyncio.gather(*(fetch_sport_matches(sp) for sp in sports_list))
         log.info(f"Retrieved {len(all_raw_matches)} total matches.")
 
+        # ৩. সময় অনুযায়ী ফিল্টার
         valid_matches = []
         for m in all_raw_matches:
             title = m.get("title") or m.get("name")
@@ -329,6 +437,7 @@ async def scrape():
 
         log.info(f"Processing {len(valid_matches)} active matches...")
 
+        # ৪. স্ট্রিম গ্রুপ রেজোলিউশন
         unique_groups = set()
         for _, m in valid_matches:
             for s in m.get("sources", []):
@@ -342,6 +451,7 @@ async def scrape():
 
         await asyncio.gather(*(fetch_stream_data(src, sid) for src, sid in unique_groups))
 
+        # ৫. সকল এমবেড লিঙ্ক প্যারালালে .m3u8 এ রূপান্তর করা
         unique_embed_urls = set()
         for _, m in valid_matches:
             for s in m.get("sources", []):
@@ -362,10 +472,12 @@ async def scrape():
 
         await asyncio.gather(*(fetch_real_m3u8(u) for u in unique_embed_urls))
 
+        # ৬. প্লেলিস্ট তৈরি
         final_playlist = []
 
         for match_dt, m in valid_matches:
             title = m.get("title") or m.get("name")
+            sport_slug = m.get("_sport_slug", "football")
             sport_name = m.get("_sport_name", "Football")
 
             event_channels = []
@@ -397,16 +509,17 @@ async def scrape():
                 t_b = t_names["team_b"]
 
                 # -------------------------------------------------------------
-                # সরাসরি তাদের API-এর badge থেকে লোগো তৈরি করা
+                # সম্পূর্ণ StreamCenter API থেকে ইমেজ/ব্যাজ বের করা
                 # -------------------------------------------------------------
-                badge_asset = m.get("badge") or m.get("poster")
-                api_logo = get_api_badge_url(badge_asset)
+                sp_default = sport_badge_map.get(sport_slug)
+                event_logo, flag_a, flag_b = extract_api_badges(m, sp_default)
 
-                # টিম-স্পেসিফিক ব্যাজ থাকলে নেওয়া, নতুবা ম্যাচ ব্যাজ ব্যবহার
-                flag_a = get_api_badge_url(m.get("homeBadge") or m.get("team1Badge")) or api_logo
-                flag_b = get_api_badge_url(m.get("awayBadge") or m.get("team2Badge")) or api_logo
-
-                sub_cat = get_sub_category(sport_name, title)
+                # সাব-ক্যাটাগরি নির্ধারণ
+                api_league = m.get("league") or m.get("competition") or m.get("tournament")
+                if api_league and isinstance(api_league, str) and api_league.strip():
+                    sub_cat = api_league.strip()
+                else:
+                    sub_cat = get_sub_category(sport_name, title)
 
                 final_playlist.append({
                     "title": title,
@@ -424,7 +537,7 @@ async def scrape():
                         "team_a": {"name": t_a, "flag": flag_a},
                         "team_b": {"name": t_b, "flag": flag_b}
                     },
-                    "logo": api_logo,  # সরাসরি তাদের API লোগো
+                    "logo": event_logo,  # সরাসরি তাদের API লোগো
                     "channels": event_channels,
                     "_timestamp": match_dt.timestamp()
                 })
@@ -435,7 +548,7 @@ async def scrape():
             it.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info("Playlists with API Badges generated successfully!")
+        log.info("Playlists with 100% StreamCenter API badges generated successfully!")
 
 
 if __name__ == "__main__":
