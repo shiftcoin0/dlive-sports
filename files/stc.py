@@ -15,7 +15,8 @@ from selectolax.lexbor import LexborHTMLParser as HTMLParser
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
 BASE_URL = "https://streamcenter.st"
-ALT_REFERER = "https://streame.center"
+# আপনার নির্দেশিত নতুন রেফারার
+STREAM_REFERER = "https://embedcenter.st/"
 API_SPORTS = f"{BASE_URL}/api/sports"
 
 TAG = "STRMCNTR"
@@ -92,12 +93,6 @@ def format_api_asset(raw_asset, asset_type="badge") -> str | None:
 
 
 def extract_api_badges(m: dict, sport_default_poster: str | None = None) -> tuple[str | None, str | None, str | None]:
-    """
-    রিটার্ন করবে:
-    ১. main_event_logo: ইভেন্টের আসল কভার ইমেজ / পোস্টার (না থাকলে টিম ১ এর ব্যাজ)
-    ২. flag_a: টিম A এর ব্যাজ
-    ৩. flag_b: টিম B এর ব্যাজ
-    """
     event_poster = format_api_asset(m.get("poster"), "poster")
     event_badge = format_api_asset(m.get("badge"), "badge")
 
@@ -125,17 +120,14 @@ def extract_api_badges(m: dict, sport_default_poster: str | None = None) -> tupl
     if not flag_b:
         flag_b = format_api_asset(m.get("awayBadge"), "badge") or format_api_asset(m.get("team2Badge"), "badge")
 
-    # টিম ব্যাজ না থাকলে ইভেন্টের ব্যাজ বসবে
     if not flag_a:
         flag_a = event_badge
     if not flag_b:
         flag_b = event_badge
 
-    # ২. মেইন লোগো নির্বাচন: পোস্টার -> ব্যাজ -> টিম ১ ব্যাজ -> স্পোর্ট পোস্টার
-    # (ফলে কোনো অবস্থাতেই logo null থাকবে না!)
+    # মেইন লোগো: পোস্টার -> ব্যাজ -> টিম ১ ব্যাজ -> স্পোর্ট পোস্টার
     main_event_logo = event_poster or event_badge or flag_a or flag_b or sport_default_poster
 
-    # যদি এখনও কোনো টিমের ফ্ল্যাগ খালি থাকে, মেইন লোগোটি সেখানে বসবে
     if not flag_a:
         flag_a = main_event_logo
     if not flag_b:
@@ -145,7 +137,7 @@ def extract_api_badges(m: dict, sport_default_poster: str | None = None) -> tupl
 
 
 # -----------------------------------------------------------------------------
-# সাব-ক্যাটাগরি নির্ধারণ (Word Boundary সহ যাতে ভুল ম্যাচিং না হয়)
+# সাব-ক্যাটাগরি নির্ধারণ
 # -----------------------------------------------------------------------------
 TOP_LEAGUE_CLUBS = {
     "Bundesliga": [
@@ -182,11 +174,9 @@ LEAGUE_PATTERNS = [
     (r"\bligue 1\b", "Ligue 1"),
     (r"\bchampions league\b|\bucl\b", "UEFA Champions League"),
     (r"\beuropa league\b|\buel\b", "UEFA Europa League"),
-    # আইপিএল-এর জন্য সঠিক আইসোলেটেড ম্যাচিং
     (r"\bipl\b|\bindian premier league\b", "Indian Premier League (IPL)"),
     (r"\bbpl\b|\bbangladesh premier league\b", "Bangladesh Premier League (BPL)"),
     (r"\bnba\b", "NBA"),
-    # কলেজ ফুটবল ও আমেরিকান স্পোর্টস
     (r"\bhoosiers\b|\bwolverines\b|\bncaa\b|\bcollege football\b", "NCAA Football"),
     (r"\bnfl\b", "NFL"),
     (r"\bmlb\b", "MLB"),
@@ -201,12 +191,10 @@ LEAGUE_PATTERNS = [
 def get_sub_category(sport: str, title: str) -> str:
     comb = f"{sport} {title}".lower()
 
-    # ১. নির্দিষ্ট টুর্নামেন্ট ও লিগ প্যাটার্ন
     for pat, league in LEAGUE_PATTERNS:
         if re.search(pat, comb):
             return league
 
-    # ২. ক্লাব ও দল দেখে লিগ চেনা (পুরো শব্দ ম্যাচিং)
     for league, clubs in TOP_LEAGUE_CLUBS.items():
         for c in clubs:
             if re.search(r'\b' + re.escape(c) + r'\b', comb):
@@ -217,7 +205,6 @@ def get_sub_category(sport: str, title: str) -> str:
 
 def clean_sport_name(sport_slug: str) -> str:
     slug = sport_slug.lower()
-    # আমেরিকান ফুটবলকে আগেই আলাদা করা
     if "american-football" in slug or "american football" in slug or "nfl" in slug:
         return "American Football"
     if "football" in slug or "soccer" in slug:
@@ -295,7 +282,7 @@ def save_playlists(events: list[dict]) -> None:
                 continue
 
             ch_name = ch.get("channel_name", "Stream")
-            referer = ch.get("headers", {}).get("Referer", ALT_REFERER)
+            referer = ch.get("headers", {}).get("Referer", STREAM_REFERER)
             status_lbl = f" [{status}]" if status else ""
             display_name = f"[{sub_cat}] {ev['title']} | {ch_name}{status_lbl}"
 
@@ -313,11 +300,11 @@ async def resolve_m3u8_from_embed(client: httpx.AsyncClient, embed_url: str) -> 
         return None
 
     if ".m3u8" in embed_url:
-        return embed_url, ALT_REFERER
+        return embed_url, STREAM_REFERER
 
     headers = {
         "User-Agent": UA,
-        "Referer": f"{BASE_URL}/",
+        "Referer": STREAM_REFERER,
     }
 
     try:
@@ -329,7 +316,7 @@ async def resolve_m3u8_from_embed(client: httpx.AsyncClient, embed_url: str) -> 
 
         m3u8_match = re.search(r'["\'](https?://[^"\'\s]+\.m3u8[^"\'\s]*)["\']', content)
         if m3u8_match:
-            return m3u8_match.group(1), ALT_REFERER
+            return m3u8_match.group(1), STREAM_REFERER
 
         soup = HTMLParser(resp.content)
         iframe = soup.css_first("iframe")
@@ -347,20 +334,20 @@ async def resolve_m3u8_from_embed(client: httpx.AsyncClient, embed_url: str) -> 
 
             if stream_id:
                 if stream_id.isdigit():
-                    return f"https://edgestream3.pro/stream/{stream_id}.m3u8", ALT_REFERER
-                return f"https://edgestream2.pro/hls/{stream_id}.m3u8", ALT_REFERER
+                    return f"https://edgestream3.pro/stream/{stream_id}.m3u8", STREAM_REFERER
+                return f"https://edgestream2.pro/hls/{stream_id}.m3u8", STREAM_REFERER
 
         js_m = re.search(r'stream(?:_id)?\s*[:=]\s*["\']?([a-zA-Z0-9_\-]+)["\']?', content, re.IGNORECASE)
         if js_m:
             s_id = js_m.group(1)
             if s_id.isdigit():
-                return f"https://edgestream3.pro/stream/{s_id}.m3u8", ALT_REFERER
-            return f"https://edgestream2.pro/hls/{s_id}.m3u8", ALT_REFERER
+                return f"https://edgestream3.pro/stream/{s_id}.m3u8", STREAM_REFERER
+            return f"https://edgestream2.pro/hls/{s_id}.m3u8", STREAM_REFERER
 
         ch_m = re.search(r'ch(\d+)', embed_url)
         if ch_m:
             ch_num = ch_m.group(1)
-            return f"https://edgestream3.pro/stream/{ch_num}.m3u8", ALT_REFERER
+            return f"https://edgestream3.pro/stream/{ch_num}.m3u8", STREAM_REFERER
 
     except Exception as e:
         log.debug(f"Error resolving embed {embed_url}: {e}")
@@ -515,13 +502,9 @@ async def scrape():
                 t_a = t_names["team_a"]
                 t_b = t_names["team_b"]
 
-                # -------------------------------------------------------------
-                # নির্ভুল লোগো নির্ধারণ (কখনোই logo null হবে না!)
-                # -------------------------------------------------------------
                 sp_default_poster = sport_poster_map.get(sport_slug)
-                event_logo, flag_a, flag_b = extract_api_badges(m, sp_default_poster)
+                event_cover_poster, flag_a, flag_b = extract_api_badges(m, sp_default_poster)
 
-                # সাব-ক্যাটাগরি
                 api_league = m.get("league") or m.get("competition") or m.get("tournament")
                 if api_league and isinstance(api_league, str) and api_league.strip():
                     sub_cat = api_league.strip()
@@ -544,7 +527,7 @@ async def scrape():
                         "team_a": {"name": t_a, "flag": flag_a},
                         "team_b": {"name": t_b, "flag": flag_b}
                     },
-                    "logo": event_logo,  # পোস্টার না পেলে স্বয়ংক্রিয়ভাবে টিম ১ ব্যাজ বসবে
+                    "logo": event_cover_poster,
                     "channels": event_channels,
                     "_timestamp": match_dt.timestamp()
                 })
@@ -555,7 +538,7 @@ async def scrape():
             it.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info("Playlists generated with 100% Non-Null Logos and Perfect Sub-categories!")
+        log.info("Playlists with https://embedcenter.st/ Referer generated successfully!")
 
 
 if __name__ == "__main__":
