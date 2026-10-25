@@ -1,122 +1,8 @@
 {
-  "last_updated": "Oct 25, 2026, 10:18:28 AM",
-  "event_count": 45,
+  "last_updated": "Oct 25, 2026, 11:03:36 AM",
+  "event_count": 46,
   "events": {
     "events": [
-      {
-        "title": "Golden State Warriors at Phoenix Suns",
-        "sport": "Basketball",
-        "sub_category": "NBA",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "golden-state-warriors-at-phoenix-suns",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Golden State Warriors",
-            "flag": "https://streamcenter.st/api/images/badge/ccbf7ba3-313c-47a9-a817-65309344418e.webp"
-          },
-          "team_b": {
-            "name": "Phoenix Suns",
-            "flag": "https://streamcenter.st/api/images/badge/bb768ee2-3abb-4176-927b-9953c09c2385.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/ccbf7ba3-313c-47a9-a817-65309344418e.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/72.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/72.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://streame.center",
-              "Origin": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Detroit Red Wings at Calgary Flames",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "detroit-red-wings-at-calgary-flames",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Detroit Red Wings",
-            "flag": "https://streamcenter.st/api/images/badge/60a78682-cae9-4dc6-bd8f-9898c18e0dc5.webp"
-          },
-          "team_b": {
-            "name": "Calgary Flames",
-            "flag": "https://streamcenter.st/api/images/badge/6086a21f-0c8e-48b8-8899-3bb8c76d68d4.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/60a78682-cae9-4dc6-bd8f-9898c18e0dc5.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/60.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/60.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://streame.center",
-              "Origin": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Minnesota Wild at Seattle Kraken",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "minnesota-wild-at-seattle-kraken",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Minnesota Wild",
-            "flag": "https://streamcenter.st/api/images/badge/58e1055d-df86-4f5b-a9a9-5e32ea674a84.webp"
-          },
-          "team_b": {
-            "name": "Seattle Kraken",
-            "flag": "https://streamcenter.st/api/images/badge/7280c674-1cd2-4120-ac33-602759ffa569.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/58e1055d-df86-4f5b-a9a9-5e32ea674a84.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/61.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/61.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://streame.center",
-              "Origin": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Houston Cougars at Utah Utes",
         "sport": "Football",
@@ -1372,44 +1258,6 @@
         ]
       },
       {
-        "title": "MSC Cruises United States Grand Prix — Race",
-        "sport": "Racing",
-        "sub_category": "Racing",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "msc-cruises-united-states-grand-prix-race",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 26, 2026, 02:00:00 AM",
-          "end_time_bst": "Oct 26, 2026, 05:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "MSC Cruises United States Grand Prix — Race",
-            "flag": null
-          },
-          "team_b": {
-            "name": "MSC Cruises United States Grand Prix — Race",
-            "flag": null
-          }
-        },
-        "logo": null,
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/49.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/49.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://streame.center",
-              "Origin": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Real Madrid at Barcelona",
         "sport": "Football",
         "sub_category": "La Liga",
@@ -1462,6 +1310,44 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/11.m3u8",
             "raw_link": "https://edgestream3.pro/stream/11.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "MSC Cruises United States Grand Prix — Race",
+        "sport": "Racing",
+        "sub_category": "Racing",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "msc-cruises-united-states-grand-prix-race",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 26, 2026, 02:00:00 AM",
+          "end_time_bst": "Oct 26, 2026, 05:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "MSC Cruises United States Grand Prix — Race",
+            "flag": null
+          },
+          "team_b": {
+            "name": "MSC Cruises United States Grand Prix — Race",
+            "flag": null
+          }
+        },
+        "logo": null,
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/49.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/49.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://streame.center",
@@ -1728,6 +1614,158 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/52.m3u8",
             "raw_link": "https://edgestream3.pro/stream/52.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Orlando Magic at New York Knicks",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "orlando-magic-at-new-york-knicks",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 26, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 26, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Orlando Magic",
+            "flag": "https://streamcenter.st/api/images/badge/5587d210-84a7-4697-8a3d-543013b9d427.webp"
+          },
+          "team_b": {
+            "name": "New York Knicks",
+            "flag": "https://streamcenter.st/api/images/badge/43949694-e050-403f-8b0d-241cfe3dcf6e.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/5587d210-84a7-4697-8a3d-543013b9d427.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/67.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/67.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Toronto Raptors at Minnesota Timberwolves",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "toronto-raptors-at-minnesota-timberwolves",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 26, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 26, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Toronto Raptors",
+            "flag": "https://streamcenter.st/api/images/badge/1f813ba9-db28-4662-a801-cccecea4dcff.webp"
+          },
+          "team_b": {
+            "name": "Minnesota Timberwolves",
+            "flag": "https://streamcenter.st/api/images/badge/7a826d96-3fb0-4155-8f60-208e8e94e207.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/1f813ba9-db28-4662-a801-cccecea4dcff.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/68.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/68.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "LA Clippers at Oklahoma City Thunder",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "la-clippers-at-oklahoma-city-thunder",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 26, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 26, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "LA Clippers",
+            "flag": "https://streamcenter.st/api/images/badge/103b21d5-7c8c-48fe-8524-a57669ced530.webp"
+          },
+          "team_b": {
+            "name": "Oklahoma City Thunder",
+            "flag": "https://streamcenter.st/api/images/badge/cb466bde-fc22-4665-9465-10ef862ab4de.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/103b21d5-7c8c-48fe-8524-a57669ced530.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/69.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/69.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Montreal Canadiens at Winnipeg Jets",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "montreal-canadiens-at-winnipeg-jets",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 26, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 26, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Montreal Canadiens",
+            "flag": "https://streamcenter.st/api/images/badge/e9c9d69e-f985-482e-89b0-d86503d5daa5.webp"
+          },
+          "team_b": {
+            "name": "Winnipeg Jets",
+            "flag": "https://streamcenter.st/api/images/badge/567b123a-3a88-42a9-a809-020841c0c05f.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/e9c9d69e-f985-482e-89b0-d86503d5daa5.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/53.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/53.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://streame.center",
