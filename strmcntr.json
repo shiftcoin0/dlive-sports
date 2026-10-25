@@ -1,8 +1,46 @@
 {
-  "last_updated": "Oct 25, 2026, 10:13:24 AM",
-  "event_count": 42,
+  "last_updated": "Oct 25, 2026, 10:18:28 AM",
+  "event_count": 45,
   "events": {
     "events": [
+      {
+        "title": "Golden State Warriors at Phoenix Suns",
+        "sport": "Basketball",
+        "sub_category": "NBA",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "golden-state-warriors-at-phoenix-suns",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 08:00:00 AM",
+          "end_time_bst": "Oct 25, 2026, 11:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Golden State Warriors",
+            "flag": "https://streamcenter.st/api/images/badge/ccbf7ba3-313c-47a9-a817-65309344418e.webp"
+          },
+          "team_b": {
+            "name": "Phoenix Suns",
+            "flag": "https://streamcenter.st/api/images/badge/bb768ee2-3abb-4176-927b-9953c09c2385.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/ccbf7ba3-313c-47a9-a817-65309344418e.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/72.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/72.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
       {
         "title": "Detroit Red Wings at Calgary Flames",
         "sport": "Hockey",
@@ -70,44 +108,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/61.m3u8",
             "raw_link": "https://edgestream3.pro/stream/61.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://streame.center",
-              "Origin": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Golden State Warriors at Phoenix Suns",
-        "sport": "Basketball",
-        "sub_category": "NBA",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "golden-state-warriors-at-phoenix-suns",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 25, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Golden State Warriors",
-            "flag": "https://streamcenter.st/api/images/badge/ccbf7ba3-313c-47a9-a817-65309344418e.webp"
-          },
-          "team_b": {
-            "name": "Phoenix Suns",
-            "flag": "https://streamcenter.st/api/images/badge/bb768ee2-3abb-4176-927b-9953c09c2385.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/ccbf7ba3-313c-47a9-a817-65309344418e.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/72.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/72.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://streame.center",
@@ -878,6 +878,82 @@
         ]
       },
       {
+        "title": "NFL Network",
+        "sport": "Football",
+        "sub_category": "NFL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nfl-network",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 10:59:00 PM",
+          "end_time_bst": "Oct 26, 2026, 01:59:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "NFL Network",
+            "flag": null
+          },
+          "team_b": {
+            "name": "NFL Network",
+            "flag": null
+          }
+        },
+        "logo": null,
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/43.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/43.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "NFL RedZone",
+        "sport": "Football",
+        "sub_category": "NFL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nfl-redzone",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 10:59:00 PM",
+          "end_time_bst": "Oct 26, 2026, 01:59:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "NFL RedZone",
+            "flag": null
+          },
+          "team_b": {
+            "name": "NFL RedZone",
+            "flag": null
+          }
+        },
+        "logo": null,
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/42.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/42.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
         "title": "Cincinnati Bengals at Baltimore Ravens",
         "sport": "Football",
         "sub_category": "Football",
@@ -1296,12 +1372,12 @@
         ]
       },
       {
-        "title": "Vermont Catamounts at Clarkson Golden Knights",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
+        "title": "MSC Cruises United States Grand Prix — Race",
+        "sport": "Racing",
+        "sub_category": "Racing",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "vermont-catamounts-at-clarkson-golden-knights",
+        "slug": "msc-cruises-united-states-grand-prix-race",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 26, 2026, 02:00:00 AM",
@@ -1309,21 +1385,21 @@
         },
         "teams": {
           "team_a": {
-            "name": "Vermont Catamounts",
-            "flag": "https://streamcenter.st/api/images/badge/731dc491-1954-485a-a440-5869b666f6ce.webp"
+            "name": "MSC Cruises United States Grand Prix — Race",
+            "flag": null
           },
           "team_b": {
-            "name": "Clarkson Golden Knights",
-            "flag": "https://streamcenter.st/api/images/badge/6113e4a0-eea9-473d-bdff-b91e8234ee29.webp"
+            "name": "MSC Cruises United States Grand Prix — Race",
+            "flag": null
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/731dc491-1954-485a-a440-5869b666f6ce.webp",
+        "logo": null,
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/51.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/51.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "url": "https://edgestream3.pro/stream/49.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/49.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://streame.center",
@@ -1386,6 +1462,44 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/11.m3u8",
             "raw_link": "https://edgestream3.pro/stream/11.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Vermont Catamounts at Clarkson Golden Knights",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "vermont-catamounts-at-clarkson-golden-knights",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 26, 2026, 02:00:00 AM",
+          "end_time_bst": "Oct 26, 2026, 05:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Vermont Catamounts",
+            "flag": "https://streamcenter.st/api/images/badge/731dc491-1954-485a-a440-5869b666f6ce.webp"
+          },
+          "team_b": {
+            "name": "Clarkson Golden Knights",
+            "flag": "https://streamcenter.st/api/images/badge/6113e4a0-eea9-473d-bdff-b91e8234ee29.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/731dc491-1954-485a-a440-5869b666f6ce.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/51.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/51.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://streame.center",
@@ -1548,44 +1662,6 @@
         ]
       },
       {
-        "title": "New York Islanders at Dallas Stars",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "new-york-islanders-at-dallas-stars",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 26, 2026, 04:00:00 AM",
-          "end_time_bst": "Oct 26, 2026, 07:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "New York Islanders",
-            "flag": "https://streamcenter.st/api/images/badge/19aca6fb-bba6-4593-83f1-b4cda6999749.webp"
-          },
-          "team_b": {
-            "name": "Dallas Stars",
-            "flag": "https://streamcenter.st/api/images/badge/5f60e307-90c1-47f8-af8c-1d7cf4946540.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/19aca6fb-bba6-4593-83f1-b4cda6999749.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/52.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/52.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://streame.center",
-              "Origin": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Indiana Pacers at Brooklyn Nets",
         "sport": "Basketball",
         "sub_category": "Basketball",
@@ -1614,6 +1690,44 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/66.m3u8",
             "raw_link": "https://edgestream3.pro/stream/66.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "New York Islanders at Dallas Stars",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "new-york-islanders-at-dallas-stars",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 26, 2026, 04:00:00 AM",
+          "end_time_bst": "Oct 26, 2026, 07:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "New York Islanders",
+            "flag": "https://streamcenter.st/api/images/badge/19aca6fb-bba6-4593-83f1-b4cda6999749.webp"
+          },
+          "team_b": {
+            "name": "Dallas Stars",
+            "flag": "https://streamcenter.st/api/images/badge/5f60e307-90c1-47f8-af8c-1d7cf4946540.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/19aca6fb-bba6-4593-83f1-b4cda6999749.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/52.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/52.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://streame.center",
