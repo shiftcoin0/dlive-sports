@@ -1,46 +1,8 @@
 {
-  "last_updated": "Oct 25, 2026, 07:02:34 AM",
-  "event_count": 30,
+  "last_updated": "Oct 25, 2026, 07:32:41 AM",
+  "event_count": 29,
   "events": {
     "events": [
-      {
-        "title": "San Diego State Aztecs at Colorado State Rams",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "san-diego-state-aztecs-at-colorado-state-rams",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 04:30:00 AM",
-          "end_time_bst": "Oct 25, 2026, 07:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "San Diego State Aztecs",
-            "flag": "https://streamcenter.st/api/images/badge/85a28aa5-ccb7-4dbd-98d3-50928b6497ba.webp"
-          },
-          "team_b": {
-            "name": "Colorado State Rams",
-            "flag": "https://streamcenter.st/api/images/badge/4e45e34c-9dbd-44cc-ad2e-28893444c08b.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/85a28aa5-ccb7-4dbd-98d3-50928b6497ba.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/stream/84.m3u8",
-            "raw_link": "https://edgestream3.pro/stream/84.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://streame.center",
-              "Origin": "https://streame.center"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Colorado Buffaloes at Oklahoma State Cowboys",
         "sport": "Football",
