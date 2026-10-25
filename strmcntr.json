@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 25, 2026, 11:26:10 PM",
-  "event_count": 39,
+  "last_updated": "Oct 25, 2026, 11:33:05 PM",
+  "event_count": 37,
   "events": {
     "events": [
       {
@@ -70,44 +70,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs12.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs12.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Strasbourg at Stade Rennais",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "strasbourg-at-stade-rennais",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 25, 2026, 10:15:00 PM",
-          "end_time_bst": "Oct 26, 2026, 01:15:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Strasbourg",
-            "flag": "https://streamcenter.st/api/images/badge/401bb7dd-310b-4d47-9227-dbff4c61961e.webp"
-          },
-          "team_b": {
-            "name": "Stade Rennais",
-            "flag": "https://streamcenter.st/api/images/badge/6776a42e-64c9-4add-9ccb-fd3443506cdb.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/401bb7dd-310b-4d47-9227-dbff4c61961e.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs13.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs13.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -726,44 +688,6 @@
         ]
       },
       {
-        "title": "Florida Panthers at Chicago Blackhawks",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "florida-panthers-at-chicago-blackhawks",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 26, 2026, 01:00:00 AM",
-          "end_time_bst": "Oct 26, 2026, 04:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Florida Panthers",
-            "flag": "https://streamcenter.st/api/images/badge/6f0a96b8-29f6-4879-95f4-0a46a705cd7c.webp"
-          },
-          "team_b": {
-            "name": "Chicago Blackhawks",
-            "flag": "https://streamcenter.st/api/images/badge/a0eb86ca-70d8-45b3-a484-43668ec8d94d.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/6f0a96b8-29f6-4879-95f4-0a46a705cd7c.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs50.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs50.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "AC Milan at Udinese",
         "sport": "Football",
         "sub_category": "Serie A",
@@ -792,6 +716,44 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs9.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs9.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Vermont Catamounts at Clarkson Golden Knights",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "vermont-catamounts-at-clarkson-golden-knights",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 26, 2026, 02:00:00 AM",
+          "end_time_bst": "Oct 26, 2026, 05:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Vermont Catamounts",
+            "flag": "https://streamcenter.st/api/images/badge/731dc491-1954-485a-a440-5869b666f6ce.webp"
+          },
+          "team_b": {
+            "name": "Clarkson Golden Knights",
+            "flag": "https://streamcenter.st/api/images/badge/6113e4a0-eea9-473d-bdff-b91e8234ee29.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/731dc491-1954-485a-a440-5869b666f6ce.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -892,44 +854,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs11.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs11.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Vermont Catamounts at Clarkson Golden Knights",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "vermont-catamounts-at-clarkson-golden-knights",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 26, 2026, 02:00:00 AM",
-          "end_time_bst": "Oct 26, 2026, 05:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Vermont Catamounts",
-            "flag": "https://streamcenter.st/api/images/badge/731dc491-1954-485a-a440-5869b666f6ce.webp"
-          },
-          "team_b": {
-            "name": "Clarkson Golden Knights",
-            "flag": "https://streamcenter.st/api/images/badge/6113e4a0-eea9-473d-bdff-b91e8234ee29.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/731dc491-1954-485a-a440-5869b666f6ce.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -1092,6 +1016,44 @@
         ]
       },
       {
+        "title": "New York Islanders at Dallas Stars",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "new-york-islanders-at-dallas-stars",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 26, 2026, 04:00:00 AM",
+          "end_time_bst": "Oct 26, 2026, 07:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "New York Islanders",
+            "flag": "https://streamcenter.st/api/images/badge/19aca6fb-bba6-4593-83f1-b4cda6999749.webp"
+          },
+          "team_b": {
+            "name": "Dallas Stars",
+            "flag": "https://streamcenter.st/api/images/badge/5f60e307-90c1-47f8-af8c-1d7cf4946540.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/19aca6fb-bba6-4593-83f1-b4cda6999749.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs52.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs52.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
         "title": "Indiana Pacers at Brooklyn Nets",
         "sport": "Basketball",
         "sub_category": "Basketball",
@@ -1130,34 +1092,34 @@
         ]
       },
       {
-        "title": "New York Islanders at Dallas Stars",
+        "title": "Montreal Canadiens at Winnipeg Jets",
         "sport": "Hockey",
         "sub_category": "Hockey",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "new-york-islanders-at-dallas-stars",
+        "slug": "montreal-canadiens-at-winnipeg-jets",
         "schedule": {
           "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 26, 2026, 04:00:00 AM",
-          "end_time_bst": "Oct 26, 2026, 07:00:00 AM"
+          "start_time_bst": "Oct 26, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 26, 2026, 08:00:00 AM"
         },
         "teams": {
           "team_a": {
-            "name": "New York Islanders",
-            "flag": "https://streamcenter.st/api/images/badge/19aca6fb-bba6-4593-83f1-b4cda6999749.webp"
+            "name": "Montreal Canadiens",
+            "flag": "https://streamcenter.st/api/images/badge/e9c9d69e-f985-482e-89b0-d86503d5daa5.webp"
           },
           "team_b": {
-            "name": "Dallas Stars",
-            "flag": "https://streamcenter.st/api/images/badge/5f60e307-90c1-47f8-af8c-1d7cf4946540.webp"
+            "name": "Winnipeg Jets",
+            "flag": "https://streamcenter.st/api/images/badge/567b123a-3a88-42a9-a809-020841c0c05f.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/19aca6fb-bba6-4593-83f1-b4cda6999749.webp",
+        "logo": "https://streamcenter.st/api/images/badge/e9c9d69e-f985-482e-89b0-d86503d5daa5.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs52.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs52.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs53.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs53.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -1272,44 +1234,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs69.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs69.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Montreal Canadiens at Winnipeg Jets",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "montreal-canadiens-at-winnipeg-jets",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 26, 2026, 05:00:00 AM",
-          "end_time_bst": "Oct 26, 2026, 08:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Montreal Canadiens",
-            "flag": "https://streamcenter.st/api/images/badge/e9c9d69e-f985-482e-89b0-d86503d5daa5.webp"
-          },
-          "team_b": {
-            "name": "Winnipeg Jets",
-            "flag": "https://streamcenter.st/api/images/badge/567b123a-3a88-42a9-a809-020841c0c05f.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/e9c9d69e-f985-482e-89b0-d86503d5daa5.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs53.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs53.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
