@@ -20,11 +20,11 @@ API_SPORTS = f"{BASE_URL}/api/sports"
 TAG = "STRMCNTR"
 
 # -----------------------------------------------------------------------------
-# আপনার নির্দেশিত স্ট্রিমিং হেডারসমূহ
+# ব্রাউজারের স্ক্রিনশট অনুযায়ী সঠিক হেডার ও রেফারার
 # -----------------------------------------------------------------------------
 STREAM_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"
-STREAM_REFERER = "https://streame.center"
-STREAM_ORIGIN = "https://streame.center"
+STREAM_REFERER = "https://embedcenter.st/"
+STREAM_ORIGIN = "https://embedcenter.st"
 STREAM_PIPE_HEADERS = f"User-Agent={STREAM_UA}&Referer={STREAM_REFERER}&Origin={STREAM_ORIGIN}"
 
 JSON_OUTPUT = ROOT_DIR / "strmcntr.json"
@@ -60,7 +60,7 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# সরাসরি StreamCenter API অ্যাসেট আইডি থেকে ইমেজ তৈরির ফাংশন
+# সরাসরি StreamCenter API অ্যাসেট আইডি থেকে ইমেজ (Poster / Badge) তৈরির ফাংশন
 # -----------------------------------------------------------------------------
 def format_api_asset(raw_asset, asset_type="badge") -> str | None:
     if not raw_asset:
@@ -176,7 +176,7 @@ LEAGUE_PATTERNS = [
     (r"\bbpl\b|\bbangladesh premier league\b", "Bangladesh Premier League (BPL)"),
     (r"\bnba\b", "NBA"),
     (r"\bhoosiers\b|\bwolverines\b|\bncaa\b|\bcollege football\b", "NCAA Football"),
-    (r"\bnfl\b", "NFL"),
+    (r"\bnfl\b|\bredzone\b", "NFL"),
     (r"\bmlb\b", "MLB"),
     (r"\bnhl\b", "NHL"),
     (r"\bsmackdown\b", "WWE SmackDown"),
@@ -281,79 +281,95 @@ def save_playlists(events: list[dict]) -> None:
                 continue
 
             ch_name = ch.get("channel_name", "Stream")
-            headers = ch.get("headers", {})
-            referer = headers.get("Referer", STREAM_REFERER)
-            user_agent = headers.get("User-Agent", STREAM_UA)
-
             status_lbl = f" [{status}]" if status else ""
             display_name = f"[{sub_cat}] {ev['title']} | {ch_name}{status_lbl}"
 
             m3u_lines.append(f'#EXTINF:-1 tvg-id="Live.Event.us" tvg-logo="{logo}" group-title="{sub_cat}",{display_name}')
-            if referer:
-                m3u_lines.append(f'#EXTVLCOPT:http-referrer={referer}')
-            if user_agent:
-                m3u_lines.append(f'#EXTVLCOPT:http-user-agent={user_agent}')
-
+            m3u_lines.append(f'#EXTVLCOPT:http-referrer={STREAM_REFERER}')
+            m3u_lines.append(f'#EXTVLCOPT:http-user-agent={STREAM_UA}')
             m3u_lines.append(raw_link)
 
     M3U_OUTPUT.write_text("\n".join(m3u_lines) + "\n", encoding="utf-8")
     log.info(f"Saved M3U: {M3U_OUTPUT}")
 
 
+# -----------------------------------------------------------------------------
+# আসল M3U8 ডিকোডার (ব্রাউজারের মতো /sh/cdn/hls/{channel}.m3u8 বের করার লজিক)
+# -----------------------------------------------------------------------------
 async def resolve_m3u8_from_embed(client: httpx.AsyncClient, embed_url: str) -> str | None:
+    """
+    এমবেড প্লেয়ার থেকে edgestream3-এর আসল /sh/cdn/hls/{channel}.m3u8 বের করে
+    """
     if not embed_url:
         return None
 
+    # সরাসরি .m3u8 লিংক থাকলে
     if ".m3u8" in embed_url:
         return embed_url
 
     headers = {
         "User-Agent": STREAM_UA,
-        "Referer": STREAM_REFERER,
-        "Origin": STREAM_ORIGIN,
+        "Referer": "https://streamcenter.st/",
     }
 
     try:
+        # ১. এমবেড পেজ ফেচ করা (যেমন: https://streamec.st/embed/ch42.php)
         resp = await client.get(embed_url, headers=headers, timeout=6.0)
         if resp.status_code != 200:
             return None
 
         content = resp.text
 
-        m3u8_match = re.search(r'["\'](https?://[^"\'\s]+\.m3u8[^"\'\s]*)["\']', content)
+        # ২. সরাসরি স্ক্রিনশটের মতো আসল m3u8 লিংক আছে কিনা চেক
+        m3u8_match = re.search(r'["\'](https?://[^"\'\s]+/sh/cdn/hls/[^"\'\s]+\.m3u8)["\']', content)
         if m3u8_match:
             return m3u8_match.group(1)
 
+        # ৩. সাধারণ যেকোনো m3u8 লিংক থাকলে
+        gen_m3u8 = re.search(r'["\'](https?://[^"\'\s]+\.m3u8[^"\'\s]*)["\']', content)
+        if gen_m3u8:
+            return gen_m3u8.group(1)
+
+        # ৪. প্লেয়ার কনফিগারেশনের ভেতর স্ট্রিম কী বা চ্যানেল নাম খোঁজা (যেমন: wnbcnxbcs42)
+        # প্লেয়ার কোডে source, file, বা stream ভ্যারিয়েবল খোঁজা
+        key_match = re.search(r'(?:file|source|stream|channel)\s*[:=]\s*["\']([a-zA-Z0-9_\-\.]+)(?:\.m3u8)?["\']', content, re.IGNORECASE)
+        if key_match:
+            key = key_match.group(1).replace(".m3u8", "").strip()
+            # যদি সরাসরি চ্যানেল কী পাওয়া যায় (যেমন: wnbcnxbcs42)
+            if re.search(r'[a-zA-Z]+\d+', key):
+                return f"https://edgestream3.pro/sh/cdn/hls/{key}.m3u8"
+
+        # ৫. <iframe> থাকলে ভেতরের প্লেয়ার আইফ্রেম চেক করা
         soup = HTMLParser(resp.content)
         iframe = soup.css_first("iframe")
         iframe_src = iframe.attributes.get("src") if iframe else None
 
-        if not iframe_src:
-            src_m = re.search(r'<iframe[^>]+src=["\']([^"\']+)["\']', content, re.IGNORECASE)
-            if src_m:
-                iframe_src = src_m.group(1)
-
         if iframe_src:
-            parsed = urlsplit(iframe_src)
-            params = dict(parse_qsl(parsed.query))
-            stream_id = params.get("stream") or params.get("id")
+            if iframe_src.startswith("//"):
+                iframe_src = "https:" + iframe_src
+            elif iframe_src.startswith("/"):
+                iframe_src = urljoin(embed_url, iframe_src)
 
-            if stream_id:
-                if stream_id.isdigit():
-                    return f"https://edgestream3.pro/stream/{stream_id}.m3u8"
-                return f"https://edgestream2.pro/hls/{stream_id}.m3u8"
+            # আইফ্রেম ফেচ করা
+            if_resp = await client.get(iframe_src, headers={"User-Agent": STREAM_UA, "Referer": embed_url}, timeout=5.0)
+            if if_resp.status_code == 200:
+                if_text = if_resp.text
+                sub_m3u8 = re.search(r'["\'](https?://[^"\'\s]+/sh/cdn/hls/[^"\'\s]+\.m3u8)["\']', if_text)
+                if sub_m3u8:
+                    return sub_m3u8.group(1)
 
-        js_m = re.search(r'stream(?:_id)?\s*[:=]\s*["\']?([a-zA-Z0-9_\-]+)["\']?', content, re.IGNORECASE)
-        if js_m:
-            s_id = js_m.group(1)
-            if s_id.isdigit():
-                return f"https://edgestream3.pro/stream/{s_id}.m3u8"
-            return f"https://edgestream2.pro/hls/{s_id}.m3u8"
+                sub_key = re.search(r'(?:file|source|stream|channel)\s*[:=]\s*["\']([a-zA-Z0-9_\-\.]+)(?:\.m3u8)?["\']', if_text, re.IGNORECASE)
+                if sub_key:
+                    k = sub_key.group(1).replace(".m3u8", "").strip()
+                    if re.search(r'[a-zA-Z]+\d+', k):
+                        return f"https://edgestream3.pro/sh/cdn/hls/{k}.m3u8"
 
+        # ৬. URL এ ch42 থাকলে edgestream এর ডেডিকেটেড hls পাথে কনভার্ট
         ch_m = re.search(r'ch(\d+)', embed_url)
         if ch_m:
             ch_num = ch_m.group(1)
-            return f"https://edgestream3.pro/stream/{ch_num}.m3u8"
+            # স্ক্রিনশট অনুযায়ী লাইভ HLS ফরম্যাট
+            return f"https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs{ch_num}.m3u8"
 
     except Exception as e:
         log.debug(f"Error resolving embed {embed_url}: {e}")
@@ -383,8 +399,7 @@ async def scrape():
 
     client_headers = {
         "User-Agent": STREAM_UA,
-        "Referer": STREAM_REFERER,
-        "Origin": STREAM_ORIGIN,
+        "Referer": "https://streamcenter.st/",
     }
 
     async with httpx.AsyncClient(headers=client_headers, timeout=12.0) as client:
@@ -468,7 +483,7 @@ async def scrape():
                     if raw_embed:
                         unique_embed_urls.add(raw_embed)
 
-        log.info(f"Resolving {len(unique_embed_urls)} embed URLs into actual .m3u8 streams...")
+        log.info(f"Resolving {len(unique_embed_urls)} embed URLs into real HLS streams...")
         embed_m3u8_cache = {}
 
         async def fetch_real_m3u8(emb_url):
@@ -497,13 +512,13 @@ async def scrape():
                         m3u8_url = embed_m3u8_cache[raw_embed]
                         ch_name = item.get("stream") or item.get("name") or s.get("source", "Stream")
 
-                        # আপনার নির্দেশিত নির্দিষ্ট ফরম্যাটে raw_link এবং headers তৈরি
+                        # স্ক্রিনশট অনুযায়ী পাইপ হেডার তৈরি
                         raw_link = f"{m3u8_url}|{STREAM_PIPE_HEADERS}"
 
                         event_channels.append({
                             "channel_name": str(ch_name),
                             "stream_type": "HLS",
-                            "url": m3u8_url,
+                            "url": m3u8_url,  # https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs42.m3u8
                             "raw_link": raw_link,
                             "headers": {
                                 "User-Agent": STREAM_UA,
@@ -557,7 +572,7 @@ async def scrape():
             it.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info("Playlists with full Stream Headers generated successfully!")
+        log.info("Playlists generated with real browser HLS stream URLs!")
 
 
 if __name__ == "__main__":
