@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 25, 2026, 10:03:34 AM",
-  "event_count": 14,
+  "last_updated": "Oct 25, 2026, 10:08:20 AM",
+  "event_count": 20,
   "events": {
     "events": [
       {
@@ -384,6 +384,44 @@
         ]
       },
       {
+        "title": "Lille at AS Monaco",
+        "sport": "Football",
+        "sub_category": "Ligue 1",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "lille-at-as-monaco",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 08:00:00 PM",
+          "end_time_bst": "Oct 25, 2026, 11:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Lille",
+            "flag": "https://streamcenter.st/api/images/badge/aa56435e-605f-4f0b-adde-78397c58a6c4.webp"
+          },
+          "team_b": {
+            "name": "AS Monaco",
+            "flag": "https://streamcenter.st/api/images/badge/992deb22-7cda-4a10-ba56-b08f0119f148.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/aa56435e-605f-4f0b-adde-78397c58a6c4.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/7.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/7.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
         "title": "Real Betis at Celta Vigo",
         "sport": "Football",
         "sub_category": "La Liga",
@@ -412,6 +450,196 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/stream/6.m3u8",
             "raw_link": "https://edgestream3.pro/stream/6.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Troyes at Toulouse",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "troyes-at-toulouse",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 10:15:00 PM",
+          "end_time_bst": "Oct 26, 2026, 01:15:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Troyes",
+            "flag": "https://streamcenter.st/api/images/badge/404d95b9-08fb-4f2a-80b6-11f85d1daa7a.webp"
+          },
+          "team_b": {
+            "name": "Toulouse",
+            "flag": "https://streamcenter.st/api/images/badge/1440e940-7587-4ee6-a776-2c1f07a13ec5.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/404d95b9-08fb-4f2a-80b6-11f85d1daa7a.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/12.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/12.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Strasbourg at Stade Rennais",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "strasbourg-at-stade-rennais",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 10:15:00 PM",
+          "end_time_bst": "Oct 26, 2026, 01:15:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Strasbourg",
+            "flag": "https://streamcenter.st/api/images/badge/401bb7dd-310b-4d47-9227-dbff4c61961e.webp"
+          },
+          "team_b": {
+            "name": "Stade Rennais",
+            "flag": "https://streamcenter.st/api/images/badge/6776a42e-64c9-4add-9ccb-fd3443506cdb.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/401bb7dd-310b-4d47-9227-dbff4c61961e.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/13.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/13.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Le Havre AC at Marseille",
+        "sport": "Football",
+        "sub_category": "Ligue 1",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "le-havre-ac-at-marseille",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 10:15:00 PM",
+          "end_time_bst": "Oct 26, 2026, 01:15:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Le Havre AC",
+            "flag": "https://streamcenter.st/api/images/badge/f49b67ae-bb69-4e68-a904-bc6636cd5e74.webp"
+          },
+          "team_b": {
+            "name": "Marseille",
+            "flag": "https://streamcenter.st/api/images/badge/8917ff7a-8c7e-433f-8a3f-4aba60611a51.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/f49b67ae-bb69-4e68-a904-bc6636cd5e74.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/7.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/7.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Le Mans at AJ Auxerre",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "le-mans-at-aj-auxerre",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 10:15:00 PM",
+          "end_time_bst": "Oct 26, 2026, 01:15:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Le Mans",
+            "flag": "https://streamcenter.st/api/images/badge/27c99d7a-1216-4659-8f34-c39e0dfb72c6.webp"
+          },
+          "team_b": {
+            "name": "AJ Auxerre",
+            "flag": "https://streamcenter.st/api/images/badge/50f8df9d-d614-4ddc-9ec2-a565ecd2d71f.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/27c99d7a-1216-4659-8f34-c39e0dfb72c6.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/14.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/14.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://streame.center",
+              "Origin": "https://streame.center"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Lorient at Angers",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "lorient-at-angers",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 25, 2026, 10:15:00 PM",
+          "end_time_bst": "Oct 26, 2026, 01:15:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Lorient",
+            "flag": "https://streamcenter.st/api/images/badge/432e4acb-e313-4c47-90c4-90208b95ed75.webp"
+          },
+          "team_b": {
+            "name": "Angers",
+            "flag": "https://streamcenter.st/api/images/badge/f41b3976-2968-42c6-8b1b-2ed72e8adefa.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/432e4acb-e313-4c47-90c4-90208b95ed75.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/stream/16.m3u8",
+            "raw_link": "https://edgestream3.pro/stream/16.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://streame.center",
