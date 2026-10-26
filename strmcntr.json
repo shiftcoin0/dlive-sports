@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 26, 2026, 01:33:18 PM",
-  "event_count": 17,
+  "last_updated": "Oct 26, 2026, 02:03:26 PM",
+  "event_count": 18,
   "events": {
     "events": [
       {
@@ -282,6 +282,44 @@
         ]
       },
       {
+        "title": "WWE Monday Night RAW",
+        "sport": "Wrestling",
+        "sub_category": "WWE Raw",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "wwe-monday-night-raw",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 27, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 27, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "WWE Monday Night RAW",
+            "flag": null
+          },
+          "team_b": {
+            "name": "WWE Monday Night RAW",
+            "flag": null
+          }
+        },
+        "logo": null,
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs48.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs48.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
         "title": "Indiana Pacers at Milwaukee Bucks",
         "sport": "Basketball",
         "sub_category": "NBA",
@@ -424,44 +462,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "WWE Monday Night RAW",
-        "sport": "Wrestling",
-        "sub_category": "WWE Raw",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "wwe-monday-night-raw",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 27, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 27, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "WWE Monday Night RAW",
-            "flag": null
-          },
-          "team_b": {
-            "name": "WWE Monday Night RAW",
-            "flag": null
-          }
-        },
-        "logo": null,
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs48.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs48.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -652,6 +652,44 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs52.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs52.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Golden State Warriors at Denver Nuggets",
+        "sport": "Basketball",
+        "sub_category": "NBA",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "golden-state-warriors-at-denver-nuggets",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 27, 2026, 08:00:00 AM",
+          "end_time_bst": "Oct 27, 2026, 11:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Golden State Warriors",
+            "flag": "https://streamcenter.st/api/images/badge/0acf1a39-8f3a-48e3-91f3-d16ed98e27cd.webp"
+          },
+          "team_b": {
+            "name": "Denver Nuggets",
+            "flag": "https://streamcenter.st/api/images/badge/bb768ee2-3abb-4176-927b-9953c09c2385.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/0acf1a39-8f3a-48e3-91f3-d16ed98e27cd.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs73.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs73.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
