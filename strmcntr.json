@@ -1,46 +1,8 @@
 {
-  "last_updated": "Oct 26, 2026, 09:02:07 AM",
-  "event_count": 5,
+  "last_updated": "Oct 26, 2026, 09:22:14 AM",
+  "event_count": 4,
   "events": {
     "events": [
-      {
-        "title": "Kansas City Chiefs at Seattle Seahawks",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "kansas-city-chiefs-at-seattle-seahawks",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 26, 2026, 06:20:00 AM",
-          "end_time_bst": "Oct 26, 2026, 09:20:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Kansas City Chiefs",
-            "flag": "https://streamcenter.st/api/images/badge/a09572c6-2501-427d-a75e-f41909c7101d.webp"
-          },
-          "team_b": {
-            "name": "Seattle Seahawks",
-            "flag": "https://streamcenter.st/api/images/badge/84ce7d37-8f1d-45a0-b45a-d474b8c3bac4.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/a09572c6-2501-427d-a75e-f41909c7101d.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs41.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs41.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Memphis Grizzlies at Sacramento Kings",
         "sport": "Basketball",
