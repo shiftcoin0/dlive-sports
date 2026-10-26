@@ -1,46 +1,8 @@
 {
-  "last_updated": "Oct 26, 2026, 08:32:01 AM",
-  "event_count": 6,
+  "last_updated": "Oct 26, 2026, 09:02:07 AM",
+  "event_count": 5,
   "events": {
     "events": [
-      {
-        "title": "Colorado Avalanche at Nashville Predators",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "colorado-avalanche-at-nashville-predators",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 26, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 26, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Colorado Avalanche",
-            "flag": "https://streamcenter.st/api/images/badge/c5124d32-cc38-4513-ab70-f67698171bff.webp"
-          },
-          "team_b": {
-            "name": "Nashville Predators",
-            "flag": "https://streamcenter.st/api/images/badge/bfa441dc-3461-42bb-a326-adb5f6057b9d.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/c5124d32-cc38-4513-ab70-f67698171bff.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs54.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs54.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Kansas City Chiefs at Seattle Seahawks",
         "sport": "Football",
