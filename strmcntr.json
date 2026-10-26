@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 26, 2026, 12:17:57 PM",
-  "event_count": 13,
+  "last_updated": "Oct 26, 2026, 12:33:02 PM",
+  "event_count": 15,
   "events": {
     "events": [
       {
@@ -282,12 +282,12 @@
         ]
       },
       {
-        "title": "WWE Monday Night RAW",
-        "sport": "Wrestling",
-        "sub_category": "WWE Raw",
+        "title": "Milwaukee Brewers at Tampa Bay Rays",
+        "sport": "Baseball",
+        "sub_category": "Baseball",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "wwe-monday-night-raw",
+        "slug": "milwaukee-brewers-at-tampa-bay-rays",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 27, 2026, 06:00:00 AM",
@@ -295,21 +295,21 @@
         },
         "teams": {
           "team_a": {
-            "name": "WWE Monday Night RAW",
-            "flag": null
+            "name": "Milwaukee Brewers",
+            "flag": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp"
           },
           "team_b": {
-            "name": "WWE Monday Night RAW",
-            "flag": null
+            "name": "Tampa Bay Rays",
+            "flag": "https://streamcenter.st/api/images/badge/693e4904-9299-4803-b649-2a9b37ad5089.webp"
           }
         },
-        "logo": null,
+        "logo": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs48.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs48.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -434,12 +434,12 @@
         ]
       },
       {
-        "title": "Milwaukee Brewers at Tampa Bay Rays",
-        "sport": "Baseball",
-        "sub_category": "Baseball",
+        "title": "WWE Monday Night RAW",
+        "sport": "Wrestling",
+        "sub_category": "WWE Raw",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "milwaukee-brewers-at-tampa-bay-rays",
+        "slug": "wwe-monday-night-raw",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 27, 2026, 06:00:00 AM",
@@ -447,21 +447,21 @@
         },
         "teams": {
           "team_a": {
-            "name": "Milwaukee Brewers",
-            "flag": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp"
+            "name": "WWE Monday Night RAW",
+            "flag": null
           },
           "team_b": {
-            "name": "Tampa Bay Rays",
-            "flag": "https://streamcenter.st/api/images/badge/693e4904-9299-4803-b649-2a9b37ad5089.webp"
+            "name": "WWE Monday Night RAW",
+            "flag": null
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp",
+        "logo": null,
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs48.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs48.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -500,6 +500,82 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs30.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs30.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Toronto Maple Leafs at Calgary Flames",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "toronto-maple-leafs-at-calgary-flames",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 27, 2026, 06:30:00 AM",
+          "end_time_bst": "Oct 27, 2026, 09:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Toronto Maple Leafs",
+            "flag": "https://streamcenter.st/api/images/badge/60a78682-cae9-4dc6-bd8f-9898c18e0dc5.webp"
+          },
+          "team_b": {
+            "name": "Calgary Flames",
+            "flag": "https://streamcenter.st/api/images/badge/c8e7e89d-6d9b-430d-af6d-84936d17d75a.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/60a78682-cae9-4dc6-bd8f-9898c18e0dc5.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Atlanta Hawks at Houston Rockets",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "atlanta-hawks-at-houston-rockets",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 27, 2026, 06:30:00 AM",
+          "end_time_bst": "Oct 27, 2026, 09:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Atlanta Hawks",
+            "flag": "https://streamcenter.st/api/images/badge/dfe3cb29-7d2f-48e6-a383-39b1f314eb22.webp"
+          },
+          "team_b": {
+            "name": "Houston Rockets",
+            "flag": "https://streamcenter.st/api/images/badge/ff2b21cf-70b5-4245-adbb-f66d06cb644c.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/dfe3cb29-7d2f-48e6-a383-39b1f314eb22.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs71.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs71.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
