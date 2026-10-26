@@ -1,46 +1,8 @@
 {
-  "last_updated": "Oct 26, 2026, 05:50:14 AM",
-  "event_count": 12,
+  "last_updated": "Oct 26, 2026, 06:00:23 AM",
+  "event_count": 11,
   "events": {
     "events": [
-      {
-        "title": "Los Angeles Lakers at Utah Jazz",
-        "sport": "Basketball",
-        "sub_category": "NBA",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "los-angeles-lakers-at-utah-jazz",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 26, 2026, 03:00:00 AM",
-          "end_time_bst": "Oct 26, 2026, 06:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Los Angeles Lakers",
-            "flag": "https://streamcenter.st/api/images/badge/83529492-e38a-4c43-8110-7e94386b52fe.webp"
-          },
-          "team_b": {
-            "name": "Utah Jazz",
-            "flag": "https://streamcenter.st/api/images/badge/53d24139-b636-452b-ae08-a417e4db49fa.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/83529492-e38a-4c43-8110-7e94386b52fe.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs65.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs65.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "New York Islanders at Dallas Stars",
         "sport": "Hockey",
