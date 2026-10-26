@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 26, 2026, 11:02:36 AM",
-  "event_count": 5,
+  "last_updated": "Oct 26, 2026, 11:32:44 AM",
+  "event_count": 7,
   "events": {
     "events": [
       {
@@ -92,44 +92,6 @@
         ]
       },
       {
-        "title": "Los Angeles Kings at New York Rangers",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "los-angeles-kings-at-new-york-rangers",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 27, 2026, 05:00:00 AM",
-          "end_time_bst": "Oct 27, 2026, 08:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Los Angeles Kings",
-            "flag": "https://streamcenter.st/api/images/badge/2b61dab9-9852-430e-8f29-91e4adb82bbf.webp"
-          },
-          "team_b": {
-            "name": "New York Rangers",
-            "flag": "https://streamcenter.st/api/images/badge/707e05f4-9023-4a40-bd65-08d88a4614d5.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/2b61dab9-9852-430e-8f29-91e4adb82bbf.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs50.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs50.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Washington Wizards at Charlotte Hornets",
         "sport": "Basketball",
         "sub_category": "Basketball",
@@ -196,6 +158,120 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs66.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs66.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Los Angeles Kings at New York Rangers",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "los-angeles-kings-at-new-york-rangers",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 27, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 27, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Los Angeles Kings",
+            "flag": "https://streamcenter.st/api/images/badge/2b61dab9-9852-430e-8f29-91e4adb82bbf.webp"
+          },
+          "team_b": {
+            "name": "New York Rangers",
+            "flag": "https://streamcenter.st/api/images/badge/707e05f4-9023-4a40-bd65-08d88a4614d5.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/2b61dab9-9852-430e-8f29-91e4adb82bbf.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs50.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs50.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Chicago Bulls at Boston Celtics",
+        "sport": "Basketball",
+        "sub_category": "NBA",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "chicago-bulls-at-boston-celtics",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 27, 2026, 05:30:00 AM",
+          "end_time_bst": "Oct 27, 2026, 08:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Chicago Bulls",
+            "flag": "https://streamcenter.st/api/images/badge/7c16587a-00ec-43f3-934e-b24c84e62545.webp"
+          },
+          "team_b": {
+            "name": "Boston Celtics",
+            "flag": "https://streamcenter.st/api/images/badge/37b86493-9307-46a3-aa5c-9a24138ff0cb.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/7c16587a-00ec-43f3-934e-b24c84e62545.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Dallas Mavericks at Miami Heat",
+        "sport": "Basketball",
+        "sub_category": "NBA",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "dallas-mavericks-at-miami-heat",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 27, 2026, 05:30:00 AM",
+          "end_time_bst": "Oct 27, 2026, 08:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Dallas Mavericks",
+            "flag": "https://streamcenter.st/api/images/badge/3967b4fa-d3db-4c52-8523-bece9b205c5e.webp"
+          },
+          "team_b": {
+            "name": "Miami Heat",
+            "flag": "https://streamcenter.st/api/images/badge/5a3ac75c-7122-4ece-aad5-2dc3550a0e4d.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/3967b4fa-d3db-4c52-8523-bece9b205c5e.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs68.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs68.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
