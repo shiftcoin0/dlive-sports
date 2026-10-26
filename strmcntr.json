@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 26, 2026, 07:06:42 AM",
-  "event_count": 9,
+  "last_updated": "Oct 26, 2026, 07:31:51 AM",
+  "event_count": 10,
   "events": {
     "events": [
       {
@@ -336,6 +336,56 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs55.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs55.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Lyon at Paris Saint-Germain",
+        "sport": "Football",
+        "sub_category": "Ligue 1",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "lyon-at-paris-saint-germain",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 27, 2026, 01:30:00 AM",
+          "end_time_bst": "Oct 27, 2026, 04:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Lyon",
+            "flag": "https://streamcenter.st/api/images/badge/742c5a0d-822d-440c-b2da-929714042583.webp"
+          },
+          "team_b": {
+            "name": "Paris Saint-Germain",
+            "flag": "https://streamcenter.st/api/images/badge/752d0971-40c9-4a40-a248-806df3e99365.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/742c5a0d-822d-440c-b2da-929714042583.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs7.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs7.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs5.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs5.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
