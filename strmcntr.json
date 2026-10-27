@@ -1,8 +1,46 @@
 {
-  "last_updated": "Oct 27, 2026, 09:15:55 PM",
-  "event_count": 25,
+  "last_updated": "Oct 27, 2026, 09:20:59 PM",
+  "event_count": 22,
   "events": {
     "events": [
+      {
+        "title": "ATP 500 Tennis: Basel Day #2 (Center Court)",
+        "sport": "Tennis",
+        "sub_category": "Tennis",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "atp-500-tennis-basel-day-2-center-court",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 27, 2026, 09:00:00 PM",
+          "end_time_bst": "Oct 28, 2026, 12:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "ATP 500 Tennis: Basel Day #2 (Center Court)",
+            "flag": null
+          },
+          "team_b": {
+            "name": "ATP 500 Tennis: Basel Day #2 (Center Court)",
+            "flag": null
+          }
+        },
+        "logo": null,
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs12.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs12.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
       {
         "title": "ATP 500 Tennis: Basel Day #2 (Court 1)",
         "sport": "Tennis",
@@ -70,44 +108,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs11.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs11.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Lazio at Sassuolo",
-        "sport": "Football",
-        "sub_category": "Serie A",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "lazio-at-sassuolo",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 27, 2026, 11:30:00 PM",
-          "end_time_bst": "Oct 28, 2026, 02:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Lazio",
-            "flag": "https://streamcenter.st/api/images/badge/2a92580f-9fb6-47f4-bd4a-74c97d643e49.webp"
-          },
-          "team_b": {
-            "name": "Sassuolo",
-            "flag": "https://streamcenter.st/api/images/badge/62bf701d-975c-4b10-a3e9-7620bf03b88a.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/2a92580f-9fb6-47f4-bd4a-74c97d643e49.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs3.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs3.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -232,82 +232,6 @@
         ]
       },
       {
-        "title": "Arsenal at Fleetwood Town",
-        "sport": "Football",
-        "sub_category": "Premier League",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "arsenal-at-fleetwood-town",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 28, 2026, 02:00:00 AM",
-          "end_time_bst": "Oct 28, 2026, 05:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Arsenal",
-            "flag": "https://streamcenter.st/api/images/badge/ee2f9814-fe69-4bd1-8e50-40033d75bf9c.webp"
-          },
-          "team_b": {
-            "name": "Fleetwood Town",
-            "flag": "https://streamcenter.st/api/images/badge/f335ffc9-5975-4c71-8983-88847d042a48.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/ee2f9814-fe69-4bd1-8e50-40033d75bf9c.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs1.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Delaware Blue Hens at Western Kentucky Hilltoppers",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "delaware-blue-hens-at-western-kentucky-hilltoppers",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 28, 2026, 05:00:00 AM",
-          "end_time_bst": "Oct 28, 2026, 08:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Delaware Blue Hens",
-            "flag": "https://streamcenter.st/api/images/badge/95bcd403-8bb4-4e1a-b143-96fc2efcab30.webp"
-          },
-          "team_b": {
-            "name": "Western Kentucky Hilltoppers",
-            "flag": "https://streamcenter.st/api/images/badge/c033ee41-ce53-4a2d-ad58-28870909f031.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/95bcd403-8bb4-4e1a-b143-96fc2efcab30.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs30.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs30.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Columbus Blue Jackets at Philadelphia Flyers",
         "sport": "Hockey",
         "sub_category": "Hockey",
@@ -422,12 +346,12 @@
         ]
       },
       {
-        "title": "Detroit Pistons at New York Knicks",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
+        "title": "Milwaukee Brewers at Tampa Bay Rays",
+        "sport": "Baseball",
+        "sub_category": "Baseball",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "detroit-pistons-at-new-york-knicks",
+        "slug": "milwaukee-brewers-at-tampa-bay-rays",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 28, 2026, 06:00:00 AM",
@@ -435,59 +359,21 @@
         },
         "teams": {
           "team_a": {
-            "name": "Detroit Pistons",
-            "flag": "https://streamcenter.st/api/images/badge/5587d210-84a7-4697-8a3d-543013b9d427.webp"
+            "name": "Milwaukee Brewers",
+            "flag": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp"
           },
           "team_b": {
-            "name": "New York Knicks",
-            "flag": "https://streamcenter.st/api/images/badge/ae652cc7-9bf8-4fa1-8ded-2290a991c592.webp"
+            "name": "Tampa Bay Rays",
+            "flag": "https://streamcenter.st/api/images/badge/693e4904-9299-4803-b649-2a9b37ad5089.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/5587d210-84a7-4697-8a3d-543013b9d427.webp",
+        "logo": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs66.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs66.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Sacramento Kings at San Antonio Spurs",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "sacramento-kings-at-san-antonio-spurs",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 28, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 28, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Sacramento Kings",
-            "flag": "https://streamcenter.st/api/images/badge/53c69c5f-5a1e-44a8-b7df-863eaac1cc06.webp"
-          },
-          "team_b": {
-            "name": "San Antonio Spurs",
-            "flag": "https://streamcenter.st/api/images/badge/90261af4-da9d-483f-b317-7d808e76e3b8.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/53c69c5f-5a1e-44a8-b7df-863eaac1cc06.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -726,12 +612,12 @@
         ]
       },
       {
-        "title": "Milwaukee Brewers at Tampa Bay Rays",
-        "sport": "Baseball",
-        "sub_category": "Baseball",
+        "title": "Sacramento Kings at San Antonio Spurs",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "milwaukee-brewers-at-tampa-bay-rays",
+        "slug": "sacramento-kings-at-san-antonio-spurs",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 28, 2026, 06:00:00 AM",
@@ -739,21 +625,21 @@
         },
         "teams": {
           "team_a": {
-            "name": "Milwaukee Brewers",
-            "flag": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp"
+            "name": "Sacramento Kings",
+            "flag": "https://streamcenter.st/api/images/badge/53c69c5f-5a1e-44a8-b7df-863eaac1cc06.webp"
           },
           "team_b": {
-            "name": "Tampa Bay Rays",
-            "flag": "https://streamcenter.st/api/images/badge/693e4904-9299-4803-b649-2a9b37ad5089.webp"
+            "name": "San Antonio Spurs",
+            "flag": "https://streamcenter.st/api/images/badge/90261af4-da9d-483f-b317-7d808e76e3b8.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp",
+        "logo": "https://streamcenter.st/api/images/badge/53c69c5f-5a1e-44a8-b7df-863eaac1cc06.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
