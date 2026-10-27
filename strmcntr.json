@@ -1,46 +1,8 @@
 {
-  "last_updated": "Oct 27, 2026, 09:01:19 AM",
-  "event_count": 6,
+  "last_updated": "Oct 27, 2026, 09:16:26 AM",
+  "event_count": 10,
   "events": {
     "events": [
-      {
-        "title": "Dallas Cowboys at Philadelphia Eagles",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "dallas-cowboys-at-philadelphia-eagles",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 27, 2026, 06:15:00 AM",
-          "end_time_bst": "Oct 27, 2026, 09:15:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Dallas Cowboys",
-            "flag": "https://streamcenter.st/api/images/badge/a5e4a440-fb62-4577-a62c-5e944012f1a3.webp"
-          },
-          "team_b": {
-            "name": "Philadelphia Eagles",
-            "flag": "https://streamcenter.st/api/images/badge/afc377e5-c212-4d40-a7de-71dcadf04a76.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/a5e4a440-fb62-4577-a62c-5e944012f1a3.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs30.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs30.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Atlanta Hawks at Houston Rockets",
         "sport": "Basketball",
@@ -222,6 +184,196 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs73.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs73.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Lazio at Sassuolo",
+        "sport": "Football",
+        "sub_category": "Serie A",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "lazio-at-sassuolo",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 27, 2026, 11:30:00 PM",
+          "end_time_bst": "Oct 28, 2026, 02:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Lazio",
+            "flag": "https://streamcenter.st/api/images/badge/2a92580f-9fb6-47f4-bd4a-74c97d643e49.webp"
+          },
+          "team_b": {
+            "name": "Sassuolo",
+            "flag": "https://streamcenter.st/api/images/badge/62bf701d-975c-4b10-a3e9-7620bf03b88a.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/2a92580f-9fb6-47f4-bd4a-74c97d643e49.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs3.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs3.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Peterborough United at Bradford City",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "peterborough-united-at-bradford-city",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 28, 2026, 01:45:00 AM",
+          "end_time_bst": "Oct 28, 2026, 04:45:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Peterborough United",
+            "flag": "https://streamcenter.st/api/images/badge/ba0cdd4d-c986-4bab-b0f9-d077025df0db.webp"
+          },
+          "team_b": {
+            "name": "Bradford City",
+            "flag": "https://streamcenter.st/api/images/badge/c7484960-8893-4601-8d9a-927a9385b115.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/ba0cdd4d-c986-4bab-b0f9-d077025df0db.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs2.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs2.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Cagliari at AS Roma",
+        "sport": "Football",
+        "sub_category": "Serie A",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "cagliari-at-as-roma",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 28, 2026, 01:45:00 AM",
+          "end_time_bst": "Oct 28, 2026, 04:45:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Cagliari",
+            "flag": "https://streamcenter.st/api/images/badge/f2fe4c24-3b5a-4eba-ba9c-9813cfafc73c.webp"
+          },
+          "team_b": {
+            "name": "AS Roma",
+            "flag": "https://streamcenter.st/api/images/badge/13d229af-99b6-42d3-a7e8-6df5797ab95b.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/f2fe4c24-3b5a-4eba-ba9c-9813cfafc73c.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs4.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs4.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Como at Torino",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "como-at-torino",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 28, 2026, 01:45:00 AM",
+          "end_time_bst": "Oct 28, 2026, 04:45:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Como",
+            "flag": "https://streamcenter.st/api/images/badge/d4d6c96b-dd85-4a68-8eff-e6a24346518a.webp"
+          },
+          "team_b": {
+            "name": "Torino",
+            "flag": "https://streamcenter.st/api/images/badge/54cd557a-0f70-4bf9-91d2-84b6b85c856c.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/d4d6c96b-dd85-4a68-8eff-e6a24346518a.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs5.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs5.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Arsenal at Fleetwood Town",
+        "sport": "Football",
+        "sub_category": "Premier League",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "arsenal-at-fleetwood-town",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 28, 2026, 02:00:00 AM",
+          "end_time_bst": "Oct 28, 2026, 05:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Arsenal",
+            "flag": "https://streamcenter.st/api/images/badge/ee2f9814-fe69-4bd1-8e50-40033d75bf9c.webp"
+          },
+          "team_b": {
+            "name": "Fleetwood Town",
+            "flag": "https://streamcenter.st/api/images/badge/f335ffc9-5975-4c71-8983-88847d042a48.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/ee2f9814-fe69-4bd1-8e50-40033d75bf9c.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs1.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
