@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 27, 2026, 02:32:54 PM",
-  "event_count": 20,
+  "last_updated": "Oct 27, 2026, 03:03:00 PM",
+  "event_count": 23,
   "events": {
     "events": [
       {
@@ -346,82 +346,6 @@
         ]
       },
       {
-        "title": "Detroit Pistons at New York Knicks",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "detroit-pistons-at-new-york-knicks",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 28, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 28, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Detroit Pistons",
-            "flag": "https://streamcenter.st/api/images/badge/5587d210-84a7-4697-8a3d-543013b9d427.webp"
-          },
-          "team_b": {
-            "name": "New York Knicks",
-            "flag": "https://streamcenter.st/api/images/badge/ae652cc7-9bf8-4fa1-8ded-2290a991c592.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/5587d210-84a7-4697-8a3d-543013b9d427.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs66.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs66.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Sacramento Kings at San Antonio Spurs",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "sacramento-kings-at-san-antonio-spurs",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 28, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 28, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Sacramento Kings",
-            "flag": "https://streamcenter.st/api/images/badge/53c69c5f-5a1e-44a8-b7df-863eaac1cc06.webp"
-          },
-          "team_b": {
-            "name": "San Antonio Spurs",
-            "flag": "https://streamcenter.st/api/images/badge/90261af4-da9d-483f-b317-7d808e76e3b8.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/53c69c5f-5a1e-44a8-b7df-863eaac1cc06.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Milwaukee Brewers at Tampa Bay Rays",
         "sport": "Baseball",
         "sub_category": "Baseball",
@@ -488,6 +412,44 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Los Angeles Kings at Chicago Blackhawks",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "los-angeles-kings-at-chicago-blackhawks",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 28, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 28, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Los Angeles Kings",
+            "flag": "https://streamcenter.st/api/images/badge/6f0a96b8-29f6-4879-95f4-0a46a705cd7c.webp"
+          },
+          "team_b": {
+            "name": "Chicago Blackhawks",
+            "flag": "https://streamcenter.st/api/images/badge/707e05f4-9023-4a40-bd65-08d88a4614d5.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/6f0a96b8-29f6-4879-95f4-0a46a705cd7c.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs52.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs52.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -602,6 +564,120 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs55.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs55.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Florida Panthers at Winnipeg Jets",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "florida-panthers-at-winnipeg-jets",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 28, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 28, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Florida Panthers",
+            "flag": "https://streamcenter.st/api/images/badge/e9c9d69e-f985-482e-89b0-d86503d5daa5.webp"
+          },
+          "team_b": {
+            "name": "Winnipeg Jets",
+            "flag": "https://streamcenter.st/api/images/badge/a0eb86ca-70d8-45b3-a484-43668ec8d94d.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/e9c9d69e-f985-482e-89b0-d86503d5daa5.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs56.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs56.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Detroit Pistons at New York Knicks",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "detroit-pistons-at-new-york-knicks",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 28, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 28, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Detroit Pistons",
+            "flag": "https://streamcenter.st/api/images/badge/5587d210-84a7-4697-8a3d-543013b9d427.webp"
+          },
+          "team_b": {
+            "name": "New York Knicks",
+            "flag": "https://streamcenter.st/api/images/badge/ae652cc7-9bf8-4fa1-8ded-2290a991c592.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/5587d210-84a7-4697-8a3d-543013b9d427.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs66.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs66.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Sacramento Kings at San Antonio Spurs",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "sacramento-kings-at-san-antonio-spurs",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 28, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 28, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Sacramento Kings",
+            "flag": "https://streamcenter.st/api/images/badge/53c69c5f-5a1e-44a8-b7df-863eaac1cc06.webp"
+          },
+          "team_b": {
+            "name": "San Antonio Spurs",
+            "flag": "https://streamcenter.st/api/images/badge/90261af4-da9d-483f-b317-7d808e76e3b8.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/53c69c5f-5a1e-44a8-b7df-863eaac1cc06.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -754,6 +830,44 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs60.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs60.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Portland Trail Blazers at Los Angeles Lakers",
+        "sport": "Basketball",
+        "sub_category": "NBA",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "portland-trail-blazers-at-los-angeles-lakers",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 28, 2026, 09:00:00 AM",
+          "end_time_bst": "Oct 28, 2026, 12:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Portland Trail Blazers",
+            "flag": "https://streamcenter.st/api/images/badge/53d24139-b636-452b-ae08-a417e4db49fa.webp"
+          },
+          "team_b": {
+            "name": "Los Angeles Lakers",
+            "flag": "https://streamcenter.st/api/images/badge/07acbbef-f561-4dba-b997-cf04c1e62ccc.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/53d24139-b636-452b-ae08-a417e4db49fa.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs68.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs68.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
