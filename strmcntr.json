@@ -1,84 +1,8 @@
 {
-  "last_updated": "Oct 27, 2026, 09:16:26 AM",
-  "event_count": 10,
+  "last_updated": "Oct 27, 2026, 09:31:28 AM",
+  "event_count": 8,
   "events": {
     "events": [
-      {
-        "title": "Atlanta Hawks at Houston Rockets",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "atlanta-hawks-at-houston-rockets",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 27, 2026, 06:30:00 AM",
-          "end_time_bst": "Oct 27, 2026, 09:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Atlanta Hawks",
-            "flag": "https://streamcenter.st/api/images/badge/dfe3cb29-7d2f-48e6-a383-39b1f314eb22.webp"
-          },
-          "team_b": {
-            "name": "Houston Rockets",
-            "flag": "https://streamcenter.st/api/images/badge/ff2b21cf-70b5-4245-adbb-f66d06cb644c.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/dfe3cb29-7d2f-48e6-a383-39b1f314eb22.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs71.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs71.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Toronto Maple Leafs at Calgary Flames",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "toronto-maple-leafs-at-calgary-flames",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 27, 2026, 06:30:00 AM",
-          "end_time_bst": "Oct 27, 2026, 09:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Toronto Maple Leafs",
-            "flag": "https://streamcenter.st/api/images/badge/60a78682-cae9-4dc6-bd8f-9898c18e0dc5.webp"
-          },
-          "team_b": {
-            "name": "Calgary Flames",
-            "flag": "https://streamcenter.st/api/images/badge/c8e7e89d-6d9b-430d-af6d-84936d17d75a.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/60a78682-cae9-4dc6-bd8f-9898c18e0dc5.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Memphis Grizzlies at Utah Jazz",
         "sport": "Basketball",
