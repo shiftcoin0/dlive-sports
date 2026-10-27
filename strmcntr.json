@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 27, 2026, 08:31:15 AM",
-  "event_count": 11,
+  "last_updated": "Oct 27, 2026, 08:51:17 AM",
+  "event_count": 10,
   "events": {
     "events": [
       {
@@ -80,12 +80,12 @@
         ]
       },
       {
-        "title": "Atlanta Dream at Golden State Valkyries",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
+        "title": "WWE Monday Night RAW",
+        "sport": "Wrestling",
+        "sub_category": "WWE Raw",
         "status": "LIVE",
         "is_hot": false,
-        "slug": "atlanta-dream-at-golden-state-valkyries",
+        "slug": "wwe-monday-night-raw",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 27, 2026, 06:00:00 AM",
@@ -93,21 +93,21 @@
         },
         "teams": {
           "team_a": {
-            "name": "Atlanta Dream",
-            "flag": "https://streamcenter.st/api/images/badge/6fc1f7c0-ce6f-47c3-9e76-a22ab3cb1ea3.webp"
+            "name": "WWE Monday Night RAW",
+            "flag": null
           },
           "team_b": {
-            "name": "Golden State Valkyries",
-            "flag": "https://streamcenter.st/api/images/badge/49c26719-8998-410f-80e0-0fb41761a015.webp"
+            "name": "WWE Monday Night RAW",
+            "flag": null
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/6fc1f7c0-ce6f-47c3-9e76-a22ab3cb1ea3.webp",
+        "logo": null,
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs80.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs80.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs48.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs48.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -156,44 +156,6 @@
         ]
       },
       {
-        "title": "WWE Monday Night RAW",
-        "sport": "Wrestling",
-        "sub_category": "WWE Raw",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "wwe-monday-night-raw",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 27, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 27, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "WWE Monday Night RAW",
-            "flag": null
-          },
-          "team_b": {
-            "name": "WWE Monday Night RAW",
-            "flag": null
-          }
-        },
-        "logo": null,
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs48.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs48.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Dallas Cowboys at Philadelphia Eagles",
         "sport": "Football",
         "sub_category": "Football",
@@ -232,44 +194,6 @@
         ]
       },
       {
-        "title": "Toronto Maple Leafs at Calgary Flames",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "toronto-maple-leafs-at-calgary-flames",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 27, 2026, 06:30:00 AM",
-          "end_time_bst": "Oct 27, 2026, 09:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Toronto Maple Leafs",
-            "flag": "https://streamcenter.st/api/images/badge/60a78682-cae9-4dc6-bd8f-9898c18e0dc5.webp"
-          },
-          "team_b": {
-            "name": "Calgary Flames",
-            "flag": "https://streamcenter.st/api/images/badge/c8e7e89d-6d9b-430d-af6d-84936d17d75a.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/60a78682-cae9-4dc6-bd8f-9898c18e0dc5.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Atlanta Hawks at Houston Rockets",
         "sport": "Basketball",
         "sub_category": "Basketball",
@@ -298,6 +222,44 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs71.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs71.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Toronto Maple Leafs at Calgary Flames",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "toronto-maple-leafs-at-calgary-flames",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 27, 2026, 06:30:00 AM",
+          "end_time_bst": "Oct 27, 2026, 09:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Toronto Maple Leafs",
+            "flag": "https://streamcenter.st/api/images/badge/60a78682-cae9-4dc6-bd8f-9898c18e0dc5.webp"
+          },
+          "team_b": {
+            "name": "Calgary Flames",
+            "flag": "https://streamcenter.st/api/images/badge/c8e7e89d-6d9b-430d-af6d-84936d17d75a.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/60a78682-cae9-4dc6-bd8f-9898c18e0dc5.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
