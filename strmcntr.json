@@ -1,8 +1,84 @@
 {
-  "last_updated": "Oct 27, 2026, 08:45:37 PM",
-  "event_count": 22,
+  "last_updated": "Oct 27, 2026, 09:15:55 PM",
+  "event_count": 25,
   "events": {
     "events": [
+      {
+        "title": "ATP 500 Tennis: Basel Day #2 (Court 1)",
+        "sport": "Tennis",
+        "sub_category": "Tennis",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "atp-500-tennis-basel-day-2-court-1",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 27, 2026, 09:00:00 PM",
+          "end_time_bst": "Oct 28, 2026, 12:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "ATP 500 Tennis: Basel Day #2 (Court 1)",
+            "flag": null
+          },
+          "team_b": {
+            "name": "ATP 500 Tennis: Basel Day #2 (Court 1)",
+            "flag": null
+          }
+        },
+        "logo": null,
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs10.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs10.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "ATP 500 Tennis: Vienna Day #2 (Centre Court)",
+        "sport": "Tennis",
+        "sub_category": "Tennis",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "atp-500-tennis-vienna-day-2-centre-court",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 27, 2026, 09:00:00 PM",
+          "end_time_bst": "Oct 28, 2026, 12:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "ATP 500 Tennis: Vienna Day #2 (Centre Court)",
+            "flag": null
+          },
+          "team_b": {
+            "name": "ATP 500 Tennis: Vienna Day #2 (Centre Court)",
+            "flag": null
+          }
+        },
+        "logo": null,
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs11.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs11.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
       {
         "title": "Lazio at Sassuolo",
         "sport": "Football",
@@ -422,44 +498,6 @@
         ]
       },
       {
-        "title": "Milwaukee Brewers at Tampa Bay Rays",
-        "sport": "Baseball",
-        "sub_category": "Baseball",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "milwaukee-brewers-at-tampa-bay-rays",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 28, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 28, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Milwaukee Brewers",
-            "flag": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp"
-          },
-          "team_b": {
-            "name": "Tampa Bay Rays",
-            "flag": "https://streamcenter.st/api/images/badge/693e4904-9299-4803-b649-2a9b37ad5089.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Boston Bruins at Carolina Hurricanes",
         "sport": "Hockey",
         "sub_category": "Hockey",
@@ -688,6 +726,44 @@
         ]
       },
       {
+        "title": "Milwaukee Brewers at Tampa Bay Rays",
+        "sport": "Baseball",
+        "sub_category": "Baseball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "milwaukee-brewers-at-tampa-bay-rays",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 28, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 28, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Milwaukee Brewers",
+            "flag": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp"
+          },
+          "team_b": {
+            "name": "Tampa Bay Rays",
+            "flag": "https://streamcenter.st/api/images/badge/693e4904-9299-4803-b649-2a9b37ad5089.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
         "title": "Minnesota Wild at Utah Mammoth",
         "sport": "Hockey",
         "sub_category": "Hockey",
@@ -830,6 +906,44 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs60.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs60.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Portland Trail Blazers at Los Angeles Lakers",
+        "sport": "Basketball",
+        "sub_category": "NBA",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "portland-trail-blazers-at-los-angeles-lakers",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 28, 2026, 09:00:00 AM",
+          "end_time_bst": "Oct 28, 2026, 12:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Portland Trail Blazers",
+            "flag": "https://streamcenter.st/api/images/badge/53d24139-b636-452b-ae08-a417e4db49fa.webp"
+          },
+          "team_b": {
+            "name": "Los Angeles Lakers",
+            "flag": "https://streamcenter.st/api/images/badge/07acbbef-f561-4dba-b997-cf04c1e62ccc.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/53d24139-b636-452b-ae08-a417e4db49fa.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs68.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs68.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
