@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 27, 2026, 12:02:03 PM",
-  "event_count": 18,
+  "last_updated": "Oct 27, 2026, 01:02:21 PM",
+  "event_count": 19,
   "events": {
     "events": [
       {
@@ -678,6 +678,44 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs56.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs56.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Minnesota Wild at Utah Mammoth",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "minnesota-wild-at-utah-mammoth",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 28, 2026, 07:00:00 AM",
+          "end_time_bst": "Oct 28, 2026, 10:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Minnesota Wild",
+            "flag": "https://streamcenter.st/api/images/badge/9bbc874b-2df6-44ce-a6b4-52b0f47d9514.webp"
+          },
+          "team_b": {
+            "name": "Utah Mammoth",
+            "flag": "https://streamcenter.st/api/images/badge/7280c674-1cd2-4120-ac33-602759ffa569.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/9bbc874b-2df6-44ce-a6b4-52b0f47d9514.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs57.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs57.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
