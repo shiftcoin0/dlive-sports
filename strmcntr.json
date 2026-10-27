@@ -1,46 +1,8 @@
 {
-  "last_updated": "Oct 27, 2026, 09:31:28 AM",
-  "event_count": 8,
+  "last_updated": "Oct 27, 2026, 10:01:35 AM",
+  "event_count": 7,
   "events": {
     "events": [
-      {
-        "title": "Memphis Grizzlies at Utah Jazz",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "memphis-grizzlies-at-utah-jazz",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 27, 2026, 07:00:00 AM",
-          "end_time_bst": "Oct 27, 2026, 10:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Memphis Grizzlies",
-            "flag": "https://streamcenter.st/api/images/badge/83529492-e38a-4c43-8110-7e94386b52fe.webp"
-          },
-          "team_b": {
-            "name": "Utah Jazz",
-            "flag": "https://streamcenter.st/api/images/badge/0c0e8af3-39c3-4f52-8133-211109a34e41.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/83529492-e38a-4c43-8110-7e94386b52fe.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs72.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs72.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Detroit Red Wings at Edmonton Oilers",
         "sport": "Hockey",
