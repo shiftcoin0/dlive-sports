@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 27, 2026, 01:02:21 PM",
-  "event_count": 19,
+  "last_updated": "Oct 27, 2026, 02:02:39 PM",
+  "event_count": 21,
   "events": {
     "events": [
       {
@@ -716,6 +716,82 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs57.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs57.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Ottawa Senators at Vegas Golden Knights",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "ottawa-senators-at-vegas-golden-knights",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 28, 2026, 08:00:00 AM",
+          "end_time_bst": "Oct 28, 2026, 11:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Ottawa Senators",
+            "flag": "https://streamcenter.st/api/images/badge/15506e97-07f7-4138-8d2f-48830c5f4445.webp"
+          },
+          "team_b": {
+            "name": "Vegas Golden Knights",
+            "flag": "https://streamcenter.st/api/images/badge/967db9c2-4152-4893-b255-df00248b82d1.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/15506e97-07f7-4138-8d2f-48830c5f4445.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs58.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs58.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Vancouver Canucks at Anaheim Ducks",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "vancouver-canucks-at-anaheim-ducks",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 28, 2026, 08:00:00 AM",
+          "end_time_bst": "Oct 28, 2026, 11:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Vancouver Canucks",
+            "flag": "https://streamcenter.st/api/images/badge/8d661920-97ad-4e18-9ae1-5943982608a0.webp"
+          },
+          "team_b": {
+            "name": "Anaheim Ducks",
+            "flag": "https://streamcenter.st/api/images/badge/1bd8e0f9-abd6-4f48-b8be-e76038ff58fc.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/8d661920-97ad-4e18-9ae1-5943982608a0.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs59.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs59.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
