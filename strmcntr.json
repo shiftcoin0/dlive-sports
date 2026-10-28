@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 29, 2026, 01:55:57 AM",
-  "event_count": 22,
+  "last_updated": "Oct 29, 2026, 04:06:31 AM",
+  "event_count": 21,
   "events": {
     "events": [
       {
@@ -32,44 +32,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs1.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Aston Villa at AFC Bournemouth",
-        "sport": "Football",
-        "sub_category": "Premier League",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "aston-villa-at-afc-bournemouth",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 29, 2026, 01:45:00 AM",
-          "end_time_bst": "Oct 29, 2026, 04:45:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Aston Villa",
-            "flag": "https://streamcenter.st/api/images/badge/7a9ed5ec-257b-4843-a438-a39afb7389c7.webp"
-          },
-          "team_b": {
-            "name": "AFC Bournemouth",
-            "flag": "https://streamcenter.st/api/images/badge/c138e625-67f2-481a-8b06-31a703302ff1.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/7a9ed5ec-257b-4843-a438-a39afb7389c7.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs2.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs2.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -536,44 +498,6 @@
         ]
       },
       {
-        "title": "Milwaukee Brewers at Tampa Bay Rays",
-        "sport": "Baseball",
-        "sub_category": "Baseball",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "milwaukee-brewers-at-tampa-bay-rays",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 29, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 29, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Milwaukee Brewers",
-            "flag": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp"
-          },
-          "team_b": {
-            "name": "Tampa Bay Rays",
-            "flag": "https://streamcenter.st/api/images/badge/693e4904-9299-4803-b649-2a9b37ad5089.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "New York Knicks at Chicago Bulls",
         "sport": "Basketball",
         "sub_category": "NBA",
@@ -716,6 +640,44 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs73.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs73.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Milwaukee Brewers at Tampa Bay Rays",
+        "sport": "Baseball",
+        "sub_category": "Baseball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "milwaukee-brewers-at-tampa-bay-rays",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 29, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 29, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Milwaukee Brewers",
+            "flag": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp"
+          },
+          "team_b": {
+            "name": "Tampa Bay Rays",
+            "flag": "https://streamcenter.st/api/images/badge/693e4904-9299-4803-b649-2a9b37ad5089.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
