@@ -1,84 +1,8 @@
 {
-  "last_updated": "Oct 28, 2026, 10:00:34 AM",
-  "event_count": 14,
+  "last_updated": "Oct 28, 2026, 11:00:46 AM",
+  "event_count": 13,
   "events": {
     "events": [
-      {
-        "title": "Ottawa Senators at Vegas Golden Knights",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "ottawa-senators-at-vegas-golden-knights",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 28, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 28, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Ottawa Senators",
-            "flag": "https://streamcenter.st/api/images/badge/15506e97-07f7-4138-8d2f-48830c5f4445.webp"
-          },
-          "team_b": {
-            "name": "Vegas Golden Knights",
-            "flag": "https://streamcenter.st/api/images/badge/967db9c2-4152-4893-b255-df00248b82d1.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/15506e97-07f7-4138-8d2f-48830c5f4445.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs58.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs58.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Vancouver Canucks at Anaheim Ducks",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "vancouver-canucks-at-anaheim-ducks",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 28, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 28, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Vancouver Canucks",
-            "flag": "https://streamcenter.st/api/images/badge/8d661920-97ad-4e18-9ae1-5943982608a0.webp"
-          },
-          "team_b": {
-            "name": "Anaheim Ducks",
-            "flag": "https://streamcenter.st/api/images/badge/1bd8e0f9-abd6-4f48-b8be-e76038ff58fc.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/8d661920-97ad-4e18-9ae1-5943982608a0.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs59.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs59.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Buffalo Sabres at San Jose Sharks",
         "sport": "Hockey",
@@ -146,44 +70,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs68.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs68.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Internazionale at Venezia",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "internazionale-at-venezia",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 28, 2026, 11:30:00 PM",
-          "end_time_bst": "Oct 29, 2026, 02:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Internazionale",
-            "flag": "https://streamcenter.st/api/images/badge/37c76dee-5b18-4737-8c5c-7f351eb7d4f4.webp"
-          },
-          "team_b": {
-            "name": "Venezia",
-            "flag": "https://streamcenter.st/api/images/badge/e59f2577-bd35-468b-a9af-9c6526db3661.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/37c76dee-5b18-4737-8c5c-7f351eb7d4f4.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs6.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs6.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -270,44 +156,6 @@
         ]
       },
       {
-        "title": "Brighton & Hove Albion at Manchester City",
-        "sport": "Football",
-        "sub_category": "Premier League",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "brighton-hove-albion-at-manchester-city",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 29, 2026, 01:30:00 AM",
-          "end_time_bst": "Oct 29, 2026, 04:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Brighton & Hove Albion",
-            "flag": "https://streamcenter.st/api/images/badge/01224e8d-9c68-4af7-bcdd-356224c9e8c1.webp"
-          },
-          "team_b": {
-            "name": "Manchester City",
-            "flag": "https://streamcenter.st/api/images/badge/80e773bb-7135-4bea-89c1-a89e2118a5f2.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/01224e8d-9c68-4af7-bcdd-356224c9e8c1.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs1.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Aston Villa at AFC Bournemouth",
         "sport": "Football",
         "sub_category": "Premier League",
@@ -374,44 +222,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs3.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs3.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Brentford at Sunderland",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "brentford-at-sunderland",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 29, 2026, 01:45:00 AM",
-          "end_time_bst": "Oct 29, 2026, 04:45:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Brentford",
-            "flag": "https://streamcenter.st/api/images/badge/72356773-699e-4ba4-bca9-88b3bec08fec.webp"
-          },
-          "team_b": {
-            "name": "Sunderland",
-            "flag": "https://streamcenter.st/api/images/badge/9af98b88-60db-4164-be6f-c0cc5a6d2681.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/72356773-699e-4ba4-bca9-88b3bec08fec.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs4.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs4.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -526,6 +336,158 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs5.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs5.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Kennesaw State Owls at Middle Tennessee Blue Raiders",
+        "sport": "Football",
+        "sub_category": "Football",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "kennesaw-state-owls-at-middle-tennessee-blue-raiders",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 29, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 29, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Kennesaw State Owls",
+            "flag": "https://streamcenter.st/api/images/badge/35430fa0-da61-4c7b-9978-d61b36ec197d.webp"
+          },
+          "team_b": {
+            "name": "Middle Tennessee Blue Raiders",
+            "flag": "https://streamcenter.st/api/images/badge/0ad8ce4e-b643-4ea3-8110-f9e334f1984c.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/35430fa0-da61-4c7b-9978-d61b36ec197d.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs30.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs30.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Miami Heat at Atlanta Hawks",
+        "sport": "Basketball",
+        "sub_category": "NBA",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "miami-heat-at-atlanta-hawks",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 29, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 29, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Miami Heat",
+            "flag": "https://streamcenter.st/api/images/badge/ff2b21cf-70b5-4245-adbb-f66d06cb644c.webp"
+          },
+          "team_b": {
+            "name": "Atlanta Hawks",
+            "flag": "https://streamcenter.st/api/images/badge/3967b4fa-d3db-4c52-8523-bece9b205c5e.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/ff2b21cf-70b5-4245-adbb-f66d06cb644c.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs65.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs65.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Charlotte Hornets at Detroit Pistons",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "charlotte-hornets-at-detroit-pistons",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 29, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 29, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Charlotte Hornets",
+            "flag": "https://streamcenter.st/api/images/badge/ae652cc7-9bf8-4fa1-8ded-2290a991c592.webp"
+          },
+          "team_b": {
+            "name": "Detroit Pistons",
+            "flag": "https://streamcenter.st/api/images/badge/0494a5d3-2758-4599-8add-b06144a2a4d2.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/ae652cc7-9bf8-4fa1-8ded-2290a991c592.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Philadelphia 76ers at Indiana Pacers",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "philadelphia-76ers-at-indiana-pacers",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 29, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 29, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Philadelphia 76ers",
+            "flag": "https://streamcenter.st/api/images/badge/b1c74876-0e79-46fc-be96-7661fe865c04.webp"
+          },
+          "team_b": {
+            "name": "Indiana Pacers",
+            "flag": "https://streamcenter.st/api/images/badge/3f0f83c7-b6fb-4a6d-864c-873a66795e84.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/b1c74876-0e79-46fc-be96-7661fe865c04.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs68.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs68.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
