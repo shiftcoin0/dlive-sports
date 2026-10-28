@@ -1,6 +1,6 @@
 {
-  "last_updated": "Oct 28, 2026, 08:10:06 AM",
-  "event_count": 26,
+  "last_updated": "Oct 28, 2026, 08:20:12 AM",
+  "event_count": 22,
   "events": {
     "events": [
       {
@@ -80,6 +80,44 @@
         ]
       },
       {
+        "title": "Milwaukee Brewers at Tampa Bay Rays",
+        "sport": "Baseball",
+        "sub_category": "Baseball",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "milwaukee-brewers-at-tampa-bay-rays",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 28, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 28, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Milwaukee Brewers",
+            "flag": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp"
+          },
+          "team_b": {
+            "name": "Tampa Bay Rays",
+            "flag": "https://streamcenter.st/api/images/badge/693e4904-9299-4803-b649-2a9b37ad5089.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
         "title": "Detroit Pistons at New York Knicks",
         "sport": "Basketball",
         "sub_category": "Basketball",
@@ -146,82 +184,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Milwaukee Brewers at Tampa Bay Rays",
-        "sport": "Baseball",
-        "sub_category": "Baseball",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "milwaukee-brewers-at-tampa-bay-rays",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 28, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 28, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Milwaukee Brewers",
-            "flag": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp"
-          },
-          "team_b": {
-            "name": "Tampa Bay Rays",
-            "flag": "https://streamcenter.st/api/images/badge/693e4904-9299-4803-b649-2a9b37ad5089.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/8803b03e-ded9-4854-b197-38c192d0ed1c.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs15.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Boston Bruins at Carolina Hurricanes",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "boston-bruins-at-carolina-hurricanes",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 28, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 28, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Boston Bruins",
-            "flag": "https://streamcenter.st/api/images/badge/851def80-1466-4a0d-92b4-de8a24e103ae.webp"
-          },
-          "team_b": {
-            "name": "Carolina Hurricanes",
-            "flag": "https://streamcenter.st/api/images/badge/42d789de-401c-499f-8372-51ddc8bc2ddb.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/851def80-1466-4a0d-92b4-de8a24e103ae.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -460,44 +422,6 @@
         ]
       },
       {
-        "title": "Ottawa Senators at Vegas Golden Knights",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "ottawa-senators-at-vegas-golden-knights",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 28, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 28, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Ottawa Senators",
-            "flag": "https://streamcenter.st/api/images/badge/15506e97-07f7-4138-8d2f-48830c5f4445.webp"
-          },
-          "team_b": {
-            "name": "Vegas Golden Knights",
-            "flag": "https://streamcenter.st/api/images/badge/967db9c2-4152-4893-b255-df00248b82d1.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/15506e97-07f7-4138-8d2f-48830c5f4445.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs58.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs58.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Vancouver Canucks at Anaheim Ducks",
         "sport": "Hockey",
         "sub_category": "Hockey",
@@ -539,7 +463,7 @@
         "title": "Buffalo Sabres at San Jose Sharks",
         "sport": "Hockey",
         "sub_category": "Hockey",
-        "status": "UPCOMING",
+        "status": "LIVE",
         "is_hot": false,
         "slug": "buffalo-sabres-at-san-jose-sharks",
         "schedule": {
@@ -830,82 +754,6 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs3.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs3.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Brentford at Sunderland",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "brentford-at-sunderland",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 29, 2026, 01:45:00 AM",
-          "end_time_bst": "Oct 29, 2026, 04:45:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Brentford",
-            "flag": "https://streamcenter.st/api/images/badge/72356773-699e-4ba4-bca9-88b3bec08fec.webp"
-          },
-          "team_b": {
-            "name": "Sunderland",
-            "flag": "https://streamcenter.st/api/images/badge/9af98b88-60db-4164-be6f-c0cc5a6d2681.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/72356773-699e-4ba4-bca9-88b3bec08fec.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs4.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs4.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Napoli at Monza",
-        "sport": "Football",
-        "sub_category": "Serie A",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "napoli-at-monza",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 29, 2026, 01:45:00 AM",
-          "end_time_bst": "Oct 29, 2026, 04:45:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Napoli",
-            "flag": "https://streamcenter.st/api/images/badge/a5b695f3-4324-4ead-a306-8604cf031221.webp"
-          },
-          "team_b": {
-            "name": "Monza",
-            "flag": "https://streamcenter.st/api/images/badge/d94af7cb-d92c-4cc9-b0d4-0200deeb01d7.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/a5b695f3-4324-4ead-a306-8604cf031221.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs9.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs9.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
