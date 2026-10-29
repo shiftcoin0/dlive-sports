@@ -1,46 +1,8 @@
 {
-  "last_updated": "Oct 29, 2026, 02:04:12 PM",
-  "event_count": 18,
+  "last_updated": "Oct 29, 2026, 04:34:51 PM",
+  "event_count": 21,
   "events": {
     "events": [
-      {
-        "title": "MotoGP",
-        "sport": "Racing",
-        "sub_category": "Racing",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "motogp",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 29, 2026, 01:30:00 PM",
-          "end_time_bst": "Oct 29, 2026, 04:30:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "MotoGP",
-            "flag": null
-          },
-          "team_b": {
-            "name": "MotoGP",
-            "flag": null
-          }
-        },
-        "logo": null,
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs47.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs47.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Golden State Valkyries at Atlanta Dream",
         "sport": "Basketball",
@@ -184,6 +146,44 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs9.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs9.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Winnipeg Jets at Tampa Bay Lightning",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "winnipeg-jets-at-tampa-bay-lightning",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 05:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 08:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Winnipeg Jets",
+            "flag": "https://streamcenter.st/api/images/badge/341ae09d-6283-4d99-8b40-6bf0865884ab.webp"
+          },
+          "team_b": {
+            "name": "Tampa Bay Lightning",
+            "flag": "https://streamcenter.st/api/images/badge/e9c9d69e-f985-482e-89b0-d86503d5daa5.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/341ae09d-6283-4d99-8b40-6bf0865884ab.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs50.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs50.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -384,6 +384,120 @@
         ]
       },
       {
+        "title": "Cleveland Cavaliers at Atlanta Hawks",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "cleveland-cavaliers-at-atlanta-hawks",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Cleveland Cavaliers",
+            "flag": "https://streamcenter.st/api/images/badge/ff2b21cf-70b5-4245-adbb-f66d06cb644c.webp"
+          },
+          "team_b": {
+            "name": "Atlanta Hawks",
+            "flag": "https://streamcenter.st/api/images/badge/34976ee6-0def-4ee5-b23f-3d67b151e780.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/ff2b21cf-70b5-4245-adbb-f66d06cb644c.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs65.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs65.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Sacramento Kings at New Orleans Pelicans",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "sacramento-kings-at-new-orleans-pelicans",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Sacramento Kings",
+            "flag": "https://streamcenter.st/api/images/badge/303d0ee1-c5f9-4ee2-a745-e01af517c96d.webp"
+          },
+          "team_b": {
+            "name": "New Orleans Pelicans",
+            "flag": "https://streamcenter.st/api/images/badge/90261af4-da9d-483f-b317-7d808e76e3b8.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/303d0ee1-c5f9-4ee2-a745-e01af517c96d.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs66.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs66.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Boston Bruins at St. Louis Blues",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "boston-bruins-at-st-louis-blues",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Boston Bruins",
+            "flag": "https://streamcenter.st/api/images/badge/5132e046-2483-4cc1-bf41-6f7eb254766a.webp"
+          },
+          "team_b": {
+            "name": "St. Louis Blues",
+            "flag": "https://streamcenter.st/api/images/badge/42d789de-401c-499f-8372-51ddc8bc2ddb.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/5132e046-2483-4cc1-bf41-6f7eb254766a.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs54.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs54.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
         "title": "Washington Capitals at Nashville Predators",
         "sport": "Hockey",
         "sub_category": "Hockey",
@@ -498,82 +612,6 @@
         ]
       },
       {
-        "title": "Cleveland Cavaliers at Atlanta Hawks",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "cleveland-cavaliers-at-atlanta-hawks",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 30, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 30, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Cleveland Cavaliers",
-            "flag": "https://streamcenter.st/api/images/badge/ff2b21cf-70b5-4245-adbb-f66d06cb644c.webp"
-          },
-          "team_b": {
-            "name": "Atlanta Hawks",
-            "flag": "https://streamcenter.st/api/images/badge/34976ee6-0def-4ee5-b23f-3d67b151e780.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/ff2b21cf-70b5-4245-adbb-f66d06cb644c.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs65.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs65.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Sacramento Kings at New Orleans Pelicans",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "sacramento-kings-at-new-orleans-pelicans",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 30, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 30, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Sacramento Kings",
-            "flag": "https://streamcenter.st/api/images/badge/303d0ee1-c5f9-4ee2-a745-e01af517c96d.webp"
-          },
-          "team_b": {
-            "name": "New Orleans Pelicans",
-            "flag": "https://streamcenter.st/api/images/badge/90261af4-da9d-483f-b317-7d808e76e3b8.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/303d0ee1-c5f9-4ee2-a745-e01af517c96d.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs66.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs66.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
         "title": "Carolina Panthers at Green Bay Packers",
         "sport": "Football",
         "sub_category": "Football",
@@ -602,6 +640,44 @@
             "stream_type": "HLS",
             "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs30.m3u8",
             "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs30.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Memphis Grizzlies at Portland Trail Blazers",
+        "sport": "Basketball",
+        "sub_category": "Basketball",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "memphis-grizzlies-at-portland-trail-blazers",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 08:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 11:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Memphis Grizzlies",
+            "flag": "https://streamcenter.st/api/images/badge/07acbbef-f561-4dba-b997-cf04c1e62ccc.webp"
+          },
+          "team_b": {
+            "name": "Portland Trail Blazers",
+            "flag": "https://streamcenter.st/api/images/badge/0c0e8af3-39c3-4f52-8133-211109a34e41.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/07acbbef-f561-4dba-b997-cf04c1e62ccc.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
@@ -650,12 +726,12 @@
         ]
       },
       {
-        "title": "Memphis Grizzlies at Portland Trail Blazers",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
+        "title": "Ottawa Senators at Los Angeles Kings",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "memphis-grizzlies-at-portland-trail-blazers",
+        "slug": "ottawa-senators-at-los-angeles-kings",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 30, 2026, 08:00:00 AM",
@@ -663,21 +739,59 @@
         },
         "teams": {
           "team_a": {
-            "name": "Memphis Grizzlies",
-            "flag": "https://streamcenter.st/api/images/badge/07acbbef-f561-4dba-b997-cf04c1e62ccc.webp"
+            "name": "Ottawa Senators",
+            "flag": "https://streamcenter.st/api/images/badge/707e05f4-9023-4a40-bd65-08d88a4614d5.webp"
           },
           "team_b": {
-            "name": "Portland Trail Blazers",
-            "flag": "https://streamcenter.st/api/images/badge/0c0e8af3-39c3-4f52-8133-211109a34e41.webp"
+            "name": "Los Angeles Kings",
+            "flag": "https://streamcenter.st/api/images/badge/967db9c2-4152-4893-b255-df00248b82d1.webp"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/07acbbef-f561-4dba-b997-cf04c1e62ccc.webp",
+        "logo": "https://streamcenter.st/api/images/badge/707e05f4-9023-4a40-bd65-08d88a4614d5.webp",
         "channels": [
           {
             "channel_name": "iframe",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs59.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs59.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://embedcenter.st/",
+              "Origin": "https://embedcenter.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Vancouver Canucks at San Jose Sharks",
+        "sport": "Hockey",
+        "sub_category": "Hockey",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "vancouver-canucks-at-san-jose-sharks",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 08:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 11:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Vancouver Canucks",
+            "flag": "https://streamcenter.st/api/images/badge/b35c349b-ef6c-4208-87f0-2c7ba21071ab.webp"
+          },
+          "team_b": {
+            "name": "San Jose Sharks",
+            "flag": "https://streamcenter.st/api/images/badge/1bd8e0f9-abd6-4f48-b8be-e76038ff58fc.webp"
+          }
+        },
+        "logo": "https://streamcenter.st/api/images/badge/b35c349b-ef6c-4208-87f0-2c7ba21071ab.webp",
+        "channels": [
+          {
+            "channel_name": "iframe",
+            "stream_type": "HLS",
+            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs60.m3u8",
+            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs60.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
               "Referer": "https://embedcenter.st/",
