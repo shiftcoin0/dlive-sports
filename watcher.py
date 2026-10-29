@@ -2,23 +2,29 @@ import asyncio
 import json
 import logging
 import os
+import re
 from datetime import datetime, timedelta, timezone
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import threading
 import httpx
 
+# GitHub ক্রেডেনশিয়াল
 GH_TOKEN = os.getenv("GH_TOKEN")
 GH_OWNER = os.getenv("GH_OWNER", "shiftcoin0")
 GH_REPO = os.getenv("GH_REPO", "dlive-sports")
 PORT = int(os.getenv("PORT", 10000))
 
-BASE_URL = "https://streamcenter.st"
-API_SPORTS = f"{BASE_URL}/api/sports"
+# Topsurge API
+BASE_URL = "https://topsurge.st"
+API_URL = f"{BASE_URL}/api_proxy.php"
+
+# স্টেট মনে রাখার জন্য ফাইল (রেন্ডার রিস্টার্ট হলেও যাতে ভুলে না যায়)
+STATE_FILE = "watcher_state.txt"
 
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
-    "Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+    "Chrome/111.0.0.0 Safari/537.36"
 )
 
 logging.basicConfig(
@@ -28,26 +34,40 @@ logging.basicConfig(
 )
 log = logging.getLogger("Watcher")
 
+
+# -----------------------------------------------------------------------------
+# Render Web Service সচল রাখার জন্য ডামি হেলথ সার্ভার (24/7 চালু রাখবে)
+# -----------------------------------------------------------------------------
 class HealthServer(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.send_header("Content-type", "application/json")
         self.end_headers()
-        response = {
+        res = {
             "status": "running",
-            "service": "StreamCenter API Watcher",
+            "service": "Topsurge 5-Minute Watcher",
             "timestamp": datetime.now(timezone.utc).isoformat()
         }
-        self.wfile.write(json.dumps(response).encode("utf-8"))
+        self.wfile.write(json.dumps(res).encode("utf-8"))
+
+    def log_message(self, format, *args):
+        return  # অতিরিক্ত লগ অফ রাখা হলো
+
 
 def start_health_server():
     server = HTTPServer(("0.0.0.0", PORT), HealthServer)
-    log.info(f"Health server running on port {PORT}")
+    log.info(f"Health server listening on port {PORT}")
     server.serve_forever()
 
-def get_event_status(match_dt: datetime) -> str:
+
+# -----------------------------------------------------------------------------
+# খেলা শুরুর ১৫ মিনিট আগে LIVE স্ট্যাটাস নির্ধারণ করার লজিক
+# -----------------------------------------------------------------------------
+def get_event_status(start_dt: datetime) -> str:
     now_utc = datetime.now(timezone.utc)
-    start_utc = match_dt.astimezone(timezone.utc)
+    start_utc = start_dt.astimezone(timezone.utc)
+    
+    # ম্যাচ শুরুর ১৫ মিনিট আগে থেকে LIVE হবে
     live_start = start_utc - timedelta(minutes=15)
     end_time = start_utc + timedelta(hours=3)
 
@@ -57,9 +77,13 @@ def get_event_status(match_dt: datetime) -> str:
         return "UPCOMING"
     return "ENDED"
 
-async def trigger_github(client: httpx.AsyncClient):
+
+# -----------------------------------------------------------------------------
+# GitHub repository_dispatch ট্রিগার পাঠানোর ফাংশন
+# -----------------------------------------------------------------------------
+async def trigger_github(client: httpx.AsyncClient, reason: str = ""):
     if not GH_TOKEN:
-        log.error("GH_TOKEN is missing!")
+        log.error("GH_TOKEN is missing! Please set it in Render Environment Variables.")
         return False
 
     url = f"https://api.github.com/repos/{GH_OWNER}/{GH_REPO}/dispatches"
@@ -72,7 +96,8 @@ async def trigger_github(client: httpx.AsyncClient):
     payload = {
         "event_type": "source_updated",
         "client_payload": {
-            "triggered_by": "StreamCenter Watcher",
+            "triggered_by": "Render Watcher",
+            "reason": reason,
             "timestamp": datetime.now(timezone.utc).isoformat()
         }
     }
@@ -80,7 +105,7 @@ async def trigger_github(client: httpx.AsyncClient):
     try:
         res = await client.post(url, headers=headers, json=payload, timeout=10.0)
         if res.status_code in [200, 204]:
-            log.info(">>> GitHub Action successfully triggered! <<<")
+            log.info(f">>> GitHub Action Triggered! Reason: {reason} <<<")
             return True
         else:
             log.error(f"GitHub dispatch failed: {res.status_code} - {res.text}")
@@ -89,66 +114,106 @@ async def trigger_github(client: httpx.AsyncClient):
         log.error(f"Error calling GitHub API: {e}")
         return False
 
-async def watch_streamcenter():
-    last_state = ""
-    log.info("StreamCenter Watcher started. Polling every 5 minutes...")
 
-    async with httpx.AsyncClient(headers={"User-Agent": UA, "Referer": f"{BASE_URL}/"}, timeout=12.0) as client:
+# -----------------------------------------------------------------------------
+# মূল ওয়াচার লুপ (প্রতি ৫ মিনিট পরপর চেক করবে)
+# -----------------------------------------------------------------------------
+async def watch_topsurge():
+    # ফাইল থেকে আগের সেভ করা স্টেট পড়া (যাতে রেন্ডার রিস্টার্ট হলেও অযথা ট্রিগার না পাঠায়)
+    last_state = ""
+    if os.path.exists(STATE_FILE):
+        try:
+            with open(STATE_FILE, "r", encoding="utf-8") as f:
+                last_state = f.read().strip()
+            log.info(f"Loaded existing state from {STATE_FILE}")
+        except Exception:
+            last_state = ""
+
+    log.info("Topsurge Watcher started. Polling every 5 minutes (300 seconds)...")
+
+    headers = {
+        "User-Agent": UA,
+        "Referer": f"{BASE_URL}/",
+        "Accept": "application/json, text/plain, */*",
+    }
+
+    async with httpx.AsyncClient(headers=headers, timeout=15.0) as client:
         while True:
             try:
-                sports_res = await client.get(API_SPORTS)
-                if sports_res.status_code != 200:
-                    log.warning(f"Failed to fetch sports: {sports_res.status_code}")
+                resp = await client.get(API_URL)
+                if resp.status_code != 200:
+                    log.warning(f"Failed to fetch Topsurge API, HTTP Status: {resp.status_code}")
                     await asyncio.sleep(60)
                     continue
 
-                sports_list = sports_res.json()
-                current_events = []
+                data = resp.json()
+                matches = data.get("matches", [])
                 now_utc = datetime.now(timezone.utc)
+                current_events = []
 
-                async def check_sport(sp):
-                    sp_id = sp.get("id")
-                    if not sp_id:
-                        return
+                for m in matches:
+                    title = m.get("matchstr") or f"{m.get('team1')} vs {m.get('team2')}"
+                    start_ts = m.get("startTimestamp")
+                    channels = m.get("channels", [])
+
+                    if not title or not start_ts or not channels:
+                        continue
+
+                    # মিলিসেকেন্ড ও সেকেন্ড সেফ হ্যান্ডলিং
                     try:
-                        m_res = await client.get(f"{BASE_URL}/api/matches/{sp_id}", timeout=6.0)
-                        if m_res.status_code == 200:
-                            for m in m_res.json():
-                                title = m.get("title") or m.get("name")
-                                date_ms = m.get("date")
-                                sources = m.get("sources", [])
-                                if title and date_ms and sources:
-                                    dt = datetime.fromtimestamp(date_ms / 1000.0, tz=timezone.utc)
-                                    if dt >= now_utc - timedelta(hours=3) and dt <= now_utc + timedelta(hours=18):
-                                        st = get_event_status(dt)
-                                        current_events.append(f"{title}|{st}|{len(sources)}")
+                        ts = float(start_ts)
+                        if ts > 1e11:
+                            ts = ts / 1000.0
+                        match_dt = datetime.fromtimestamp(ts, tz=timezone.utc)
                     except Exception:
-                        pass
+                        continue
 
-                await asyncio.gather(*(check_sport(sp) for sp in sports_list))
+                    # শুধুমাত্র চলমান (৩ ঘণ্টা আগের) এবং আগামী ১৮ ঘণ্টার ম্যাচগুলো ট্র্যাক করবে
+                    if match_dt >= now_utc - timedelta(hours=3) and match_dt <= now_utc + timedelta(hours=18):
+                        st = get_event_status(match_dt)
+                        # চ্যানেলের মোট লিংক সংখ্যা
+                        total_links = sum(len(c.get("links") or c.get("oldLinks") or []) for c in channels)
+                        # টাইটেল + স্ট্যাটাস + লিংক সংখ্যা নিয়ে ইউনিক সিগনেচার তৈরি
+                        current_events.append(f"{title}|{st}|{total_links}")
 
+                # সকল ম্যাচের বর্তমান অবস্থা দিয়ে একটি সিগনেচার স্ট্রিং
                 new_state = "#".join(sorted(current_events))
 
+                # ১. একদম প্রথমবার রান হলে সিঙ্ক করা
                 if last_state == "":
-                    log.info(f"Initial run: {len(current_events)} active events. Syncing...")
-                    if await trigger_github(client):
+                    log.info(f"Initial run: Tracking {len(current_events)} active matches. Syncing with GitHub...")
+                    if await trigger_github(client, "Initial Sync"):
                         last_state = new_state
+                        with open(STATE_FILE, "w", encoding="utf-8") as f:
+                            f.write(new_state)
+
+                # ২. কোনো ম্যাচ যোগ/রিমুভ হলে অথবা ১৫ মিনিট বাকি থাকায় UPCOMING থেকে LIVE হলে ট্রিগার পাঠানো
                 elif new_state != last_state:
-                    log.info("Change detected! (Event added/removed or status changed to LIVE)")
-                    if await trigger_github(client):
+                    log.info("Change detected! (Event added/removed or match reached 15-minute LIVE window).")
+                    if await trigger_github(client, "15-Min LIVE Window / Event Update"):
                         last_state = new_state
+                        with open(STATE_FILE, "w", encoding="utf-8") as f:
+                            f.write(new_state)
+
+                # ৩. যদি কোনো পরিবর্তন না থাকে তবে গিটহাবে কোনো কল যাবে না
                 else:
-                    log.info("No status change or source update. Skipping.")
+                    log.info("No status change or event update. Skipping trigger. Sleeping 5 minutes...")
 
             except Exception as e:
                 log.error(f"Watcher loop exception: {e}")
 
+            # ঠিক ৫ মিনিট (৩০০ সেকেন্ড) পর আবার চেক করবে
             await asyncio.sleep(300)
 
+
 def main():
+    # ব্যাকগ্রাউন্ডে হেলথ সার্ভার চালানো (Render Free Service সচল রাখতে)
     t = threading.Thread(target=start_health_server, daemon=True)
     t.start()
-    asyncio.run(watch_streamcenter())
+
+    # মূল লুপ চালু করা
+    asyncio.run(watch_topsurge())
+
 
 if __name__ == "__main__":
     main()
