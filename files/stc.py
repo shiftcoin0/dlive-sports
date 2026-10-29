@@ -5,7 +5,7 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import parse_qsl, quote_plus, urljoin, urlsplit
+from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 import httpx
@@ -57,8 +57,28 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# টিম লোগো সিডিএন
+# আপনার দেওয়া কাস্টম স্পোর্টস আইকন ও ডিফল্ট লোগো
 # -----------------------------------------------------------------------------
+SPORT_ICONS = {
+    "football": "https://i.ibb.co.com/JwDc9ckh/Football.png",
+    "cricket": "https://i.ibb.co.com/KxYMqyw8/cricket.webp",
+    "basketball": "https://i.ibb.co.com/rGQtdmkG/Basketball.jpg",
+    "tennis": "https://i.ibb.co.com/99CFfxDK/Tennis.webp",
+    "weightlifting": "https://i.ibb.co.com/0jbC4PcX/Weightlifting.jpg",
+    "volleyball": "https://i.ibb.co.com/jvJRYYDc/Volleyball.jpg",
+    "hockey": "https://i.ibb.co.com/d0TKNFrY/Hockey.jpg",
+    "wrestling": "https://i.ibb.co.com/Xf5DFxsB/Wrestling.png",
+    "winter sports": "https://i.ibb.co.com/GvT5mQcb/Winter-sports.jpg",
+    "ski jumping": "https://i.ibb.co.com/vvxtCZHN/Ski-jumping.jpg",
+    "handball": "https://i.ibb.co.com/R4sMyfv9/Handball.webp",
+    "snooker": "https://i.ibb.co.com/vvxtCZHN/Ski-jumping.jpg",
+    "golf": "https://i.ibb.co.com/21zYsjH3/Golf.jpg",
+    "motorsport": "https://i.ibb.co.com/hFVsfnpC/Motorsport.png",
+}
+
+DEFAULT_LOGO = "https://i.ibb.co.com/h1gWgKHy/Live-Streaming.webp"
+
+# জনপ্রিয় টপ ক্লাবগুলোর লোগো
 KNOWN_TEAM_LOGOS = {
     "manchester city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
     "man city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
@@ -83,25 +103,17 @@ KNOWN_TEAM_LOGOS = {
     "al qadisiya": "https://images.fotmob.com/image_resources/logo/teamlogo/10245.png",
 }
 
-DEFAULT_SPORT_ICONS = {
-    "football": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-    "cricket": "https://cdn-icons-png.flaticon.com/512/1071/1071178.png",
-    "basketball": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
-    "tennis": "https://cdn-icons-png.flaticon.com/512/709/709605.png",
-    "hockey": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
-    "motorsport": "https://cdn-icons-png.flaticon.com/512/2418/2418779.png",
-}
-
 
 def get_team_badge(team_name: str, sport: str = "Football") -> str:
     t_clean = team_name.lower().strip()
     for k, v in KNOWN_TEAM_LOGOS.items():
         if k in t_clean or t_clean in k:
             return v
-    for sp_k, sp_v in DEFAULT_SPORT_ICONS.items():
-        if sp_k in sport.lower():
+    sp_clean = sport.lower().strip()
+    for sp_k, sp_v in SPORT_ICONS.items():
+        if sp_k in sp_clean:
             return sp_v
-    return DEFAULT_SPORT_ICONS["football"]
+    return DEFAULT_LOGO
 
 
 def clean_sport_name(sport_raw: str) -> str:
@@ -118,6 +130,24 @@ def clean_sport_name(sport_raw: str) -> str:
         return "Cricket"
     if "tennis" in s:
         return "Tennis"
+    if "weightlifting" in s:
+        return "Weightlifting"
+    if "volleyball" in s:
+        return "Volleyball"
+    if "wrestling" in s:
+        return "Wrestling"
+    if "winter" in s:
+        return "Winter Sports"
+    if "ski" in s:
+        return "Ski Jumping"
+    if "handball" in s:
+        return "Handball"
+    if "snooker" in s:
+        return "Snooker"
+    if "golf" in s:
+        return "Golf"
+    if "motorsport" in s or "racing" in s:
+        return "Motorsport"
     return sport_raw.strip().title() or "Football"
 
 
@@ -178,13 +208,9 @@ def save_playlists(events: list[dict]) -> None:
 
 
 # -----------------------------------------------------------------------------
-# স্ক্রিনশট ১ ও ২ অনুযায়ী আসল secure_hls.php ডিকোডার
+# আসল secure_hls.php ডিকোডার
 # -----------------------------------------------------------------------------
 async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> str | None:
-    """
-    ১. s3.vertex.st/api/player.php?id={id} কল করে embed.php লিংক বের করে।
-    ২. embed.php পেজ থেকে আসল secure_hls.php স্ট্রিম ডিকোড করে।
-    """
     if not link_url:
         return None
 
@@ -193,11 +219,10 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
 
     embed_page_url = None
 
-    # ১. স্ক্রিনশট ১ অনুযায়ী: s3.vertex.st/ch?id={number} থেকে আইডি বের করা
+    # ১. s3.vertex.st/ch?id={number} থেকে আইডি বের করা
     ch_id_match = re.search(r'id=(\d+)', link_url)
     if ch_id_match:
         ch_id = ch_id_match.group(1)
-        # স্ক্রিনশট ১ এর হুবহু API কল
         api_player_url = f"https://s3.vertex.st/api/player.php?id={ch_id}"
         api_headers = {
             "User-Agent": STREAM_UA,
@@ -208,16 +233,14 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
         try:
             resp = await client.get(api_player_url, headers=api_headers, timeout=6.0)
             if resp.status_code == 200:
-                # স্ক্রিনশট ২ অনুযায়ী JSON থেকে url বের করা
                 data = resp.json()
                 embed_page_url = data.get("url")
         except Exception as e:
             log.debug(f"Error fetching vertex api: {e}")
 
-    # যদি সরাসরি embed পেজ না পাওয়া যায়, মূল লিংকটি পরীক্ষা করা
     target_embed = embed_page_url or link_url
 
-    # ২. embed.php পেজ ফেচ করে ভেতরের secure_hls.php বের করা
+    # ২. embed.php পেজ থেকে আসল secure_hls.php বের করা
     try:
         headers = {
             "User-Agent": STREAM_UA,
@@ -229,18 +252,15 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
         if res.status_code == 200:
             content = res.text
 
-            # secure_hls.php সরাসরি খোঁজা
             sec_m3u8 = re.search(r'["\'](https?://[^"\'\s]+/secure_hls\.php\?[^"\'\s]+)["\']', content)
             if sec_m3u8:
                 return sec_m3u8.group(1).replace("&amp;", "&")
 
-            # ব্যাকস্ল্যাশ এস্কেপ করা ফরম্যাট (\/secure_hls.php...)
             sec_esc = re.search(r'(https?:\\/\\/[^"\'\s]+secure_hls\.php\?[^"\'\s]+)', content)
             if sec_esc:
                 clean_url = sec_esc.group(1).replace(r"\/", "/").replace("&amp;", "&")
                 return clean_url.strip('"\'')
 
-            # আইফ্রেম থাকলে আইফ্রেমের ভেতর খোঁজা
             iframe_m = re.search(r'<iframe[^>]+src=["\']([^"\']+)["\']', content, re.IGNORECASE)
             if iframe_m:
                 sub_src = iframe_m.group(1)
@@ -256,7 +276,6 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
                     if sub_sec:
                         return sub_sec.group(1).replace("&amp;", "&")
 
-            # সাধারণ কোনো m3u8 লিংক থাকলে
             gen_m3u8 = re.search(r'["\'](https?://[^"\'\s]+\.m3u8[^"\'\s]*)["\']', content)
             if gen_m3u8:
                 return gen_m3u8.group(1)
@@ -264,7 +283,6 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
     except Exception as e:
         log.debug(f"Error resolving embed stream: {e}")
 
-    # যদি কোনো কারণে ডিকোড না হয়, তবে embed_page_url রিটার্ন করবে
     return embed_page_url or link_url
 
 
@@ -326,7 +344,6 @@ async def scrape():
 
         log.info(f"Processing {len(valid_matches)} active matches in window...")
 
-        # সকল চ্যানেল লিংক থেকে প্যারালালে আসল secure_hls.php বের করা
         unique_links = set()
         for _, m in valid_matches:
             for ch in m.get("channels", []):
@@ -417,7 +434,7 @@ async def scrape():
             it.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info(f"Successfully generated {len(final_playlist)} matches with real secure_hls streams!")
+        log.info(f"Successfully generated {len(final_playlist)} matches with updated sport icons!")
 
 
 if __name__ == "__main__":
