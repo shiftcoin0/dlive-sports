@@ -16,7 +16,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 BASE_URL = "https://topsurge.st"
 API_URL = f"{BASE_URL}/api_proxy.php"
 
-# আপনার নির্দেশিত নির্দিষ্ট রেফারার ও অরিজিন
+# নির্দিষ্ট রেফারার ও অরিজিন
 STREAM_REFERER = "https://matchli.st/"
 STREAM_ORIGIN = "https://matchli.st"
 STREAM_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"
@@ -57,10 +57,9 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# টিম লোগো সিডিএন (কোনো ম্যাচে যেন লোগো খালি না থাকে)
+# টিম লোগো সিডিএন
 # -----------------------------------------------------------------------------
 KNOWN_TEAM_LOGOS = {
-    # Champions League & Top Teams
     "manchester city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
     "man city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
     "psg": "https://images.fotmob.com/image_resources/logo/teamlogo/9847.png",
@@ -90,7 +89,6 @@ DEFAULT_SPORT_ICONS = {
     "basketball": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
     "tennis": "https://cdn-icons-png.flaticon.com/512/709/709605.png",
     "hockey": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
-    "motorsport": "https://cdn-icons-png.flaticon.com/512/2418/2418779.png",
 }
 
 
@@ -178,13 +176,7 @@ def save_playlists(events: list[dict]) -> None:
     log.info(f"Saved M3U: {M3U_OUTPUT}")
 
 
-# -----------------------------------------------------------------------------
-# স্ক্রিনশট ৪ অনুযায়ী আসল লাইভ HLS স্ট্রিম ডিকোডার
-# -----------------------------------------------------------------------------
 async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> str | None:
-    """
-    vertex.st / playfa.st লিঙ্ক থেকে secure_hls.php বা সরাসরি m3u8 স্ট্রিম বের করে
-    """
     if not link_url:
         return None
 
@@ -204,7 +196,7 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
 
         content = resp.text
 
-        # ১. স্ক্রিনশট ৪ এর মতো secure_hls.php ফাইল খোঁজা
+        # ১. secure_hls.php সরাসরি খোঁজা
         sec_m3u8 = re.search(r'["\'](https?://[^"\'\s]+/secure_hls\.php\?[^"\'\s]+)["\']', content)
         if sec_m3u8:
             return sec_m3u8.group(1).replace("&amp;", "&")
@@ -215,12 +207,9 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
             return m3u8_m.group(1)
 
         # ৩. <iframe> ট্যাগ খোঁজা
-        iframe_src = None
         iframe_match = re.search(r'<iframe[^>]+src=["\']([^"\']+)["\']', content, re.IGNORECASE)
         if iframe_match:
             iframe_src = iframe_match.group(1)
-
-        if iframe_src:
             if iframe_src.startswith("//"):
                 iframe_src = "https:" + iframe_src
             elif iframe_src.startswith("/"):
@@ -239,22 +228,19 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
                 if sub_m3u8:
                     return sub_m3u8.group(1)
 
-        # ৪. JS ভ্যারিয়েবল (source / file)
+        # ৪. JS ভ্যারিয়েবল
         js_m = re.search(r'(?:file|source|src)\s*[:=]\s*["\'](https?://[^"\'\s]+)["\']', content, re.IGNORECASE)
         if js_m:
             candidate = js_m.group(1)
             if ".m3u8" in candidate or "secure_hls.php" in candidate:
                 return candidate
 
-    except Exception as e:
-        log.debug(f"Error resolving stream from {link_url}: {e}")
+    except Exception:
+        pass
 
     return None
 
 
-# -----------------------------------------------------------------------------
-# মূল স্ক্র্যাপার প্রসেস
-# -----------------------------------------------------------------------------
 async def scrape():
     log.info(f"Fetching matches from Topsurge API ({API_URL})...")
 
@@ -273,7 +259,7 @@ async def scrape():
 
             data = resp.json()
             matches = data.get("matches", [])
-            log.info(f"Retrieved {len(matches)} matches directly from Topsurge API!")
+            log.info(f"Retrieved {len(matches)} matches from Topsurge API!")
         except Exception as e:
             log.error(f"Error fetching API: {e}")
             return
@@ -281,7 +267,6 @@ async def scrape():
         now_utc = datetime.now(timezone.utc)
         valid_matches = []
 
-        # ম্যাচ ফিল্টারিং
         for m in matches:
             t_a = m.get("team1")
             t_b = m.get("team2")
@@ -295,7 +280,7 @@ async def scrape():
 
             match_dt = datetime.fromtimestamp(start_ts, tz=timezone.utc)
 
-            # ৩ ঘণ্টা আগের ম্যাচ থেকে পরবর্তী ১৮ ঘণ্টার ম্যাচ রাখা হবে
+            # ৩ ঘণ্টা আগের ম্যাচ থেকে পরবর্তী ১৮ ঘণ্টার ম্যাচ
             if match_dt < now_utc - timedelta(hours=3):
                 continue
             if match_dt > now_utc + timedelta(hours=18):
@@ -303,9 +288,9 @@ async def scrape():
 
             valid_matches.append((match_dt, m))
 
-        log.info(f"Processing {len(valid_matches)} active matches in window...")
+        log.info(f"Processing {len(valid_matches)} active matches...")
 
-        # সকল চ্যানেল লিঙ্ক থেকে প্যারালালে আসল m3u8 স্ট্রিম বের করা
+        # স্ট্রিম লিংকগুলো দ্রুত রেজলভ করা
         unique_links = set()
         for _, m in valid_matches:
             for ch in m.get("channels", []):
@@ -314,9 +299,7 @@ async def scrape():
                     if l:
                         unique_links.add(l)
 
-        log.info(f"Resolving {len(unique_links)} unique stream links concurrently...")
         stream_cache = {}
-
         async def fetch_stream(link):
             async with HTTP_SEMAPHORE:
                 m3u8 = await resolve_channel_stream(client, link)
@@ -361,7 +344,7 @@ async def scrape():
                         },
                         "drm_key": None
                     })
-                    break  # প্রতিটি চ্যানেলের জন্য সেরা প্রথম লিঙ্কটি নেওয়া
+                    break
 
             if event_channels:
                 start_bst = match_dt.astimezone(BST_TZ)
@@ -391,13 +374,12 @@ async def scrape():
                     "_timestamp": match_dt.timestamp()
                 })
 
-        # সর্টিং (LIVE সবার উপরে)
         final_playlist.sort(key=lambda x: ({"LIVE": 0, "UPCOMING": 1, "ENDED": 2}.get(x["status"], 99), x["_timestamp"]))
         for it in final_playlist:
             it.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info(f"Successfully generated {len(final_playlist)} matches from Topsurge API!")
+        log.info(f"Generated {len(final_playlist)} matches successfully!")
 
 
 if __name__ == "__main__":
