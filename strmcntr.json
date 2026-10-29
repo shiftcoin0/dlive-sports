@@ -1,53 +1,775 @@
 {
-  "last_updated": "Oct 30, 2026, 01:25:21 AM",
-  "event_count": 20,
+  "last_updated": "Oct 30, 2026, 01:54:33 AM",
+  "event_count": 48,
   "events": {
     "events": [
       {
-        "title": "Lecce at Frosinone",
+        "title": "Al Riyadh vs Al Quadisiya",
         "sport": "Football",
-        "sub_category": "Football",
+        "sub_category": "Saudi Arabia Pro League",
         "status": "LIVE",
         "is_hot": false,
-        "slug": "lecce-at-frosinone",
+        "slug": "saudi-arabia-pro-league-football-al-riyadh-al-quadisiya-2026-10-29-20-00",
         "schedule": {
           "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 29, 2026, 11:30:00 PM",
-          "end_time_bst": "Oct 30, 2026, 02:30:00 AM"
+          "start_time_bst": "Oct 30, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 03:00:00 AM"
         },
         "teams": {
           "team_a": {
-            "name": "Lecce",
-            "flag": "https://streamcenter.st/api/images/badge/d3ad78bc-198e-46b4-9bb9-732007ce8274.webp"
+            "name": "Al Riyadh",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/10243.png"
           },
           "team_b": {
-            "name": "Frosinone",
-            "flag": "https://streamcenter.st/api/images/badge/a4375480-d4f8-4e75-8fb8-9610b88f66fc.webp"
+            "name": "Al Quadisiya",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/d3ad78bc-198e-46b4-9bb9-732007ce8274.webp",
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/10243.png",
         "channels": [
           {
-            "channel_name": "iframe",
+            "channel_name": "Sportdigital FUSSBALL 2 (DE)",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs9.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs9.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://s3.vertex.st/ch?id=20",
+            "raw_link": "https://s3.vertex.st/ch?id=20|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Newcastle United at Everton",
+        "title": "Lebrijana vs Getafe",
         "sport": "Football",
-        "sub_category": "Premier League",
-        "status": "UPCOMING",
+        "sub_category": "Spain Copa del Rey",
+        "status": "LIVE",
         "is_hot": false,
-        "slug": "newcastle-united-at-everton",
+        "slug": "spain-copa-del-rey-football-lebrijana-getafe-2026-10-29-20-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Lebrijana",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Getafe",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/8305.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "M+ LALIGA TV 3 (ES)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=26",
+            "raw_link": "https://s3.vertex.st/ch?id=26|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Atlético Calatayud vs Osasuna",
+        "sport": "Football",
+        "sub_category": "Spain Copa del Rey",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "spain-copa-del-rey-football-atletico-calatayud-osasuna-2026-10-29-20-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Atlético Calatayud",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Osasuna",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/8371.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "LaLiga TV Bar (ES)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=27",
+            "raw_link": "https://s3.vertex.st/ch?id=27|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Kalmar vs GAIS",
+        "sport": "Football",
+        "sub_category": "Sweden Allsvenskan",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "sweden-allsvenskan-football-kalmar-gais-2026-10-29-20-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Kalmar",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "GAIS",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "TV4 Play (SE)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=58",
+            "raw_link": "https://s3.vertex.st/ch?id=58|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Brynäs IF vs Färjestad BK",
+        "sport": "Hockey",
+        "sub_category": "Sweden SHL",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "sweden-shl-hockey-brynas-if-farjestad-bk-2026-10-29-20-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Brynäs IF",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Färjestad BK",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "TV4 Sport Live 1 (SE)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=61",
+            "raw_link": "https://s3.vertex.st/ch?id=61|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Skellefteå AIK vs Linköping HC",
+        "sport": "Hockey",
+        "sub_category": "Sweden SHL",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "sweden-shl-hockey-skelleftea-aik-linkoping-hc-2026-10-29-20-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Skellefteå AIK",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Linköping HC",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "TV4 Sport Live 2 (SE)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=62",
+            "raw_link": "https://s3.vertex.st/ch?id=62|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Timrå IK vs Växjö Lakers",
+        "sport": "Hockey",
+        "sub_category": "Sweden SHL",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "sweden-shl-hockey-timra-ik-vaxjo-lakers-2026-10-29-20-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Timrå IK",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Växjö Lakers",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "TV4 Sport Live 3 (SE)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=63",
+            "raw_link": "https://s3.vertex.st/ch?id=63|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Örebro Hockey vs Frölunda HC",
+        "sport": "Hockey",
+        "sub_category": "Sweden SHL",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "sweden-shl-hockey-orebro-hockey-frolunda-hc-2026-10-29-20-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Örebro Hockey",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Frölunda HC",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "TV4 Sport Live 4 (SE)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=64",
+            "raw_link": "https://s3.vertex.st/ch?id=64|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Luleå HF vs IF Björklöven",
+        "sport": "Hockey",
+        "sub_category": "Sweden SHL",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "sweden-shl-hockey-lulea-hf-if-bjorkloven-2026-10-29-20-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Luleå HF",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "IF Björklöven",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "TV4 Motor (SE)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=65",
+            "raw_link": "https://s3.vertex.st/ch?id=65|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Rögle BK vs Malmö Redhawks",
+        "sport": "Hockey",
+        "sub_category": "Sweden SHL",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "sweden-shl-hockey-rogle-bk-malmo-redhawks-2026-10-29-20-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Rögle BK",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Malmö Redhawks",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "TV4 Hockey (SE)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=66",
+            "raw_link": "https://s3.vertex.st/ch?id=66|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Örgryte vs Mjällby",
+        "sport": "Football",
+        "sub_category": "Sweden Allsvenskan",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "sweden-allsvenskan-football-orgryte-mjallby-2026-10-29-20-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Örgryte",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Mjällby",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "TV4 Play (SE)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=68",
+            "raw_link": "https://s3.vertex.st/ch?id=68|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Al Nassr vs Al Kholood",
+        "sport": "Football",
+        "sub_category": "Saudi Arabia Pro League",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "saudi-arabia-pro-league-football-al-nassr-al-kholood-2026-10-29-20-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 12:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 03:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Al Nassr",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Al Kholood",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Fox Soccer Plus (US)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=83",
+            "raw_link": "https://s3.vertex.st/ch?id=83|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Augsburger Panther vs Löwen Frankfurt",
+        "sport": "Hockey",
+        "sub_category": "Germany DEL",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "germany-del-hockey-augsburger-panther-lowen-frankfurt-2026-10-29-20-30",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 12:30:00 AM",
+          "end_time_bst": "Oct 30, 2026, 03:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Augsburger Panther",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Löwen Frankfurt",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "Magenta Sport (DE)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=14",
+            "raw_link": "https://s3.vertex.st/ch?id=14|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Djurgårdens IF vs HV71",
+        "sport": "Hockey",
+        "sub_category": "Sweden SHL",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "sweden-shl-hockey-djurgardens-if-hv71-2026-10-29-20-30",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 12:30:00 AM",
+          "end_time_bst": "Oct 30, 2026, 03:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Djurgårdens IF",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "HV71",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "TV4 Sportkanalen (SE)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=67",
+            "raw_link": "https://s3.vertex.st/ch?id=67|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Midtjylland vs OB",
+        "sport": "Football",
+        "sub_category": "Denmark DBU Pokalen",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "denmark-dbu-pokalen-football-midtjylland-ob-2026-10-29-20-30",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 12:30:00 AM",
+          "end_time_bst": "Oct 30, 2026, 03:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Midtjylland",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "OB",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Viaplay Sport News (DK)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=69",
+            "raw_link": "https://s3.vertex.st/ch?id=69|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Sporting Braga vs Famalicão",
+        "sport": "Football",
+        "sub_category": "Portugal Taça da Liga",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "portugal-taca-da-liga-football-sporting-braga-famalicao-2026-10-29-20-45",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 12:45:00 AM",
+          "end_time_bst": "Oct 30, 2026, 03:45:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Sporting Braga",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Famalicão",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Sport TV2 (PT)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=21",
+            "raw_link": "https://s3.vertex.st/ch?id=21|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Crvena Zvezda Meridianbet vs FC Bayern München",
+        "sport": "Basketball",
+        "sub_category": "Euroleague",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "euroleague-basketball-crvena-zvezda-meridianbet-fc-bayern-munchen-2026-10-29-21-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 01:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 04:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Crvena Zvezda Meridianbet",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          },
+          "team_b": {
+            "name": "FC Bayern München",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
+        "channels": [
+          {
+            "channel_name": "Magenta Sport (DE)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=11",
+            "raw_link": "https://s3.vertex.st/ch?id=11|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "De Treffers vs Heracles",
+        "sport": "Football",
+        "sub_category": "Netherlands KNVB Beker",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "netherlands-knvb-beker-football-de-treffers-heracles-2026-10-29-21-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 01:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 04:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "De Treffers",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Heracles",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "ESPN 3 (NL)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=89",
+            "raw_link": "https://s3.vertex.st/ch?id=89|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Maccabi Tel Aviv vs Paris",
+        "sport": "Basketball",
+        "sub_category": "Euroleague",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "euroleague-basketball-maccabi-tel-aviv-paris-2026-10-29-21-05",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 01:05:00 AM",
+          "end_time_bst": "Oct 30, 2026, 04:05:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Maccabi Tel Aviv",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          },
+          "team_b": {
+            "name": "Paris",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9847.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
+        "channels": [
+          {
+            "channel_name": "Magenta Sport (DE)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=12",
+            "raw_link": "https://s3.vertex.st/ch?id=12|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Odra Opole vs Śląsk Wrocław",
+        "sport": "Football",
+        "sub_category": "Poland Puchar Polski",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "poland-puchar-polski-football-odra-opole-slask-wroclaw-2026-10-29-21-30",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 01:30:00 AM",
+          "end_time_bst": "Oct 30, 2026, 04:30:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Odra Opole",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Śląsk Wrocław",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "TVP Sport (PL)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=60",
+            "raw_link": "https://s3.vertex.st/ch?id=60|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Everton vs Newcastle United",
+        "sport": "Football",
+        "sub_category": "England League Cup",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "england-league-cup-football-everton-newcastle-united-2026-10-29-21-45",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 30, 2026, 01:45:00 AM",
@@ -55,37 +777,49 @@
         },
         "teams": {
           "team_a": {
-            "name": "Newcastle United",
-            "flag": "https://streamcenter.st/api/images/badge/cdd3c395-1b18-459f-acb1-056539bce650.webp"
-          },
-          "team_b": {
             "name": "Everton",
-            "flag": "https://streamcenter.st/api/images/badge/3bd93285-8661-4d4f-8530-3556ccb5d317.webp"
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/8668.png"
+          },
+          "team_b": {
+            "name": "Newcastle United",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/10261.png"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/cdd3c395-1b18-459f-acb1-056539bce650.webp",
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/8668.png",
         "channels": [
           {
-            "channel_name": "iframe",
+            "channel_name": "Sky Sports+ (GB)",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs1.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://s3.vertex.st/ch?id=4",
+            "raw_link": "https://s3.vertex.st/ch?id=4|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "beIN Sports 1 (FR)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=51",
+            "raw_link": "https://s3.vertex.st/ch?id=51|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Atalanta at Fiorentina",
-        "sport": "Football",
-        "sub_category": "Serie A",
-        "status": "UPCOMING",
+        "title": "Real Madrid vs Fenerbahce",
+        "sport": "Basketball",
+        "sub_category": "Euroleague",
+        "status": "LIVE",
         "is_hot": false,
-        "slug": "atalanta-at-fiorentina",
+        "slug": "euroleague-basketball-real-madrid-fenerbahce-2026-10-29-21-45",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 30, 2026, 01:45:00 AM",
@@ -93,37 +827,341 @@
         },
         "teams": {
           "team_a": {
-            "name": "Atalanta",
-            "flag": "https://streamcenter.st/api/images/badge/abbebd0c-3eec-4e03-a396-13e364af36b7.webp"
+            "name": "Real Madrid",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/8633.png"
           },
           "team_b": {
+            "name": "Fenerbahce",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/8633.png",
+        "channels": [
+          {
+            "channel_name": "Magenta Sport (DE)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=13",
+            "raw_link": "https://s3.vertex.st/ch?id=13|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Fiorentina vs Atalanta",
+        "sport": "Football",
+        "sub_category": "Italy Serie A",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "italy-serie-a-football-fiorentina-atalanta-2026-10-29-21-45",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 01:45:00 AM",
+          "end_time_bst": "Oct 30, 2026, 04:45:00 AM"
+        },
+        "teams": {
+          "team_a": {
             "name": "Fiorentina",
-            "flag": "https://streamcenter.st/api/images/badge/d1e86efa-e2bf-4cd3-82b2-95cfb30acf72.webp"
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Atalanta",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/abbebd0c-3eec-4e03-a396-13e364af36b7.webp",
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
         "channels": [
           {
-            "channel_name": "iframe",
+            "channel_name": "DAZN1 (IT)",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs9.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs9.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://s3.vertex.st/ch?id=47",
+            "raw_link": "https://s3.vertex.st/ch?id=47|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Winnipeg Jets at Tampa Bay Lightning",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
+        "title": "Manchester City vs PSG",
+        "sport": "Football",
+        "sub_category": "Europe UEFA Women's Champions League",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "europe-uefa-women-s-champions-league-football-manchester-city-psg-2026-10-29-22-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 02:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 05:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Manchester City",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png"
+          },
+          "team_b": {
+            "name": "PSG",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9847.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
+        "channels": [
+          {
+            "channel_name": "BBC Two (GB)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=2",
+            "raw_link": "https://s3.vertex.st/ch?id=2|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Ribadesella CF vs Racing Santander",
+        "sport": "Football",
+        "sub_category": "Spain Copa del Rey",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "spain-copa-del-rey-football-ribadesella-cf-racing-santander-2026-10-29-22-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 02:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 05:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Ribadesella CF",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Racing Santander",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "M+ LALIGA TV 3 (ES)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=26",
+            "raw_link": "https://s3.vertex.st/ch?id=26|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Hortaleza vs Sevilla",
+        "sport": "Football",
+        "sub_category": "Spain Copa del Rey",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "spain-copa-del-rey-football-hortaleza-sevilla-2026-10-29-22-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 02:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 05:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Hortaleza",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Sevilla",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "LaLiga TV Bar (ES)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=27",
+            "raw_link": "https://s3.vertex.st/ch?id=27|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Auriense vs Deportivo La Coruña",
+        "sport": "Football",
+        "sub_category": "Spain Copa del Rey",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "spain-copa-del-rey-football-auriense-deportivo-la-coruna-2026-10-29-22-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 02:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 05:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Auriense",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Deportivo La Coruña",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "M+ LALIGA TV 2 (ES)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=28",
+            "raw_link": "https://s3.vertex.st/ch?id=28|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Køge vs Barcelona",
+        "sport": "Football",
+        "sub_category": "Europe UEFA Women's Champions League",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "europe-uefa-women-s-champions-league-football-koge-barcelona-2026-10-29-22-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 02:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 05:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Køge",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Barcelona",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/8634.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "ESPN Deportes (ES)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=86",
+            "raw_link": "https://s3.vertex.st/ch?id=86|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Groningen vs Emmen",
+        "sport": "Football",
+        "sub_category": "Netherlands KNVB Beker",
+        "status": "LIVE",
+        "is_hot": false,
+        "slug": "netherlands-knvb-beker-football-groningen-emmen-2026-10-29-22-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 02:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 05:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Groningen",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Emmen",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "ESPN 4 (NL)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=88",
+            "raw_link": "https://s3.vertex.st/ch?id=88|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Benfica vs Gil Vicente",
+        "sport": "Football",
+        "sub_category": "Portugal Taça da Liga",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "winnipeg-jets-at-tampa-bay-lightning",
+        "slug": "portugal-taca-da-liga-football-benfica-gil-vicente-2026-10-29-22-45",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 02:45:00 AM",
+          "end_time_bst": "Oct 30, 2026, 05:45:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Benfica",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Gil Vicente",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "Sport TV1 (PT)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=21",
+            "raw_link": "https://s3.vertex.st/ch?id=21|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Tampa Bay Lightning vs Winnipeg Jets",
+        "sport": "Hockey",
+        "sub_category": "NHL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nhl-hockey-tampa-bay-lightning-winnipeg-jets-2026-10-30-01-00",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 30, 2026, 05:00:00 AM",
@@ -131,37 +1169,37 @@
         },
         "teams": {
           "team_a": {
-            "name": "Winnipeg Jets",
-            "flag": "https://streamcenter.st/api/images/badge/341ae09d-6283-4d99-8b40-6bf0865884ab.webp"
-          },
-          "team_b": {
             "name": "Tampa Bay Lightning",
-            "flag": "https://streamcenter.st/api/images/badge/e9c9d69e-f985-482e-89b0-d86503d5daa5.webp"
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Winnipeg Jets",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/341ae09d-6283-4d99-8b40-6bf0865884ab.webp",
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
         "channels": [
           {
-            "channel_name": "iframe",
+            "channel_name": "Sportsnet+ (CA)",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs50.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs50.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://s3.vertex.st/ch?id=31",
+            "raw_link": "https://s3.vertex.st/ch?id=31|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Utah Mammoth at Pittsburgh Penguins",
+        "title": "Pittsburgh Penguins vs Utah Mammoth",
         "sport": "Hockey",
-        "sub_category": "Hockey",
+        "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "utah-mammoth-at-pittsburgh-penguins",
+        "slug": "nhl-hockey-pittsburgh-penguins-utah-mammoth-2026-10-30-01-00",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 30, 2026, 05:00:00 AM",
@@ -169,37 +1207,37 @@
         },
         "teams": {
           "team_a": {
-            "name": "Utah Mammoth",
-            "flag": "https://streamcenter.st/api/images/badge/cf193378-d6e6-4cac-aa1b-1d4dde3e7221.webp"
-          },
-          "team_b": {
             "name": "Pittsburgh Penguins",
-            "flag": "https://streamcenter.st/api/images/badge/9bbc874b-2df6-44ce-a6b4-52b0f47d9514.webp"
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Utah Mammoth",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/cf193378-d6e6-4cac-aa1b-1d4dde3e7221.webp",
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
         "channels": [
           {
-            "channel_name": "iframe",
+            "channel_name": "Sportsnet+ (CA)",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs51.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://s3.vertex.st/ch?id=32",
+            "raw_link": "https://s3.vertex.st/ch?id=32|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Columbus Blue Jackets at Carolina Hurricanes",
+        "title": "Carolina Hurricanes vs Columbus Blue Jackets",
         "sport": "Hockey",
-        "sub_category": "Hockey",
+        "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "columbus-blue-jackets-at-carolina-hurricanes",
+        "slug": "nhl-hockey-carolina-hurricanes-columbus-blue-jackets-2026-10-30-01-00",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 30, 2026, 05:00:00 AM",
@@ -207,113 +1245,37 @@
         },
         "teams": {
           "team_a": {
-            "name": "Columbus Blue Jackets",
-            "flag": "https://streamcenter.st/api/images/badge/851def80-1466-4a0d-92b4-de8a24e103ae.webp"
-          },
-          "team_b": {
             "name": "Carolina Hurricanes",
-            "flag": "https://streamcenter.st/api/images/badge/a12d8b8b-0691-418e-93a2-1d7af8926439.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/851def80-1466-4a0d-92b4-de8a24e103ae.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs52.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs52.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Florida Atlantic Owls at North Texas Mean Green",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "florida-atlantic-owls-at-north-texas-mean-green",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 30, 2026, 05:30:00 AM",
-          "end_time_bst": "Oct 30, 2026, 08:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Florida Atlantic Owls",
-            "flag": "https://streamcenter.st/api/images/badge/d74cd35c-7d8c-48d0-8dbd-9a3abc14440f.webp"
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
           },
           "team_b": {
-            "name": "North Texas Mean Green",
-            "flag": "https://streamcenter.st/api/images/badge/be6f5f1b-e8dd-4606-a417-d395f89d4a5d.webp"
+            "name": "Columbus Blue Jackets",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/d74cd35c-7d8c-48d0-8dbd-9a3abc14440f.webp",
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
         "channels": [
           {
-            "channel_name": "iframe",
+            "channel_name": "Sportsnet+ (CA)",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs31.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs31.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://s3.vertex.st/ch?id=33",
+            "raw_link": "https://s3.vertex.st/ch?id=33|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Troy Trojans at James Madison Dukes",
-        "sport": "Football",
-        "sub_category": "Football",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "troy-trojans-at-james-madison-dukes",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 30, 2026, 05:30:00 AM",
-          "end_time_bst": "Oct 30, 2026, 08:30:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Troy Trojans",
-            "flag": "https://streamcenter.st/api/images/badge/d6b26a3e-090d-4c70-9fe4-04b1dec66730.webp"
-          },
-          "team_b": {
-            "name": "James Madison Dukes",
-            "flag": "https://streamcenter.st/api/images/badge/ee84e7f1-830c-4a65-bbb1-cc39714b13af.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/d6b26a3e-090d-4c70-9fe4-04b1dec66730.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs32.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs32.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Chicago Blackhawks at Detroit Red Wings",
+        "title": "Detroit Red Wings vs Chicago Blackhawks",
         "sport": "Hockey",
-        "sub_category": "Hockey",
+        "sub_category": "NHL",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "chicago-blackhawks-at-detroit-red-wings",
+        "slug": "nhl-hockey-detroit-red-wings-chicago-blackhawks-2026-10-30-01-30",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 30, 2026, 05:30:00 AM",
@@ -321,189 +1283,37 @@
         },
         "teams": {
           "team_a": {
-            "name": "Chicago Blackhawks",
-            "flag": "https://streamcenter.st/api/images/badge/6086a21f-0c8e-48b8-8899-3bb8c76d68d4.webp"
-          },
-          "team_b": {
             "name": "Detroit Red Wings",
-            "flag": "https://streamcenter.st/api/images/badge/6f0a96b8-29f6-4879-95f4-0a46a705cd7c.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/6086a21f-0c8e-48b8-8899-3bb8c76d68d4.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs53.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs53.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Boston Bruins at St. Louis Blues",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "boston-bruins-at-st-louis-blues",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 30, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 30, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Boston Bruins",
-            "flag": "https://streamcenter.st/api/images/badge/5132e046-2483-4cc1-bf41-6f7eb254766a.webp"
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
           },
           "team_b": {
-            "name": "St. Louis Blues",
-            "flag": "https://streamcenter.st/api/images/badge/42d789de-401c-499f-8372-51ddc8bc2ddb.webp"
+            "name": "Chicago Blackhawks",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/5132e046-2483-4cc1-bf41-6f7eb254766a.webp",
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
         "channels": [
           {
-            "channel_name": "iframe",
+            "channel_name": "Sportsnet+ (CA)",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs54.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs54.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://s3.vertex.st/ch?id=34",
+            "raw_link": "https://s3.vertex.st/ch?id=34|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Washington Capitals at Nashville Predators",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "washington-capitals-at-nashville-predators",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 30, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 30, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Washington Capitals",
-            "flag": "https://streamcenter.st/api/images/badge/c5124d32-cc38-4513-ab70-f67698171bff.webp"
-          },
-          "team_b": {
-            "name": "Nashville Predators",
-            "flag": "https://streamcenter.st/api/images/badge/74b70289-6a72-4956-a4b7-20a14cc85823.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/c5124d32-cc38-4513-ab70-f67698171bff.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs55.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs55.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Montreal Canadiens at Dallas Stars",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "montreal-canadiens-at-dallas-stars",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 30, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 30, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Montreal Canadiens",
-            "flag": "https://streamcenter.st/api/images/badge/19aca6fb-bba6-4593-83f1-b4cda6999749.webp"
-          },
-          "team_b": {
-            "name": "Dallas Stars",
-            "flag": "https://streamcenter.st/api/images/badge/567b123a-3a88-42a9-a809-020841c0c05f.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/19aca6fb-bba6-4593-83f1-b4cda6999749.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs56.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs56.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "New York Islanders at Minnesota Wild",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "new-york-islanders-at-minnesota-wild",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 30, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 30, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "New York Islanders",
-            "flag": "https://streamcenter.st/api/images/badge/7280c674-1cd2-4120-ac33-602759ffa569.webp"
-          },
-          "team_b": {
-            "name": "Minnesota Wild",
-            "flag": "https://streamcenter.st/api/images/badge/5f60e307-90c1-47f8-af8c-1d7cf4946540.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/7280c674-1cd2-4120-ac33-602759ffa569.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs57.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs57.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Cleveland Cavaliers at Atlanta Hawks",
+        "title": "New Orleans Pelicans vs Sacramento Kings",
         "sport": "Basketball",
-        "sub_category": "Basketball",
+        "sub_category": "NBA",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "cleveland-cavaliers-at-atlanta-hawks",
+        "slug": "nba-basketball-new-orleans-pelicans-sacramento-kings-2026-10-30-02-00",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 30, 2026, 06:00:00 AM",
@@ -511,75 +1321,227 @@
         },
         "teams": {
           "team_a": {
-            "name": "Cleveland Cavaliers",
-            "flag": "https://streamcenter.st/api/images/badge/ff2b21cf-70b5-4245-adbb-f66d06cb644c.webp"
-          },
-          "team_b": {
-            "name": "Atlanta Hawks",
-            "flag": "https://streamcenter.st/api/images/badge/34976ee6-0def-4ee5-b23f-3d67b151e780.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/ff2b21cf-70b5-4245-adbb-f66d06cb644c.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs65.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs65.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Sacramento Kings at New Orleans Pelicans",
-        "sport": "Basketball",
-        "sub_category": "Basketball",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "sacramento-kings-at-new-orleans-pelicans",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 30, 2026, 06:00:00 AM",
-          "end_time_bst": "Oct 30, 2026, 09:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Sacramento Kings",
-            "flag": "https://streamcenter.st/api/images/badge/303d0ee1-c5f9-4ee2-a745-e01af517c96d.webp"
-          },
-          "team_b": {
             "name": "New Orleans Pelicans",
-            "flag": "https://streamcenter.st/api/images/badge/90261af4-da9d-483f-b317-7d808e76e3b8.webp"
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          },
+          "team_b": {
+            "name": "Sacramento Kings",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/303d0ee1-c5f9-4ee2-a745-e01af517c96d.webp",
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
         "channels": [
           {
-            "channel_name": "iframe",
+            "channel_name": "NBA League Pass (US)",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs66.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs66.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://s3.vertex.st/ch?id=3",
+            "raw_link": "https://s3.vertex.st/ch?id=3|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Carolina Panthers at Green Bay Packers",
-        "sport": "Football",
-        "sub_category": "Football",
+        "title": "Atlanta Hawks vs Cleveland Cavaliers",
+        "sport": "Basketball",
+        "sub_category": "NBA",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "carolina-panthers-at-green-bay-packers",
+        "slug": "nba-basketball-atlanta-hawks-cleveland-cavaliers-2026-10-30-02-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Atlanta Hawks",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          },
+          "team_b": {
+            "name": "Cleveland Cavaliers",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
+        "channels": [
+          {
+            "channel_name": "NBA League Pass (US)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=5",
+            "raw_link": "https://s3.vertex.st/ch?id=5|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "St. Louis Blues vs Boston Bruins",
+        "sport": "Hockey",
+        "sub_category": "NHL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nhl-hockey-st-louis-blues-boston-bruins-2026-10-30-02-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "St. Louis Blues",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Boston Bruins",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "Sportsnet+ (CA)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=35",
+            "raw_link": "https://s3.vertex.st/ch?id=35|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Nashville Predators vs Washington Capitals",
+        "sport": "Hockey",
+        "sub_category": "NHL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nhl-hockey-nashville-predators-washington-capitals-2026-10-30-02-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Nashville Predators",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Washington Capitals",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "Sportsnet+ (CA)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=36",
+            "raw_link": "https://s3.vertex.st/ch?id=36|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Dallas Stars vs Montreal Canadiens",
+        "sport": "Hockey",
+        "sub_category": "NHL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nhl-hockey-dallas-stars-montreal-canadiens-2026-10-30-02-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Dallas Stars",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Montreal Canadiens",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "Sportsnet+ (CA)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=37",
+            "raw_link": "https://s3.vertex.st/ch?id=37|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Minnesota Wild vs New York Islanders",
+        "sport": "Hockey",
+        "sub_category": "NHL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nhl-hockey-minnesota-wild-new-york-islanders-2026-10-30-02-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 06:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 09:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Minnesota Wild",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "New York Islanders",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "Sportsnet+ (CA)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=38",
+            "raw_link": "https://s3.vertex.st/ch?id=38|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Green Bay Packers vs Carolina Panthers",
+        "sport": "American Football",
+        "sub_category": "NFL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nfl-american-football-green-bay-packers-carolina-panthers-2026-10-30-02-15",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 30, 2026, 06:15:00 AM",
@@ -587,151 +1549,87 @@
         },
         "teams": {
           "team_a": {
-            "name": "Carolina Panthers",
-            "flag": "https://streamcenter.st/api/images/badge/e2aed45b-45ac-405f-a000-7a337f454c3e.webp"
-          },
-          "team_b": {
             "name": "Green Bay Packers",
-            "flag": "https://streamcenter.st/api/images/badge/7cdd84d3-3c9d-49ed-8624-caefd57f799c.webp"
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Carolina Panthers",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/e2aed45b-45ac-405f-a000-7a337f454c3e.webp",
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
         "channels": [
           {
-            "channel_name": "iframe",
+            "channel_name": "TSN1 (CA)",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs30.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs30.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://s3.vertex.st/ch?id=1",
+            "raw_link": "https://s3.vertex.st/ch?id=1|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Buffalo Sabres at Anaheim Ducks",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
+        "title": "Malaysian Grand Prix",
+        "sport": "Motorsport",
+        "sub_category": "MotoGP",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "buffalo-sabres-at-anaheim-ducks",
+        "slug": "motogp-motorsport-malaysian-grand-prix-2026-10-30-03-00",
         "schedule": {
           "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 30, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 30, 2026, 11:00:00 AM"
+          "start_time_bst": "Oct 30, 2026, 07:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 10:00:00 AM"
         },
         "teams": {
           "team_a": {
-            "name": "Buffalo Sabres",
-            "flag": "https://streamcenter.st/api/images/badge/8d661920-97ad-4e18-9ae1-5943982608a0.webp"
+            "name": "Malaysian Grand Prix",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2418/2418779.png"
           },
           "team_b": {
-            "name": "Anaheim Ducks",
-            "flag": "https://streamcenter.st/api/images/badge/37dee480-518e-47d7-ba31-78bdde627b16.webp"
+            "name": "Team B",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2418/2418779.png"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/8d661920-97ad-4e18-9ae1-5943982608a0.webp",
+        "logo": "https://cdn-icons-png.flaticon.com/512/2418/2418779.png",
         "channels": [
           {
-            "channel_name": "iframe",
+            "channel_name": "TNT Sports 2 (GB)",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs58.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs58.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://s3.vertex.st/ch?id=2",
+            "raw_link": "https://s3.vertex.st/ch?id=2|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          },
+          {
+            "channel_name": "Sky Sport Mix (DE)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=11",
+            "raw_link": "https://s3.vertex.st/ch?id=11|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
             },
             "drm_key": null
           }
         ]
       },
       {
-        "title": "Ottawa Senators at Los Angeles Kings",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "ottawa-senators-at-los-angeles-kings",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 30, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 30, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Ottawa Senators",
-            "flag": "https://streamcenter.st/api/images/badge/707e05f4-9023-4a40-bd65-08d88a4614d5.webp"
-          },
-          "team_b": {
-            "name": "Los Angeles Kings",
-            "flag": "https://streamcenter.st/api/images/badge/967db9c2-4152-4893-b255-df00248b82d1.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/707e05f4-9023-4a40-bd65-08d88a4614d5.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs59.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs59.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Vancouver Canucks at San Jose Sharks",
-        "sport": "Hockey",
-        "sub_category": "Hockey",
-        "status": "UPCOMING",
-        "is_hot": false,
-        "slug": "vancouver-canucks-at-san-jose-sharks",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Oct 30, 2026, 08:00:00 AM",
-          "end_time_bst": "Oct 30, 2026, 11:00:00 AM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Vancouver Canucks",
-            "flag": "https://streamcenter.st/api/images/badge/b35c349b-ef6c-4208-87f0-2c7ba21071ab.webp"
-          },
-          "team_b": {
-            "name": "San Jose Sharks",
-            "flag": "https://streamcenter.st/api/images/badge/1bd8e0f9-abd6-4f48-b8be-e76038ff58fc.webp"
-          }
-        },
-        "logo": "https://streamcenter.st/api/images/badge/b35c349b-ef6c-4208-87f0-2c7ba21071ab.webp",
-        "channels": [
-          {
-            "channel_name": "iframe",
-            "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs60.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs60.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
-      {
-        "title": "Memphis Grizzlies at Portland Trail Blazers",
+        "title": "Portland Trail Blazers vs Memphis Grizzlies",
         "sport": "Basketball",
-        "sub_category": "Basketball",
+        "sub_category": "NBA",
         "status": "UPCOMING",
         "is_hot": false,
-        "slug": "memphis-grizzlies-at-portland-trail-blazers",
+        "slug": "nba-basketball-portland-trail-blazers-memphis-grizzlies-2026-10-30-04-00",
         "schedule": {
           "timezone": "BST (UTC+6)",
           "start_time_bst": "Oct 30, 2026, 08:00:00 AM",
@@ -739,25 +1637,215 @@
         },
         "teams": {
           "team_a": {
-            "name": "Memphis Grizzlies",
-            "flag": "https://streamcenter.st/api/images/badge/07acbbef-f561-4dba-b997-cf04c1e62ccc.webp"
+            "name": "Portland Trail Blazers",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
           },
           "team_b": {
-            "name": "Portland Trail Blazers",
-            "flag": "https://streamcenter.st/api/images/badge/0c0e8af3-39c3-4f52-8133-211109a34e41.webp"
+            "name": "Memphis Grizzlies",
+            "flag": "https://cdn-icons-png.flaticon.com/512/889/889508.png"
           }
         },
-        "logo": "https://streamcenter.st/api/images/badge/07acbbef-f561-4dba-b997-cf04c1e62ccc.webp",
+        "logo": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
         "channels": [
           {
-            "channel_name": "iframe",
+            "channel_name": "NBA League Pass (US)",
             "stream_type": "HLS",
-            "url": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8",
-            "raw_link": "https://edgestream3.pro/sh/cdn/hls/wnbcnxbcs67.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://embedcenter.st/&Origin=https://embedcenter.st",
+            "url": "https://s3.vertex.st/ch?id=4",
+            "raw_link": "https://s3.vertex.st/ch?id=4|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
             "headers": {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://embedcenter.st/",
-              "Origin": "https://embedcenter.st"
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "San Jose Sharks vs Vancouver Canucks",
+        "sport": "Hockey",
+        "sub_category": "NHL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nhl-hockey-san-jose-sharks-vancouver-canucks-2026-10-30-04-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 08:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 11:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "San Jose Sharks",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Vancouver Canucks",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "Sportsnet+ (CA)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=31",
+            "raw_link": "https://s3.vertex.st/ch?id=31|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Anaheim Ducks vs Buffalo Sabres",
+        "sport": "Hockey",
+        "sub_category": "NHL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nhl-hockey-anaheim-ducks-buffalo-sabres-2026-10-30-04-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 08:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 11:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Anaheim Ducks",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Buffalo Sabres",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "Sportsnet+ (CA)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=39",
+            "raw_link": "https://s3.vertex.st/ch?id=39|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Los Angeles Kings vs Ottawa Senators",
+        "sport": "Hockey",
+        "sub_category": "NHL",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "nhl-hockey-los-angeles-kings-ottawa-senators-2026-10-30-04-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 08:00:00 AM",
+          "end_time_bst": "Oct 30, 2026, 11:00:00 AM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Los Angeles Kings",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          },
+          "team_b": {
+            "name": "Ottawa Senators",
+            "flag": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png"
+          }
+        },
+        "logo": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+        "channels": [
+          {
+            "channel_name": "Sportsnet+ (CA)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=40",
+            "raw_link": "https://s3.vertex.st/ch?id=40|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Brisbane Roar vs Auckland",
+        "sport": "Football",
+        "sub_category": "Australia A-League",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "australia-a-league-football-brisbane-roar-auckland-2026-10-30-11-00",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 03:00:00 PM",
+          "end_time_bst": "Oct 30, 2026, 06:00:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Brisbane Roar",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Auckland",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "TNT Sports 2 (GB)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=2",
+            "raw_link": "https://s3.vertex.st/ch?id=2|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
+            },
+            "drm_key": null
+          }
+        ]
+      },
+      {
+        "title": "Abha vs Al Ittihad",
+        "sport": "Football",
+        "sub_category": "Saudi Arabia Pro League",
+        "status": "UPCOMING",
+        "is_hot": false,
+        "slug": "saudi-arabia-pro-league-football-abha-al-ittihad-2026-10-30-15-45",
+        "schedule": {
+          "timezone": "BST (UTC+6)",
+          "start_time_bst": "Oct 30, 2026, 07:45:00 PM",
+          "end_time_bst": "Oct 30, 2026, 10:45:00 PM"
+        },
+        "teams": {
+          "team_a": {
+            "name": "Abha",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          },
+          "team_b": {
+            "name": "Al Ittihad",
+            "flag": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+          }
+        },
+        "logo": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+        "channels": [
+          {
+            "channel_name": "FOX Deportes (ES)",
+            "stream_type": "HLS",
+            "url": "https://s3.vertex.st/ch?id=87",
+            "raw_link": "https://s3.vertex.st/ch?id=87|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+              "Referer": "https://matchli.st/",
+              "Origin": "https://matchli.st"
             },
             "drm_key": null
           }
