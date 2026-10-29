@@ -154,17 +154,26 @@ def create_slug(text: str) -> str:
     return re.sub(r"[\W_]+", "-", text.lower().strip()).strip("-")
 
 
-def determine_status(start_dt: datetime) -> str:
+# -----------------------------------------------------------------------------
+# ডাইনামিক লাইভ স্ট্যাটাস (যতক্ষণ সোর্সে থাকবে ততক্ষণ লাইভ থাকবে)
+# -----------------------------------------------------------------------------
+def determine_status(m: dict, start_dt: datetime) -> str:
+    # ১. যদি সোর্স এপিআইতে সরাসরি ফিনিশড/এন্ডেড স্ট্যাটাস থাকে
+    raw_status = str(m.get("status", "")).lower()
+    if raw_status in ["ended", "finished", "ft", "final", "completed", "closed"]:
+        return "ENDED"
+    if m.get("ended") is True or m.get("finished") is True:
+        return "ENDED"
+
+    # ২. সময়ভিত্তিক হিসাব
     now_utc = datetime.now(timezone.utc)
     start_utc = start_dt.astimezone(timezone.utc)
     live_start = start_utc - timedelta(minutes=15)
-    end_time = start_utc + timedelta(hours=3)
 
-    if live_start <= now_utc <= end_time:
+    # ১৫ মিনিট আগে থেকে শুরু করে যতক্ষণ পর্যন্ত সোর্স থেকে রিমুভ না হবে ততক্ষণ LIVE
+    if now_utc >= live_start:
         return "LIVE"
-    elif now_utc < live_start:
-        return "UPCOMING"
-    return "ENDED"
+    return "UPCOMING"
 
 
 def save_playlists(events: list[dict]) -> None:
@@ -218,7 +227,7 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
 
     embed_page_url = None
 
-    # ১. s3.vertex.st/ch?id={number} থেকে আইডি বের করা
+    # s3.vertex.st/ch?id={number} থেকে আইডি বের করা
     ch_id_match = re.search(r'id=(\d+)', link_url)
     if ch_id_match:
         ch_id = ch_id_match.group(1)
@@ -239,7 +248,7 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
 
     target_embed = embed_page_url or link_url
 
-    # ২. embed.php পেজ থেকে আসল secure_hls.php বের করা
+    # embed.php পেজ থেকে আসল secure_hls.php বের করা
     try:
         headers = {
             "User-Agent": STREAM_UA,
@@ -286,7 +295,7 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
 
 
 # -----------------------------------------------------------------------------
-# মূল স্ক্র্যাপার প্রসেস (মাত্র ১০-১৫ সেকেন্ডে রান হয়ে শেষ হবে)
+# মূল স্ক্র্যাপার প্রসেস
 # -----------------------------------------------------------------------------
 async def scrape():
     log.info(f"Fetching matches from Topsurge API ({API_URL})...")
@@ -314,6 +323,7 @@ async def scrape():
         now_utc = datetime.now(timezone.utc)
         valid_matches = []
 
+        # ম্যাচ ফিল্টারিং: সোর্স এপিআইতে থাকা সব ম্যাচ থাকবে (যদি না ১২+ ঘণ্টা আগের কোনো পুরানো ম্যাচ হয়)
         for m in matches:
             t_a = m.get("team1")
             t_b = m.get("team2")
@@ -333,10 +343,8 @@ async def scrape():
             except (ValueError, TypeError, OverflowError):
                 continue
 
-            # ৩ ঘণ্টা আগের ম্যাচ থেকে পরবর্তী ১৮ ঘণ্টার ম্যাচ রাখা হবে
-            if match_dt < now_utc - timedelta(hours=3):
-                continue
-            if match_dt > now_utc + timedelta(hours=18):
+            # ১২ ঘণ্টার বেশি পুরনো বা শেষ হওয়া ম্যাচ বাদ দিয়ে সোর্সের বাকি সব চলমান ও আসন্ন ম্যাচ থাকবে
+            if match_dt < now_utc - timedelta(hours=12):
                 continue
 
             valid_matches.append((match_dt, m))
@@ -374,6 +382,9 @@ async def scrape():
             sport = clean_sport_name(m.get("sport") or "Football")
             slug = m.get("slug") or create_slug(title)
 
+            # স্ট্যাটাস নির্ধারণ (১৫ মিনিট আগে LIVE হবে এবং সোর্সে থাকা পর্যন্ত LIVE থাকবে)
+            match_status = determine_status(m, match_dt)
+
             event_channels = []
             for ch in m.get("channels", []):
                 c_name = ch.get("name") or "Stream"
@@ -402,7 +413,10 @@ async def scrape():
 
             if event_channels:
                 start_bst = match_dt.astimezone(BST_TZ)
-                end_bst = start_bst + timedelta(hours=3)
+                
+                # সোর্স থেকে duration নেওয়া (ডিফল্ট ২ ঘণ্টা ৩০ মিনিট)
+                dur_minutes = int(m.get("duration") or 150)
+                end_bst = start_bst + timedelta(minutes=dur_minutes)
 
                 flag_a = get_team_badge(t_a, sport)
                 flag_b = get_team_badge(t_b, sport)
@@ -411,7 +425,7 @@ async def scrape():
                     "title": title,
                     "sport": sport,
                     "sub_category": league,
-                    "status": determine_status(match_dt),
+                    "status": match_status,
                     "is_hot": False,
                     "slug": slug,
                     "schedule": {
@@ -428,11 +442,11 @@ async def scrape():
                     "_timestamp": match_dt.timestamp()
                 })
 
+        # LIVE ম্যাচ সবার উপরে রাখার সর্টিং
         final_playlist.sort(key=lambda x: ({"LIVE": 0, "UPCOMING": 1, "ENDED": 2}.get(x["status"], 99), x["_timestamp"]))
         for it in final_playlist:
             it.pop("_timestamp", None)
 
-        # প্লেলিস্ট ফাইল সংরক্ষণ
         save_playlists(final_playlist)
         log.info(f"Done! Successfully generated {len(final_playlist)} matches.")
 
