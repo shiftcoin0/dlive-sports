@@ -8,17 +8,13 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 import threading
 import httpx
 
-# GitHub ক্রেডেনশিয়াল
 GH_TOKEN = os.getenv("GH_TOKEN")
 GH_OWNER = os.getenv("GH_OWNER", "shiftcoin0")
 GH_REPO = os.getenv("GH_REPO", "dlive-sports")
 PORT = int(os.getenv("PORT", 10000))
 
-# Topsurge API
 BASE_URL = "https://topsurge.st"
 API_URL = f"{BASE_URL}/api_proxy.php"
-
-# স্টেট মনে রাখার জন্য ফাইল (রেন্ডার রিস্টার্ট হলেও যাতে ভুলে না যায়)
 STATE_FILE = "watcher_state.txt"
 
 UA = (
@@ -35,9 +31,6 @@ logging.basicConfig(
 log = logging.getLogger("Watcher")
 
 
-# -----------------------------------------------------------------------------
-# Render Web Service সচল রাখার জন্য ডামি হেলথ সার্ভার (24/7 চালু রাখবে)
-# -----------------------------------------------------------------------------
 class HealthServer(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
@@ -45,13 +38,13 @@ class HealthServer(BaseHTTPRequestHandler):
         self.end_headers()
         res = {
             "status": "running",
-            "service": "Topsurge 5-Minute Watcher",
+            "service": "Topsurge Dynamic Watcher",
             "timestamp": datetime.now(timezone.utc).isoformat()
         }
         self.wfile.write(json.dumps(res).encode("utf-8"))
 
     def log_message(self, format, *args):
-        return  # অতিরিক্ত লগ অফ রাখা হলো
+        return
 
 
 def start_health_server():
@@ -61,26 +54,24 @@ def start_health_server():
 
 
 # -----------------------------------------------------------------------------
-# খেলা শুরুর ১৫ মিনিট আগে LIVE স্ট্যাটাস নির্ধারণ করার লজিক
+# ডাইনামিক লাইভ স্ট্যাটাস ক্যালকুলেশন (সোর্সে থাকা পর্যন্ত LIVE থাকবে)
 # -----------------------------------------------------------------------------
-def get_event_status(start_dt: datetime) -> str:
+def get_event_status(m: dict, start_dt: datetime) -> str:
+    raw_status = str(m.get("status", "")).lower()
+    if raw_status in ["ended", "finished", "ft", "final", "completed", "closed"]:
+        return "ENDED"
+    if m.get("ended") is True or m.get("finished") is True:
+        return "ENDED"
+
     now_utc = datetime.now(timezone.utc)
     start_utc = start_dt.astimezone(timezone.utc)
-    
-    # ম্যাচ শুরুর ১৫ মিনিট আগে থেকে LIVE হবে
     live_start = start_utc - timedelta(minutes=15)
-    end_time = start_utc + timedelta(hours=3)
 
-    if live_start <= now_utc <= end_time:
+    if now_utc >= live_start:
         return "LIVE"
-    elif now_utc < live_start:
-        return "UPCOMING"
-    return "ENDED"
+    return "UPCOMING"
 
 
-# -----------------------------------------------------------------------------
-# GitHub repository_dispatch ট্রিগার পাঠানোর ফাংশন
-# -----------------------------------------------------------------------------
 async def trigger_github(client: httpx.AsyncClient, reason: str = ""):
     if not GH_TOKEN:
         log.error("GH_TOKEN is missing! Please set it in Render Environment Variables.")
@@ -115,11 +106,7 @@ async def trigger_github(client: httpx.AsyncClient, reason: str = ""):
         return False
 
 
-# -----------------------------------------------------------------------------
-# মূল ওয়াচার লুপ (প্রতি ৫ মিনিট পরপর চেক করবে)
-# -----------------------------------------------------------------------------
 async def watch_topsurge():
-    # ফাইল থেকে আগের সেভ করা স্টেট পড়া (যাতে রেন্ডার রিস্টার্ট হলেও অযথা ট্রিগার না পাঠায়)
     last_state = ""
     if os.path.exists(STATE_FILE):
         try:
@@ -129,7 +116,7 @@ async def watch_topsurge():
         except Exception:
             last_state = ""
 
-    log.info("Topsurge Watcher started. Polling every 5 minutes (300 seconds)...")
+    log.info("Topsurge Dynamic Watcher started. Polling every 5 minutes...")
 
     headers = {
         "User-Agent": UA,
@@ -142,7 +129,7 @@ async def watch_topsurge():
             try:
                 resp = await client.get(API_URL)
                 if resp.status_code != 200:
-                    log.warning(f"Failed to fetch Topsurge API, HTTP Status: {resp.status_code}")
+                    log.warning(f"Failed to fetch Topsurge API, Status: {resp.status_code}")
                     await asyncio.sleep(60)
                     continue
 
@@ -159,7 +146,6 @@ async def watch_topsurge():
                     if not title or not start_ts or not channels:
                         continue
 
-                    # মিলিসেকেন্ড ও সেকেন্ড সেফ হ্যান্ডলিং
                     try:
                         ts = float(start_ts)
                         if ts > 1e11:
@@ -168,18 +154,14 @@ async def watch_topsurge():
                     except Exception:
                         continue
 
-                    # শুধুমাত্র চলমান (৩ ঘণ্টা আগের) এবং আগামী ১৮ ঘণ্টার ম্যাচগুলো ট্র্যাক করবে
-                    if match_dt >= now_utc - timedelta(hours=3) and match_dt <= now_utc + timedelta(hours=18):
-                        st = get_event_status(match_dt)
-                        # চ্যানেলের মোট লিংক সংখ্যা
+                    # সোর্সের সব ম্যাচ ট্র্যাক করা হবে (১২ ঘণ্টা আগের পুরনো ডেটা বাদে)
+                    if match_dt >= now_utc - timedelta(hours=12):
+                        st = get_event_status(m, match_dt)
                         total_links = sum(len(c.get("links") or c.get("oldLinks") or []) for c in channels)
-                        # টাইটেল + স্ট্যাটাস + লিংক সংখ্যা নিয়ে ইউনিক সিগনেচার তৈরি
                         current_events.append(f"{title}|{st}|{total_links}")
 
-                # সকল ম্যাচের বর্তমান অবস্থা দিয়ে একটি সিগনেচার স্ট্রিং
                 new_state = "#".join(sorted(current_events))
 
-                # ১. একদম প্রথমবার রান হলে সিঙ্ক করা
                 if last_state == "":
                     log.info(f"Initial run: Tracking {len(current_events)} active matches. Syncing with GitHub...")
                     if await trigger_github(client, "Initial Sync"):
@@ -187,31 +169,25 @@ async def watch_topsurge():
                         with open(STATE_FILE, "w", encoding="utf-8") as f:
                             f.write(new_state)
 
-                # ২. কোনো ম্যাচ যোগ/রিমুভ হলে অথবা ১৫ মিনিট বাকি থাকায় UPCOMING থেকে LIVE হলে ট্রিগার পাঠানো
                 elif new_state != last_state:
                     log.info("Change detected! (Event added/removed or match reached 15-minute LIVE window).")
                     if await trigger_github(client, "15-Min LIVE Window / Event Update"):
                         last_state = new_state
                         with open(STATE_FILE, "w", encoding="utf-8") as f:
                             f.write(new_state)
-
-                # ৩. যদি কোনো পরিবর্তন না থাকে তবে গিটহাবে কোনো কল যাবে না
                 else:
                     log.info("No status change or event update. Skipping trigger. Sleeping 5 minutes...")
 
             except Exception as e:
                 log.error(f"Watcher loop exception: {e}")
 
-            # ঠিক ৫ মিনিট (৩০০ সেকেন্ড) পর আবার চেক করবে
+            # প্রতি ৫ মিনিট (৩০০ সেকেন্ড) পর পর চেক
             await asyncio.sleep(300)
 
 
 def main():
-    # ব্যাকগ্রাউন্ডে হেলথ সার্ভার চালানো (Render Free Service সচল রাখতে)
     t = threading.Thread(target=start_health_server, daemon=True)
     t.start()
-
-    # মূল লুপ চালু করা
     asyncio.run(watch_topsurge())
 
 
