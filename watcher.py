@@ -2,19 +2,22 @@ import asyncio
 import json
 import logging
 import os
-import re
 from datetime import datetime, timedelta, timezone
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import threading
 import httpx
 
+# GitHub ক্রেডেনশিয়াল
 GH_TOKEN = os.getenv("GH_TOKEN")
 GH_OWNER = os.getenv("GH_OWNER", "shiftcoin0")
 GH_REPO = os.getenv("GH_REPO", "dlive-sports")
 PORT = int(os.getenv("PORT", 10000))
 
-BASE_URL = "https://topsurge.st"
-API_URL = f"{BASE_URL}/api_proxy.php"
+# -----------------------------------------------------------------------------
+# Render Environment Variables থেকে রিড করা হচ্ছে (কোডে সোর্স লুকানো থাকবে)
+# -----------------------------------------------------------------------------
+BASE_URL = os.getenv("SOURCE_BASE_URL", "")
+API_URL = os.getenv("SOURCE_API_URL", "")
 STATE_FILE = "watcher_state.txt"
 
 UA = (
@@ -38,7 +41,7 @@ class HealthServer(BaseHTTPRequestHandler):
         self.end_headers()
         res = {
             "status": "running",
-            "service": "Topsurge Dynamic Watcher",
+            "service": "Dynamic Event Watcher",
             "timestamp": datetime.now(timezone.utc).isoformat()
         }
         self.wfile.write(json.dumps(res).encode("utf-8"))
@@ -53,9 +56,6 @@ def start_health_server():
     server.serve_forever()
 
 
-# -----------------------------------------------------------------------------
-# ডাইনামিক লাইভ স্ট্যাটাস ক্যালকুলেশন (সোর্সে থাকা পর্যন্ত LIVE থাকবে)
-# -----------------------------------------------------------------------------
 def get_event_status(m: dict, start_dt: datetime) -> str:
     raw_status = str(m.get("status", "")).lower()
     if raw_status in ["ended", "finished", "ft", "final", "completed", "closed"]:
@@ -74,7 +74,7 @@ def get_event_status(m: dict, start_dt: datetime) -> str:
 
 async def trigger_github(client: httpx.AsyncClient, reason: str = ""):
     if not GH_TOKEN:
-        log.error("GH_TOKEN is missing! Please set it in Render Environment Variables.")
+        log.error("GH_TOKEN is missing! Please configure it in Environment Variables.")
         return False
 
     url = f"https://api.github.com/repos/{GH_OWNER}/{GH_REPO}/dispatches"
@@ -107,6 +107,10 @@ async def trigger_github(client: httpx.AsyncClient, reason: str = ""):
 
 
 async def watch_topsurge():
+    if not API_URL:
+        log.error("CRITICAL: 'SOURCE_API_URL' environment variable is missing on Render!")
+        return
+
     last_state = ""
     if os.path.exists(STATE_FILE):
         try:
@@ -116,11 +120,11 @@ async def watch_topsurge():
         except Exception:
             last_state = ""
 
-    log.info("Topsurge Dynamic Watcher started. Polling every 5 minutes...")
+    log.info("Watcher started. Polling every 5 minutes...")
 
     headers = {
         "User-Agent": UA,
-        "Referer": f"{BASE_URL}/",
+        "Referer": f"{BASE_URL}/" if BASE_URL else "",
         "Accept": "application/json, text/plain, */*",
     }
 
@@ -129,7 +133,7 @@ async def watch_topsurge():
             try:
                 resp = await client.get(API_URL)
                 if resp.status_code != 200:
-                    log.warning(f"Failed to fetch Topsurge API, Status: {resp.status_code}")
+                    log.warning(f"Failed to fetch API, Status: {resp.status_code}")
                     await asyncio.sleep(60)
                     continue
 
@@ -154,7 +158,6 @@ async def watch_topsurge():
                     except Exception:
                         continue
 
-                    # সোর্সের সব ম্যাচ ট্র্যাক করা হবে (১২ ঘণ্টা আগের পুরনো ডেটা বাদে)
                     if match_dt >= now_utc - timedelta(hours=12):
                         st = get_event_status(m, match_dt)
                         total_links = sum(len(c.get("links") or c.get("oldLinks") or []) for c in channels)
@@ -181,7 +184,7 @@ async def watch_topsurge():
             except Exception as e:
                 log.error(f"Watcher loop exception: {e}")
 
-            # প্রতি ৫ মিনিট (৩০০ সেকেন্ড) পর পর চেক
+            # ঠিক ৫ মিনিট পর পর চেক করবে
             await asyncio.sleep(300)
 
 
