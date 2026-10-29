@@ -78,7 +78,6 @@ SPORT_ICONS = {
 
 DEFAULT_LOGO = "https://i.ibb.co.com/h1gWgKHy/Live-Streaming.webp"
 
-# জনপ্রিয় টপ ক্লাবগুলোর লোগো
 KNOWN_TEAM_LOGOS = {
     "manchester city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
     "man city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
@@ -235,8 +234,8 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
             if resp.status_code == 200:
                 data = resp.json()
                 embed_page_url = data.get("url")
-        except Exception as e:
-            log.debug(f"Error fetching vertex api: {e}")
+        except Exception:
+            pass
 
     target_embed = embed_page_url or link_url
 
@@ -280,14 +279,14 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
             if gen_m3u8:
                 return gen_m3u8.group(1)
 
-    except Exception as e:
-        log.debug(f"Error resolving embed stream: {e}")
+    except Exception:
+        pass
 
     return embed_page_url or link_url
 
 
 # -----------------------------------------------------------------------------
-# মূল স্ক্র্যাপার প্রসেস
+# মূল স্ক্র্যাপার প্রসেস (মাত্র ১০-১৫ সেকেন্ডে রান হয়ে শেষ হবে)
 # -----------------------------------------------------------------------------
 async def scrape():
     log.info(f"Fetching matches from Topsurge API ({API_URL})...")
@@ -433,8 +432,9 @@ async def scrape():
         for it in final_playlist:
             it.pop("_timestamp", None)
 
+        # প্লেলিস্ট ফাইল সংরক্ষণ
         save_playlists(final_playlist)
-        log.info(f"Successfully generated {len(final_playlist)} matches with updated sport icons!")
+        log.info(f"Done! Successfully generated {len(final_playlist)} matches.")
 
 
 if __name__ == "__main__":
