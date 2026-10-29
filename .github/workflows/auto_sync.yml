@@ -30,6 +30,12 @@ jobs:
           pip install "httpx[http2]"
 
       - name: Run Scraper
+        # গিটহাব সিক্রেটগুলো এনভায়রনমেন্ট ভ্যারিয়েবল হিসেবে পাস করা হচ্ছে
+        env:
+          SOURCE_API_URL: ${{ secrets.SOURCE_API_URL }}
+          SOURCE_BASE_URL: ${{ secrets.SOURCE_BASE_URL }}
+          STREAM_REFERER: ${{ secrets.STREAM_REFERER }}
+          STREAM_ORIGIN: ${{ secrets.STREAM_ORIGIN }}
         run: |
           python files/stc.py
 
