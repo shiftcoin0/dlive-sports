@@ -1,6 +1,7 @@
 import asyncio
 import json
 import logging
+import os
 import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
@@ -13,12 +14,14 @@ import httpx
 # রিপোজিটরি রুট ডিরেক্টরি
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
-BASE_URL = "https://topsurge.st"
-API_URL = f"{BASE_URL}/api_proxy.php"
+# -----------------------------------------------------------------------------
+# ১০০% সিক্রেট থেকে রিড করা হচ্ছে (কোডের ভেতর কোনো সোর্স লিঙ্ক রাখা হয়নি)
+# -----------------------------------------------------------------------------
+BASE_URL = os.getenv("SOURCE_BASE_URL", "")
+API_URL = os.getenv("SOURCE_API_URL", "")
+STREAM_REFERER = os.getenv("STREAM_REFERER", "")
+STREAM_ORIGIN = os.getenv("STREAM_ORIGIN", "")
 
-# নির্দিষ্ট রেফারার ও অরিজিন
-STREAM_REFERER = "https://matchli.st/"
-STREAM_ORIGIN = "https://matchli.st"
 STREAM_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"
 STREAM_PIPE_HEADERS = f"User-Agent={STREAM_UA}&Referer={STREAM_REFERER}&Origin={STREAM_ORIGIN}"
 
@@ -57,7 +60,7 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# আপনার দেওয়া কাস্টম স্পোর্টস আইকন ও ডিফল্ট লোগো
+# স্পোর্টস আইকন ও ডিফল্ট লোগো
 # -----------------------------------------------------------------------------
 SPORT_ICONS = {
     "football": "https://i.ibb.co.com/JwDc9ckh/Football.png",
@@ -154,23 +157,17 @@ def create_slug(text: str) -> str:
     return re.sub(r"[\W_]+", "-", text.lower().strip()).strip("-")
 
 
-# -----------------------------------------------------------------------------
-# ডাইনামিক লাইভ স্ট্যাটাস (যতক্ষণ সোর্সে থাকবে ততক্ষণ লাইভ থাকবে)
-# -----------------------------------------------------------------------------
 def determine_status(m: dict, start_dt: datetime) -> str:
-    # ১. যদি সোর্স এপিআইতে সরাসরি ফিনিশড/এন্ডেড স্ট্যাটাস থাকে
     raw_status = str(m.get("status", "")).lower()
     if raw_status in ["ended", "finished", "ft", "final", "completed", "closed"]:
         return "ENDED"
     if m.get("ended") is True or m.get("finished") is True:
         return "ENDED"
 
-    # ২. সময়ভিত্তিক হিসাব
     now_utc = datetime.now(timezone.utc)
     start_utc = start_dt.astimezone(timezone.utc)
     live_start = start_utc - timedelta(minutes=15)
 
-    # ১৫ মিনিট আগে থেকে শুরু করে যতক্ষণ পর্যন্ত সোর্স থেকে রিমুভ না হবে ততক্ষণ LIVE
     if now_utc >= live_start:
         return "LIVE"
     return "UPCOMING"
@@ -206,8 +203,10 @@ def save_playlists(events: list[dict]) -> None:
             display_name = f"[{sub_cat}] {ev['title']} | {ch_name}{status_lbl}"
 
             m3u_lines.append(f'#EXTINF:-1 tvg-id="Live.Event.us" tvg-logo="{logo}" group-title="{sub_cat}",{display_name}')
-            m3u_lines.append(f'#EXTVLCOPT:http-referrer={STREAM_REFERER}')
-            m3u_lines.append(f'#EXTVLCOPT:http-origin={STREAM_ORIGIN}')
+            if STREAM_REFERER:
+                m3u_lines.append(f'#EXTVLCOPT:http-referrer={STREAM_REFERER}')
+            if STREAM_ORIGIN:
+                m3u_lines.append(f'#EXTVLCOPT:http-origin={STREAM_ORIGIN}')
             m3u_lines.append(f'#EXTVLCOPT:http-user-agent={STREAM_UA}')
             m3u_lines.append(raw_link)
 
@@ -215,9 +214,6 @@ def save_playlists(events: list[dict]) -> None:
     log.info(f"Saved M3U: {M3U_OUTPUT}")
 
 
-# -----------------------------------------------------------------------------
-# আসল secure_hls.php ডিকোডার
-# -----------------------------------------------------------------------------
 async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> str | None:
     if not link_url:
         return None
@@ -227,7 +223,6 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
 
     embed_page_url = None
 
-    # s3.vertex.st/ch?id={number} থেকে আইডি বের করা
     ch_id_match = re.search(r'id=(\d+)', link_url)
     if ch_id_match:
         ch_id = ch_id_match.group(1)
@@ -248,11 +243,10 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
 
     target_embed = embed_page_url or link_url
 
-    # embed.php পেজ থেকে আসল secure_hls.php বের করা
     try:
         headers = {
             "User-Agent": STREAM_UA,
-            "Referer": "https://topsurge.st/",
+            "Referer": f"{BASE_URL}/" if BASE_URL else "https://topsurge.st/",
             "Origin": STREAM_ORIGIN,
         }
 
@@ -294,15 +288,17 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
     return embed_page_url or link_url
 
 
-# -----------------------------------------------------------------------------
-# মূল স্ক্র্যাপার প্রসেস
-# -----------------------------------------------------------------------------
 async def scrape():
-    log.info(f"Fetching matches from Topsurge API ({API_URL})...")
+    # সিক্রেট ভ্যারিয়েবল অনুপস্থিত থাকলে সেফ এক্সিট
+    if not API_URL:
+        log.error("CRITICAL: 'SOURCE_API_URL' environment secret is missing! Please configure it in GitHub Secrets.")
+        return
+
+    log.info("Fetching matches from secure API endpoint...")
 
     headers = {
         "User-Agent": STREAM_UA,
-        "Referer": f"{BASE_URL}/",
+        "Referer": f"{BASE_URL}/" if BASE_URL else "",
         "Accept": "application/json, text/plain, */*",
     }
 
@@ -310,12 +306,12 @@ async def scrape():
         try:
             resp = await client.get(API_URL)
             if resp.status_code != 200:
-                log.error(f"Failed to fetch api_proxy.php: {resp.status_code}")
+                log.error(f"Failed to fetch API: HTTP {resp.status_code}")
                 return
 
             data = resp.json()
             matches = data.get("matches", [])
-            log.info(f"Retrieved {len(matches)} matches directly from Topsurge API!")
+            log.info(f"Retrieved {len(matches)} matches successfully from secure source.")
         except Exception as e:
             log.error(f"Error fetching API: {e}")
             return
@@ -323,7 +319,6 @@ async def scrape():
         now_utc = datetime.now(timezone.utc)
         valid_matches = []
 
-        # ম্যাচ ফিল্টারিং: সোর্স এপিআইতে থাকা সব ম্যাচ থাকবে (যদি না ১২+ ঘণ্টা আগের কোনো পুরানো ম্যাচ হয়)
         for m in matches:
             t_a = m.get("team1")
             t_b = m.get("team2")
@@ -343,7 +338,6 @@ async def scrape():
             except (ValueError, TypeError, OverflowError):
                 continue
 
-            # ১২ ঘণ্টার বেশি পুরনো বা শেষ হওয়া ম্যাচ বাদ দিয়ে সোর্সের বাকি সব চলমান ও আসন্ন ম্যাচ থাকবে
             if match_dt < now_utc - timedelta(hours=12):
                 continue
 
@@ -359,7 +353,7 @@ async def scrape():
                     if l:
                         unique_links.add(l)
 
-        log.info(f"Resolving {len(unique_links)} unique stream links via vertex API...")
+        log.info(f"Resolving {len(unique_links)} unique stream links...")
         stream_cache = {}
 
         async def fetch_stream(link):
@@ -382,7 +376,6 @@ async def scrape():
             sport = clean_sport_name(m.get("sport") or "Football")
             slug = m.get("slug") or create_slug(title)
 
-            # স্ট্যাটাস নির্ধারণ (১৫ মিনিট আগে LIVE হবে এবং সোর্সে থাকা পর্যন্ত LIVE থাকবে)
             match_status = determine_status(m, match_dt)
 
             event_channels = []
@@ -413,8 +406,6 @@ async def scrape():
 
             if event_channels:
                 start_bst = match_dt.astimezone(BST_TZ)
-                
-                # সোর্স থেকে duration নেওয়া (ডিফল্ট ২ ঘণ্টা ৩০ মিনিট)
                 dur_minutes = int(m.get("duration") or 150)
                 end_bst = start_bst + timedelta(minutes=dur_minutes)
 
@@ -442,7 +433,6 @@ async def scrape():
                     "_timestamp": match_dt.timestamp()
                 })
 
-        # LIVE ম্যাচ সবার উপরে রাখার সর্টিং
         final_playlist.sort(key=lambda x: ({"LIVE": 0, "UPCOMING": 1, "ENDED": 2}.get(x["status"], 99), x["_timestamp"]))
         for it in final_playlist:
             it.pop("_timestamp", None)
