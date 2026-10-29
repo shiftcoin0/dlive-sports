@@ -56,11 +56,7 @@ if not log.handlers:
     log.propagate = False
 
 
-# -----------------------------------------------------------------------------
-# টিম লোগো সিডিএন
-# -----------------------------------------------------------------------------
 KNOWN_TEAM_LOGOS = {
-    # Champions League & Top Teams
     "manchester city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
     "man city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
     "psg": "https://images.fotmob.com/image_resources/logo/teamlogo/9847.png",
@@ -179,72 +175,75 @@ def save_playlists(events: list[dict]) -> None:
 
 
 # -----------------------------------------------------------------------------
-# আসল লাইভ HLS স্ট্রিম ডিকোডার
+# শক্তিশালী HLS ডিকোডার (s3.vertex.st এবং secure_hls.php হ্যান্ডলার)
 # -----------------------------------------------------------------------------
 async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> str | None:
     if not link_url:
         return None
 
-    if ".m3u8" in link_url or "secure_hls.php" in link_url:
+    if "secure_hls.php" in link_url or (link_url.endswith(".m3u8") and "vertex" not in link_url):
         return link_url
 
-    headers = {
-        "User-Agent": STREAM_UA,
-        "Referer": STREAM_REFERER,
-        "Origin": STREAM_ORIGIN,
-    }
+    # vertex.st পেজের জন্য topsurge ও matchlist উভয় রেফারার ট্রাই করা
+    headers_list = [
+        {"User-Agent": STREAM_UA, "Referer": "https://topsurge.st/", "Origin": "https://topsurge.st"},
+        {"User-Agent": STREAM_UA, "Referer": STREAM_REFERER, "Origin": STREAM_ORIGIN},
+    ]
 
-    try:
-        resp = await client.get(link_url, headers=headers, timeout=6.0)
-        if resp.status_code != 200:
-            return None
+    for req_headers in headers_list:
+        try:
+            resp = await client.get(link_url, headers=req_headers, timeout=6.0)
+            if resp.status_code != 200:
+                continue
 
-        content = resp.text
+            content = resp.text
 
-        # ১. secure_hls.php সরাসরি খোঁজা
-        sec_m3u8 = re.search(r'["\'](https?://[^"\'\s]+/secure_hls\.php\?[^"\'\s]+)["\']', content)
-        if sec_m3u8:
-            return sec_m3u8.group(1).replace("&amp;", "&")
+            # ১. সরাসরি secure_hls.php খোঁজা (কোনো এস্কেপ ছাড়া)
+            sec_m3u8 = re.search(r'["\'](https?://[^"\'\s]+/secure_hls\.php\?[^"\'\s]+)["\']', content)
+            if sec_m3u8:
+                return sec_m3u8.group(1).replace("&amp;", "&")
 
-        # ২. সরাসরি m3u8 লিংক
-        m3u8_m = re.search(r'["\'](https?://[^"\'\s]+\.m3u8[^"\'\s]*)["\']', content)
-        if m3u8_m:
-            return m3u8_m.group(1)
+            # ২. ব্যাকস্ল্যাশ এস্কেপ করা URL (যেমন: https:\/\/hls.lshls.st\/secure_hls.php...)
+            sec_escaped = re.search(r'(https?:\\/\\/[^"\'\s]+secure_hls\.php\?[^"\'\s]+)', content)
+            if sec_escaped:
+                clean_url = sec_escaped.group(1).replace(r"\/", "/").replace("&amp;", "&")
+                return clean_url.strip('"\'')
 
-        # ৩. <iframe> ট্যাগ খোঁজা
-        iframe_src = None
-        iframe_match = re.search(r'<iframe[^>]+src=["\']([^"\']+)["\']', content, re.IGNORECASE)
-        if iframe_match:
-            iframe_src = iframe_match.group(1)
+            # ৩. সাধারণ যেকোনো m3u8 লিংক থাকলে
+            m3u8_m = re.search(r'["\'](https?://[^"\'\s]+\.m3u8[^"\'\s]*)["\']', content)
+            if m3u8_m and "s3.vertex.st" not in m3u8_m.group(1):
+                return m3u8_m.group(1)
 
-        if iframe_src:
-            if iframe_src.startswith("//"):
-                iframe_src = "https:" + iframe_src
-            elif iframe_src.startswith("/"):
-                iframe_src = urljoin(link_url, iframe_src)
+            # ৪. <iframe> ট্যাগ থাকলে
+            iframe_m = re.search(r'<iframe[^>]+src=["\']([^"\']+)["\']', content, re.IGNORECASE)
+            if iframe_m:
+                iframe_src = iframe_m.group(1)
+                if iframe_src.startswith("//"):
+                    iframe_src = "https:" + iframe_src
+                elif iframe_src.startswith("/"):
+                    iframe_src = urljoin(link_url, iframe_src)
 
-            if "secure_hls.php" in iframe_src or ".m3u8" in iframe_src:
-                return iframe_src
+                # আইফ্রেম ফেচ করা
+                if_resp = await client.get(iframe_src, headers=req_headers, timeout=5.0)
+                if if_resp.status_code == 200:
+                    if_text = if_resp.text
+                    sub_sec = re.search(r'["\'](https?://[^"\'\s]+/secure_hls\.php\?[^"\'\s]+)["\']', if_text)
+                    if sub_sec:
+                        return sub_sec.group(1).replace("&amp;", "&")
 
-            if_resp = await client.get(iframe_src, headers=headers, timeout=5.0)
-            if if_resp.status_code == 200:
-                sub_text = if_resp.text
-                sub_sec = re.search(r'["\'](https?://[^"\'\s]+/secure_hls\.php\?[^"\'\s]+)["\']', sub_text)
-                if sub_sec:
-                    return sub_sec.group(1).replace("&amp;", "&")
-                sub_m3u8 = re.search(r'["\'](https?://[^"\'\s]+\.m3u8[^"\'\s]*)["\']', sub_text)
-                if sub_m3u8:
-                    return sub_m3u8.group(1)
+                    sub_escaped = re.search(r'(https?:\\/\\/[^"\'\s]+secure_hls\.php\?[^"\'\s]+)', if_text)
+                    if sub_escaped:
+                        return sub_escaped.group(1).replace(r"\/", "/").replace("&amp;", "&").strip('"\'')
 
-        # ৪. JS ভ্যারিয়েবল
-        js_m = re.search(r'(?:file|source|src)\s*[:=]\s*["\'](https?://[^"\'\s]+)["\']', content, re.IGNORECASE)
-        if js_m:
-            candidate = js_m.group(1)
-            if ".m3u8" in candidate or "secure_hls.php" in candidate:
-                return candidate
+            # ৫. JavaScript এর source: বা file: ভ্যারিয়েবল
+            js_src = re.search(r'(?:file|source|src)\s*[:=]\s*["\'](https?://[^"\'\s]+)["\']', content, re.IGNORECASE)
+            if js_src:
+                candidate = js_src.group(1)
+                if "secure_hls" in candidate or ".m3u8" in candidate:
+                    return candidate
 
-    except Exception:
-        pass
+        except Exception:
+            pass
 
     return None
 
@@ -278,7 +277,6 @@ async def scrape():
         now_utc = datetime.now(timezone.utc)
         valid_matches = []
 
-        # ম্যাচ ফিল্টারিং ও সেফ টাইমস্ট্যাম্প কনভার্সন
         for m in matches:
             t_a = m.get("team1")
             t_b = m.get("team2")
@@ -290,18 +288,14 @@ async def scrape():
             if not title or not start_ts or not channels:
                 continue
 
-            # মিলিসেকেন্ড ও সেকেন্ড সেফ হ্যান্ডলিং
             try:
                 ts = float(start_ts)
-                # যদি মিলিসেকেন্ড (১৩ ডিজিট) হয়, ১০০০ দিয়ে ভাগ করা
                 if ts > 1e11:
                     ts = ts / 1000.0
-
                 match_dt = datetime.fromtimestamp(ts, tz=timezone.utc)
             except (ValueError, TypeError, OverflowError):
                 continue
 
-            # ৩ ঘণ্টা আগের ম্যাচ থেকে পরবর্তী ১৮ ঘণ্টার ম্যাচ
             if match_dt < now_utc - timedelta(hours=3):
                 continue
             if match_dt > now_utc + timedelta(hours=18):
@@ -311,7 +305,6 @@ async def scrape():
 
         log.info(f"Processing {len(valid_matches)} active matches in window...")
 
-        # স্ট্রিম লিংকগুলো দ্রুত রেজলভ করা
         unique_links = set()
         for _, m in valid_matches:
             for ch in m.get("channels", []):
@@ -320,12 +313,14 @@ async def scrape():
                     if l:
                         unique_links.add(l)
 
+        log.info(f"Resolving {len(unique_links)} unique stream links concurrently...")
         stream_cache = {}
+
         async def fetch_stream(link):
             async with HTTP_SEMAPHORE:
-                m3u8 = await resolve_channel_stream(client, link)
-                if m3u8:
-                    stream_cache[link] = m3u8
+                resolved = await resolve_channel_stream(client, link)
+                if resolved:
+                    stream_cache[link] = resolved
 
         await asyncio.gather(*(fetch_stream(u) for u in unique_links))
 
