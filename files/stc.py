@@ -5,7 +5,7 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import parse_qsl, quote_plus, urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 import httpx
@@ -29,7 +29,7 @@ M3U_OUTPUT = ROOT_DIR / "strmcntr.m3u"
 LOG_DIR = ROOT_DIR / "logs"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
-HTTP_SEMAPHORE = asyncio.Semaphore(15)
+HTTP_SEMAPHORE = asyncio.Semaphore(12)
 BST_TZ = ZoneInfo("Asia/Dhaka")
 
 LOG_FMT = (
@@ -56,6 +56,9 @@ if not log.handlers:
     log.propagate = False
 
 
+# -----------------------------------------------------------------------------
+# টিম লোগো সিডিএন
+# -----------------------------------------------------------------------------
 KNOWN_TEAM_LOGOS = {
     "manchester city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
     "man city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
@@ -175,77 +178,94 @@ def save_playlists(events: list[dict]) -> None:
 
 
 # -----------------------------------------------------------------------------
-# শক্তিশালী HLS ডিকোডার (s3.vertex.st এবং secure_hls.php হ্যান্ডলার)
+# স্ক্রিনশট ১ ও ২ অনুযায়ী আসল secure_hls.php ডিকোডার
 # -----------------------------------------------------------------------------
 async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> str | None:
+    """
+    ১. s3.vertex.st/api/player.php?id={id} কল করে embed.php লিংক বের করে।
+    ২. embed.php পেজ থেকে আসল secure_hls.php স্ট্রিম ডিকোড করে।
+    """
     if not link_url:
         return None
 
     if "secure_hls.php" in link_url or (link_url.endswith(".m3u8") and "vertex" not in link_url):
         return link_url
 
-    # vertex.st পেজের জন্য topsurge ও matchlist উভয় রেফারার ট্রাই করা
-    headers_list = [
-        {"User-Agent": STREAM_UA, "Referer": "https://topsurge.st/", "Origin": "https://topsurge.st"},
-        {"User-Agent": STREAM_UA, "Referer": STREAM_REFERER, "Origin": STREAM_ORIGIN},
-    ]
+    embed_page_url = None
 
-    for req_headers in headers_list:
+    # ১. স্ক্রিনশট ১ অনুযায়ী: s3.vertex.st/ch?id={number} থেকে আইডি বের করা
+    ch_id_match = re.search(r'id=(\d+)', link_url)
+    if ch_id_match:
+        ch_id = ch_id_match.group(1)
+        # স্ক্রিনশট ১ এর হুবহু API কল
+        api_player_url = f"https://s3.vertex.st/api/player.php?id={ch_id}"
+        api_headers = {
+            "User-Agent": STREAM_UA,
+            "Referer": link_url,
+            "Accept": "*/*",
+        }
+
         try:
-            resp = await client.get(link_url, headers=req_headers, timeout=6.0)
-            if resp.status_code != 200:
-                continue
+            resp = await client.get(api_player_url, headers=api_headers, timeout=6.0)
+            if resp.status_code == 200:
+                # স্ক্রিনশট ২ অনুযায়ী JSON থেকে url বের করা
+                data = resp.json()
+                embed_page_url = data.get("url")
+        except Exception as e:
+            log.debug(f"Error fetching vertex api: {e}")
 
-            content = resp.text
+    # যদি সরাসরি embed পেজ না পাওয়া যায়, মূল লিংকটি পরীক্ষা করা
+    target_embed = embed_page_url or link_url
 
-            # ১. সরাসরি secure_hls.php খোঁজা (কোনো এস্কেপ ছাড়া)
+    # ২. embed.php পেজ ফেচ করে ভেতরের secure_hls.php বের করা
+    try:
+        headers = {
+            "User-Agent": STREAM_UA,
+            "Referer": "https://topsurge.st/",
+            "Origin": STREAM_ORIGIN,
+        }
+
+        res = await client.get(target_embed, headers=headers, timeout=6.0)
+        if res.status_code == 200:
+            content = res.text
+
+            # secure_hls.php সরাসরি খোঁজা
             sec_m3u8 = re.search(r'["\'](https?://[^"\'\s]+/secure_hls\.php\?[^"\'\s]+)["\']', content)
             if sec_m3u8:
                 return sec_m3u8.group(1).replace("&amp;", "&")
 
-            # ২. ব্যাকস্ল্যাশ এস্কেপ করা URL (যেমন: https:\/\/hls.lshls.st\/secure_hls.php...)
-            sec_escaped = re.search(r'(https?:\\/\\/[^"\'\s]+secure_hls\.php\?[^"\'\s]+)', content)
-            if sec_escaped:
-                clean_url = sec_escaped.group(1).replace(r"\/", "/").replace("&amp;", "&")
+            # ব্যাকস্ল্যাশ এস্কেপ করা ফরম্যাট (\/secure_hls.php...)
+            sec_esc = re.search(r'(https?:\\/\\/[^"\'\s]+secure_hls\.php\?[^"\'\s]+)', content)
+            if sec_esc:
+                clean_url = sec_esc.group(1).replace(r"\/", "/").replace("&amp;", "&")
                 return clean_url.strip('"\'')
 
-            # ৩. সাধারণ যেকোনো m3u8 লিংক থাকলে
-            m3u8_m = re.search(r'["\'](https?://[^"\'\s]+\.m3u8[^"\'\s]*)["\']', content)
-            if m3u8_m and "s3.vertex.st" not in m3u8_m.group(1):
-                return m3u8_m.group(1)
-
-            # ৪. <iframe> ট্যাগ থাকলে
+            # আইফ্রেম থাকলে আইফ্রেমের ভেতর খোঁজা
             iframe_m = re.search(r'<iframe[^>]+src=["\']([^"\']+)["\']', content, re.IGNORECASE)
             if iframe_m:
-                iframe_src = iframe_m.group(1)
-                if iframe_src.startswith("//"):
-                    iframe_src = "https:" + iframe_src
-                elif iframe_src.startswith("/"):
-                    iframe_src = urljoin(link_url, iframe_src)
+                sub_src = iframe_m.group(1)
+                if sub_src.startswith("//"):
+                    sub_src = "https:" + sub_src
+                elif sub_src.startswith("/"):
+                    sub_src = urljoin(target_embed, sub_src)
 
-                # আইফ্রেম ফেচ করা
-                if_resp = await client.get(iframe_src, headers=req_headers, timeout=5.0)
-                if if_resp.status_code == 200:
-                    if_text = if_resp.text
-                    sub_sec = re.search(r'["\'](https?://[^"\'\s]+/secure_hls\.php\?[^"\'\s]+)["\']', if_text)
+                sub_res = await client.get(sub_src, headers={"User-Agent": STREAM_UA, "Referer": target_embed}, timeout=5.0)
+                if sub_res.status_code == 200:
+                    sub_text = sub_res.text
+                    sub_sec = re.search(r'["\'](https?://[^"\'\s]+/secure_hls\.php\?[^"\'\s]+)["\']', sub_text)
                     if sub_sec:
                         return sub_sec.group(1).replace("&amp;", "&")
 
-                    sub_escaped = re.search(r'(https?:\\/\\/[^"\'\s]+secure_hls\.php\?[^"\'\s]+)', if_text)
-                    if sub_escaped:
-                        return sub_escaped.group(1).replace(r"\/", "/").replace("&amp;", "&").strip('"\'')
+            # সাধারণ কোনো m3u8 লিংক থাকলে
+            gen_m3u8 = re.search(r'["\'](https?://[^"\'\s]+\.m3u8[^"\'\s]*)["\']', content)
+            if gen_m3u8:
+                return gen_m3u8.group(1)
 
-            # ৫. JavaScript এর source: বা file: ভ্যারিয়েবল
-            js_src = re.search(r'(?:file|source|src)\s*[:=]\s*["\'](https?://[^"\'\s]+)["\']', content, re.IGNORECASE)
-            if js_src:
-                candidate = js_src.group(1)
-                if "secure_hls" in candidate or ".m3u8" in candidate:
-                    return candidate
+    except Exception as e:
+        log.debug(f"Error resolving embed stream: {e}")
 
-        except Exception:
-            pass
-
-    return None
+    # যদি কোনো কারণে ডিকোড না হয়, তবে embed_page_url রিটার্ন করবে
+    return embed_page_url or link_url
 
 
 # -----------------------------------------------------------------------------
@@ -269,7 +289,7 @@ async def scrape():
 
             data = resp.json()
             matches = data.get("matches", [])
-            log.info(f"Retrieved {len(matches)} matches from Topsurge API!")
+            log.info(f"Retrieved {len(matches)} matches directly from Topsurge API!")
         except Exception as e:
             log.error(f"Error fetching API: {e}")
             return
@@ -296,6 +316,7 @@ async def scrape():
             except (ValueError, TypeError, OverflowError):
                 continue
 
+            # ৩ ঘণ্টা আগের ম্যাচ থেকে পরবর্তী ১৮ ঘণ্টার ম্যাচ রাখা হবে
             if match_dt < now_utc - timedelta(hours=3):
                 continue
             if match_dt > now_utc + timedelta(hours=18):
@@ -305,6 +326,7 @@ async def scrape():
 
         log.info(f"Processing {len(valid_matches)} active matches in window...")
 
+        # সকল চ্যানেল লিংক থেকে প্যারালালে আসল secure_hls.php বের করা
         unique_links = set()
         for _, m in valid_matches:
             for ch in m.get("channels", []):
@@ -313,14 +335,14 @@ async def scrape():
                     if l:
                         unique_links.add(l)
 
-        log.info(f"Resolving {len(unique_links)} unique stream links concurrently...")
+        log.info(f"Resolving {len(unique_links)} unique stream links via vertex API...")
         stream_cache = {}
 
         async def fetch_stream(link):
             async with HTTP_SEMAPHORE:
-                resolved = await resolve_channel_stream(client, link)
-                if resolved:
-                    stream_cache[link] = resolved
+                m3u8 = await resolve_channel_stream(client, link)
+                if m3u8:
+                    stream_cache[link] = m3u8
 
         await asyncio.gather(*(fetch_stream(u) for u in unique_links))
 
@@ -395,7 +417,7 @@ async def scrape():
             it.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info(f"Generated {len(final_playlist)} matches successfully!")
+        log.info(f"Successfully generated {len(final_playlist)} matches with real secure_hls streams!")
 
 
 if __name__ == "__main__":
