@@ -60,6 +60,7 @@ if not log.handlers:
 # টিম লোগো সিডিএন
 # -----------------------------------------------------------------------------
 KNOWN_TEAM_LOGOS = {
+    # Champions League & Top Teams
     "manchester city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
     "man city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
     "psg": "https://images.fotmob.com/image_resources/logo/teamlogo/9847.png",
@@ -89,6 +90,7 @@ DEFAULT_SPORT_ICONS = {
     "basketball": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
     "tennis": "https://cdn-icons-png.flaticon.com/512/709/709605.png",
     "hockey": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+    "motorsport": "https://cdn-icons-png.flaticon.com/512/2418/2418779.png",
 }
 
 
@@ -176,6 +178,9 @@ def save_playlists(events: list[dict]) -> None:
     log.info(f"Saved M3U: {M3U_OUTPUT}")
 
 
+# -----------------------------------------------------------------------------
+# আসল লাইভ HLS স্ট্রিম ডিকোডার
+# -----------------------------------------------------------------------------
 async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> str | None:
     if not link_url:
         return None
@@ -207,9 +212,12 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
             return m3u8_m.group(1)
 
         # ৩. <iframe> ট্যাগ খোঁজা
+        iframe_src = None
         iframe_match = re.search(r'<iframe[^>]+src=["\']([^"\']+)["\']', content, re.IGNORECASE)
         if iframe_match:
             iframe_src = iframe_match.group(1)
+
+        if iframe_src:
             if iframe_src.startswith("//"):
                 iframe_src = "https:" + iframe_src
             elif iframe_src.startswith("/"):
@@ -241,6 +249,9 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
     return None
 
 
+# -----------------------------------------------------------------------------
+# মূল স্ক্র্যাপার প্রসেস
+# -----------------------------------------------------------------------------
 async def scrape():
     log.info(f"Fetching matches from Topsurge API ({API_URL})...")
 
@@ -267,6 +278,7 @@ async def scrape():
         now_utc = datetime.now(timezone.utc)
         valid_matches = []
 
+        # ম্যাচ ফিল্টারিং ও সেফ টাইমস্ট্যাম্প কনভার্সন
         for m in matches:
             t_a = m.get("team1")
             t_b = m.get("team2")
@@ -278,7 +290,16 @@ async def scrape():
             if not title or not start_ts or not channels:
                 continue
 
-            match_dt = datetime.fromtimestamp(start_ts, tz=timezone.utc)
+            # মিলিসেকেন্ড ও সেকেন্ড সেফ হ্যান্ডলিং
+            try:
+                ts = float(start_ts)
+                # যদি মিলিসেকেন্ড (১৩ ডিজিট) হয়, ১০০০ দিয়ে ভাগ করা
+                if ts > 1e11:
+                    ts = ts / 1000.0
+
+                match_dt = datetime.fromtimestamp(ts, tz=timezone.utc)
+            except (ValueError, TypeError, OverflowError):
+                continue
 
             # ৩ ঘণ্টা আগের ম্যাচ থেকে পরবর্তী ১৮ ঘণ্টার ম্যাচ
             if match_dt < now_utc - timedelta(hours=3):
@@ -288,7 +309,7 @@ async def scrape():
 
             valid_matches.append((match_dt, m))
 
-        log.info(f"Processing {len(valid_matches)} active matches...")
+        log.info(f"Processing {len(valid_matches)} active matches in window...")
 
         # স্ট্রিম লিংকগুলো দ্রুত রেজলভ করা
         unique_links = set()
