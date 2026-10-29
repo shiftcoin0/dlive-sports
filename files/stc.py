@@ -5,18 +5,18 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import parse_qsl, quote_plus, urljoin, urlsplit
+from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 import httpx
-from selectolax.lexbor import LexborHTMLParser as HTMLParser
 
 # রিপোজিটরি রুট ডিরেক্টরি
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
 BASE_URL = "https://topsurge.st"
+API_URL = f"{BASE_URL}/api_proxy.php"
 
-# স্ক্রিনশট ৪ অনুযায়ী নির্দিষ্ট হেডার ও রেফারার
+# আপনার নির্দেশিত নির্দিষ্ট রেফারার ও অরিজিন
 STREAM_REFERER = "https://matchli.st/"
 STREAM_ORIGIN = "https://matchli.st"
 STREAM_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"
@@ -29,7 +29,7 @@ M3U_OUTPUT = ROOT_DIR / "strmcntr.m3u"
 LOG_DIR = ROOT_DIR / "logs"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
-HTTP_SEMAPHORE = asyncio.Semaphore(10)
+HTTP_SEMAPHORE = asyncio.Semaphore(15)
 BST_TZ = ZoneInfo("Asia/Dhaka")
 
 LOG_FMT = (
@@ -57,10 +57,17 @@ if not log.handlers:
 
 
 # -----------------------------------------------------------------------------
-# টিম লোগো সিডিএন (কোনো ম্যাচে যেন লোগো null না থাকে)
+# টিম লোগো সিডিএন (কোনো ম্যাচে যেন লোগো খালি না থাকে)
 # -----------------------------------------------------------------------------
 KNOWN_TEAM_LOGOS = {
     # Champions League & Top Teams
+    "manchester city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
+    "man city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
+    "psg": "https://images.fotmob.com/image_resources/logo/teamlogo/9847.png",
+    "paris saint-germain": "https://images.fotmob.com/image_resources/logo/teamlogo/9847.png",
+    "everton": "https://images.fotmob.com/image_resources/logo/teamlogo/8668.png",
+    "newcastle united": "https://images.fotmob.com/image_resources/logo/teamlogo/10261.png",
+    "newcastle": "https://images.fotmob.com/image_resources/logo/teamlogo/10261.png",
     "juventus": "https://images.fotmob.com/image_resources/logo/teamlogo/9885.png",
     "austria wien": "https://images.fotmob.com/image_resources/logo/teamlogo/8169.png",
     "utrecht": "https://images.fotmob.com/image_resources/logo/teamlogo/9908.png",
@@ -70,7 +77,6 @@ KNOWN_TEAM_LOGOS = {
     "chelsea": "https://images.fotmob.com/image_resources/logo/teamlogo/10260.png",
     "liverpool": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
     "manchester united": "https://images.fotmob.com/image_resources/logo/teamlogo/10267.png",
-    "manchester city": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
     "real madrid": "https://images.fotmob.com/image_resources/logo/teamlogo/8633.png",
     "barcelona": "https://images.fotmob.com/image_resources/logo/teamlogo/8634.png",
     "bayern munich": "https://images.fotmob.com/image_resources/logo/teamlogo/9823.png",
@@ -84,6 +90,7 @@ DEFAULT_SPORT_ICONS = {
     "basketball": "https://cdn-icons-png.flaticon.com/512/889/889508.png",
     "tennis": "https://cdn-icons-png.flaticon.com/512/709/709605.png",
     "hockey": "https://cdn-icons-png.flaticon.com/512/2622/2622830.png",
+    "motorsport": "https://cdn-icons-png.flaticon.com/512/2418/2418779.png",
 }
 
 
@@ -113,22 +120,6 @@ def clean_sport_name(sport_raw: str) -> str:
     if "tennis" in s:
         return "Tennis"
     return sport_raw.strip().title() or "Football"
-
-
-def parse_team_names(title: str) -> dict[str, str]:
-    delimiters = [" vs. ", " vs ", " v ", " - ", " @ ", " at "]
-    for d in delimiters:
-        if d in title.lower():
-            parts = re.split(re.escape(d), title, maxsplit=1, flags=re.IGNORECASE)
-            if len(parts) == 2 and parts[0].strip() and parts[1].strip():
-                return {
-                    "team_a": parts[0].strip(),
-                    "team_b": parts[1].strip()
-                }
-    return {
-        "team_a": title.strip(),
-        "team_b": title.strip()
-    }
 
 
 def create_slug(text: str) -> str:
@@ -190,23 +181,24 @@ def save_playlists(events: list[dict]) -> None:
 # -----------------------------------------------------------------------------
 # স্ক্রিনশট ৪ অনুযায়ী আসল লাইভ HLS স্ট্রিম ডিকোডার
 # -----------------------------------------------------------------------------
-async def resolve_topsurge_stream(client: httpx.AsyncClient, player_url: str) -> str | None:
+async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> str | None:
     """
-    topsurge.st/player.php/... পেজ থেকে secure_hls.php বা সরাসরি m3u8 বের করে
+    vertex.st / playfa.st লিঙ্ক থেকে secure_hls.php বা সরাসরি m3u8 স্ট্রিম বের করে
     """
-    if not player_url:
+    if not link_url:
         return None
 
-    if ".m3u8" in player_url or "secure_hls.php" in player_url:
-        return player_url
+    if ".m3u8" in link_url or "secure_hls.php" in link_url:
+        return link_url
 
     headers = {
         "User-Agent": STREAM_UA,
-        "Referer": f"{BASE_URL}/",
+        "Referer": STREAM_REFERER,
+        "Origin": STREAM_ORIGIN,
     }
 
     try:
-        resp = await client.get(player_url, headers=headers, timeout=8.0)
+        resp = await client.get(link_url, headers=headers, timeout=6.0)
         if resp.status_code != 200:
             return None
 
@@ -222,39 +214,32 @@ async def resolve_topsurge_stream(client: httpx.AsyncClient, player_url: str) ->
         if m3u8_m:
             return m3u8_m.group(1)
 
-        # ৩. <iframe> চেক করা
-        soup = HTMLParser(resp.content)
-        iframe = soup.css_first("iframe")
-        iframe_src = iframe.attributes.get("src") if iframe else None
-
-        if not iframe_src:
-            src_m = re.search(r'<iframe[^>]+src=["\']([^"\']+)["\']', content, re.IGNORECASE)
-            if src_m:
-                iframe_src = src_m.group(1)
+        # ৩. <iframe> ট্যাগ খোঁজা
+        iframe_src = None
+        iframe_match = re.search(r'<iframe[^>]+src=["\']([^"\']+)["\']', content, re.IGNORECASE)
+        if iframe_match:
+            iframe_src = iframe_match.group(1)
 
         if iframe_src:
             if iframe_src.startswith("//"):
                 iframe_src = "https:" + iframe_src
             elif iframe_src.startswith("/"):
-                iframe_src = urljoin(player_url, iframe_src)
+                iframe_src = urljoin(link_url, iframe_src)
 
             if "secure_hls.php" in iframe_src or ".m3u8" in iframe_src:
                 return iframe_src
 
-            # আইফ্রেম পেজে রিকোয়েস্ট পাঠানো
-            sub_headers = {"User-Agent": STREAM_UA, "Referer": STREAM_REFERER}
-            if_resp = await client.get(iframe_src, headers=sub_headers, timeout=6.0)
+            if_resp = await client.get(iframe_src, headers=headers, timeout=5.0)
             if if_resp.status_code == 200:
                 sub_text = if_resp.text
                 sub_sec = re.search(r'["\'](https?://[^"\'\s]+/secure_hls\.php\?[^"\'\s]+)["\']', sub_text)
                 if sub_sec:
                     return sub_sec.group(1).replace("&amp;", "&")
-
                 sub_m3u8 = re.search(r'["\'](https?://[^"\'\s]+\.m3u8[^"\'\s]*)["\']', sub_text)
                 if sub_m3u8:
                     return sub_m3u8.group(1)
 
-        # ৪. JS ভ্যারিয়েবল থেকে source বা file খোঁজা
+        # ৪. JS ভ্যারিয়েবল (source / file)
         js_m = re.search(r'(?:file|source|src)\s*[:=]\s*["\'](https?://[^"\'\s]+)["\']', content, re.IGNORECASE)
         if js_m:
             candidate = js_m.group(1)
@@ -262,200 +247,136 @@ async def resolve_topsurge_stream(client: httpx.AsyncClient, player_url: str) ->
                 return candidate
 
     except Exception as e:
-        log.debug(f"Error resolving stream from {player_url}: {e}")
+        log.debug(f"Error resolving stream from {link_url}: {e}")
 
     return None
-
-
-@dataclass(slots=True)
-class TopsurgeEvent:
-    title: str
-    sport: str
-    sub_cat: str
-    start_dt: datetime
-    channels: list[tuple[str, str]]
-
-
-# -----------------------------------------------------------------------------
-# ২ নম্বর স্ক্রিনশট অনুযায়ী Topsurge থেকে সকল ম্যাচ সংগ্রহ
-# -----------------------------------------------------------------------------
-async def get_topsurge_events(client: httpx.AsyncClient) -> list[TopsurgeEvent]:
-    events = []
-    headers = {
-        "User-Agent": STREAM_UA,
-        "Referer": f"{BASE_URL}/",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
-    }
-
-    try:
-        resp = await client.get(f"{BASE_URL}/", headers=headers, timeout=12.0)
-        if resp.status_code != 200:
-            log.error(f"Failed to fetch topsurge home page: {resp.status_code}")
-            return events
-
-        soup = HTMLParser(resp.content)
-        now_utc = datetime.now(timezone.utc)
-
-        # স্ক্রিনশট ২ অনুযায়ী কার্ড বা কন্টেইনার খোঁজা
-        # সাইটে প্রতিটি ম্যাচ একটি ব্লকে থাকে যেখানে টাইটেল এবং সাবটেক্সট থাকে
-        cards = soup.css("div[class*='rounded'], div[class*='border'], div[class*='bg-'], .match, .card")
-        
-        # যদি নির্দিষ্ট কন্টেইনার না মেলে তবে সরাসরি 'vs' থাকা ব্লকগুলো খোঁজা
-        valid_containers = []
-        for c in cards:
-            text = c.text(strip=True)
-            if " vs " in text or " at " in text:
-                # ডুপ্লিকেট প্যারেন্ট কন্টেইনার এড়াতে
-                if len(c.css("div[class*='rounded'], div[class*='border']")) == 0:
-                    valid_containers.append(c)
-
-        # যদি কন্টেইনার শূন্য হয়, বডির সব প্যারাগ্রাফ/ডিভ লাইন থেকে পার্স করা
-        if not valid_containers:
-            valid_containers = [soup.body] if soup.body else []
-
-        seen_titles = set()
-
-        # HTML থেকে ম্যাচগুলো রেজেক্স দিয়েও নিখুঁতভাবে রিড করা (যাতে কোনোভাবেই মিস না হয়)
-        # স্ক্রিনশট ২ এর টেক্সট ফরম্যাট: "Austria Wien vs Juventus" এবং "11:45 PM • Europe UEFA Women's Champions League • Football"
-        html_raw = resp.text
-
-        # রেজেক্স দিয়ে স্ক্রিনশটের সব ম্যাচ ও মেটাডাটা একবারে তুলে আনা
-        matches_found = re.findall(
-            r'([A-Za-z0-9\.\s\-\'\&]+(?:vs|at)[A-Za-z0-9\.\s\-\'\&]+)[\s\S]*?(\d{1,2}:\d{2}\s*(?:AM|PM)?)\s*•\s*([^•\n<]+)\s*•\s*([A-Za-z\s]+)',
-            html_raw,
-            re.IGNORECASE
-        )
-
-        for match_item in matches_found:
-            event_title = match_item[0].strip()
-            time_str = match_item[1].strip()
-            league_str = match_item[2].strip()
-            sport_str = match_item[3].strip()
-
-            # ক্লিনআপ
-            event_title = re.sub(r'\s+', ' ', event_title).strip()
-            if len(event_title) > 60 or "\n" in event_title:
-                continue
-
-            if event_title in seen_titles:
-                continue
-            seen_titles.add(event_title)
-
-            # সময় পার্স করা
-            event_dt = now_utc
-            tm = re.search(r"(\d{1,2}):(\d{2})\s*(AM|PM)?", time_str, re.IGNORECASE)
-            if tm:
-                h = int(tm.group(1))
-                m = int(tm.group(2))
-                ampm = tm.group(3)
-                if ampm and ampm.upper() == "PM" and h < 12:
-                    h += 12
-                elif ampm and ampm.upper() == "AM" and h == 12:
-                    h = 0
-                event_dt = now_utc.replace(hour=h, minute=m, second=0, microsecond=0)
-
-            # ৩ নম্বর স্ক্রিনশট অনুযায়ী লিঙ্ক তৈরি:
-            # https://topsurge.st/player.php/{title}-{league}-{sport}
-            slug_part = create_slug(f"{event_title} {league_str} {sport_str}")
-            player_url = f"{BASE_URL}/player.php/{slug_part}"
-
-            # চ্যানেল তৈরি (স্ক্রিনশট ২ এ থাকা চ্যালেন নাম)
-            channel_name = f"{league_str} Stream"
-            channels = [(channel_name, player_url)]
-
-            sport_clean = clean_sport_name(sport_str)
-
-            events.append(
-                TopsurgeEvent(
-                    title=event_title,
-                    sport=sport_clean,
-                    sub_cat=league_str,
-                    start_dt=event_dt,
-                    channels=channels
-                )
-            )
-
-    except Exception as e:
-        log.error(f"Error scraping Topsurge events: {e}")
-
-    return events
 
 
 # -----------------------------------------------------------------------------
 # মূল স্ক্র্যাপার প্রসেস
 # -----------------------------------------------------------------------------
 async def scrape():
-    log.info(f"Scraping from {BASE_URL} with Referer: {STREAM_REFERER}...")
+    log.info(f"Fetching matches from Topsurge API ({API_URL})...")
 
     headers = {
         "User-Agent": STREAM_UA,
-        "Referer": STREAM_REFERER,
-        "Origin": STREAM_ORIGIN,
+        "Referer": f"{BASE_URL}/",
+        "Accept": "application/json, text/plain, */*",
     }
 
     async with httpx.AsyncClient(headers=headers, timeout=12.0) as client:
-        raw_events = await get_topsurge_events(client)
-        if not raw_events:
-            log.info("No active events found on Topsurge.")
+        try:
+            resp = await client.get(API_URL)
+            if resp.status_code != 200:
+                log.error(f"Failed to fetch api_proxy.php: {resp.status_code}")
+                return
+
+            data = resp.json()
+            matches = data.get("matches", [])
+            log.info(f"Retrieved {len(matches)} matches directly from Topsurge API!")
+        except Exception as e:
+            log.error(f"Error fetching API: {e}")
             return
 
-        log.info(f"Found {len(raw_events)} events. Resolving streams concurrently...")
+        now_utc = datetime.now(timezone.utc)
+        valid_matches = []
 
-        # প্লেয়ার লিংকগুলো প্যারালালে ডিকোড করা
+        # ম্যাচ ফিল্টারিং
+        for m in matches:
+            t_a = m.get("team1")
+            t_b = m.get("team2")
+            matchstr = m.get("matchstr")
+            title = matchstr or f"{t_a} vs {t_b}"
+            start_ts = m.get("startTimestamp")
+            channels = m.get("channels", [])
+
+            if not title or not start_ts or not channels:
+                continue
+
+            match_dt = datetime.fromtimestamp(start_ts, tz=timezone.utc)
+
+            # ৩ ঘণ্টা আগের ম্যাচ থেকে পরবর্তী ১৮ ঘণ্টার ম্যাচ রাখা হবে
+            if match_dt < now_utc - timedelta(hours=3):
+                continue
+            if match_dt > now_utc + timedelta(hours=18):
+                continue
+
+            valid_matches.append((match_dt, m))
+
+        log.info(f"Processing {len(valid_matches)} active matches in window...")
+
+        # সকল চ্যানেল লিঙ্ক থেকে প্যারালালে আসল m3u8 স্ট্রিম বের করা
         unique_links = set()
-        for ev in raw_events:
-            for _, link in ev.channels:
-                unique_links.add(link)
+        for _, m in valid_matches:
+            for ch in m.get("channels", []):
+                links_list = ch.get("links") or ch.get("oldLinks") or []
+                for l in links_list:
+                    if l:
+                        unique_links.add(l)
 
+        log.info(f"Resolving {len(unique_links)} unique stream links concurrently...")
         stream_cache = {}
-        async def fetch_stream(p_url):
+
+        async def fetch_stream(link):
             async with HTTP_SEMAPHORE:
-                m3u8 = await resolve_topsurge_stream(client, p_url)
+                m3u8 = await resolve_channel_stream(client, link)
                 if m3u8:
-                    stream_cache[p_url] = m3u8
+                    stream_cache[link] = m3u8
 
         await asyncio.gather(*(fetch_stream(u) for u in unique_links))
 
         final_playlist = []
 
-        for ev in raw_events:
-            event_channels = []
-            for cname, link in ev.channels:
-                # যদি লাইভ m3u8 রেজলভ হয় অথবা সরাসরি প্লেয়ার থাকে
-                stream_url = stream_cache.get(link) or link
-                raw_link = f"{stream_url}|{STREAM_PIPE_HEADERS}"
+        for match_dt, m in valid_matches:
+            t_a = m.get("team1") or "Team A"
+            t_b = m.get("team2") or "Team B"
+            matchstr = m.get("matchstr")
+            title = matchstr or f"{t_a} vs {t_b}"
 
-                event_channels.append({
-                    "channel_name": cname,
-                    "stream_type": "HLS",
-                    "url": stream_url,
-                    "raw_link": raw_link,
-                    "headers": {
-                        "User-Agent": STREAM_UA,
-                        "Referer": STREAM_REFERER,
-                        "Origin": STREAM_ORIGIN,
-                    },
-                    "drm_key": None
-                })
+            league = m.get("league") or "Live Sports"
+            sport = clean_sport_name(m.get("sport") or "Football")
+            slug = m.get("slug") or create_slug(title)
+
+            event_channels = []
+            for ch in m.get("channels", []):
+                c_name = ch.get("name") or "Stream"
+                c_lang = ch.get("language")
+                if c_lang:
+                    c_name = f"{c_name} ({c_lang})"
+
+                links_list = ch.get("links") or ch.get("oldLinks") or []
+                for l in links_list:
+                    stream_url = stream_cache.get(l) or l
+                    raw_link = f"{stream_url}|{STREAM_PIPE_HEADERS}"
+
+                    event_channels.append({
+                        "channel_name": c_name,
+                        "stream_type": "HLS",
+                        "url": stream_url,
+                        "raw_link": raw_link,
+                        "headers": {
+                            "User-Agent": STREAM_UA,
+                            "Referer": STREAM_REFERER,
+                            "Origin": STREAM_ORIGIN,
+                        },
+                        "drm_key": None
+                    })
+                    break  # প্রতিটি চ্যানেলের জন্য সেরা প্রথম লিঙ্কটি নেওয়া
 
             if event_channels:
-                start_bst = ev.start_dt.astimezone(BST_TZ)
+                start_bst = match_dt.astimezone(BST_TZ)
                 end_bst = start_bst + timedelta(hours=3)
 
-                t_names = parse_team_names(ev.title)
-                t_a = t_names["team_a"]
-                t_b = t_names["team_b"]
-
-                flag_a = get_team_badge(t_a, ev.sport)
-                flag_b = get_team_badge(t_b, ev.sport)
+                flag_a = get_team_badge(t_a, sport)
+                flag_b = get_team_badge(t_b, sport)
 
                 final_playlist.append({
-                    "title": ev.title,
-                    "sport": ev.sport,
-                    "sub_category": ev.sub_cat,
-                    "status": determine_status(ev.start_dt),
+                    "title": title,
+                    "sport": sport,
+                    "sub_category": league,
+                    "status": determine_status(match_dt),
                     "is_hot": False,
-                    "slug": create_slug(ev.title),
+                    "slug": slug,
                     "schedule": {
                         "timezone": "BST (UTC+6)",
                         "start_time_bst": start_bst.strftime("%b %d, %Y, %I:%M:%S %p"),
@@ -467,7 +388,7 @@ async def scrape():
                     },
                     "logo": flag_a,
                     "channels": event_channels,
-                    "_timestamp": ev.start_dt.timestamp()
+                    "_timestamp": match_dt.timestamp()
                 })
 
         # সর্টিং (LIVE সবার উপরে)
@@ -476,7 +397,7 @@ async def scrape():
             it.pop("_timestamp", None)
 
         save_playlists(final_playlist)
-        log.info(f"Generated {len(final_playlist)} events from Topsurge successfully!")
+        log.info(f"Successfully generated {len(final_playlist)} matches from Topsurge API!")
 
 
 if __name__ == "__main__":
