@@ -1,4 +1,5 @@
 import asyncio
+import html as html_lib
 import json
 import logging
 import os
@@ -15,7 +16,7 @@ import httpx
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
 # -----------------------------------------------------------------------------
-# ১০০% সিক্রেট থেকে রিড করা হচ্ছে (কোডের ভেতর কোনো সোর্স লিঙ্ক রাখা হয়নি)
+# GitHub Secrets থেকে মান পড়া হচ্ছে
 # -----------------------------------------------------------------------------
 BASE_URL = os.getenv("SOURCE_BASE_URL", "")
 API_URL = os.getenv("SOURCE_API_URL", "")
@@ -57,6 +58,31 @@ if not log.handlers:
     log.addHandler(file_handler)
     log.addHandler(console_handler)
     log.propagate = False
+
+
+# -----------------------------------------------------------------------------
+# URL ক্লিনিং ফাংশন (\u0026, \/, &amp; ইত্যাদি ফিক্স করবে)
+# -----------------------------------------------------------------------------
+def clean_stream_url(raw_url: str | None) -> str | None:
+    if not raw_url:
+        return None
+
+    url = raw_url.strip().strip('"\'')
+
+    # ১. \u0026 ইউনিকোড এস্কেপ দূর করে & রূপান্তর
+    url = url.replace(r"\u0026", "&").replace("\\u0026", "&").replace(r"%5Cu0026", "&")
+
+    # ২. ব্যাকস্ল্যাশ রিমুভ (\/ -> /)
+    url = url.replace(r"\/", "/")
+
+    # ৩. এইচটিএমএল এনটিটি রিমুভ (&amp; -> &)
+    url = html_lib.unescape(url)
+    url = url.replace("&amp;", "&")
+
+    # অতিরিক্ত ব্যাকস্ল্যাশ ক্লিনিং
+    url = re.sub(r"\\+", "", url)
+
+    return url.strip()
 
 
 # -----------------------------------------------------------------------------
@@ -214,12 +240,15 @@ def save_playlists(events: list[dict]) -> None:
     log.info(f"Saved M3U: {M3U_OUTPUT}")
 
 
+# -----------------------------------------------------------------------------
+# আসল secure_hls.php ডিকোডার
+# -----------------------------------------------------------------------------
 async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> str | None:
     if not link_url:
         return None
 
     if "secure_hls.php" in link_url or (link_url.endswith(".m3u8") and "vertex" not in link_url):
-        return link_url
+        return clean_stream_url(link_url)
 
     embed_page_url = None
 
@@ -237,7 +266,8 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
             resp = await client.get(api_player_url, headers=api_headers, timeout=6.0)
             if resp.status_code == 200:
                 data = resp.json()
-                embed_page_url = data.get("url")
+                raw_u = data.get("url")
+                embed_page_url = clean_stream_url(raw_u)
         except Exception:
             pass
 
@@ -254,18 +284,19 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
         if res.status_code == 200:
             content = res.text
 
+            # ১. সরাসরি secure_hls.php খোঁজা (এস্কেপ এবং নন-এস্কেপ উভয়ই)
             sec_m3u8 = re.search(r'["\'](https?://[^"\'\s]+/secure_hls\.php\?[^"\'\s]+)["\']', content)
             if sec_m3u8:
-                return sec_m3u8.group(1).replace("&amp;", "&")
+                return clean_stream_url(sec_m3u8.group(1))
 
             sec_esc = re.search(r'(https?:\\/\\/[^"\'\s]+secure_hls\.php\?[^"\'\s]+)', content)
             if sec_esc:
-                clean_url = sec_esc.group(1).replace(r"\/", "/").replace("&amp;", "&")
-                return clean_url.strip('"\'')
+                return clean_stream_url(sec_esc.group(1))
 
+            # ২. আইফ্রেম চেক করা
             iframe_m = re.search(r'<iframe[^>]+src=["\']([^"\']+)["\']', content, re.IGNORECASE)
             if iframe_m:
-                sub_src = iframe_m.group(1)
+                sub_src = clean_stream_url(iframe_m.group(1))
                 if sub_src.startswith("//"):
                     sub_src = "https:" + sub_src
                 elif sub_src.startswith("/"):
@@ -276,22 +307,29 @@ async def resolve_channel_stream(client: httpx.AsyncClient, link_url: str) -> st
                     sub_text = sub_res.text
                     sub_sec = re.search(r'["\'](https?://[^"\'\s]+/secure_hls\.php\?[^"\'\s]+)["\']', sub_text)
                     if sub_sec:
-                        return sub_sec.group(1).replace("&amp;", "&")
+                        return clean_stream_url(sub_sec.group(1))
 
+                    sub_esc_2 = re.search(r'(https?:\\/\\/[^"\'\s]+secure_hls\.php\?[^"\'\s]+)', sub_text)
+                    if sub_esc_2:
+                        return clean_stream_url(sub_esc_2.group(1))
+
+            # ৩. সাধারণ m3u8 লিংক
             gen_m3u8 = re.search(r'["\'](https?://[^"\'\s]+\.m3u8[^"\'\s]*)["\']', content)
             if gen_m3u8:
-                return gen_m3u8.group(1)
+                return clean_stream_url(gen_m3u8.group(1))
 
     except Exception:
         pass
 
-    return embed_page_url or link_url
+    return clean_stream_url(embed_page_url or link_url)
 
 
+# -----------------------------------------------------------------------------
+# মূল স্ক্র্যাপার প্রসেস
+# -----------------------------------------------------------------------------
 async def scrape():
-    # সিক্রেট ভ্যারিয়েবল অনুপস্থিত থাকলে সেফ এক্সিট
     if not API_URL:
-        log.error("CRITICAL: 'SOURCE_API_URL' environment secret is missing! Please configure it in GitHub Secrets.")
+        log.error("CRITICAL: 'SOURCE_API_URL' environment secret is missing!")
         return
 
     log.info("Fetching matches from secure API endpoint...")
@@ -360,7 +398,7 @@ async def scrape():
             async with HTTP_SEMAPHORE:
                 m3u8 = await resolve_channel_stream(client, link)
                 if m3u8:
-                    stream_cache[link] = m3u8
+                    stream_cache[link] = clean_stream_url(m3u8)
 
         await asyncio.gather(*(fetch_stream(u) for u in unique_links))
 
@@ -387,7 +425,7 @@ async def scrape():
 
                 links_list = ch.get("links") or ch.get("oldLinks") or []
                 for l in links_list:
-                    stream_url = stream_cache.get(l) or l
+                    stream_url = stream_cache.get(l) or clean_stream_url(l)
                     raw_link = f"{stream_url}|{STREAM_PIPE_HEADERS}"
 
                     event_channels.append({
