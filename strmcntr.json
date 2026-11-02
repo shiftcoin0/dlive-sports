@@ -1,46 +1,8 @@
 {
-  "last_updated": "Nov 02, 2026, 10:50:35 PM",
-  "event_count": 99,
+  "last_updated": "Nov 02, 2026, 11:05:42 PM",
+  "event_count": 98,
   "events": {
     "events": [
-      {
-        "title": "Cherno More vs Botev Vratsa",
-        "sport": "Football",
-        "sub_category": "Bulgaria Parva Liga",
-        "status": "LIVE",
-        "is_hot": false,
-        "slug": "bulgaria-parva-liga-football-cherno-more-botev-vratsa-2026-11-02-17-00",
-        "schedule": {
-          "timezone": "BST (UTC+6)",
-          "start_time_bst": "Nov 02, 2026, 09:00:00 PM",
-          "end_time_bst": "Nov 02, 2026, 11:00:00 PM"
-        },
-        "teams": {
-          "team_a": {
-            "name": "Cherno More",
-            "flag": "https://i.ibb.co.com/JwDc9ckh/Football.png"
-          },
-          "team_b": {
-            "name": "Botev Vratsa",
-            "flag": "https://i.ibb.co.com/JwDc9ckh/Football.png"
-          }
-        },
-        "logo": "https://i.ibb.co.com/JwDc9ckh/Football.png",
-        "channels": [
-          {
-            "channel_name": "Diema Sport (BG)",
-            "stream_type": "HLS",
-            "url": "https://s3.vertex.st/ch?id=48",
-            "raw_link": "https://s3.vertex.st/ch?id=48|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://matchli.st/&Origin=https://matchli.st",
-            "headers": {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-              "Referer": "https://matchli.st/",
-              "Origin": "https://matchli.st"
-            },
-            "drm_key": null
-          }
-        ]
-      },
       {
         "title": "Real Oviedo vs Las Palmas",
         "sport": "Football",
