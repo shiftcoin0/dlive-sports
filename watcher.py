@@ -20,6 +20,9 @@ BASE_URL = os.getenv("SOURCE_BASE_URL", "")
 API_URL = os.getenv("SOURCE_API_URL", "")
 STATE_FILE = "watcher_state.txt"
 
+# পরিবর্তন না হলে কত সেকেন্ড পর পর বাধ্যতামূলক ট্রিগার পাঠাবে (১০ মিনিট = ~৫৯০ সেকেন্ড)
+FORCE_TRIGGER_SECONDS = 590
+
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -120,7 +123,10 @@ async def watch_topsurge():
         except Exception:
             last_state = ""
 
-    log.info("Watcher started. Polling every 5 minutes...")
+    # সর্বশেষ ট্রিগার টাইম ট্র্যাক করার জন্য
+    last_trigger_time = datetime.now(timezone.utc)
+
+    log.info("Watcher started. Polling every 5 minutes (Force trigger every 10 minutes if unchanged)...")
 
     headers = {
         "User-Agent": UA,
@@ -164,11 +170,13 @@ async def watch_topsurge():
                         current_events.append(f"{title}|{st}|{total_links}")
 
                 new_state = "#".join(sorted(current_events))
+                seconds_since_last_trigger = (datetime.now(timezone.utc) - last_trigger_time).total_seconds()
 
                 if last_state == "":
                     log.info(f"Initial run: Tracking {len(current_events)} active matches. Syncing with GitHub...")
                     if await trigger_github(client, "Initial Sync"):
                         last_state = new_state
+                        last_trigger_time = datetime.now(timezone.utc)
                         with open(STATE_FILE, "w", encoding="utf-8") as f:
                             f.write(new_state)
 
@@ -176,8 +184,15 @@ async def watch_topsurge():
                     log.info("Change detected! (Event added/removed or match reached 15-minute LIVE window).")
                     if await trigger_github(client, "15-Min LIVE Window / Event Update"):
                         last_state = new_state
+                        last_trigger_time = datetime.now(timezone.utc)
                         with open(STATE_FILE, "w", encoding="utf-8") as f:
                             f.write(new_state)
+
+                elif seconds_since_last_trigger >= FORCE_TRIGGER_SECONDS:
+                    log.info("No source change in 10 minutes. Sending periodic trigger...")
+                    if await trigger_github(client, "10-Min Periodic Trigger (No Source Change)"):
+                        last_trigger_time = datetime.now(timezone.utc)
+
                 else:
                     log.info("No status change or event update. Skipping trigger. Sleeping 5 minutes...")
 
